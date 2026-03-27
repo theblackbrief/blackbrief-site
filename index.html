@@ -733,12 +733,11 @@ track.appendChild(sep);
 }
 addSet();
 addSet();
-var dur=Math.max(20,Math.round(entries.length*200/60))+'s';
-track.style.setProperty('--dur',dur);
+var dur=Math.max(20,Math.round(entries.length*200/60));
+track.style.animation='none';
+track.style.setProperty('--dur',dur+'s');
 requestAnimationFrame(function(){
-  requestAnimationFrame(function(){
-    track.classList.add('running');
-  });
+  track.style.animation='bb-scroll '+dur+'s linear infinite';
 });
 })
 .catch(function(e){console.error('[ticker]',e);});
