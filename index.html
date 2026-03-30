@@ -47,7 +47,6 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 @keyframes bb-tick-blink{0%,100%{opacity:1}50%{opacity:.15}}
 #bb-ticker-mask{flex:1;overflow:hidden;display:flex;align-items:center;background:rgba(204,34,34,0.06)}
 #bb-ticker-track{display:inline-flex;align-items:center;white-space:nowrap;will-change:transform}
-#bb-ticker-track.running{animation:bb-scroll var(–dur,40s) linear infinite}
 @keyframes bb-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .bb-tick-item{font-family:‘Zilla Slab’,serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:0 20px;color:#ccc}
 .bb-tick-item.tick-urgent{color:#ff3333}
@@ -100,10 +99,10 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 
 /* ── VIDEO CARDS ── */
 .video-card{border-radius:6px;border:1px solid rgba(255,255,255,0.08);border-left:3px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.03);overflow:hidden;display:flex;flex-direction:column}
-.video-card.tag-urgent{border-left:3px solid #ff5555}
-.video-card.tag-noted{border-left:3px solid #ffcc00}
+.video-card.tag-urgent{border-left:3px solid #ff3333}
+.video-card.tag-noted{border-left:3px solid #ffaa00}
 .video-card.tag-verified{border-left:3px solid #44dd77}
-.video-card.tag-sus{border-left:3px solid #cc6644}
+.video-card.tag-sus{border-left:3px solid #ff7700}
 .video-card.tag-custom{border-left:3px solid #5599ff}
 .video-card-header{font-family:‘Zilla Slab’,serif;font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#666;text-align:center;padding:14px 20px}
 .video-card.tag-urgent .video-card-header{color:#ff3333}
@@ -121,16 +120,16 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 @media(prefers-color-scheme:light){
 .video-card{background:#f0f2f4;border-color:rgba(0,0,0,0.12)}
 .video-card-header{color:#888}
-.video-card.tag-urgent .video-card-header{color:#cc2222}
-.video-card.tag-noted .video-card-header{color:#cc9900}
+.video-card.tag-urgent .video-card-header{color:#cc1111}
+.video-card.tag-noted .video-card-header{color:#cc7700}
 .video-card.tag-verified .video-card-header{color:#228844}
-.video-card.tag-sus .video-card-header{color:#994422}
+.video-card.tag-sus .video-card-header{color:#cc5500}
 .video-card.tag-custom .video-card-header{color:#2255cc}
 .video-card-footer{color:#888;border-top-color:rgba(0,0,0,0.10)}
-.video-card.tag-urgent .video-card-footer{color:#cc2222}
-.video-card.tag-noted .video-card-footer{color:#cc9900}
+.video-card.tag-urgent .video-card-footer{color:#cc1111}
+.video-card.tag-noted .video-card-footer{color:#cc7700}
 .video-card.tag-verified .video-card-footer{color:#228844}
-.video-card.tag-sus .video-card-footer{color:#994422}
+.video-card.tag-sus .video-card-footer{color:#cc5500}
 .video-card.tag-custom .video-card-footer{color:#2255cc}
 }
 
@@ -192,7 +191,6 @@ html,body{background:#f5f5f5}
 .rich-preview{background:#f0f2f4;border-color:rgba(0,0,0,0.12);color:#1a1a1a}
 .rich-preview:hover{background:#e8eaed}
 .rich-preview-title{color:#111;opacity:1}
-.rich-preview-title.loaded{opacity:1}
 .rich-preview-action{color:#888;border-top-color:rgba(0,0,0,0.10)}
 .rich-preview.tag-urgent .rich-preview-action{color:#cc1111}
 .rich-preview.tag-noted .rich-preview-action{color:#cc7700}
@@ -302,6 +300,7 @@ html,body{background:#f5f5f5}
 (function(){
 'use strict';
 var LIMIT=25,MLIMIT=8,isMob=window.innerWidth<=640,aLimit=isMob?MLIMIT:LIMIT;
+var KNOWN_TAGS=['urgent','noted','verified','sus'];
 var GH='https'+'://raw.githubusercontent.com/theblackbrief/blackbrief-feed/main/posts.txt?t='+Date.now();
 var TW='https'+'://platform.twitter.com/widgets.js';
 var YT='https'+'://www.youtube.com/embed/';
@@ -401,8 +400,7 @@ else resolve(null);
 }
 
 function buildRichCard(url,tag){
-var knownTags=['urgent','noted','verified','sus'];
-var isKnown=tag&&knownTags.indexOf(tag)!==-1;
+var isKnown=tag&&KNOWN_TAGS.indexOf(tag)!==-1;
 var isCustom=tag&&tag!=='headline'&&!isKnown;
 var borderTag='none';
 if(isKnown)borderTag=tag;
@@ -428,8 +426,7 @@ return rp;
 }
 
 function buildEditorialCard(line,tag){
-var knownTags=['urgent','noted','verified','sus'];
-var isKnown=tag&&knownTags.indexOf(tag)!==-1;
+var isKnown=tag&&KNOWN_TAGS.indexOf(tag)!==-1;
 var isCustom=tag&&tag!=='headline'&&!isKnown;
 var borderTag='none';
 if(isKnown)borderTag=tag;
@@ -476,12 +473,11 @@ tweetObserver.unobserve(wrap);
 
 function buildCard(line,delay){
 var tag=getTag(line);
-var isEditorial=line.trimLeft().charAt(0)==='§';
+var isEditorial=line.trimStart().charAt(0)==='§';
 if(isEditorial){
 var card=mkEl('div','post-container');
 card.style.animationDelay=delay+'ms';
-var knownTags=['urgent','noted','verified','sus'];
-var isKnown=tag&&knownTags.indexOf(tag)!==-1;
+var isKnown=tag&&KNOWN_TAGS.indexOf(tag)!==-1;
 var isCustom=tag&&tag!=='headline'&&!isKnown;
 if(isKnown||isCustom)card.appendChild(mkStamp(tag));
 card.appendChild(buildEditorialCard(line,tag));
@@ -491,14 +487,12 @@ var rawUrl=stripTags(line),url=safeUrl(rawUrl);
 if(!url)return null;
 var card=mkEl('div','post-container');
 card.style.animationDelay=delay+'ms';
-var knownTags=['urgent','noted','verified','sus'];
-var isKnown=tag&&knownTags.indexOf(tag)!==-1;
+var isKnown=tag&&KNOWN_TAGS.indexOf(tag)!==-1;
 var isCustom=tag&&tag!=='headline'&&!isKnown;
 if(isKnown||isCustom)card.appendChild(mkStamp(tag));
 var ytId=getYtId(url);
 if(ytId){
-var knownTagsYt=['urgent','noted','verified','sus'];
-var isKnownYt=tag&&knownTagsYt.indexOf(tag)!==-1;
+var isKnownYt=tag&&KNOWN_TAGS.indexOf(tag)!==-1;
 var isCustomYt=tag&&tag!=='headline'&&!isKnownYt;
 var borderTagYt='none';
 if(isKnownYt)borderTagYt=tag;
@@ -693,7 +687,6 @@ drawerFrame.src='';
 drawer.appendChild(drawerFrame);
 
 function openDrawer(url,dom){
-window.__bbOpenDrawer=openDrawer;
 drawerDomainText.textContent=dom;
 drawerNewtab.href=url;
 drawerRestricted.style.display='none';
@@ -725,6 +718,8 @@ drawerRestricted.style.display='none';
 drawerFrame.style.opacity='1';
 setTimeout(function(){drawerFrame.src='';},400);
 }
+
+window.__bbOpenDrawer=openDrawer;
 
 overlay.addEventListener('click',closeDrawer);
 drawerClose.addEventListener('click',closeDrawer);
