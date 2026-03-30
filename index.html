@@ -211,8 +211,9 @@ html,body{background:#f5f5f5}
 .stamp{background:#e8eaed}
 .stamp-headline{color:#222222;border-color:#222222}
 #bb-archive-wrap{border-top-color:rgba(0,0,0,0.10)}
-#bb-archive-btn{color:#444;border-color:rgba(0,0,0,0.2)}
-#bb-archive-btn:hover{color:#000;border-color:rgba(0,0,0,0.4);background:rgba(0,0,0,0.04)}
+#bb-archive-btn{color:#444;border-color:rgba(0,0,0,0.2);animation:bb-archive-glow-light 3s ease-in-out infinite}
+@keyframes bb-archive-glow-light{0%,100%{box-shadow:0 0 0px rgba(0,0,0,0)}50%{box-shadow:0 0 12px rgba(0,0,0,0.10),0 0 24px rgba(0,0,0,0.04)}}
+#bb-archive-btn:hover{color:#000;border-color:rgba(0,0,0,0.4);background:rgba(0,0,0,0.04);animation:none}
 #bb-archive-feed{opacity:.8}
 .skeleton{background:linear-gradient(90deg,rgba(0,0,0,.06) 25%,rgba(0,0,0,.10) 50%,rgba(0,0,0,.06) 75%);background-size:200% 100%}
 #bb-ticker-outer{border-color:rgba(180,20,20,0.3)}
@@ -226,8 +227,9 @@ html,body{background:#f5f5f5}
 
 /* ── ARCHIVE ── */
 #bb-archive-wrap{width:100%;max-width:900px;margin-top:40px;border-top:1px solid rgba(255,255,255,0.07);padding-top:20px}
-#bb-archive-btn{width:100%;padding:14px 20px;background:transparent;border:1px solid rgba(255,255,255,0.18);border-radius:6px;font-family:‘Zilla Slab’,serif;font-weight:600;font-size:15px;letter-spacing:.25em;color:#ccc;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
-#bb-archive-btn:hover{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.04)}
+#bb-archive-btn{width:100%;padding:14px 20px;background:transparent;border:1px solid rgba(255,255,255,0.18);border-radius:6px;font-family:‘Zilla Slab’,serif;font-weight:600;font-size:17px;letter-spacing:.25em;color:#ccc;cursor:pointer;transition:color .2s,border-color .2s,background .2s;animation:bb-archive-glow 3s ease-in-out infinite}
+@keyframes bb-archive-glow{0%,100%{box-shadow:0 0 0px rgba(255,255,255,0)}50%{box-shadow:0 0 12px rgba(255,255,255,0.12),0 0 24px rgba(255,255,255,0.05)}}
+#bb-archive-btn:hover{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.04);animation:none}
 #bb-archive-section{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.4,0,.2,1)}
 #bb-archive-section.open{max-height:9999px}
 #bb-archive-feed{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;padding-top:24px;opacity:.7}
@@ -259,7 +261,7 @@ html,body{background:#f5f5f5}
 @media(max-width:480px){
 #black-brief-wrapper{padding:6px 8px 36px}
 .stamp{font-size:13px;padding:4px 9px}
-#bb-archive-btn{font-size:13px;letter-spacing:.2em;padding:12px 14px}
+#bb-archive-btn{font-size:15px;letter-spacing:.2em;padding:12px 14px}
 .rich-preview-title{font-size:19px}
 .rich-preview-domain{font-size:12px}
 #bb-ticker-outer{height:30px}
@@ -291,7 +293,7 @@ html,body{background:#f5f5f5}
     <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
   </div>
   <div id="bb-archive-wrap" style="display:none">
-    <button id="bb-archive-btn" aria-expanded="false">§ archives</button>
+    <button id="bb-archive-btn" aria-expanded="false">§ archives // tap for more</button>
     <div id="bb-archive-section"><div id="bb-archive-feed"></div></div>
   </div>
 </div>
@@ -317,7 +319,8 @@ var sec=document.getElementById('bb-archive-section');
 btn.addEventListener('click',function(){
 var o=sec.classList.toggle('open');
 btn.setAttribute('aria-expanded',String(o));
-btn.textContent=o?'§ close archives':'§ archives';
+btn.textContent=o?'§ close archives':'§ archives // tap for more';
+btn.style.animation=o?'none':'bb-archive-glow 3s ease-in-out infinite';
 });
 
 function getTag(l){
