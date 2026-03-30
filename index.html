@@ -212,7 +212,7 @@ html,body{background:#f5f5f5}
 .stamp-headline{color:#222222;border-color:#222222}
 #bb-archive-wrap{border-top-color:rgba(0,0,0,0.10)}
 #bb-archive-btn{color:#444;border-color:rgba(0,0,0,0.2);animation:bb-archive-glow-light 3s ease-in-out infinite}
-@keyframes bb-archive-glow-light{0%,100%{box-shadow:0 0 0px rgba(0,0,0,0)}50%{box-shadow:0 0 12px rgba(0,0,0,0.10),0 0 24px rgba(0,0,0,0.04)}}
+@keyframes bb-archive-glow-light{0%,100%{box-shadow:0 0 0px rgba(0,0,0,0)}50%{box-shadow:0 0 18px rgba(0,0,0,0.18),0 0 40px rgba(0,0,0,0.08)}}
 #bb-archive-btn:hover{color:#000;border-color:rgba(0,0,0,0.4);background:rgba(0,0,0,0.04);animation:none}
 #bb-archive-feed{opacity:.8}
 .skeleton{background:linear-gradient(90deg,rgba(0,0,0,.06) 25%,rgba(0,0,0,.10) 50%,rgba(0,0,0,.06) 75%);background-size:200% 100%}
@@ -228,7 +228,7 @@ html,body{background:#f5f5f5}
 /* ── ARCHIVE ── */
 #bb-archive-wrap{width:100%;max-width:900px;margin-top:40px;border-top:1px solid rgba(255,255,255,0.07);padding-top:20px}
 #bb-archive-btn{width:100%;padding:14px 20px;background:transparent;border:1px solid rgba(255,255,255,0.18);border-radius:6px;font-family:‘Zilla Slab’,serif;font-weight:600;font-size:17px;letter-spacing:.25em;color:#ccc;cursor:pointer;transition:color .2s,border-color .2s,background .2s;animation:bb-archive-glow 3s ease-in-out infinite}
-@keyframes bb-archive-glow{0%,100%{box-shadow:0 0 0px rgba(255,255,255,0)}50%{box-shadow:0 0 12px rgba(255,255,255,0.12),0 0 24px rgba(255,255,255,0.05)}}
+@keyframes bb-archive-glow{0%,100%{box-shadow:0 0 0px rgba(255,255,255,0)}50%{box-shadow:0 0 18px rgba(255,255,255,0.28),0 0 40px rgba(255,255,255,0.10)}}
 #bb-archive-btn:hover{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.04);animation:none}
 #bb-archive-section{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.4,0,.2,1)}
 #bb-archive-section.open{max-height:9999px}
@@ -293,7 +293,7 @@ html,body{background:#f5f5f5}
     <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
   </div>
   <div id="bb-archive-wrap" style="display:none">
-    <button id="bb-archive-btn" aria-expanded="false">§ archives // tap for more</button>
+    <button id="bb-archive-btn" aria-expanded="false">§ archives</button>
     <div id="bb-archive-section"><div id="bb-archive-feed"></div></div>
   </div>
 </div>
@@ -319,7 +319,8 @@ var sec=document.getElementById('bb-archive-section');
 btn.addEventListener('click',function(){
 var o=sec.classList.toggle('open');
 btn.setAttribute('aria-expanded',String(o));
-btn.textContent=o?'§ close archives':'§ archives // tap for more';
+var count=btn.getAttribute('data-count')||'';
+btn.textContent=o?'§ close archives':'§ archives // show '+count+' transmissions';
 btn.style.animation=o?'none':'bb-archive-glow 3s ease-in-out infinite';
 });
 
@@ -629,6 +630,8 @@ if(c)frag.appendChild(c);
 feed.appendChild(frag);
 if(arch.length>0){
 aw.style.display='block';
+btn.setAttribute('data-count',arch.length);
+btn.textContent='§ archives // show '+arch.length+' transmissions';
 var af2=document.createDocumentFragment();
 arch.forEach(function(l,i){
 var c=buildCard(l,i*40);
