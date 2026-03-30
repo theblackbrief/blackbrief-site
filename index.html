@@ -53,6 +53,7 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 .bb-tick-item.tick-urgent{color:#ff3333}
 .bb-tick-item.tick-headline{color:#cccccc}
 .bb-tick-item.tick-noted{color:#ffaa00}
+.bb-tick-item.tick-editorial{color:#6699aa;letter-spacing:.10em;text-transform:none}
 .bb-tick-sep{color:#cc2222;font-size:15px;font-weight:700;flex-shrink:0;padding:0 4px;font-family:‘Zilla Slab’,serif}
 .bb-ticker-paused #bb-ticker-dot{animation:none;opacity:.3}
 .bb-ticker-paused .bb-tick-item{text-decoration:underline;cursor:pointer}
@@ -220,6 +221,7 @@ html,body{background:#f5f5f5}
 .bb-tick-item.tick-urgent{color:#cc1111}
 .bb-tick-item.tick-headline{color:#222222}
 .bb-tick-item.tick-noted{color:#cc7700}
+.bb-tick-item.tick-editorial{color:#336699}
 }
 
 /* ── ARCHIVE ── */
@@ -781,20 +783,35 @@ if(paused){timer=setTimeout(function(){setPaused(false);},8000);}
 fetch(GH)
 .then(function(r){return r.text();})
 .then(function(text){
-var lines=text.split('\n');
+var lines=text.split('\n').map(function(l){return l.trim();}).filter(function(l){return l.length>0;});
+lines.reverse();
 var entries=[];
 for(var i=0;i<lines.length;i++){
 if(entries.length>=8)break;
-var l=lines[i].trim();
-if(!l||l.charAt(0)==='§')continue;
-var clean=l.replace(/\s+#\w+/g,'').trim();
+var l=lines[i];
+var isEditorial=l.charAt(0)==='§';
+if(isEditorial){
+var eText=l.replace(/^§\s*/,'').replace(/\s+#\w+/g,'').trim();
+if(!eText)continue;
+entries.push({tag:'editorial',label:eText,url:null});
+continue;
+}
+// check for | label separator
+var pipeIdx=l.indexOf(' | ');
+var customLabel='';
+var rawLine=l;
+if(pipeIdx!==-1){
+customLabel=l.substring(pipeIdx+3).replace(/\s+#\w+/g,'').trim();
+rawLine=l.substring(0,pipeIdx).trim();
+}
+var clean=rawLine.replace(/\s+#\w+/g,'').trim();
 try{
 var u=new URL(clean);
 if(u.protocol!=='https:'&&u.protocol!=='http:')continue;
 if(!isExternal(clean))continue;
 var dom=u.hostname.replace('www.','');
 if(!dom)continue;
-entries.push({tag:tickerGetTag(l),label:dom,url:clean});
+entries.push({tag:tickerGetTag(l),label:customLabel||dom,url:clean});
 }catch(e){continue;}
 }
 if(!entries.length)return;
@@ -803,7 +820,7 @@ entries.forEach(function(entry){
 var item=document.createElement('span');
 item.className='bb-tick-item'+(entry.tag?' tick-'+entry.tag:'');
 item.textContent='§ '+entry.label;
-item.setAttribute('data-url',entry.url);
+if(entry.url)item.setAttribute('data-url',entry.url);
 track.appendChild(item);
 var sep=document.createElement('span');
 sep.className='bb-tick-sep';
