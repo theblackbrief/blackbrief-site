@@ -437,7 +437,7 @@ else resolve(null);
 });
 }
 
-function buildRichCard(url,tag){
+function buildRichCard(url,tag,label){
 var knownTags=['urgent','noted','verified','sus'];
 var isKnown=tag&&knownTags.indexOf(tag)!==-1;
 var isCustom=tag&&tag!=='headline'&&!isKnown;
@@ -457,10 +457,15 @@ rp.appendChild(top);
 var ra=mkEl('div','rich-preview-action');
 ra.textContent='§ external source';
 rp.appendChild(ra);
+if(label){
+rt.textContent=label;
+rt.classList.add('loaded');
+}else{
 fetchTitle(url).then(function(title){
 rt.textContent=title||domain(url);
 rt.classList.add('loaded');
 });
+}
 return rp;
 }
 
@@ -527,7 +532,14 @@ card.appendChild(buildEditorialCard(line,tag));
 card.appendChild(mkShareBtn(editId));
 return card;
 }
-var rawUrl=stripTags(line),url=safeUrl(rawUrl);
+var pipeIdx=line.indexOf(' | ');
+var customLabel='';
+var lineForUrl=line;
+if(pipeIdx!==-1){
+customLabel=line.substring(pipeIdx+3).replace(/\s+#\w+/g,'').trim();
+lineForUrl=line.substring(0,pipeIdx).trim();
+}
+var rawUrl=stripTags(lineForUrl),url=safeUrl(rawUrl);
 if(!url)return null;
 var card=mkEl('div','post-container');
 card.style.animationDelay=delay+'ms';
@@ -577,14 +589,21 @@ tw.appendChild(bq);
 }
 card.appendChild(tw);
 }else{
-card.appendChild(buildRichCard(url,tag));
+card.appendChild(buildRichCard(url,tag,customLabel));
 }
 card.appendChild(mkShareBtn(url));
 return card;
 }
 
 function buildHeadline(line){
-var rawUrl=stripTags(line),url=safeUrl(rawUrl);
+var pipeIdx=line.indexOf(' | ');
+var customLabel='';
+var lineForUrl=line;
+if(pipeIdx!==-1){
+customLabel=line.substring(pipeIdx+3).replace(/\s+#\w+/g,'').trim();
+lineForUrl=line.substring(0,pipeIdx).trim();
+}
+var rawUrl=stripTags(lineForUrl),url=safeUrl(rawUrl);
 if(!url)return;
 var fl=mkEl('div','headline-flag');
 fl.textContent='top transmission';
@@ -622,7 +641,7 @@ bq.appendChild(a);
 tw.appendChild(bq);
 hi.appendChild(tw);
 }else{
-hi.appendChild(buildRichCard(url,'headline'));
+hi.appendChild(buildRichCard(url,'headline',customLabel));
 }
 hc.appendChild(hi);
 hc.appendChild(mkShareBtn(url));
