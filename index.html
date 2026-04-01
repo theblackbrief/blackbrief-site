@@ -263,8 +263,8 @@ html,body{background:#f5f5f5}
 .bb-share-btn.bb-copied{color:#44dd77}
 @media(prefers-color-scheme:light){.bb-share-btn{color:#aaa}.bb-share-btn:hover{color:#666}}
 /* ── PERMALINK HIGHLIGHT ── */
-@keyframes bb-permalink-pulse{0%,100%{box-shadow:0 0 0 rgba(68,221,119,0)}40%,60%{box-shadow:0 0 22px rgba(68,221,119,0.5),0 0 6px rgba(68,221,119,0.25)}}
-.bb-permalink-target{animation:bb-permalink-pulse 2s ease-in-out 3!important}
+@keyframes bb-permalink-pulse{0%{outline-color:rgba(68,221,119,0.9)}60%{outline-color:rgba(68,221,119,0.9)}100%{outline-color:rgba(68,221,119,0)}}
+.bb-permalink-target{outline:2px solid rgba(68,221,119,0.9);border-radius:8px;animation:bb-permalink-pulse 3s ease-out forwards!important}
 
 /* ── MOBILE ── */
 @media(max-width:480px){
@@ -720,8 +720,7 @@ btn.style.animation='none';
 }
 setTimeout(function(){
 plTarget.scrollIntoView({behavior:'smooth',block:'center'});
-var inner=plTarget.querySelector('.rich-preview,.editorial-card,.video-card,.tweet-wrap');
-if(inner)inner.classList.add('bb-permalink-target');
+plTarget.classList.add('bb-permalink-target');
 var rp=plTarget.querySelector('.rich-preview[data-url]');
 if(rp){
 var pUrl=rp.getAttribute('data-url');
