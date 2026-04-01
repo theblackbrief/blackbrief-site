@@ -258,7 +258,7 @@ html,body{background:#f5f5f5}
 #bb-drawer-frame{flex:1;border:none;width:100%;background:#fff}
 
 /* ── SHARE BUTTON ── */
-.bb-share-btn{display:block;text-align:right;font-family:‘Zilla Slab’,serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#555;background:transparent;border:none;cursor:pointer;padding:5px 2px 0;transition:color .15s;width:100%}
+.bb-share-btn{display:block;text-align:right;font-family:'Zilla Slab',serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#555;background:transparent;border:none;cursor:pointer;padding:5px 2px 0;transition:color .15s;width:100%}
 .bb-share-btn:hover{color:#999}
 .bb-share-btn.bb-copied{color:#44dd77}
 @media(prefers-color-scheme:light){.bb-share-btn{color:#aaa}.bb-share-btn:hover{color:#666}}
@@ -729,7 +729,10 @@ var pDom='';
 try{pDom=new URL(pUrl).hostname.replace('www.','');}catch(ex){}
 setTimeout(function(){openDrawer(pUrl,pDom);},700);
 }
-},400);
+setTimeout(function(){
+plTarget.scrollIntoView({behavior:'smooth',block:'center'});
+},800);
+},600);
 }
 }
 loadTw();
