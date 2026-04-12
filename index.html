@@ -582,6 +582,8 @@ fr.title='Video';
 vc.appendChild(fr);
 var vf=mkEl('div','video-card-footer');
 vf.textContent='video source';
+vc.appendChild(vf);
+card.appendChild(vc);
 }else if(isTw(url)){
 var tw=mkEl('div','tweet-wrap');
 if(tweetObserver){
