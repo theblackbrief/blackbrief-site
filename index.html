@@ -35,10 +35,14 @@ html{font-size:18pt}
 html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-height:100vh}
 
 /* ── SITE HEADER ── */
-#bb-header{text-align:center;padding:32px 20px 24px;font-family:‘Zilla Slab’,serif}
+#bb-header{text-align:center;padding:16px 20px 10px;font-family:‘Zilla Slab’,serif}
 #bb-header h1{font-family:‘Zilla Slab’,serif;font-size:clamp(2rem,8vw,5rem);font-weight:700;font-style:normal;color:#ffffff;line-height:1.2;letter-spacing:0;white-space:nowrap}
 #bb-header h1 span{color:#cc2222}
 #bb-header p{font-family:‘Source Serif 4’,serif;font-size:clamp(0.85rem,2.2vw,1.125rem);font-weight:300;font-style:normal;color:#ffffff;margin-top:0.6rem;line-height:1.4;letter-spacing:0}
+
+/* ── STICKY SHELL ── */
+#bb-sticky-shell{position:sticky;top:0;z-index:100;background:#000000;border-bottom:1px solid rgba(255,255,255,0.08)}
+@media(prefers-color-scheme:light){#bb-sticky-shell{background:#f5f5f5;border-bottom-color:rgba(0,0,0,0.08)}}
 
 /* ── TICKER ── */
 #bb-ticker-outer{width:100%;max-width:900px;margin:0 auto 14px;display:flex;align-items:stretch;height:36px;border:1px solid rgba(204,34,34,0.4);border-radius:4px;font-family:‘Zilla Slab’,serif;box-sizing:border-box;cursor:pointer}
@@ -62,8 +66,6 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 #bb-status-bar{width:100%;max-width:900px;margin:0 0 16px;font-family:‘Zilla Slab’,serif;font-size:13px;display:flex;align-items:center;justify-content:center;color:#555;letter-spacing:.18em;gap:6px}
 #bb-status-dot{width:6px;height:6px;background:#2ecc71;border-radius:50%;flex-shrink:0;animation:bb-blink 1.6s infinite}
 @keyframes bb-blink{0%,100%{opacity:1}50%{opacity:.2}}
-
-/* ── HEADLINE SLOT ── */
 #bb-headline-slot{width:100%;max-width:900px;margin-bottom:20px}
 .headline-card{position:relative;width:100%;border:2px solid rgba(255,255,255,0.08);border-left:5px solid #cc2222;border-radius:6px;padding:24px 20px 18px 20px;display:flex;flex-direction:column;align-items:center;background:rgba(255,255,255,0.03)}
 .headline-sigil{font-family:‘Zilla Slab’,serif;font-size:13px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#cc2222;text-align:center;position:absolute;top:24px;left:0;right:0}
@@ -192,17 +194,18 @@ html,body{background:#f5f5f5}
 .rich-preview{background:#f0f2f4;border-color:rgba(0,0,0,0.12);color:#1a1a1a}
 .rich-preview:hover{background:#e8eaed}
 .rich-preview-title{color:#111}
+.rich-preview-title.loaded{opacity:1}
 .rich-preview-action{color:#888;border-top-color:rgba(0,0,0,0.10)}
-.rich-preview.tag-urgent .rich-preview-action{color:#cc1111}
-.rich-preview.tag-noted .rich-preview-action{color:#cc7700}
-.rich-preview.tag-verified .rich-preview-action{color:#228844}
-.rich-preview.tag-sus .rich-preview-action{color:#cc5500}
-.rich-preview.tag-custom .rich-preview-action{color:#2255cc}
 .rich-preview.tag-urgent .rich-preview-domain{color:#cc1111}
 .rich-preview.tag-noted .rich-preview-domain{color:#cc7700}
 .rich-preview.tag-verified .rich-preview-domain{color:#228844}
 .rich-preview.tag-sus .rich-preview-domain{color:#cc5500}
 .rich-preview.tag-custom .rich-preview-domain{color:#2255cc}
+.rich-preview.tag-urgent .rich-preview-action{color:#cc1111}
+.rich-preview.tag-noted .rich-preview-action{color:#cc7700}
+.rich-preview.tag-verified .rich-preview-action{color:#228844}
+.rich-preview.tag-sus .rich-preview-action{color:#cc5500}
+.rich-preview.tag-custom .rich-preview-action{color:#2255cc}
 .editorial-card{background:#f0f2f4;border-color:rgba(0,0,0,0.10)}
 .editorial-text{color:#111;display:flex;align-items:center;justify-content:center}
 .editorial-sigil{color:#336699}
@@ -290,15 +293,17 @@ html,body{background:#f5f5f5}
 </head>
 <body>
 
+<div id="bb-sticky-shell">
 <div id="bb-header">
   <h1>the <span>/</span> black brief</h1>
 </div>
 
-<div style="width:100%;display:flex;flex-direction:column;align-items:center;padding:0 10px 6px">
+<div style="width:100%;display:flex;flex-direction:column;align-items:center;padding:0 10px 4px">
   <div id="bb-ticker-outer">
     <span id="bb-ticker-label">§ bb</span>
     <div id="bb-ticker-mask"><div id="bb-ticker-track"></div></div>
   </div>
+</div>
 </div>
 
 <div id="black-brief-wrapper">
@@ -399,14 +404,14 @@ return e;
 
 function mkShareBtn(id){
 var b=mkEl('button','bb-share-btn');
-b.textContent='share';
+b.textContent='§ share';
 b.addEventListener('click',function(e){
 e.stopPropagation();
 var url='https'+'://theblackbrief.com/?post='+encodeURIComponent(id);
 if(navigator.clipboard&&navigator.clipboard.writeText){
 navigator.clipboard.writeText(url).then(function(){
 b.textContent='copied.';b.classList.add('bb-copied');
-setTimeout(function(){b.textContent='share';b.classList.remove('bb-copied');},1500);
+setTimeout(function(){b.textContent='§ share';b.classList.remove('bb-copied');},1500);
 }).catch(function(){bbFallbackCopy(url,b);});
 }else{bbFallbackCopy(url,b);}
 });
@@ -420,8 +425,8 @@ document.body.appendChild(ta);ta.focus();ta.select();
 try{
 document.execCommand('copy');
 btn.textContent='copied.';btn.classList.add('bb-copied');
-setTimeout(function(){btn.textContent='share';btn.classList.remove('bb-copied');},1500);
-}catch(ex){btn.textContent='!';setTimeout(function(){btn.textContent='share';},1500);}
+setTimeout(function(){btn.textContent='§ share';btn.classList.remove('bb-copied');},1500);
+}catch(ex){btn.textContent='!';setTimeout(function(){btn.textContent='§ share';},1500);}
 document.body.removeChild(ta);
 }
 
@@ -576,8 +581,6 @@ fr.title='Video';
 vc.appendChild(fr);
 var vf=mkEl('div','video-card-footer');
 vf.textContent='video source';
-vc.appendChild(vf);
-card.appendChild(vc);
 }else if(isTw(url)){
 var tw=mkEl('div','tweet-wrap');
 if(tweetObserver){
@@ -737,7 +740,7 @@ var inArch=!!plTarget.closest('#bb-archive-section');
 if(inArch){
 sec.classList.add('open');
 btn.setAttribute('aria-expanded','true');
-btn.textContent='close archives';
+btn.textContent='§ close archives';
 btn.style.animation='none';
 }
 setTimeout(function(){
