@@ -66,7 +66,7 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 #black-brief-wrapper{width:100%;display:flex;flex-direction:column;align-items:center;padding:8px 10px 48px;font-family:‘Zilla Slab’,serif;color:#e8e8e8}
 
 /* ── STATUS BAR ── */
-#bb-status-bar{width:100%;max-width:900px;margin-bottom:8px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.08);font-family:‘Zilla Slab’,serif;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px;color:#777;letter-spacing:.14em;cursor:pointer}
+#bb-status-bar{width:100%;max-width:900px;margin-bottom:8px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.08);font-family:‘Zilla Slab’,serif;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px;color:#777;letter-spacing:.14em}
 #bb-status-dot{width:7px;height:7px;background:#2ecc71;border-radius:50%;flex-shrink:0;animation:bb-blink 1.6s infinite}
 @keyframes bb-blink{0%,100%{opacity:1}50%{opacity:.2}}
 
@@ -692,29 +692,15 @@ feed.innerHTML='';
 feed.appendChild(n);
 }
 
-var bbLoading=false;
-async function loadFeed(){
-if(bbLoading)return;
-bbLoading=true;
-log.textContent='resyncing...';
-hs.innerHTML='';
-document.getElementById('bb-feed-divider').style.display='none';
-af.innerHTML='';
-aw.style.display='none';
-sec.classList.remove('open');
-btn.setAttribute('aria-expanded','false');
-btn.style.animation='bb-archive-glow 3s ease-in-out infinite';
-feed.innerHTML='<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>';
-var ghUrl='https'+'://raw.githubusercontent.com/theblackbrief/blackbrief-feed/main/posts.txt?t='+Date.now();
+(async function(){
 try{
-var res=await fetch(ghUrl);
+var res=await fetch(GH);
 if(!res.ok)throw new Error('HTTP '+res.status);
 var text=await res.text();
 var lines=text.split(/\r?\n/).map(function(l){return l.trim();}).filter(function(l){return l.length>8;});
 if(lines.length===0){
 notice('\u2014 no intel found \u2014');
 log.textContent='no intel found';
-bbLoading=false;
 return;
 }
 lines.reverse();
@@ -784,22 +770,21 @@ plTarget.scrollIntoView({behavior:'smooth',block:'center'});
 }
 }
 loadTw();
-var now=new Date();
-var hrs=now.getHours();
-var mins=now.getMinutes().toString().padStart(2,'0');
-var ampm=hrs>=12?'pm':'am';
-var hh=(hrs%12||12).toString();
-log.textContent='synced: '+hh+':'+mins+' '+ampm+' // system live';
+var bbSyncTime=Date.now();
+var bbPostCount=live.length+(arch?arch.length:0);
+function bbUpdateStatus(){
+var elapsed=Math.round((Date.now()-bbSyncTime)/60000);
+var age=elapsed<1?'just now':elapsed===1?'1m ago':elapsed+'m ago';
+log.textContent='§ '+bbPostCount+' transmissions // synced '+age;
+}
+bbUpdateStatus();
+setInterval(bbUpdateStatus,60000);
 }catch(err){
 console.error('[BlackBrief]',err);
 notice('\u2014 communications failure \u2014');
-log.textContent='communications failure';
+log.textContent='§ communications failure';
 }
-bbLoading=false;
-}
-
-document.getElementById('bb-status-bar').addEventListener('click',function(){loadFeed();});
-loadFeed();
+})();
 
 // ── DRAWER ──
 var overlay=document.createElement('div');
