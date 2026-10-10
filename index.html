@@ -67,19 +67,6 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 #bb-status-dot{width:6px;height:6px;background:#2ecc71;border-radius:50%;flex-shrink:0;animation:bb-blink 1.6s infinite}
 @keyframes bb-blink{0%,100%{opacity:1}50%{opacity:.2}}
 
-/* ── FILTER BAR ── */
-#bb-filter-bar{width:100%;max-width:900px;margin:0 0 18px;display:none;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px}
-.bb-chip{font-family:'Zilla Slab',serif;font-size:12px;font-weight:700;letter-spacing:.16em;line-height:1;color:#888;background:transparent;border:1px solid rgba(255,255,255,0.16);border-radius:3px;padding:6px 10px;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s}
-.bb-chip:hover{border-color:currentColor}
-.bb-chip-n{font-weight:400;opacity:.65;margin-left:7px}
-.bb-chip.chip-urgent{color:#ff3333;border-color:rgba(255,51,51,0.4)}
-.bb-chip.chip-noted{color:#ffaa00;border-color:rgba(255,170,0,0.4)}
-.bb-chip.chip-verified{color:#44dd77;border-color:rgba(68,221,119,0.4)}
-.bb-chip.chip-sus{color:#ff7700;border-color:rgba(255,119,0,0.4)}
-.bb-chip.chip-custom{color:#5599ff;border-color:rgba(85,153,255,0.4)}
-.bb-chip.active{background:currentColor;border-color:currentColor}
-.bb-chip.active>span{color:#111;opacity:1}
-
 /* ── NEW TRANSMISSIONS PILL ── */
 #bb-new-pill{position:fixed;left:50%;top:120px;z-index:99;transform:translate(-50%,-12px);opacity:0;pointer-events:none;font-family:'Zilla Slab',serif;font-size:12px;font-weight:700;letter-spacing:.18em;line-height:1;color:#fff;background:#cc2222;border:none;border-radius:4px;padding:10px 16px;cursor:pointer;white-space:nowrap;box-shadow:0 4px 18px rgba(0,0,0,0.55);transition:opacity .25s,transform .25s}
 #bb-new-pill.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
@@ -107,7 +94,7 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 @keyframes bb-fadeup{to{opacity:1;transform:translateY(0)}}
 
 /* ── STAMPS ── */
-.stamp{position:absolute;top:4px;right:-8px;z-index:10;font-family:'Zilla Slab',serif;font-weight:700;font-size:15px;line-height:1;padding:5px 11px;border:2px solid;border-radius:3px;text-transform:uppercase;letter-spacing:.14em;transform:rotate(10deg);transform-origin:top right;cursor:pointer;white-space:nowrap;background:#111}
+.stamp{position:absolute;top:4px;right:-8px;z-index:10;font-family:'Zilla Slab',serif;font-weight:700;font-size:15px;line-height:1;padding:5px 11px;border:2px solid;border-radius:3px;text-transform:uppercase;letter-spacing:.14em;transform:rotate(10deg);transform-origin:top right;pointer-events:none;white-space:nowrap;background:#111}
 .stamp-urgent{color:#ff3333;border-color:#ff3333}
 .stamp-noted{color:#ffaa00;border-color:#ffaa00}
 .stamp-verified{color:#44dd77;border-color:#44dd77}
@@ -253,13 +240,6 @@ html,body{background:#f5f5f5}
 .bb-tick-item.tick-headline{color:#222222}
 .bb-tick-item.tick-noted{color:#cc7700}
 .bb-tick-item.tick-editorial{color:#336699}
-.bb-chip{color:#666;border-color:rgba(0,0,0,0.2)}
-.bb-chip.chip-urgent{color:#cc1111;border-color:rgba(204,17,17,0.4)}
-.bb-chip.chip-noted{color:#cc7700;border-color:rgba(204,119,0,0.4)}
-.bb-chip.chip-verified{color:#228844;border-color:rgba(34,136,68,0.4)}
-.bb-chip.chip-sus{color:#cc5500;border-color:rgba(204,85,0,0.4)}
-.bb-chip.chip-custom{color:#2255cc;border-color:rgba(34,85,204,0.4)}
-.bb-chip.active>span{color:#f5f5f5}
 #bb-new-pill{box-shadow:0 4px 14px rgba(0,0,0,0.25)}
 }
 
@@ -341,7 +321,6 @@ html,body{background:#f5f5f5}
 #bb-ticker-outer{height:30px}
 #bb-ticker-label{font-size:10px;letter-spacing:.2em;padding:0 10px;gap:5px}
 .bb-tick-item{font-size:11px;padding:0 14px}
-.bb-chip{font-size:11px;padding:6px 9px}
 #bb-new-pill{font-size:11px;padding:9px 13px}
 }
 </style>
@@ -366,7 +345,6 @@ html,body{background:#f5f5f5}
 
 <div id="black-brief-wrapper">
   <div id="bb-status-bar"><span id="bb-status-dot"></span><span id="bb-log">initializing...</span></div>
-  <div id="bb-filter-bar" role="group" aria-label="filter by tag"></div>
   <div id="bb-headline-slot"></div>
   <div class="feed-divider" id="bb-feed-divider" style="display:none"></div>
   <div id="black-brief-feed">
@@ -398,17 +376,14 @@ var aw=document.getElementById('bb-archive-wrap');
 var af=document.getElementById('bb-archive-feed');
 var btn=document.getElementById('bb-archive-btn');
 var sec=document.getElementById('bb-archive-section');
-var filterBar=document.getElementById('bb-filter-bar');
 var pill=document.getElementById('bb-new-pill');
 var shell=document.getElementById('bb-sticky-shell');
 
 // ── STATE ──
 var allLines=[];        // every post line, newest first
 var pendingLines=null;  // newer copy of the feed waiting behind the pill
-var activeFilter=null;  // tag name or null
 var archCount=0;
 var totalCount=0;
-var shownCount=0;
 var bbSyncTime=0;
 var postParam=new URLSearchParams(window.location.search).get('post');
 var permalinkDone=false;
@@ -487,11 +462,6 @@ return e;
 function mkStamp(t){
 var e=mkEl('div','stamp '+stampClass(t));
 e.textContent=t.toUpperCase();
-e.title='show only #'+t;
-e.addEventListener('click',function(ev){
-ev.stopPropagation();
-setFilter(activeFilter===t?null:t);
-});
 return e;
 }
 
@@ -524,7 +494,7 @@ document.body.removeChild(ta);
 }
 
 // Staggered microlink fetch — small delay between calls to avoid mobile overload.
-// Results are cached per URL so re-rendering (filter, live refresh) never refetches.
+// Results are cached per URL so a live refresh never refetches.
 var fetchQueue=0;
 var titleCache={};
 function fetchTitle(url){
@@ -761,63 +731,12 @@ clearEl(feed);
 feed.appendChild(n);
 }
 
-// ── TAG FILTER ──
-function tagCounts(){
-var counts={};
-allLines.forEach(function(l){
-var t=getTag(l);
-if(!t||t==='headline')return;
-counts[t]=(counts[t]||0)+1;
-});
-return counts;
-}
-
-function mkChip(text,count,cls,isActive,onTap){
-var c=mkEl('button','bb-chip'+(cls?' '+cls:'')+(isActive?' active':''));
-c.type='button';
-c.setAttribute('aria-pressed',String(isActive));
-var t=mkEl('span','bb-chip-t');
-t.textContent=text;
-c.appendChild(t);
-if(count!==null){
-var n=mkEl('span','bb-chip-n');
-n.textContent=String(count);
-c.appendChild(n);
-}
-c.addEventListener('click',onTap);
-return c;
-}
-
-function buildFilterBar(){
-var counts=tagCounts();
-var custom=Object.keys(counts).filter(function(t){return KNOWN_TAGS.indexOf(t)===-1;}).sort();
-var tags=KNOWN_TAGS.filter(function(t){return counts[t];}).concat(custom);
-clearEl(filterBar);
-if(tags.length===0){filterBar.style.display='none';return;}
-filterBar.style.display='flex';
-filterBar.appendChild(mkChip('all',null,'',activeFilter===null,function(){setFilter(null);}));
-tags.forEach(function(t){
-filterBar.appendChild(mkChip('#'+t,counts[t],'chip-'+borderTagOf(t),activeFilter===t,function(){
-setFilter(activeFilter===t?null:t);
-}));
-});
-}
-
-function setFilter(tag){
-if(tag===activeFilter)return;
-activeFilter=tag;
-render();
-window.scrollTo({top:0,behavior:'smooth'});
-}
-
 // ── RENDER ──
 function render(){
 fetchQueue=0;
 clearEl(hs);
 clearEl(feed);
 clearEl(af);
-if(activeFilter&&!tagCounts()[activeFilter])activeFilter=null;
-buildFilterBar();
 var lines=allLines.slice();
 if(lines.length===0){
 hs.style.display='none';
@@ -828,20 +747,6 @@ log.textContent='no intel found';
 return;
 }
 var frag=document.createDocumentFragment();
-if(activeFilter){
-// filtered view: every match from feed + archive in one grid
-hs.style.display='none';
-divider.style.display='none';
-aw.style.display='none';
-var matches=lines.filter(function(l){return getTag(l)===activeFilter;});
-matches.forEach(function(l,i){
-var c=buildCard(l,Math.min(i,24)*55);
-if(c)frag.appendChild(c);
-});
-feed.appendChild(frag);
-shownCount=matches.length;
-totalCount=lines.length-(lines.some(function(l){return l.toLowerCase().includes('#headline');})?1:0);
-}else{
 hs.style.display='';
 var hIdx=lines.findIndex(function(l){return l.toLowerCase().includes('#headline');});
 if(hIdx!==-1){
@@ -870,8 +775,6 @@ syncArchiveBtn();
 aw.style.display='none';
 }
 totalCount=lines.length;
-shownCount=totalCount;
-}
 applyPermalink();
 loadTw();
 bbUpdateStatus();
@@ -915,11 +818,7 @@ function bbUpdateStatus(){
 if(!bbSyncTime)return;
 var elapsed=Math.round((Date.now()-bbSyncTime)/60000);
 var age=elapsed<1?'just now':elapsed===1?'1m ago':elapsed+'m ago';
-if(activeFilter){
-log.textContent=shownCount+' of '+totalCount+' transmissions // #'+activeFilter;
-}else{
 log.textContent=totalCount+' transmissions // synced '+age;
-}
 }
 setInterval(bbUpdateStatus,30000);
 
