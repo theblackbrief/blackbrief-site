@@ -196,7 +196,7 @@ html,body{background:#f5f5f5}
 .stamp{background:#e8eaed}
 .stamp-headline{color:#222222;border-color:#222222}
 #bb-archive-wrap{border-top-color:rgba(0,0,0,0.10)}
-.headline-card{background:#f0f2f4;border-color:rgba(0,0,0,0.12)}
+.headline-card{background:#f0f2f4;border-color:rgba(0,0,0,0.12);border-left-color:#cc2222}
 .headline-title{color:#111}
 .headline-title.loaded{opacity:1}
 #bb-archive-btn{color:#444;border-color:rgba(0,0,0,0.2);animation:bb-archive-glow-light 3s ease-in-out infinite}
@@ -269,7 +269,6 @@ html,body{background:#f5f5f5}
 .post-container.bb-shared:not(.headline-card) .editorial-card,
 .post-container.bb-shared:not(.headline-card) .video-card,
 .headline-card.bb-shared{border-color:#44dd77;border-left-color:#44dd77;box-shadow:0 0 22px rgba(68,221,119,0.16)}
-.post-container.bb-shared:not(.headline-card) .tweet-wrap{border:2px solid #44dd77;border-left-width:5px;border-radius:6px;box-shadow:0 0 22px rgba(68,221,119,0.16)}
 .bb-shared-note{position:absolute;left:2px;bottom:0;font-family:'Zilla Slab',serif;font-size:12px;font-weight:700;letter-spacing:.15em;line-height:1.3;text-transform:uppercase;color:#44dd77;pointer-events:none}
 .headline-card .bb-shared-note{left:20px;bottom:18px}
 @media(prefers-color-scheme:light){
@@ -277,7 +276,6 @@ html,body{background:#f5f5f5}
 .post-container.bb-shared:not(.headline-card) .editorial-card,
 .post-container.bb-shared:not(.headline-card) .video-card,
 .headline-card.bb-shared{border-color:#228844;border-left-color:#228844;box-shadow:0 0 18px rgba(34,136,68,0.18)}
-.post-container.bb-shared:not(.headline-card) .tweet-wrap{border-color:#228844;box-shadow:0 0 18px rgba(34,136,68,0.18)}
 .bb-shared-note{color:#228844}
 }
 
@@ -285,6 +283,15 @@ html,body{background:#f5f5f5}
 @media(prefers-color-scheme:light){
 .stamp-custom{color:#5a5348;border-color:#5a5348}
 .rich-preview.tag-custom,.editorial-card.tag-custom,.video-card.tag-custom{border-left-color:#5a5348}
+}
+
+/* ── TWEET CARDS (Oct 2026) ──
+   X embeds sit inside the same shell as the video cards (.video-card),
+   so they pick up its border, tag colours and light-mode styles. */
+.tweet-card .tweet-wrap{margin:0 14px 4px;border-radius:0}
+@media(max-width:480px){
+.tweet-card .tweet-wrap{margin:0 8px 2px}
+.headline-sigil{font-size:11px;letter-spacing:.14em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 12px}
 }
 
 /* ── MOBILE ── */
@@ -417,7 +424,7 @@ if(tag==='headline'||tag==='urgent'){
 var fresh=!isNaN(ts)&&(Date.now()-ts)<EXPIRE_MS;
 if(!fresh)tag=null;
 }
-return{text:text,tag:tag};
+return{text:text,tag:tag,ts:ts};
 }
 
 // which timed tags are in force right now; changes when one expires
@@ -579,6 +586,58 @@ vc.appendChild(vf);
 return vc;
 }
 
+// ── TWEET CARDS + POST AGE (Oct 2026) ──
+// An X embed gets the video-card shell: handle on top, "x.com // 2h ago" below.
+// The age only shows on posts whose posts.txt line carries an @timestamp.
+function twHandle(url){
+try{
+var seg=new URL(url).pathname.split('/')[1];
+return seg&&seg!=='i'?'@'+seg.toLowerCase():'x.com';
+}catch(e){return'x.com';}
+}
+
+function ago(ts){
+if(!ts||isNaN(ts))return'';
+var m=Math.round((Date.now()-ts)/60000);
+if(m<0)return'';
+if(m<1)return'just now';
+if(m<60)return m+'m ago';
+var h=Math.round(m/60);
+if(h<24)return h+'h ago';
+var d=Math.round(h/24);
+return d<=30?d+'d ago':'';
+}
+
+// writes "label" or "label // 2h ago" and remembers both so the age can tick over
+function setAge(el,label,ts){
+el.setAttribute('data-bb-label',label);
+if(ts&&!isNaN(ts))el.setAttribute('data-bb-ts',String(ts));
+var a=ago(ts);
+el.textContent=label+(a?' // '+a:'');
+}
+
+function refreshAges(){
+var els=document.querySelectorAll('[data-bb-ts]');
+for(var i=0;i<els.length;i++){
+var a=ago(Number(els[i].getAttribute('data-bb-ts')));
+els[i].textContent=els[i].getAttribute('data-bb-label')+(a?' // '+a:'');
+}
+}
+setInterval(refreshAges,60000);
+
+function buildTweetCard(url,tag,ts,tw){
+var borderTag=borderTagOf(tag);
+var tc=mkEl('div','video-card tweet-card'+(borderTag!=='none'?' tag-'+borderTag:''));
+var th=mkEl('div','video-card-header');
+th.textContent=twHandle(url);
+tc.appendChild(th);
+tc.appendChild(tw);
+var tf=mkEl('div','video-card-footer');
+setAge(tf,'x.com',ts);
+tc.appendChild(tf);
+return tc;
+}
+
 // Lazy tweet loading via IntersectionObserver
 var tweetObserver=null;
 if('IntersectionObserver' in window){
@@ -653,7 +712,7 @@ a.href=url.replace('x.com','twitter.com').split('?')[0];
 bq.appendChild(a);
 tw.appendChild(bq);
 }
-card.appendChild(tw);
+card.appendChild(buildTweetCard(url,tag,p.ts,tw));
 }else{
 card.appendChild(buildRichCard(url,tag,parts.label));
 }
@@ -686,6 +745,7 @@ a.href=url.replace('x.com','twitter.com').split('?')[0];
 bq.appendChild(a);
 tw.appendChild(bq);
 hi.appendChild(tw);
+sig.textContent='top post // '+twHandle(url);
 }else{
 var hdom=mkEl('div','headline-domain');
 hdom.textContent=domain(url);
@@ -706,7 +766,7 @@ hc.style.cursor='pointer';
 }
 hc.appendChild(hi);
 var hft=mkEl('div','headline-footer');
-hft.textContent='priority';
+setAge(hft,'priority',p.ts);
 hc.appendChild(hft);
 hc.appendChild(mkShareBtn(url));
 hs.appendChild(hc);
