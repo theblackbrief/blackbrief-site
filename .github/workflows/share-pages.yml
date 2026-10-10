@@ -1,0 +1,36 @@
+# Builds a small preview page for every post (the /p/ folder) each time
+# posts.txt changes. See tools/build-share.js.
+name: build share pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - posts.txt
+      - tools/build-share.js
+      - .github/workflows/share-pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: share-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: build pages
+        run: node tools/build-share.js
+      - name: save pages to the repo
+        run: |
+          git config user.name "blackbrief-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A p tools/share-cache.json
+          if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
+          git commit -m "share pages"
+          git pull --rebase origin main
+          git push
