@@ -661,7 +661,8 @@ th.textContent=twHandle(url);
 tc.appendChild(th);
 tc.appendChild(tw);
 var tf=mkEl('div','video-card-footer');
-setAge(tf,'x.com',ts);
+// a link with no account name already shows 'x.com' on top, so don't repeat it below
+setAge(tf,th.textContent==='x.com'?'x post':'x.com',ts);
 tc.appendChild(tf);
 return tc;
 }
