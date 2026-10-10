@@ -667,11 +667,13 @@ return tc;
 }
 
 // ── NEW SINCE LAST VISIT (Oct 2026) ──
-// The browser remembers the newest posts it saw (nothing leaves the device).
-// On the next visit, every post above them gets a small "new" tab.
-// A reload within 10 minutes keeps the same markers instead of clearing them.
+// The browser remembers the newest posts it has shown (nothing leaves the device).
+// Any post that turns up above them gets a small "new" tab, whether it arrives
+// on a fresh load or through the "new transmissions" pill.
+// A visit ends after 10 minutes away: a reload sooner than that keeps the same
+// markers, and coming back to an open tab later than that starts a new visit.
 var SEEN_KEY='bb-seen-v1',SEEN_HOLD_MS=10*60*1000;
-var seenBaseline=null,seenReady=false;
+var seenBaseline=null,seenReady=false,seenT=0,hiddenAt=0;
 
 function postId(p){
 var line=p.text;
@@ -679,19 +681,46 @@ if(line.trimStart().charAt(0)==='§')return line.replace(/\s+#\w+/g,'').trim();
 return safeUrl(stripTags(splitLabel(line).urlPart));
 }
 
-function initSeen(ids){
-var s=null;
-try{s=JSON.parse(localStorage.getItem(SEEN_KEY)||'null');}catch(e){}
-if(!s||!Array.isArray(s.ids))s=null;
-if(s&&Date.now()-s.t<SEEN_HOLD_MS){
-seenBaseline=Array.isArray(s.prev)?s.prev:null;
-return;
-}
-seenBaseline=s?s.ids:null;
+function topIds(ids){return ids.filter(Boolean).slice(0,8);}
+
+function saveSeen(ids){
 try{
-localStorage.setItem(SEEN_KEY,JSON.stringify({ids:ids.filter(Boolean).slice(0,8),t:Date.now(),prev:seenBaseline}));
+localStorage.setItem(SEEN_KEY,JSON.stringify({ids:topIds(ids),t:seenT,prev:seenBaseline}));
 }catch(e){}
 }
+
+// runs on every render: the first call works out where the last visit ended
+function trackSeen(ids){
+if(!seenReady){
+seenReady=true;
+var s=null;
+try{s=JSON.parse(localStorage.getItem(SEEN_KEY)||'null');}catch(e){}
+if(!s||!Array.isArray(s.ids)||!s.ids.length)s=null;
+if(s&&Date.now()-s.t<SEEN_HOLD_MS){
+seenT=s.t;
+seenBaseline=Array.isArray(s.prev)&&s.prev.length?s.prev:s.ids;
+}else{
+seenT=Date.now();
+seenBaseline=s?s.ids:topIds(ids);
+}
+}
+saveSeen(ids);
+}
+
+// back on an open tab after 10+ minutes away: that is a new visit
+document.addEventListener('visibilitychange',function(){
+if(document.hidden){hiddenAt=Date.now();return;}
+var away=hiddenAt?Date.now()-hiddenAt:0;
+hiddenAt=0;
+if(!seenReady||away<SEEN_HOLD_MS)return;
+var ids=allLines.map(prep).map(postId);
+if(!topIds(ids).length)return;
+seenT=Date.now();
+seenBaseline=topIds(ids);
+saveSeen(ids);
+var old=document.querySelectorAll('.bb-new-tag');
+for(var i=0;i<old.length;i++)old[i].parentNode.removeChild(old[i]);
+});
 
 function markNew(ids){
 if(!seenBaseline)return;
@@ -879,7 +908,7 @@ log.textContent='no intel found';
 return;
 }
 var ids=lines.map(postId);
-if(!seenReady){seenReady=true;initSeen(ids);}
+trackSeen(ids);
 var frag=document.createDocumentFragment();
 hs.style.display='';
 var hIdx=lines.findIndex(function(l){return l.tag==='headline';});
