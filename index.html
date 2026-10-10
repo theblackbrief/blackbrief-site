@@ -296,15 +296,19 @@ html,body{background:#f5f5f5}
 
 /* ── EQUAL-HEIGHT ROWS (Oct 2026) ──
    Both cards in a row stretch to the taller one, so footers line up.
-   A shorter tweet is centred inside its frame. */
+   A shorter tweet sits at the top of its frame, under its handle. */
 #black-brief-feed .post-container,#bb-archive-feed .post-container{display:flex;flex-direction:column}
 .post-container>.video-card,.post-container>.rich-preview,.post-container>.editorial-card{flex:1 0 auto}
 .post-container>.rich-preview,.post-container>.editorial-card{height:auto;min-height:300px}
-.tweet-card .tweet-wrap{flex:1 0 auto;display:flex;flex-direction:column;justify-content:center}
+.tweet-card .tweet-wrap{flex:1 0 auto;display:flex;flex-direction:column;justify-content:flex-start}
 .video-card-footer{margin-top:auto}
 @media(max-width:480px){
 .post-container>.rich-preview,.post-container>.editorial-card{min-height:240px}
 }
+
+/* ── NEW SINCE LAST VISIT (Oct 2026) ── */
+.bb-new-tag{position:absolute;top:1px;left:12px;z-index:9;font-family:'Zilla Slab',serif;font-size:11px;font-weight:700;letter-spacing:.2em;line-height:1;text-transform:uppercase;color:#fff;background:#cc2222;border-radius:3px;padding:4px 6px 4px 8px;pointer-events:none}
+.headline-card>.bb-new-tag{top:-10px}
 
 /* ── MOBILE ── */
 @media(max-width:480px){
@@ -488,14 +492,26 @@ b.textContent='§ share';
 b.addEventListener('click',function(e){
 e.stopPropagation();
 var url='https'+'://theblackbrief.com/?post='+encodeURIComponent(id);
+// SHARE SHEET (Oct 2026): phones and tablets open the system share sheet;
+// everything else copies the link, as before.
+if(navigator.share&&window.matchMedia&&window.matchMedia('(pointer:coarse)').matches){
+navigator.share({title:'the / black brief',url:url}).catch(function(err){
+if(!err||err.name!=='AbortError')bbCopyLink(url,b);
+});
+return;
+}
+bbCopyLink(url,b);
+});
+return b;
+}
+
+function bbCopyLink(url,b){
 if(navigator.clipboard&&navigator.clipboard.writeText){
 navigator.clipboard.writeText(url).then(function(){
 b.textContent='copied.';b.classList.add('bb-copied');
 setTimeout(function(){b.textContent='§ share';b.classList.remove('bb-copied');},1500);
 }).catch(function(){bbFallbackCopy(url,b);});
 }else{bbFallbackCopy(url,b);}
-});
-return b;
 }
 
 function bbFallbackCopy(text,btn){
@@ -648,6 +664,50 @@ var tf=mkEl('div','video-card-footer');
 setAge(tf,'x.com',ts);
 tc.appendChild(tf);
 return tc;
+}
+
+// ── NEW SINCE LAST VISIT (Oct 2026) ──
+// The browser remembers the newest posts it saw (nothing leaves the device).
+// On the next visit, every post above them gets a small "new" tab.
+// A reload within 10 minutes keeps the same markers instead of clearing them.
+var SEEN_KEY='bb-seen-v1',SEEN_HOLD_MS=10*60*1000;
+var seenBaseline=null,seenReady=false;
+
+function postId(p){
+var line=p.text;
+if(line.trimStart().charAt(0)==='§')return line.replace(/\s+#\w+/g,'').trim();
+return safeUrl(stripTags(splitLabel(line).urlPart));
+}
+
+function initSeen(ids){
+var s=null;
+try{s=JSON.parse(localStorage.getItem(SEEN_KEY)||'null');}catch(e){}
+if(!s||!Array.isArray(s.ids))s=null;
+if(s&&Date.now()-s.t<SEEN_HOLD_MS){
+seenBaseline=Array.isArray(s.prev)?s.prev:null;
+return;
+}
+seenBaseline=s?s.ids:null;
+try{
+localStorage.setItem(SEEN_KEY,JSON.stringify({ids:ids.filter(Boolean).slice(0,8),t:Date.now(),prev:seenBaseline}));
+}catch(e){}
+}
+
+function markNew(ids){
+if(!seenBaseline)return;
+var cut=-1;
+for(var i=0;i<seenBaseline.length&&cut===-1;i++)cut=ids.indexOf(seenBaseline[i]);
+if(cut<1)return;
+var fresh={};
+for(var j=0;j<cut;j++)if(ids[j])fresh[ids[j]]=true;
+var cs=document.querySelectorAll('.post-container[data-post-id]');
+for(var k=0;k<cs.length;k++){
+if(fresh[cs[k].getAttribute('data-post-id')]===true){
+var t=mkEl('span','bb-new-tag');
+t.textContent='new';
+cs[k].appendChild(t);
+}
+}
 }
 
 // Lazy tweet loading via IntersectionObserver
@@ -818,6 +878,8 @@ notice('— no intel found —');
 log.textContent='no intel found';
 return;
 }
+var ids=lines.map(postId);
+if(!seenReady){seenReady=true;initSeen(ids);}
 var frag=document.createDocumentFragment();
 hs.style.display='';
 var hIdx=lines.findIndex(function(l){return l.tag==='headline';});
@@ -847,6 +909,7 @@ syncArchiveBtn();
 aw.style.display='none';
 }
 totalCount=lines.length;
+markNew(ids);
 applyPermalink();
 loadTw();
 bbUpdateStatus();
