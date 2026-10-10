@@ -389,6 +389,16 @@ var archCount=0;
 var totalCount=0;
 var bbSyncTime=0;
 var postParam=new URLSearchParams(window.location.search).get('post');
+// SHORT SHARE LINKS (Oct 2026): theblackbrief.com/p/<code>/ is a small preview
+// page built by GitHub (tools/build-share.js) that forwards here with ?post=.
+// If that page is not built yet, 404.html forwards here with ?p=<code> instead.
+var postCode=new URLSearchParams(window.location.search).get('p');
+// MUST stay identical to bbCode() in tools/build-share.js
+function bbCode(id){
+var h=0x811c9dc5;
+for(var i=0;i<id.length;i++){h^=id.charCodeAt(i);h=Math.imul(h,0x01000193);}
+return (h>>>0).toString(36);
+}
 var permalinkDone=false;
 var lastSig='';
 
@@ -491,7 +501,7 @@ var b=mkEl('button','bb-share-btn');
 b.textContent='§ share';
 b.addEventListener('click',function(e){
 e.stopPropagation();
-var url='https'+'://theblackbrief.com/?post='+encodeURIComponent(id);
+var url='https'+'://theblackbrief.com/p/'+bbCode(id)+'/';
 // SHARE SHEET (Oct 2026): phones and tablets open the system share sheet;
 // everything else copies the link, as before.
 if(navigator.share&&window.matchMedia&&window.matchMedia('(pointer:coarse)').matches){
@@ -947,11 +957,12 @@ bbUpdateStatus();
 
 // ── PERMALINK HANDLER ──
 function applyPermalink(){
-if(!postParam)return;
+if(!postParam&&!postCode)return;
 var allContainers=document.querySelectorAll('.post-container[data-post-id]');
 var plTarget=null;
 for(var pi=0;pi<allContainers.length;pi++){
-if(allContainers[pi].getAttribute('data-post-id')===postParam){plTarget=allContainers[pi];break;}
+var pid=allContainers[pi].getAttribute('data-post-id');
+if(pid===postParam||(postCode&&bbCode(pid)===postCode)){plTarget=allContainers[pi];break;}
 }
 if(!plTarget)return;
 plTarget.classList.add('bb-shared');
