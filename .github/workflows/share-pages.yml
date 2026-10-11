@@ -1,4 +1,4 @@
-# Runs each time posts.txt changes, and once a day. It does two things:
+# Runs each time posts.txt changes, and every 6 hours. It does two things:
 #   1. housekeeping: removes old posts and deleted tweets from posts.txt
 #      (see tools/housekeep.js; removed lines are kept in old-posts.txt)
 #   2. builds a small preview page for every post (the /p/ folder)
@@ -14,7 +14,7 @@ on:
       - tools/housekeep.js
       - .github/workflows/share-pages.yml
   schedule:
-    - cron: '17 9 * * *' # once a day, about 5am US Eastern
+    - cron: '17 */6 * * *' # every 6 hours (00:17, 06:17, 12:17, 18:17 UTC)
   workflow_dispatch:
 
 permissions:
@@ -31,7 +31,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: housekeeping
         env:
-          # deleted tweets are only checked on the daily run (and manual runs)
+          # deleted tweets are only checked on the 6-hourly run (and manual runs)
           CHECK_DEAD: ${{ github.event_name != 'push' && '1' || '0' }}
         run: node tools/housekeep.js
       - name: build pages
