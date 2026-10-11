@@ -40,14 +40,14 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 #bb-header{text-align:center;padding:16px 20px 10px;font-family:'Zilla Slab',serif}
 #bb-header h1{font-family:'Zilla Slab',serif;font-size:clamp(2rem,8vw,5rem);font-weight:700;font-style:normal;color:#ffffff;line-height:1.2;letter-spacing:0;white-space:nowrap}
 #bb-header h1 span{color:#cc2222}
-#bb-header p{font-family:'Source Serif 4',serif;font-size:clamp(0.85rem,2.2vw,1.125rem);font-weight:300;font-style:normal;color:#ffffff;margin-top:0.6rem;line-height:1.4;letter-spacing:0}
+#bb-header p{font-family:'Source Serif 4',serif;font-size:clamp(13.5px,1.6vw,18px);font-weight:400;font-style:normal;color:#bdbdbd;margin:2px auto 0;max-width:34em;line-height:1.35;letter-spacing:.01em;text-wrap:balance}
 
 /* ── STICKY SHELL ── */
 #bb-sticky-shell{position:sticky;top:0;z-index:100;background:#000000;border-bottom:1px solid rgba(255,255,255,0.08)}
 @media(prefers-color-scheme:light){#bb-sticky-shell{background:#f5f5f5;border-bottom-color:rgba(0,0,0,0.08)}}
 
 /* ── TICKER ── */
-#bb-ticker-outer{width:100%;max-width:900px;margin:0 auto 8px;display:flex;align-items:stretch;height:42px;border:1px solid rgba(204,34,34,0.4);border-radius:4px;font-family:'Zilla Slab',serif;box-sizing:border-box;cursor:pointer}
+#bb-ticker-outer{width:100%;max-width:900px;margin:0 auto 10px;display:flex;align-items:stretch;height:42px;border:1px solid rgba(204,34,34,0.4);border-radius:4px;font-family:'Zilla Slab',serif;box-sizing:border-box;cursor:pointer}
 #bb-ticker-label{flex-shrink:0;display:flex;align-items:center;gap:7px;padding:0 14px;background:#cc2222;border-radius:3px 0 0 3px;font-weight:700;font-size:14px;letter-spacing:.24em;color:#fff;text-transform:uppercase;white-space:nowrap}
 #bb-ticker-mask{flex:1;overflow:hidden;display:flex;align-items:center;background:rgba(204,34,34,0.06)}
 #bb-ticker-track{display:inline-flex;align-items:center;white-space:nowrap;will-change:transform}
@@ -64,9 +64,8 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 /* ── WRAPPER ── */
 #black-brief-wrapper{width:100%;display:flex;flex-direction:column;align-items:center;padding:16px 10px 48px;font-family:'Zilla Slab',serif;color:#e8e8e8}
 
-/* ── STATUS BAR ── */
-#bb-status-bar{width:100%;max-width:900px;margin:0 0 6px;line-height:1.2;font-family:'Zilla Slab',serif;font-size:15px;display:flex;align-items:center;justify-content:center;color:#999;letter-spacing:.18em;gap:6px}
-#bb-status-dot{width:6px;height:6px;background:#2ecc71;border-radius:50%;flex-shrink:0;animation:bb-blink 1.6s infinite}
+/* ── TICKER DOT (the green "live" dot that travels with the transmissions count) ── */
+.bb-tick-dot{display:inline-block;width:6px;height:6px;margin:0 9px 2px 0;vertical-align:middle;background:#2ecc71;border-radius:50%;animation:bb-blink 1.6s infinite}
 @keyframes bb-blink{0%,100%{opacity:1}50%{opacity:.2}}
 
 /* ── NEW TRANSMISSIONS PILL ── */
@@ -174,8 +173,7 @@ html,body{background:#f5f5f5}
 #bb-header h1{color:#1a1a1a}
 #bb-header p{color:#666}
 #black-brief-wrapper{color:#1a1a1a}
-#bb-status-bar{color:#666}
-#bb-status-dot{background:#27ae60}
+.bb-tick-dot{background:#27ae60}
 .feed-divider{background:rgba(0,0,0,0.08)}
 .rich-preview{background:#f0f2f4;border-color:rgba(0,0,0,0.12);color:#1a1a1a}
 .rich-preview:hover{background:#e8eaed}
@@ -324,7 +322,6 @@ html,body{background:#f5f5f5}
 #bb-ticker-outer{height:36px}
 #bb-ticker-label{font-size:12px;letter-spacing:.2em;padding:0 11px;gap:5px}
 .bb-tick-item{font-size:13px;padding:0 14px}
-#bb-status-bar{font-size:14px;letter-spacing:.12em}
 #bb-new-pill{font-size:11px;padding:9px 13px}
 }
 </style>
@@ -335,6 +332,7 @@ html,body{background:#f5f5f5}
 <div id="bb-sticky-shell">
 <div id="bb-header">
   <h1>the <span>/</span> black brief</h1>
+  <p>a newsfeed of things we don't wanna see in a world that isn't supposed to be</p>
 </div>
 
 <div style="width:100%;display:flex;flex-direction:column;align-items:center;padding:0 10px 4px">
@@ -342,8 +340,6 @@ html,body{background:#f5f5f5}
     <span id="bb-ticker-label">§ bb</span>
     <div id="bb-ticker-mask"><div id="bb-ticker-track"></div></div>
   </div>
-  <!-- status line: moved into the pinned header Oct 2026 -->
-  <div id="bb-status-bar"><span id="bb-status-dot"></span><span id="bb-log">initializing...</span></div>
 </div>
 </div>
 
@@ -377,7 +373,6 @@ var TS_RE=/(?:^|\s)@(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:\.\d+)?(?:Z|[+-]
 var isDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
 var theme=isDark?'dark':'light';
 var feed=document.getElementById('black-brief-feed');
-var log=document.getElementById('bb-log');
 var hs=document.getElementById('bb-headline-slot');
 var divider=document.getElementById('bb-feed-divider');
 var aw=document.getElementById('bb-archive-wrap');
@@ -920,7 +915,7 @@ hs.style.display='none';
 divider.style.display='none';
 aw.style.display='none';
 notice('— no intel found —');
-log.textContent='no intel found';
+tickMode='empty';tickerUpdate();
 return;
 }
 var ids=lines.map(postId);
@@ -957,6 +952,7 @@ totalCount=lines.length;
 markNew(ids);
 applyPermalink();
 loadTw();
+tickMode='ok';
 bbUpdateStatus();
 }
 
@@ -994,12 +990,11 @@ if(document.body.contains(plTarget))plTarget.scrollIntoView({behavior:'smooth',b
 },600);
 }
 
-// ── STATUS BAR ──
+// ── STATUS ──
+// The figures now live in the ticker (see TICKER at the bottom of this script).
 function bbUpdateStatus(){
 if(!bbSyncTime)return;
-var elapsed=Math.round((Date.now()-bbSyncTime)/60000);
-var age=elapsed<1?'just now':elapsed===1?'1m ago':elapsed+'m ago';
-log.textContent=totalCount+' transmissions // synced '+age;
+tickerUpdate();
 }
 setInterval(bbUpdateStatus,30000);
 
@@ -1179,50 +1174,112 @@ console.error('[BlackBrief]',err);
 loadFailed=true;
 lastCheck=Date.now();
 notice('— communications failure —');
-log.textContent='§ communications failure';
+tickMode='fail';tickerUpdate();
 });
 
-// ── TICKER ──
-(function(){
-var track=document.getElementById('bb-ticker-track');
-var outer=document.getElementById('bb-ticker-outer');
-var paused=false;
-var timer=null;
-var tagline='a newsfeed of things we don\'t wanna see in a world that isn\'t supposed to be';
+// ── TICKER (rebuilt Oct 2026) ──
+// The tagline is now the subtitle under the title. The ticker scrolls live
+// figures instead: total, last sync, newest post, posts today, and a count of
+// each kind of post. Text is refreshed in place so the scroll never restarts;
+// the strip is only rebuilt when the set of items or the ticker width changes.
+var tickTrack=document.getElementById('bb-ticker-track');
+var tickOuter=document.getElementById('bb-ticker-outer');
+var tickMask=document.getElementById('bb-ticker-mask');
+var tickPaused=false,tickTimer=null,tickSig='',tickMode='init';
+var TICK_SPEED=32; // pixels per second
 
-function setPaused(val){
-paused=val;
-if(val){
-track.style.animationPlayState='paused';
-outer.classList.add('bb-ticker-paused');
-}else{
-track.style.animationPlayState='running';
-outer.classList.remove('bb-ticker-paused');
-}
-}
+function plural(n,one,many){return n+' '+(n===1?one:many);}
 
-outer.addEventListener('click',function(){
-if(timer)clearTimeout(timer);
-setPaused(!paused);
-if(paused){timer=setTimeout(function(){setPaused(false);},8000);}
+function tickerItems(){
+if(tickMode==='init')return[{k:'init',t:'initializing...'}];
+if(tickMode==='fail')return[{k:'fail',t:'§ communications failure',c:'tick-urgent'}];
+if(tickMode==='empty')return[{k:'empty',t:'no intel found'}];
+var now=Date.now(),d=new Date();
+var dayStart=new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime();
+var x=0,art=0,vid=0,ed=0,today=0,latest=0;
+allLines.map(prep).forEach(function(p){
+if(!isNaN(p.ts)&&p.ts<=now+60000){
+if(p.ts>latest)latest=p.ts;
+if(p.ts>=dayStart)today++;
+}
+if(p.text.trimStart().charAt(0)==='§'){ed++;return;}
+var url=safeUrl(stripTags(splitLabel(p.text).urlPart));
+if(!url)return;
+if(getYtId(url))vid++;else if(isTw(url))x++;else art++;
 });
+var mins=Math.round((now-bbSyncTime)/60000);
+var out=[
+{k:'total',t:plural(allLines.length,'transmission','transmissions'),dot:true},
+{k:'sync',t:'synced '+(mins<1?'just now':mins+'m ago')}
+];
+var la=latest?ago(latest):'';
+if(la)out.push({k:'latest',t:'latest '+la});
+if(today)out.push({k:'today',t:today+' today'});
+if(x)out.push({k:'x',t:plural(x,'x post','x posts')});
+if(art)out.push({k:'art',t:plural(art,'article','articles')});
+if(vid)out.push({k:'vid',t:plural(vid,'video','videos')});
+if(ed)out.push({k:'ed',t:plural(ed,'editorial','editorials')});
+return out;
+}
 
+function tickerBuild(items){
+clearEl(tickTrack);
 function addSet(){
-var item=document.createElement('span');
-item.className='bb-tick-item';
-item.textContent=tagline;
-track.appendChild(item);
-var sep=document.createElement('span');
-sep.className='bb-tick-sep';
+items.forEach(function(it){
+var s=mkEl('span','bb-tick-item'+(it.c?' '+it.c:''));
+s.setAttribute('data-k',it.k);
+if(it.dot)s.appendChild(mkEl('span','bb-tick-dot'));
+s.appendChild(document.createTextNode(it.t));
+tickTrack.appendChild(s);
+var sep=mkEl('span','bb-tick-sep');
 sep.textContent='///';
-track.appendChild(sep);
-}
-addSet();
-addSet();
-requestAnimationFrame(function(){
-track.style.animation='bb-scroll 30s linear infinite';
+tickTrack.appendChild(sep);
 });
-})();
+}
+// repeat the set until it is wider than the ticker, then double it so the
+// scroll can loop without a visible seam
+addSet();
+var one=tickTrack.offsetWidth||1;
+var need=Math.min(40,Math.max(1,Math.ceil((tickMask.clientWidth+200)/one)));
+for(var i=1;i<need;i++)addSet();
+var count=tickTrack.childNodes.length;
+for(var j=0;j<count;j++)tickTrack.appendChild(tickTrack.childNodes[j].cloneNode(true));
+var half=tickTrack.offsetWidth/2;
+tickTrack.style.animation='bb-scroll '+Math.max(12,Math.round(half/TICK_SPEED))+'s linear infinite';
+tickTrack.style.animationPlayState=tickPaused?'paused':'running';
+}
+
+function tickerUpdate(){
+var items=tickerItems();
+var sig=items.map(function(i){return i.k;}).join('|')+'@'+tickMask.clientWidth;
+if(sig!==tickSig){tickSig=sig;tickerBuild(items);return;}
+items.forEach(function(it){
+var els=tickTrack.querySelectorAll('[data-k="'+it.k+'"]');
+for(var i=0;i<els.length;i++){
+if(els[i].lastChild.nodeValue!==it.t)els[i].lastChild.nodeValue=it.t;
+}
+});
+}
+
+function tickerPause(val){
+tickPaused=val;
+tickTrack.style.animationPlayState=val?'paused':'running';
+tickOuter.classList.toggle('bb-ticker-paused',val);
+}
+
+tickOuter.addEventListener('click',function(){
+if(tickTimer)clearTimeout(tickTimer);
+tickerPause(!tickPaused);
+if(tickPaused){tickTimer=setTimeout(function(){tickerPause(false);},8000);}
+});
+
+var tickResize=null;
+window.addEventListener('resize',function(){
+if(tickResize)clearTimeout(tickResize);
+tickResize=setTimeout(tickerUpdate,200);
+});
+
+tickerUpdate();
 
 })();
 </script>
