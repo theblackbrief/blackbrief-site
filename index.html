@@ -28,6 +28,21 @@
 <meta name="twitter:title" content="the / black brief"/>
 <meta name="twitter:description" content="a newsfeed of things we don't wanna see in a world that isn't supposed to be"/>
 <meta name="twitter:image" content="https://theblackbrief.com/BB_Share_Image.png"/>
+
+<!-- EARLY START (Oct 2026): ask for the posts, and for X's embed script, straight
+     away instead of waiting for the fonts. The main script picks the posts up
+     from window.__bbFeed. -->
+
+<link rel="preload" as="script" href="https://platform.twitter.com/widgets.js"/>
+<script>
+(function(){
+try{
+window.__bbFeed=fetch('https'+'://raw.githubusercontent.com/theblackbrief/blackbrief-site/main/posts.txt?t='+Date.now(),{cache:'no-store'})
+.then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.text();});
+window.__bbFeed.catch(function(){});
+}catch(e){window.__bbFeed=null;}
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600;700&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet"/>
@@ -740,6 +755,11 @@ seenBaseline=s?s.ids:topIds(ids);
 saveSeen(ids);
 }
 
+function clearNewTags(){
+var old=document.querySelectorAll('.bb-new-tag');
+for(var i=0;i<old.length;i++)old[i].parentNode.removeChild(old[i]);
+}
+
 // back on an open tab after 10+ minutes away: that is a new visit
 document.addEventListener('visibilitychange',function(){
 if(document.hidden){hiddenAt=Date.now();return;}
@@ -751,11 +771,11 @@ if(!topIds(ids).length)return;
 seenT=Date.now();
 seenBaseline=topIds(ids);
 saveSeen(ids);
-var old=document.querySelectorAll('.bb-new-tag');
-for(var i=0;i<old.length;i++)old[i].parentNode.removeChild(old[i]);
+clearNewTags();
 });
 
 function markNew(ids){
+clearNewTags(); // cards are kept between redraws, so start from a clean slate
 if(!seenBaseline)return;
 var cut=-1;
 for(var i=0;i<seenBaseline.length&&cut===-1;i++)cut=ids.indexOf(seenBaseline[i]);
@@ -772,7 +792,9 @@ cs[k].appendChild(t);
 }
 }
 
-// Lazy tweet loading via IntersectionObserver
+// Lazy tweet loading via IntersectionObserver.
+// A tweet starts loading when it is within 600px of the screen (was 200px
+// until Oct 2026), so a quick scroll meets fewer empty frames.
 var tweetObserver=null;
 if('IntersectionObserver' in window){
 tweetObserver=new IntersectionObserver(function(entries){
@@ -793,7 +815,7 @@ tweetObserver.unobserve(wrap);
 }
 }
 });
-},{rootMargin:'200px'});
+},{rootMargin:'600px'});
 }
 
 function splitLabel(line){
@@ -924,15 +946,54 @@ clearEl(feed);
 feed.appendChild(n);
 }
 
+// ── KEEP LOADED CARDS (Oct 2026) ──
+// A redraw used to throw every card away and build the feed again, so every
+// tweet on screen went blank and reloaded from X. Now a card that is already
+// on the page stays exactly where it is: new posts are slotted in, posts that
+// are gone are taken out, and nothing else is touched. (A card is never moved,
+// because moving an embed makes the browser reload it.)
+// A card counts as "the same" only if its line, tag in force and timestamp
+// are all unchanged; anything else is built fresh.
+function cardKey(p){return(p.tag||'')+'\n'+(isNaN(p.ts)?'':p.ts)+'\n'+p.text;}
+
+function dropCard(el){
+if(tweetObserver&&el.querySelectorAll){
+var w=el.querySelectorAll('.tweet-wrap[data-tweet-url]');
+for(var i=0;i<w.length;i++)tweetObserver.unobserve(w[i]);
+}
+el.parentNode.removeChild(el);
+}
+
+// make box (the feed or the archive) show exactly the posts in list, in order
+function syncCards(box,list,step){
+var keys=list.map(cardKey);
+var kids=Array.prototype.slice.call(box.children),j=0,i,k;
+// 1. take out anything that no longer belongs here (skeletons and notices too)
+for(i=0;i<kids.length;i++){
+k=kids[i].__bbKey?keys.indexOf(kids[i].__bbKey,j):-1;
+if(k===-1)dropCard(kids[i]);else j=k+1;
+}
+// 2. walk the wanted list, slotting new cards in around the ones that stayed
+var cur=box.firstElementChild,fresh=0;
+for(i=0;i<list.length;i++){
+if(cur&&cur.__bbKey===keys[i]){cur=cur.nextElementSibling;continue;}
+var c=buildCard(list[i],Math.min(fresh,6)*step); // fade-in is staggered for the first few only
+if(!c)continue;
+fresh++;
+c.__bbKey=keys[i];
+box.insertBefore(c,cur);
+}
+}
+
 // ── RENDER ──
 function render(){
 fetchQueue=0;
-clearEl(hs);
-clearEl(feed);
-clearEl(af);
 var lines=allLines.map(prep);
 lastSig=timedSig();
 if(lines.length===0){
+clearEl(hs);
+clearEl(feed);
+clearEl(af);
 hs.style.display='none';
 divider.style.display='none';
 aw.style.display='none';
@@ -948,31 +1009,26 @@ var showing=activeFilter?filterLabel(activeFilter):'';
 if(activeFilter&&!showing){activeFilter=null;tickerPause(false);} // nothing left to show: back to the full feed
 drawFilterBar(showing);
 if(activeFilter)lines=lines.filter(function(p){return matchesFilter(p,activeFilter);});
-var frag=document.createDocumentFragment();
 hs.style.display=activeFilter?'none':'';
 var hIdx=activeFilter?-1:lines.findIndex(function(l){return l.tag==='headline';});
-if(hIdx!==-1){
-buildHeadline(lines.splice(hIdx,1)[0]);
-divider.style.display='block';
-}else{
-divider.style.display='none';
+var hp=hIdx!==-1?lines.splice(hIdx,1)[0]:null;
+var hKey=hp?cardKey(hp):'';
+// the headline card is kept too, unless it is a different post now
+if(!hp||!hs.firstElementChild||hs.firstElementChild.__bbKey!==hKey){
+clearEl(hs);
+if(hp){
+buildHeadline(hp);
+if(hs.firstElementChild)hs.firstElementChild.__bbKey=hKey;
 }
+}
+divider.style.display=hp?'block':'none';
 var cut=activeFilter?lines.length:aLimit;
 var live=lines.slice(0,cut),arch=lines.slice(cut);
-live.forEach(function(l,i){
-var c=buildCard(l,Math.min(i,24)*55);
-if(c)frag.appendChild(c);
-});
-feed.appendChild(frag);
+syncCards(feed,live,55);
+syncCards(af,arch,40);
 archCount=arch.length;
 if(arch.length>0){
 aw.style.display='block';
-var af2=document.createDocumentFragment();
-arch.forEach(function(l,i){
-var c=buildCard(l,Math.min(i,24)*40);
-if(c)af2.appendChild(c);
-});
-af.appendChild(af2);
 syncArchiveBtn();
 }else{
 aw.style.display='none';
@@ -995,10 +1051,12 @@ var pid=allContainers[pi].getAttribute('data-post-id');
 if(pid===postParam||(postCode&&bbCode(pid)===postCode)){plTarget=allContainers[pi];break;}
 }
 if(!plTarget)return;
+if(!plTarget.classList.contains('bb-shared')){ // a kept card is already marked
 plTarget.classList.add('bb-shared');
 var note=mkEl('span','bb-shared-note');
 note.textContent='shared // viewing';
 plTarget.appendChild(note);
+}
 if(permalinkDone)return; // re-render: keep the green card, skip the scroll + drawer
 permalinkDone=true;
 if(plTarget.closest('#bb-archive-section')){
@@ -1033,10 +1091,14 @@ return text.split(/\r?\n/).map(function(l){return l.trim();}).filter(function(l)
 }
 
 function fetchFeed(){
-return fetch(GH+'?t='+Date.now(),{cache:'no-store'}).then(function(res){
+// EARLY START (Oct 2026): the first call uses the request the page head already sent
+var early=window.__bbFeed;
+window.__bbFeed=null;
+var req=early||fetch(GH+'?t='+Date.now(),{cache:'no-store'}).then(function(res){
 if(!res.ok)throw new Error('HTTP '+res.status);
 return res.text();
-}).then(parseLines);
+});
+return req.then(parseLines);
 }
 
 function showPill(n){
