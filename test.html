@@ -459,6 +459,37 @@ html,body{background:#f5f5f5}
 #bb-drawer-nav{padding-left:10px;padding-right:10px}
 #bb-drawer-nav button{font-size:12px;min-width:84px;padding:11px 10px}
 }
+/* ── CARD LOOK (TEST PAGE ONLY, version 4) ──
+   Less grey. Dark: near-black cards outlined by a hairline, brighter wording.
+   Light: white cards on the pale page. A thick left edge now appears only
+   where it carries a colour (a tag, an editorial, the top post). "§ share"
+   sits inside the card, on its bottom line. */
+:root{--bb-card:#070707;--bb-edge:rgba(255,255,255,0.15)}
+@media(prefers-color-scheme:light){:root{--bb-card:#ffffff;--bb-edge:rgba(0,0,0,0.14)}}
+.video-card,.rich-preview,.rich-preview.tag-none{border:1px solid var(--bb-edge);background:var(--bb-card)}
+.editorial-card,.headline-card{border-top:1px solid var(--bb-edge);border-right:1px solid var(--bb-edge);border-bottom:1px solid var(--bb-edge);background:var(--bb-card)}
+.rich-preview:hover,.wire-card:hover{background:var(--bb-card)}
+@media(hover:hover){.rich-preview:hover,.wire-card:hover{background:#111111}}
+.wire-text{color:#f2f2f2}
+.rich-preview-title,.headline-title,.editorial-text{color:#f2f2f2}
+.wire-card>.video-card-header{color:#b4b4b4}
+.wire-fresh>.video-card-header{color:#f0f0f0}
+/* the bottom line of a card: what a tap does on the left, share on the right */
+.bb-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left}
+.bb-foot .bb-share-btn{display:inline-block;width:auto;padding:0;flex-shrink:0;line-height:inherit}
+.wire-cue.has-media{font-weight:700;color:#ffffff}
+.video-card[class*="tag-"] .wire-cue.has-media{color:inherit}
+.headline-cue.has-media{color:#cc2222}
+.post-container:not(.headline-card)>.bb-shared-note{position:static;display:block;padding:6px 2px 0}
+@media(prefers-color-scheme:light){
+.video-card,.rich-preview,.rich-preview.tag-none,.editorial-card,.headline-card{box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+.wire-text,.rich-preview-title,.headline-title,.editorial-text{color:#0f0f0f}
+.wire-card>.video-card-header{color:#5c5c5c}
+.wire-fresh>.video-card-header{color:#111111}
+.wire-cue.has-media{color:#111111}
+.stamp{background:#ffffff}
+}
+@media(prefers-color-scheme:light) and (hover:hover){.rich-preview:hover,.wire-card:hover{background:#f6f7f8}}
 </style>
 
 </head>
@@ -915,6 +946,18 @@ var cs=document.querySelectorAll('.wire-card');
 for(var i=0;i<cs.length;i++){setWire(cs[i]);wireAge(cs[i]);}
 checkFades();
 }
+// SHARE INSIDE THE CARD (test page): "§ share" joins the card's bottom line
+// instead of floating in the gap underneath it.
+function footShare(card,id){
+var b=mkShareBtn(id);
+var f=card.querySelector('.video-card-footer,.rich-preview-action,.editorial-footer');
+if(!f){card.appendChild(b);return;}
+var lab=mkEl('span');
+while(f.firstChild)lab.appendChild(f.firstChild);
+f.appendChild(lab);
+f.appendChild(b);
+f.classList.add('bb-foot');
+}
 function buildWireCard(url,tag,ts){
 var borderTag=borderTagOf(tag);
 var tc=mkEl('div','video-card tweet-card wire-card'+(borderTag!=='none'?' tag-'+borderTag:''));
@@ -925,7 +968,9 @@ var th=mkEl('div','video-card-header');
 setAge(th,twHandle(url),ts);
 tc.appendChild(th);
 tc.appendChild(wireBody());
-tc.appendChild(mkEl('div','video-card-footer wire-cue'));
+var tf=mkEl('div','video-card-footer');
+tf.appendChild(mkEl('span','wire-cue'));
+tc.appendChild(tf);
 setWire(tc);
 wireAge(tc);
 return tc;
@@ -1117,7 +1162,7 @@ card.style.animationDelay=delay+'ms';
 card.setAttribute('data-post-id',editId);
 if(hasStamp)card.appendChild(mkStamp(tag));
 card.appendChild(buildEditorialCard(line,tag));
-card.appendChild(mkShareBtn(editId));
+footShare(card,editId);
 return card;
 }
 var parts=splitLabel(line);
@@ -1135,7 +1180,7 @@ card.appendChild(buildWireCard(url,tag,p.ts));
 }else{
 card.appendChild(buildRichCard(url,tag,parts.label));
 }
-card.appendChild(mkShareBtn(url));
+footShare(card,url);
 return card;
 }
 
