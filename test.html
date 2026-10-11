@@ -360,30 +360,56 @@ html,body{background:#f5f5f5}
 #bb-new-pill{font-size:11px;padding:9px 13px}
 }
 /* ── WIRE CARDS (TEST PAGE ONLY, Oct 2026) ──
-   An X post drawn as our own card: handle and age on top, the post's wording,
-   and a footer that says what a tap will show ("view post", "view video",
-   "view image"). Tapping opens the real X post in the drawer. */
+   An X post drawn as our own card: handle and age on top, an optional red
+   kicker ("breaking", "just in"), the post's wording, and a footer that says
+   what a tap will show ("view post", "view video", "view image"). Tapping
+   opens the real X post in the drawer. */
 .wire-card{cursor:pointer;min-height:300px;transition:background .18s}
 @media(hover:hover){.wire-card:hover{background:rgba(255,255,255,0.055)}}
-.wire-text{flex:1 0 auto;display:flex;align-items:center;justify-content:center;padding:4px 24px 20px;font-family:'Source Serif 4',serif;font-weight:600;color:#e0e0e0;line-height:1.38;text-align:center}
-.wire-text span{display:block;max-height:12.42em;overflow:hidden;overflow-wrap:anywhere}
-/* a long post fades out at the bottom instead of stopping mid-sentence */
-.wire-fade span{-webkit-mask-image:linear-gradient(#000 calc(100% - 3.4em),transparent);mask-image:linear-gradient(#000 calc(100% - 3.4em),transparent)}
+.wire-text{flex:1 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4px 24px 20px;font-family:'Source Serif 4',serif;font-weight:600;color:#e0e0e0;line-height:1.38;text-align:center}
+/* two sizes only: a short post, and everything else. Six lines at most. */
+.wire-text span{display:block;max-height:8.28em;overflow:hidden;overflow-wrap:anywhere}
 .wire-s{font-size:23px}
 .wire-m{font-size:19px}
-.wire-l{font-size:16.5px}
+/* a long post fades out at the bottom instead of stopping mid-sentence */
+.wire-fade span{-webkit-mask-image:linear-gradient(#000 calc(100% - 2.9em),transparent);mask-image:linear-gradient(#000 calc(100% - 2.9em),transparent)}
+/* the kicker: "breaking", "just in", "new"... lifted off the front of the post */
+.wire-kicker{font-family:'Zilla Slab',serif;font-size:12px;font-weight:700;letter-spacing:.26em;line-height:1;text-transform:uppercase;color:#cc2222;margin-bottom:11px}
+.wire-kicker:empty{display:none}
+.video-card.tag-urgent .wire-kicker{color:#ff3333}
+.video-card.tag-sus .wire-kicker{color:#ffaa00}
+.video-card.tag-custom .wire-kicker{color:#d8d0c0}
 /* no wording: a post that has just arrived, or one X no longer has */
 .wire-none{font-family:'Zilla Slab',serif;font-weight:400;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#777}
 .wire-pending{color:#c8c8c8}
 .wire-cue.has-media{color:#e6e6e6}
+/* live: under an hour old gets the green dot and a brighter time; over a day old steps back a little */
+.wire-fresh>.video-card-header{color:#e6e6e6}
+.wire-fresh>.video-card-header::before{content:'';display:inline-block;width:6px;height:6px;margin:0 9px 2px 0;vertical-align:middle;background:#2ecc71;border-radius:50%;animation:bb-blink 1.6s infinite}
+.wire-old .wire-text span{opacity:.8}
 /* the top post */
 .headline-card.wire-card{min-height:0}
 .headline-card .wire-text{padding:6px 4px 4px}
 .headline-card .wire-s{font-size:30px}
 .headline-card .wire-m{font-size:24px}
-.headline-card .wire-l{font-size:19px}
 .headline-cue{font-family:'Zilla Slab',serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#cc2222;text-align:center;margin-top:16px}
 .headline-cue.has-media{color:#cc2222;font-weight:700}
+
+/* ── RHYTHM (test page): the newest post runs full width in larger type ── */
+@media(min-width:641px){#black-brief-feed>.bb-lead{grid-column:1/-1}}
+.bb-lead .wire-card{min-height:250px}
+.bb-lead .wire-text{padding:8px 56px 24px}
+.bb-lead .wire-s{font-size:32px}
+.bb-lead .wire-m{font-size:25px}
+.bb-lead .wire-kicker{font-size:13px;margin-bottom:13px}
+.bb-lead .rich-preview-title{font-size:28px}
+.bb-lead .editorial-text{font-size:30px}
+
+/* ── DAY MARKERS (test page): "today // sun oct 11", "sat oct 10" ── */
+#bb-feed-divider{display:none!important}
+.bb-day{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin:0 0 -10px;font-family:'Zilla Slab',serif;font-size:12px;font-weight:700;letter-spacing:.24em;line-height:1;text-transform:uppercase;color:#8a8a8a;white-space:nowrap}
+.bb-day::before,.bb-day::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.10)}
+.bb-day b{color:#cc2222;font-weight:700}
 
 /* the drawer, when it holds an X post */
 #bb-drawer{overscroll-behavior:contain}
@@ -406,6 +432,13 @@ html,body{background:#f5f5f5}
 .wire-pending{color:#444}
 .wire-cue.has-media{color:#222}
 .headline-cue.has-media{color:#cc2222}
+.video-card.tag-urgent .wire-kicker{color:#cc2222}
+.video-card.tag-sus .wire-kicker{color:#cc7700}
+.video-card.tag-custom .wire-kicker{color:#5a5348}
+.wire-fresh>.video-card-header{color:#222}
+.wire-fresh>.video-card-header::before{background:#27ae60}
+.bb-day{color:#6e6e6e}
+.bb-day::before,.bb-day::after{background:rgba(0,0,0,0.12)}
 #bb-drawer-tweet{background:#f5f5f5}
 }
 @media(prefers-color-scheme:light) and (hover:hover){.wire-card:hover{background:#e8eaed}}
@@ -414,10 +447,15 @@ html,body{background:#f5f5f5}
 .wire-text{padding:2px 16px 16px}
 .wire-s{font-size:20px}
 .wire-m{font-size:17.5px}
-.wire-l{font-size:15.5px}
 .headline-card .wire-s{font-size:24px}
 .headline-card .wire-m{font-size:20px}
-.headline-card .wire-l{font-size:17px}
+.bb-lead .wire-card{min-height:240px}
+.bb-lead .wire-text{padding:4px 16px 18px}
+.bb-lead .wire-s{font-size:25px}
+.bb-lead .wire-m{font-size:20px}
+.bb-lead .rich-preview-title{font-size:22px}
+.bb-lead .editorial-text{font-size:26px}
+.bb-day{font-size:11px;margin-bottom:-6px}
 #bb-drawer-nav{padding-left:10px;padding-right:10px}
 #bb-drawer-nav button{font-size:12px;min-width:84px;padding:11px 10px}
 }
@@ -811,7 +849,25 @@ var e=wireMarks[bbCode(id)];
 var m=e&&e.m;
 return m==='video'||m==='image'||m==='media'?m:'';
 }
-// fill in (or refresh) a card's wording and its "view ..." line
+// KICKER: a post that opens with "BREAKING:", "JUST IN:", "NEW:" and the like
+// has that word lifted off and shown as a small red label above the wording.
+// A leading siren or flag emoji in front of the word is allowed for.
+var KICK_RE=/^[^A-Za-z0-9"'\u201c\u2018@#$(\[]{0,8}(BREAKING NEWS|BREAKING|JUST IN|NEW|UPDATE|DEVELOPING|ALERT|LATEST|EXCLUSIVE|URGENT|HAPPENING NOW|WATCH)(?:\s*:\s*|\s+[-\u2013\u2014|]\s+)/i;
+function wireSplit(t){
+var m=t.match(KICK_RE);
+if(!m)return{k:'',t:t};
+var rest=t.slice(m[0].length).trim();
+if(rest.length<12)return{k:'',t:t}; // nearly nothing left: leave the post as written
+return{k:m[1].toLowerCase(),t:rest};
+}
+// the middle of a card: kicker (empty unless there is one) + wording
+function wireBody(){
+var body=mkEl('div','wire-text');
+body.appendChild(mkEl('div','wire-kicker'));
+body.appendChild(mkEl('span'));
+return body;
+}
+// fill in (or refresh) a card's kicker, wording and its "view ..." line
 function setWire(tc){
 var id=tc.getAttribute('data-wire-id');
 var t=wireText(id),m=wireMedia(id);
@@ -820,15 +876,25 @@ var pending=!t&&ts>0&&Date.now()-ts<WIRE_NEW_MS;
 var sig=t+'|'+m+'|'+(pending?1:0);
 if(tc.__wire===sig)return;
 tc.__wire=sig;
+var w=t?wireSplit(t):{k:'',t:''};
 var body=tc.querySelector('.wire-text');
-body.className='wire-text '+(t?(t.length<=110?'wire-s':t.length<=220?'wire-m':'wire-l'):pending?'wire-none wire-pending':'wire-none');
-var sp=body.firstChild;
+body.className='wire-text '+(t?(w.t.length<=110?'wire-s':'wire-m'):pending?'wire-none wire-pending':'wire-none');
+body.querySelector('.wire-kicker').textContent=w.k;
+var sp=body.querySelector('span');
 clearEl(sp);
 if(pending)sp.appendChild(mkEl('i','bb-tick-dot'));
-sp.appendChild(document.createTextNode(t||(pending?'new transmission':'post on x')));
+sp.appendChild(document.createTextNode(t?w.t:(pending?'new transmission':'post on x')));
 var cue=tc.querySelector('.wire-cue');
-cue.textContent='view '+(m||'post')+' »';
+cue.textContent='view '+(m||'post')+' \u00bb';
 cue.classList.toggle('has-media',!!m);
+}
+// LIVE: under an hour old is "fresh" (green dot, brighter time); over a day
+// old, or with no timestamp, steps back a little
+function wireAge(tc){
+var ts=Number(tc.getAttribute('data-wire-ts'))||0;
+var age=ts?Date.now()-ts:Infinity;
+tc.classList.toggle('wire-fresh',age>=0&&age<3600000);
+tc.classList.toggle('wire-old',age>86400000);
 }
 // a post too long for its card gets a fade at the bottom
 var fadeQueued=false;
@@ -839,14 +905,14 @@ requestAnimationFrame(function(){
 fadeQueued=false;
 var els=document.querySelectorAll('.wire-text');
 for(var i=0;i<els.length;i++){
-var sp=els[i].firstChild;
+var sp=els[i].querySelector('span');
 els[i].classList.toggle('wire-fade',sp.scrollHeight>sp.clientHeight+2);
 }
 });
 }
 function fillWire(){
 var cs=document.querySelectorAll('.wire-card');
-for(var i=0;i<cs.length;i++)setWire(cs[i]);
+for(var i=0;i<cs.length;i++){setWire(cs[i]);wireAge(cs[i]);}
 checkFades();
 }
 function buildWireCard(url,tag,ts){
@@ -858,13 +924,62 @@ tc.setAttribute('data-tweet',url.replace('x.com','twitter.com').split('?')[0]);
 var th=mkEl('div','video-card-header');
 setAge(th,twHandle(url),ts);
 tc.appendChild(th);
-var body=mkEl('div','wire-text');
-body.appendChild(mkEl('span'));
-tc.appendChild(body);
+tc.appendChild(wireBody());
 tc.appendChild(mkEl('div','video-card-footer wire-cue'));
 setWire(tc);
+wireAge(tc);
 return tc;
 }
+
+// RHYTHM + DAY MARKERS (test page). Runs after every redraw.
+//  - the newest post in the feed runs full width in larger type
+//  - a thin labelled line marks where each day starts: "today // sun oct 11"
+// A post with no timestamp counts as the same day as the next dated post
+// below it (the same rule housekeeping uses); with none below, "earlier".
+var DOW=['sun','mon','tue','wed','thu','fri','sat'];
+var MON=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+function dayKey(ts){
+if(!ts||isNaN(ts))return'';
+var d=new Date(ts);
+return d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate();
+}
+function dayMarker(ts){
+var m=mkEl('div','bb-day');
+var sp=mkEl('span');
+if(!ts){sp.textContent='earlier';}
+else{
+var d=new Date(ts);
+var label=DOW[d.getDay()]+' '+MON[d.getMonth()]+' '+d.getDate();
+if(dayKey(ts)===dayKey(Date.now())){
+var b=mkEl('b');
+b.textContent='today';
+sp.appendChild(b);
+sp.appendChild(document.createTextNode(' // '+label));
+}else sp.textContent=label;
+}
+m.appendChild(sp);
+return m;
+}
+function dressFeed(){
+var i;
+var old=document.querySelectorAll('.bb-day');
+for(i=0;i<old.length;i++)old[i].parentNode.removeChild(old[i]);
+var cs=Array.prototype.slice.call(feed.querySelectorAll('.post-container')).concat(Array.prototype.slice.call(af.querySelectorAll('.post-container')));
+// the day each card belongs to, worked out from the bottom up
+var days=[],carry=0;
+for(i=cs.length-1;i>=0;i--){
+var ts=cs[i].__bbTs;
+if(ts&&!isNaN(ts))carry=ts;
+days[i]=carry;
+}
+var prev=null;
+for(i=0;i<cs.length;i++){
+cs[i].classList.toggle('bb-lead',i===0&&!activeFilter&&cs[i].parentNode===feed);
+var k=dayKey(days[i]);
+if(k!==prev){cs[i].parentNode.insertBefore(dayMarker(days[i]),cs[i]);prev=k;}
+}
+}
+
 // the same link "§ share" gives, for the share button inside the drawer
 function shareFrom(id,b){
 var url='https'+'://theblackbrief.com/p/'+bbCode(id)+'/';
@@ -1046,9 +1161,7 @@ hc.className+=' wire-card';
 hc.setAttribute('data-wire-id',url);
 hc.setAttribute('data-wire-ts',isNaN(p.ts)?'':String(p.ts));
 hc.setAttribute('data-tweet',url.replace('x.com','twitter.com').split('?')[0]);
-var wt=mkEl('div','wire-text');
-wt.appendChild(mkEl('span'));
-hi.appendChild(wt);
+hi.appendChild(wireBody());
 hi.appendChild(mkEl('div','wire-cue headline-cue'));
 sig.textContent='top post // '+twHandle(url);
 }else{
@@ -1131,6 +1244,7 @@ var c=buildCard(list[i],Math.min(fresh,6)*step); // fade-in is staggered for the
 if(!c)continue;
 fresh++;
 c.__bbKey=keys[i];
+c.__bbTs=list[i].ts;
 box.insertBefore(c,cur);
 }
 }
@@ -1184,6 +1298,7 @@ syncArchiveBtn();
 aw.style.display='none';
 }
 totalCount=lines.length;
+dressFeed();
 markNew(ids);
 applyPermalink();
 loadTw();
@@ -1314,8 +1429,9 @@ console.warn('[BlackBrief] refresh failed',err);
 }
 
 setInterval(checkForUpdates,POLL_MS);
-// test page: pick up the wording and media marks of newly added posts
-setInterval(function(){if(!document.hidden)loadWire().then(fillWire);},60000);
+// test page: once a minute pick up the wording and media marks of new posts,
+// and keep the live dots and day markers current
+setInterval(function(){if(!document.hidden)loadWire().then(function(){fillWire();if(allLines.length)dressFeed();});},60000);
 window.addEventListener('resize',checkFades);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(checkFades);
 document.addEventListener('visibilitychange',function(){
@@ -1386,14 +1502,14 @@ var drawerNav=mkEl('div');
 drawerNav.id='bb-drawer-nav';
 var navPrev=mkEl('button');
 navPrev.type='button';
-navPrev.textContent='« prev';
+navPrev.textContent='\u00ab prev';
 var navShare=mkEl('button');
 navShare.type='button';
 navShare.id='bb-drawer-share';
-navShare.textContent='§ share';
+navShare.textContent='\u00a7 share';
 var navNext=mkEl('button');
 navNext.type='button';
-navNext.textContent='next »';
+navNext.textContent='next \u00bb';
 drawerNav.appendChild(navPrev);
 drawerNav.appendChild(navShare);
 drawerNav.appendChild(navNext);
@@ -1542,7 +1658,7 @@ wireCur=wireFirst=null;
 clearEl(drawerTweet);
 drawerTweet.style.display='none';
 drawer.classList.remove('wire-mode');
-drawerNewtab.textContent='open in new tab »';
+drawerNewtab.textContent='open in new tab \u00bb';
 drawer.style.transform='';
 drawerFrame.style.display='';
 drawerBrief.style.display='';
