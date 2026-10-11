@@ -1,4 +1,8 @@
 {
+ "vh2rq2": {
+  "tries": 0,
+  "done": false
+ },
  "1e6ywcs": {
   "tries": 1,
   "done": true,
@@ -291,12 +295,6 @@
   "tries": 1,
   "done": true,
   "title": "@Barchart: JUST IN 🚨: Diesel soars to highest price in history 📈 📈",
-  "image": ""
- },
- "bfg4uv": {
-  "tries": 1,
-  "done": true,
-  "title": "@charliebilello: Price changes over last year (August CPI report) Fuel Oil: +52.0% Gasoline: +27.4% Gas Utilities: +4.4% Electricity: +3.8% Apparel: +3.6% Overall CPI: +3.4% Food away from home: +3.4% Shelter: +3.0% Medical Care: +2.5% Transportation: +2.4% Food at home: +2.2% New Cars: +0.6%…",
   "image": ""
  }
 }
