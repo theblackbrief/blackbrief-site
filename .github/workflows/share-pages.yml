@@ -1,6 +1,9 @@
-# Builds a small preview page for every post (the /p/ folder) each time
-# posts.txt changes. See tools/build-share.js.
-name: build share pages
+# Runs each time posts.txt changes, and once a day. It does two things:
+#   1. housekeeping: removes old posts and deleted tweets from posts.txt
+#      (see tools/housekeep.js; removed lines are kept in old-posts.txt)
+#   2. builds a small preview page for every post (the /p/ folder)
+#      (see tools/build-share.js)
+name: housekeeping and share pages
 
 on:
   push:
@@ -8,7 +11,10 @@ on:
     paths:
       - posts.txt
       - tools/build-share.js
+      - tools/housekeep.js
       - .github/workflows/share-pages.yml
+  schedule:
+    - cron: '17 9 * * *' # once a day, about 5am US Eastern
   workflow_dispatch:
 
 permissions:
@@ -23,14 +29,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: housekeeping
+        env:
+          # deleted tweets are only checked on the daily run (and manual runs)
+          CHECK_DEAD: ${{ github.event_name != 'push' && '1' || '0' }}
+        run: node tools/housekeep.js
       - name: build pages
         run: node tools/build-share.js
-      - name: save pages to the repo
+      - name: save to the repo
         run: |
           git config user.name "blackbrief-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A p tools/share-cache.json
+          git add -A p tools/share-cache.json tools/housekeep-state.json posts.txt old-posts.txt
           if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
-          git commit -m "share pages"
+          git commit -m "housekeeping and share pages"
           git pull --rebase origin main
           git push
