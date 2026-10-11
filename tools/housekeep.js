@@ -1,10 +1,11 @@
 // ── BLACK BRIEF: HOUSEKEEPING ──
 // GitHub runs this by itself (see .github/workflows/share-pages.yml) each time
-// posts.txt changes and once a day. It keeps the feed fresh:
+// posts.txt changes and every 6 hours. It keeps the feed fresh:
 //   - a post older than MAX_AGE_DAYS is removed
 //   - never more than MAX_POSTS are kept
 //   - never fewer than MIN_POSTS are kept (the newest ones stay, whatever their age)
-//   - a tweet that X reports as deleted on two separate days is removed
+//   - a tweet that X reports as deleted on two checks in a row, hours apart,
+//     is removed
 // Nothing is thrown away: every removed line is added to old-posts.txt, which
 // the site does not read. To bring a post back, move its line back into
 // posts.txt. Nothing here changes index.html.
@@ -21,9 +22,9 @@ const ROOT = path.join(__dirname, '..');
 const POSTS = path.join(ROOT, 'posts.txt');
 const OLD = path.join(ROOT, 'old-posts.txt');
 const STATE = path.join(__dirname, 'housekeep-state.json');
-const CHECK_DEAD = process.env.CHECK_DEAD === '1'; // only on the daily run
+const CHECK_DEAD = process.env.CHECK_DEAD === '1'; // only on the 6-hourly run
 const DAY = 24 * 60 * 60 * 1000;
-const RECHECK_MS = 20 * 60 * 60 * 1000; // a second "deleted" answer only counts this much later
+const RECHECK_MS = 5 * 60 * 60 * 1000; // a second "deleted" answer only counts this much later
 
 // ── the same rules index.html uses to read a posts.txt line ──
 const TS_RE = /(?:^|\s)@(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)(?=\s|$)/;
@@ -95,7 +96,7 @@ async function tweetStatus(url) {
   const posts = rows.filter(r => !r.junk).reverse(); // newest first
   if (posts.length === 0) { console.log('no posts found; nothing changed'); touch(); return; }
 
-  // ── deleted tweets (daily run only) ──
+  // ── deleted tweets (6-hourly run only) ──
   if (CHECK_DEAD) {
     const tweets = posts.slice(0, MAX_POSTS).filter(r => r.tweet);
     const gone = [], ok = [];
