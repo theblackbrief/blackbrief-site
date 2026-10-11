@@ -8,7 +8,8 @@
 //     is removed
 // Nothing is thrown away: every removed line is added to old-posts.txt, which
 // the site does not read. To bring a post back, move its line back into
-// posts.txt. Nothing here changes index.html.
+// posts.txt. It also tidies posts.txt on every run: no empty rows, and no line
+// break at the end of the file. Nothing here changes index.html.
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -142,11 +143,16 @@ async function tweetStatus(url) {
   if (removed.size > 0) {
     const out = rows.filter(r => removed.has(r)).map(r => r.line);
     fs.appendFileSync(OLD, out.join('\n') + '\n');
-    fs.writeFileSync(POSTS, kept.map(r => r.line).join('\n') + (raw.endsWith('\n') ? '\n' : ''));
   }
+  // always leave posts.txt tidy: one post per line, no empty rows, and no line
+  // break at the very end. The Shortcut puts its own line break in front of
+  // each new post, so a file that ended with one would get an empty row.
+  const tidy = kept.map(r => r.line).join('\n');
+  const tidied = tidy !== raw;
+  if (tidied) fs.writeFileSync(POSTS, tidy);
   fs.writeFileSync(STATE, JSON.stringify(still, null, 1) + '\n');
   touch();
-  console.log(kept.length + ' posts kept; removed ' + aged + ' old, ' + dead + ' deleted tweets, ' + junk + ' unreadable lines');
+  console.log(kept.length + ' posts kept; removed ' + aged + ' old, ' + dead + ' deleted tweets, ' + junk + ' unreadable lines' + (tidied && removed.size === 0 ? '; tidied empty rows' : ''));
 })().catch(e => { console.error(e); process.exit(1); });
 
 // make sure both side files exist, so the workflow can always save them
