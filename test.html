@@ -360,22 +360,52 @@ html,body{background:#f5f5f5}
 #bb-new-pill{font-size:11px;padding:9px 13px}
 }
 /* ── WIRE CARDS (TEST PAGE ONLY, Oct 2026) ──
-   An X post drawn as our own card: handle, the post's wording, "view post".
-   Tapping it opens the real X post in the drawer. */
+   An X post drawn as our own card: handle and age on top, the post's wording,
+   and a footer that says what a tap will show ("view post", "view video",
+   "view image"). Tapping opens the real X post in the drawer. */
 .wire-card{cursor:pointer;min-height:300px;transition:background .18s}
 @media(hover:hover){.wire-card:hover{background:rgba(255,255,255,0.055)}}
 .wire-text{flex:1 0 auto;display:flex;align-items:center;justify-content:center;padding:4px 24px 20px;font-family:'Source Serif 4',serif;font-weight:600;color:#e0e0e0;line-height:1.38;text-align:center}
-.wire-text span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:9;overflow:hidden;overflow-wrap:anywhere}
+.wire-text span{display:block;max-height:12.42em;overflow:hidden;overflow-wrap:anywhere}
+/* a long post fades out at the bottom instead of stopping mid-sentence */
+.wire-fade span{-webkit-mask-image:linear-gradient(#000 calc(100% - 3.4em),transparent);mask-image:linear-gradient(#000 calc(100% - 3.4em),transparent)}
 .wire-s{font-size:23px}
 .wire-m{font-size:19px}
 .wire-l{font-size:16.5px}
+/* no wording: a post that has just arrived, or one X no longer has */
 .wire-none{font-family:'Zilla Slab',serif;font-weight:400;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#777}
-#bb-drawer-tweet{flex:1;display:none;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:14px 10px 48px;background:#000}
+.wire-pending{color:#c8c8c8}
+.wire-cue.has-media{color:#e6e6e6}
+/* the top post */
+.headline-card.wire-card{min-height:0}
+.headline-card .wire-text{padding:6px 4px 4px}
+.headline-card .wire-s{font-size:30px}
+.headline-card .wire-m{font-size:24px}
+.headline-card .wire-l{font-size:19px}
+.headline-cue{font-family:'Zilla Slab',serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#cc2222;text-align:center;margin-top:16px}
+.headline-cue.has-media{color:#cc2222;font-weight:700}
+
+/* the drawer, when it holds an X post */
+#bb-drawer{overscroll-behavior:contain}
+#bb-drawer.wire-mode{height:auto;max-height:90%}
+#bb-drawer.wire-drag{transition:none}
+#bb-drawer-grab{position:absolute;top:6px;left:50%;width:38px;height:4px;margin-left:-19px;border-radius:2px;background:rgba(255,255,255,.24);pointer-events:none}
+#bb-drawer-bar{padding-top:18px}
+#bb-drawer-tweet{flex:1 1 auto;min-height:200px;display:none;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:14px 10px 18px;background:#000}
 #bb-drawer-tweet>div{max-width:550px;margin:0 auto}
-.wire-status{font-family:'Zilla Slab',serif;font-size:13px;letter-spacing:.2em;color:#888;text-align:center;padding:48px 20px}
+.wire-status{font-family:'Zilla Slab',serif;font-size:13px;letter-spacing:.2em;color:#888;text-align:center;padding:60px 20px}
+#bb-drawer-nav{display:none;flex-shrink:0;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,.08);background:#111;border-radius:0}
+#bb-drawer.wire-mode #bb-drawer-nav{display:flex}
+#bb-drawer-nav button{font-family:'Zilla Slab',serif;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;line-height:1;color:#cfcfcf;background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:11px 14px;min-width:96px;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+#bb-drawer-nav button:disabled{opacity:.25;cursor:default}
+#bb-drawer-nav #bb-drawer-share{border-color:transparent;color:#999;min-width:0}
+#bb-drawer-nav #bb-drawer-share.bb-copied{color:#44dd77}
+@media(hover:hover){#bb-drawer-nav button:not(:disabled):hover{color:#fff;border-color:rgba(255,255,255,.5)}#bb-drawer-nav #bb-drawer-share:hover{border-color:transparent}}
 @media(prefers-color-scheme:light){
 .wire-text{color:#111}
-.wire-none{color:#777}
+.wire-pending{color:#444}
+.wire-cue.has-media{color:#222}
+.headline-cue.has-media{color:#cc2222}
 #bb-drawer-tweet{background:#f5f5f5}
 }
 @media(prefers-color-scheme:light) and (hover:hover){.wire-card:hover{background:#e8eaed}}
@@ -385,6 +415,11 @@ html,body{background:#f5f5f5}
 .wire-s{font-size:20px}
 .wire-m{font-size:17.5px}
 .wire-l{font-size:15.5px}
+.headline-card .wire-s{font-size:24px}
+.headline-card .wire-m{font-size:20px}
+.headline-card .wire-l{font-size:17px}
+#bb-drawer-nav{padding-left:10px;padding-right:10px}
+#bb-drawer-nav button{font-size:12px;min-width:84px;padding:11px 10px}
 }
 </style>
 
@@ -743,16 +778,25 @@ return tc;
 }
 
 // ── WIRE CARDS (TEST PAGE ONLY, Oct 2026) ──
-// The wording of each X post comes from tools/share-cache.json, the file the
-// share-page builder already keeps (one lookup per post, done by GitHub).
-// A post added in the last minute or two has no wording yet and shows
-// "post on x" until the builder has run.
-var wire={};
-function loadWire(){
-return fetch('/tools/share-cache.json?t='+Date.now(),{cache:'no-store'})
+// Two small files, both kept up to date by GitHub, feed these cards:
+//   tools/share-cache.json  the wording of each X post (the share-page
+//                           builder already keeps this)
+//   tools/media-cache.json  whether a post has an image or a video
+//                           (tools/build-media.js, test page only)
+// A post added in the last minute or two is in neither yet: it shows
+// "new transmission" until GitHub has looked it up.
+var wire={},wireMarks={};
+var WIRE_NEW_MS=10*60*1000;
+function wireJson(u){
+return fetch(u+'?t='+Date.now(),{cache:'no-store'})
 .then(function(r){return r.ok?r.json():null;})
-.then(function(j){if(j)wire=j;})
-.catch(function(){});
+.catch(function(){return null;});
+}
+function loadWire(){
+return Promise.all([wireJson('/tools/share-cache.json'),wireJson('/tools/media-cache.json')]).then(function(a){
+if(a[0])wire=a[0];
+if(a[1])wireMarks=a[1];
+});
 }
 function wireText(id){
 var e=wire[bbCode(id)];
@@ -761,22 +805,55 @@ var i=t.indexOf(': ');
 if(t.charAt(0)==='@'&&i!==-1)t=t.slice(i+2);
 return t.trim();
 }
+// 'video' | 'image' | 'media' (has one, kind unknown) | ''
+function wireMedia(id){
+var e=wireMarks[bbCode(id)];
+var m=e&&e.m;
+return m==='video'||m==='image'||m==='media'?m:'';
+}
+// fill in (or refresh) a card's wording and its "view ..." line
 function setWire(tc){
-var t=wireText(tc.getAttribute('data-wire-id'));
-if(tc.__wire===t)return;
-tc.__wire=t;
+var id=tc.getAttribute('data-wire-id');
+var t=wireText(id),m=wireMedia(id);
+var ts=Number(tc.getAttribute('data-wire-ts'))||0;
+var pending=!t&&ts>0&&Date.now()-ts<WIRE_NEW_MS;
+var sig=t+'|'+m+'|'+(pending?1:0);
+if(tc.__wire===sig)return;
+tc.__wire=sig;
 var body=tc.querySelector('.wire-text');
-body.className='wire-text '+(!t?'wire-none':t.length<=110?'wire-s':t.length<=220?'wire-m':'wire-l');
-body.firstChild.textContent=t||'post on x';
+body.className='wire-text '+(t?(t.length<=110?'wire-s':t.length<=220?'wire-m':'wire-l'):pending?'wire-none wire-pending':'wire-none');
+var sp=body.firstChild;
+clearEl(sp);
+if(pending)sp.appendChild(mkEl('i','bb-tick-dot'));
+sp.appendChild(document.createTextNode(t||(pending?'new transmission':'post on x')));
+var cue=tc.querySelector('.wire-cue');
+cue.textContent='view '+(m||'post')+' »';
+cue.classList.toggle('has-media',!!m);
+}
+// a post too long for its card gets a fade at the bottom
+var fadeQueued=false;
+function checkFades(){
+if(fadeQueued)return;
+fadeQueued=true;
+requestAnimationFrame(function(){
+fadeQueued=false;
+var els=document.querySelectorAll('.wire-text');
+for(var i=0;i<els.length;i++){
+var sp=els[i].firstChild;
+els[i].classList.toggle('wire-fade',sp.scrollHeight>sp.clientHeight+2);
+}
+});
 }
 function fillWire(){
 var cs=document.querySelectorAll('.wire-card');
 for(var i=0;i<cs.length;i++)setWire(cs[i]);
+checkFades();
 }
 function buildWireCard(url,tag,ts){
 var borderTag=borderTagOf(tag);
 var tc=mkEl('div','video-card tweet-card wire-card'+(borderTag!=='none'?' tag-'+borderTag:''));
 tc.setAttribute('data-wire-id',url);
+tc.setAttribute('data-wire-ts',isNaN(ts)?'':String(ts));
 tc.setAttribute('data-tweet',url.replace('x.com','twitter.com').split('?')[0]);
 var th=mkEl('div','video-card-header');
 setAge(th,twHandle(url),ts);
@@ -784,11 +861,20 @@ tc.appendChild(th);
 var body=mkEl('div','wire-text');
 body.appendChild(mkEl('span'));
 tc.appendChild(body);
-var tf=mkEl('div','video-card-footer');
-tf.textContent='view post \u00bb';
-tc.appendChild(tf);
+tc.appendChild(mkEl('div','video-card-footer wire-cue'));
 setWire(tc);
 return tc;
+}
+// the same link "§ share" gives, for the share button inside the drawer
+function shareFrom(id,b){
+var url='https'+'://theblackbrief.com/p/'+bbCode(id)+'/';
+if(navigator.share&&window.matchMedia&&window.matchMedia('(pointer:coarse)').matches){
+navigator.share({title:'the / black brief',url:url}).catch(function(err){
+if(!err||err.name!=='AbortError')bbCopyLink(url,b);
+});
+return;
+}
+bbCopyLink(url,b);
 }
 
 // ── NEW SINCE LAST VISIT (Oct 2026) ──
@@ -955,14 +1041,15 @@ var ytId=getYtId(url);
 if(ytId){
 hi.appendChild(buildVideoCard(ytId,null,'Featured video'));
 }else if(isTw(url)){
-var tw=mkEl('div','tweet-wrap');
-var bq=mkEl('blockquote','twitter-tweet');
-bq.setAttribute('data-theme',theme);
-var a=mkEl('a');
-a.href=url.replace('x.com','twitter.com').split('?')[0];
-bq.appendChild(a);
-tw.appendChild(bq);
-hi.appendChild(tw);
+// WIRE CARDS (test page): the top post is one of our cards as well
+hc.className+=' wire-card';
+hc.setAttribute('data-wire-id',url);
+hc.setAttribute('data-wire-ts',isNaN(p.ts)?'':String(p.ts));
+hc.setAttribute('data-tweet',url.replace('x.com','twitter.com').split('?')[0]);
+var wt=mkEl('div','wire-text');
+wt.appendChild(mkEl('span'));
+hi.appendChild(wt);
+hi.appendChild(mkEl('div','wire-cue headline-cue'));
 sig.textContent='top post // '+twHandle(url);
 }else{
 var hdom=mkEl('div','headline-domain');
@@ -988,6 +1075,7 @@ setAge(hft,'priority',p.ts);
 hc.appendChild(hft);
 hc.appendChild(mkShareBtn(url));
 hs.appendChild(hc);
+if(hc.classList.contains('wire-card'))setWire(hc);
 }
 
 function loadTw(){
@@ -1099,6 +1187,7 @@ totalCount=lines.length;
 markNew(ids);
 applyPermalink();
 loadTw();
+checkFades();
 tickMode='ok';
 bbUpdateStatus();
 }
@@ -1225,8 +1314,10 @@ console.warn('[BlackBrief] refresh failed',err);
 }
 
 setInterval(checkForUpdates,POLL_MS);
-// test page: pick up the wording of newly added posts
+// test page: pick up the wording and media marks of newly added posts
 setInterval(function(){if(!document.hidden)loadWire().then(fillWire);},60000);
+window.addEventListener('resize',checkFades);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(checkFades);
 document.addEventListener('visibilitychange',function(){
 if(!document.hidden&&Date.now()-lastCheck>60000)checkForUpdates();
 });
@@ -1280,40 +1371,88 @@ drawerFrame.id='bb-drawer-frame';
 drawerFrame.title='article';
 drawerFrame.src='';
 drawer.appendChild(drawerFrame);
-// WIRE CARDS (test page): the drawer can also hold a real X post
-var drawerTweet=document.createElement('div');
+
+// ── WIRE CARDS (test page): the drawer can also hold a real X post ──
+// In that mode it rises only as far as the post needs, has a bottom row with
+// "prev", "share" and "next" to step through the feed without closing, and
+// (in either mode) can be swiped down to close.
+var drawerGrab=mkEl('div');
+drawerGrab.id='bb-drawer-grab';
+drawer.insertBefore(drawerGrab,drawer.firstChild);
+var drawerTweet=mkEl('div');
 drawerTweet.id='bb-drawer-tweet';
 drawer.appendChild(drawerTweet);
+var drawerNav=mkEl('div');
+drawerNav.id='bb-drawer-nav';
+var navPrev=mkEl('button');
+navPrev.type='button';
+navPrev.textContent='« prev';
+var navShare=mkEl('button');
+navShare.type='button';
+navShare.id='bb-drawer-share';
+navShare.textContent='§ share';
+var navNext=mkEl('button');
+navNext.type='button';
+navNext.textContent='next »';
+drawerNav.appendChild(navPrev);
+drawerNav.appendChild(navShare);
+drawerNav.appendChild(navNext);
+drawer.appendChild(drawerNav);
 
-function openTweet(card){
+var wireCur=null;   // the card whose post is in the drawer
+var wireFirst=null; // the card that was tapped to open it
+var wireSeq=0;      // goes up each time the drawer's post changes
+
+function wireList(){return Array.prototype.slice.call(document.querySelectorAll('.wire-card[data-tweet]'));}
+// where the current card sits in the feed (cards can be rebuilt while the drawer is open)
+function wireIndex(list){
+var i=list.indexOf(wireCur);
+if(i===-1&&wireCur){
+var u=wireCur.getAttribute('data-tweet');
+for(var k=0;k<list.length;k++)if(list[k].getAttribute('data-tweet')===u){wireCur=list[k];return k;}
+}
+return i;
+}
+
+function showTweet(card){
+wireCur=card;
+var seq=++wireSeq;
 var url=card.getAttribute('data-tweet');
 var id=(url.match(/status\/(\d+)/)||[])[1];
 var open=url.replace('twitter.com','x.com');
-drawerDomain.textContent=twHandle(url);
+var a=ago(Number(card.getAttribute('data-wire-ts'))||0);
+drawerDomain.textContent=twHandle(url)+(a?' // '+a:'');
 drawerNewtab.href=open;
 drawerHintLink.href=open;
-drawerBrief.style.display='none';
-drawerFrame.style.display='none';
-drawerFrame.src='';
+var list=wireList(),i=wireIndex(list);
+navPrev.disabled=i<=0;
+navNext.disabled=i===-1||i>=list.length-1;
+// hold the drawer at its present height until the next post has loaded
+var h=drawerTweet.offsetHeight;
+drawerTweet.style.minHeight=h>0?h+'px':'';
 clearEl(drawerTweet);
-drawerTweet.style.display='block';
 drawerTweet.scrollTop=0;
 var st=mkEl('div','wire-status');
 st.textContent='loading post...';
 drawerTweet.appendChild(st);
 var box=mkEl('div');
 drawerTweet.appendChild(box);
-overlay.classList.add('open');
-drawer.classList.add('open');
-document.body.style.overflow='hidden';
-function fail(){if(document.body.contains(st)){st.textContent='this post is not available on x right now.';st.style.display='';}}
+function settle(){if(seq===wireSeq)drawerTweet.style.minHeight='';}
+function fail(){
+if(seq!==wireSeq)return;
+st.textContent='this post is not available on x right now.';
+st.style.display='';
+settle();
+}
 if(!id)return fail();
 var tries=0;
 (function go(){
-if(!document.body.contains(box))return; // drawer was closed or reused
+if(seq!==wireSeq||!drawer.classList.contains('open'))return; // closed, or moved on
 if(window.twttr&&window.twttr.widgets&&window.twttr.widgets.createTweet){
-window.twttr.widgets.createTweet(id,box,{theme:theme,dnt:true,align:'center'})
-.then(function(el){if(el)st.style.display='none';else fail();},fail);
+window.twttr.widgets.createTweet(id,box,{theme:theme,dnt:true,align:'center'}).then(function(el){
+if(seq!==wireSeq)return;
+if(el){st.style.display='none';settle();}else fail();
+},fail);
 return;
 }
 if(tries===0)loadTw();
@@ -1322,14 +1461,89 @@ setTimeout(go,100);
 })();
 }
 
+function openTweet(card){
+wireFirst=card;
+drawerBrief.style.display='none';
+drawerFrame.style.display='none';
+drawerFrame.src='';
+clearEl(drawerTweet);
+drawerTweet.style.minHeight='';
+drawerTweet.style.display='block';
+drawer.style.transform='';
+drawer.classList.add('wire-mode');
+drawerNewtab.textContent='open on x \u00bb';
+overlay.classList.add('open');
+drawer.classList.add('open');
+document.body.style.overflow='hidden';
+showTweet(card);
+}
+
+function wireStep(d){
+if(!wireCur||!drawer.classList.contains('wire-mode'))return;
+var list=wireList(),i=wireIndex(list);
+if(i===-1||!list[i+d])return;
+showTweet(list[i+d]);
+}
+navPrev.addEventListener('click',function(){wireStep(-1);});
+navNext.addEventListener('click',function(){wireStep(1);});
+navShare.addEventListener('click',function(){if(wireCur)shareFrom(wireCur.getAttribute('data-wire-id'),navShare);});
+document.addEventListener('keydown',function(e){
+if(!drawer.classList.contains('open'))return;
+if(e.key==='ArrowRight')wireStep(1);
+else if(e.key==='ArrowLeft')wireStep(-1);
+});
+
+// swipe down to close. A touch that starts on the X post itself never
+// reaches this page (it belongs to X's frame), so the swipe works from the
+// bar at the top, the row at the bottom and the margins around the post.
+var drag=null;
+drawer.addEventListener('touchstart',function(e){
+if(e.touches.length!==1){drag=null;return;}
+var t=e.touches[0];
+var inPost=!!(e.target.closest&&e.target.closest('#bb-drawer-tweet'));
+drag={x:t.clientX,y:t.clientY,t:Date.now(),dy:0,on:false,ok:!inPost||drawerTweet.scrollTop<=0};
+},{passive:true});
+drawer.addEventListener('touchmove',function(e){
+if(!drag||!drag.ok)return;
+var t=e.touches[0],dy=t.clientY-drag.y,dx=t.clientX-drag.x;
+if(!drag.on){
+if(dy>8&&dy>Math.abs(dx)*1.2){drag.on=true;drawer.classList.add('wire-drag');}
+else if(dy<-8||Math.abs(dx)>12){drag.ok=false;return;}
+else return;
+}
+drag.dy=Math.max(0,dy);
+drawer.style.transform='translateY('+drag.dy+'px)';
+if(e.cancelable)e.preventDefault();
+},{passive:false});
+function dragEnd(){
+if(!drag)return;
+var d=drag;
+drag=null;
+if(!d.on)return;
+var flick=d.dy>40&&Date.now()-d.t<280;
+// let the browser register where the drawer is before it animates away or back
+void drawer.offsetHeight;
+drawer.classList.remove('wire-drag');
+drawer.style.transform='';
+if(d.dy>110||flick)closeDrawer();
+}
+drawer.addEventListener('touchend',dragEnd);
+drawer.addEventListener('touchcancel',dragEnd);
+
 function cardTitle(card){
 var t=card.querySelector('.rich-preview-title,.headline-title');
 return t?t.textContent.trim():'';
 }
 
 function openDrawer(url,dom,title){
+// test page: back to article mode
+wireSeq++;
+wireCur=wireFirst=null;
 clearEl(drawerTweet);
 drawerTweet.style.display='none';
+drawer.classList.remove('wire-mode');
+drawerNewtab.textContent='open in new tab »';
+drawer.style.transform='';
 drawerFrame.style.display='';
 drawerBrief.style.display='';
 if(!dom){try{dom=new URL(url).hostname.replace('www.','');}catch(ex){dom='';}}
@@ -1346,10 +1560,21 @@ document.body.style.overflow='hidden';
 window.__bbOpenDrawer=openDrawer;
 
 function closeDrawer(){
+// test page: if the reader stepped to another post, leave the page at that card
+var back=wireCur&&wireCur!==wireFirst?wireCur:null;
+wireSeq++;
+wireCur=wireFirst=null;
 overlay.classList.remove('open');
 drawer.classList.remove('open');
+drawer.style.transform='';
 document.body.style.overflow='';
-setTimeout(function(){if(!drawer.classList.contains('open')){drawerFrame.src='';clearEl(drawerTweet);}},400);
+if(back&&document.body.contains(back)&&!(back.closest('#bb-archive-section')&&!sec.classList.contains('open')))back.scrollIntoView({block:'center'});
+setTimeout(function(){
+if(drawer.classList.contains('open'))return;
+drawerFrame.src='';
+clearEl(drawerTweet);
+drawer.classList.remove('wire-mode');
+},400);
 }
 
 overlay.addEventListener('click',closeDrawer);
