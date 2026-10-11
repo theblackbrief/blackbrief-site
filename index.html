@@ -4,6 +4,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"/>
+<meta name="theme-color" content="#f5f5f5" media="(prefers-color-scheme: light)"/>
 <title>the / black brief</title>
 <meta name="description" content="a newsfeed of things we don't wanna see in a world that isn't supposed to be"/>
 
@@ -315,8 +317,11 @@ html,body{background:#f5f5f5}
    The full header scrolls away with the page. Once it is out of sight this
    thin bar slides down from the top; it slides away again near the top.
    Same on every device; only the sizes scale. Tapping it returns to the top. */
-#bb-slim{position:fixed;top:0;left:0;right:0;z-index:100;height:clamp(52px,6vw,60px);display:flex;align-items:center;justify-content:center;margin:0;padding:0;background:#000000;border:none;border-bottom:1px solid rgba(204,34,34,0.5);border-radius:0;font-family:'Zilla Slab',serif;font-size:clamp(24px,3.2vw,32px);font-weight:700;line-height:1;color:#ffffff;white-space:nowrap;cursor:pointer;transform:translateY(-102%);transition:transform .22s ease;-webkit-appearance:none;appearance:none}
-#bb-slim.show{transform:translateY(0)}
+#bb-slim{--bar:clamp(52px,6vw,60px);position:fixed;top:calc(-122px - var(--bar));left:0;right:0;z-index:100;box-sizing:border-box;height:calc(var(--bar) + 120px);padding:120px 0 0;display:flex;align-items:center;justify-content:center;margin:0;background:#000000;border:none;border-bottom:1px solid rgba(204,34,34,0.5);border-radius:0;font-family:'Zilla Slab',serif;font-size:clamp(24px,3.2vw,32px);font-weight:700;line-height:1;color:#ffffff;white-space:nowrap;cursor:pointer;transition:top .22s ease;-webkit-appearance:none;appearance:none}
+/* shown: the bar's top 120px sits above the screen edge, so its black also
+   fills the strip behind Safari's see-through toolbar. No transform is used,
+   because Safari ignores transformed bars when colouring that strip. */
+#bb-slim.show{top:-120px}
 #bb-slim span{color:#cc2222;padding:0 .28em}
 @media(prefers-color-scheme:light){#bb-slim{background:#f5f5f5;color:#1a1a1a}}
 @media(prefers-reduced-motion:reduce){#bb-slim{transition:none}}
@@ -1097,7 +1102,7 @@ var slim=document.getElementById('bb-slim');
 var slimOn=false,slimTick=false;
 
 function placePill(){
-var under=Math.max(shell.getBoundingClientRect().bottom,slimOn?slim.offsetHeight:0);
+var under=Math.max(shell.getBoundingClientRect().bottom,slimOn?slim.offsetHeight-120:0); // 120 = the part of the bar above the screen edge
 pill.style.top=(Math.round(under)+12)+'px';
 }
 
