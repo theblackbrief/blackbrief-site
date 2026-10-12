@@ -1,50 +1,54 @@
 {
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
-  "unfiled": 9,
-  "war": 21,
+  "unfiled": 2,
+  "war": 18,
   "power": 7,
-  "money": 12,
+  "money": 13,
   "tech": 0,
-  "anomaly": 0
+  "anomaly": 9
  },
  "filed_by": {
-  "account": 23,
-  "words": 17
+  "account": 20,
+  "words": 21,
+  "words_over_account": 6
  },
  "accounts_without_a_desk": [
   {
    "handle": "@leadingreport",
    "posts": 5,
    "filed_by_words": [
-    "war"
+    "war",
+    "anomaly"
    ]
   },
   {
    "handle": "@911newsbreaks",
    "posts": 1,
    "filed_by_words": [
-    "war"
+    "anomaly"
    ]
   },
   {
    "handle": "@abc",
    "posts": 1,
    "filed_by_words": [
-    "war"
+    "anomaly"
    ]
   },
   {
    "handle": "@ap",
    "posts": 1,
    "filed_by_words": [
-    "power"
+    "money"
    ]
   },
   {
    "handle": "@breaking911",
    "posts": 1,
-   "filed_by_words": []
+   "filed_by_words": [
+    "anomaly"
+   ]
   },
   {
    "handle": "@cnn",
@@ -75,7 +79,9 @@
   {
    "handle": "@insatiablevine",
    "posts": 1,
-   "filed_by_words": []
+   "filed_by_words": [
+    "power"
+   ]
   },
   {
    "handle": "@mrsausageget",
@@ -92,14 +98,11 @@
    ]
   },
   {
-   "handle": "@nolimitgains",
-   "posts": 1,
-   "filed_by_words": []
-  },
-  {
    "handle": "@remarks",
    "posts": 1,
-   "filed_by_words": []
+   "filed_by_words": [
+    "money"
+   ]
   },
   {
    "handle": "@rt_com",
@@ -111,7 +114,9 @@
   {
    "handle": "@scotchscotchzz",
    "posts": 1,
-   "filed_by_words": []
+   "filed_by_words": [
+    "money"
+   ]
   },
   {
    "handle": "@secretfire79",
@@ -126,18 +131,6 @@
    "filed_by_words": [
     "war"
    ]
-  },
-  {
-   "handle": "@warmonitor3",
-   "posts": 1,
-   "filed_by_words": [
-    "war"
-   ]
-  },
-  {
-   "handle": "@weathernation",
-   "posts": 1,
-   "filed_by_words": []
   },
   {
    "handle": "@zacharyloft",

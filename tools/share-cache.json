@@ -5,7 +5,7 @@
   "title": "@Polymarket: BREAKING: North Korea launches multiple ballistic missiles toward the sea off its eastern coast.",
   "image": "",
   "media": "",
-  "desk": "money"
+  "desk": "war"
  },
  "n8tbh9": {
   "tries": 1,
@@ -20,7 +20,8 @@
   "done": true,
   "title": "@WeatherNation: #BREAKING: New video from Long Beach, CA shows homes starting to collapse due to large waves from Rachel's impacts. Emergency crews rushed to deploy seawall barriers as the coast took a beating on Sunday. We'll have continued coverage of this story and more. #CAwx WATCH:…",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "anomaly"
  },
  "mea6u5": {
   "tries": 1,
@@ -43,7 +44,8 @@
   "done": true,
   "title": "@Breaking911: Nepal reportedly hit with another massive flood.",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "anomaly"
  },
  "kuoo8x": {
   "tries": 1,
@@ -67,7 +69,7 @@
   "title": "@Polymarket: JUST IN: WHO reveals the cause of death remains “unknown” for the Russian plague lab worker whose death sparked fears of an outbreak.",
   "image": "",
   "media": "",
-  "desk": "money"
+  "desk": "anomaly"
  },
  "vh2rq2": {
   "tries": 0,
@@ -94,14 +96,15 @@
   "title": "@AP: BREAKING: Trump says Ukraine should get a new president as he blames Zelenskyy for U.S. diesel prices.",
   "image": "",
   "media": "",
-  "desk": "power"
+  "desk": "money"
  },
  "2d42fi": {
   "tries": 1,
   "done": true,
   "title": "@NoLimitGains: BREAKING: U.S. homes are now the least affordable on record.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "358tc2": {
   "tries": 1,
@@ -180,7 +183,7 @@
   "title": "@unusual_whales: BREAKING: The Pentagon has told U.S. Central Command to finish preparations for the potential resumption of large-scale combat operations against Iran, per Axios.",
   "image": "",
   "media": "",
-  "desk": "money"
+  "desk": "war"
  },
  "awsdoq": {
   "tries": 1,
@@ -188,14 +191,15 @@
   "title": "@HormuzLetter: BREAKING: Venezuela's Cardon Oil refinery, the country's second largest at 310,000 barrels per day, has just unexpectedly exploded and caught fire, forcing a full shutdown. The fire started at a gas line connecting the refinery's diesel hydrotreater and halted the whole plant,…",
   "image": "",
   "media": "video",
-  "desk": "war"
+  "desk": "money"
  },
  "1qfi4p3": {
   "tries": 1,
   "done": true,
   "title": "@remarks: JUST IN: 🇺🇸 US home foreclosures surge 42% from last year as more Americans lose their homes.",
   "image": "",
-  "media": "image"
+  "media": "image",
+  "desk": "money"
  },
  "1mnqyl3": {
   "tries": 1,
@@ -218,7 +222,8 @@
   "done": true,
   "title": "@scotchscotchzz: Your average 40 year old has paid more into Medicare at this point then a boomer did in an entire lifetime. The boomer gets hundreds of thousands in medical expenses covered The millennial can’t afford health insurance and puts basic things off compounding future problems.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "1h8lltb": {
   "tries": 1,
@@ -226,7 +231,7 @@
   "title": "@LeadingReport: Trump has offered to help Putin as Russia scrambles to contain a suspected outbreak of airborne plague in Siberia.",
   "image": "",
   "media": "",
-  "desk": "war"
+  "desk": "anomaly"
  },
  "b4ny76": {
   "tries": 1,
@@ -234,7 +239,7 @@
   "title": "@ABC: The U.S. State Department is monitoring a reportedly fatal case of \"pneumonia of an unknown etiology\" linked to a plague research laboratory in Russia. Read more:",
   "image": "",
   "media": "",
-  "desk": "war"
+  "desk": "anomaly"
  },
  "8tqbww": {
   "tries": 1,
@@ -258,7 +263,7 @@
   "title": "@visegrad24: BREAKING: 5 hospitals have been closed for quarantines in Siberia due to a possible plague outbreak. The 28-year-old lab technician Darya Shipilova, died yesterday after breaking a test tube with live Yersinia pestis the Irkutsk Anti-Plague Institute on September 25th while…",
   "image": "",
   "media": "image",
-  "desk": "war"
+  "desk": "anomaly"
  },
  "hmg2u9": {
   "tries": 1,
@@ -266,7 +271,7 @@
   "title": "@911NewsBreaks: ALERT: 🚨 Russia quarantines 200 people, [enacts anti-epidemic measures] after lab worker dies of plague.",
   "image": "",
   "media": "",
-  "desk": "war"
+  "desk": "anomaly"
  },
  "6rpbz5": {
   "tries": 1,
@@ -274,14 +279,15 @@
   "title": "@LeadingReport: Russian lab technician dıes from suspected pneumonic plague after reportedly breaking test tube containing live bacteria.",
   "image": "",
   "media": "",
-  "desk": "war"
+  "desk": "anomaly"
  },
  "os60j0": {
   "tries": 1,
   "done": true,
   "title": "@insatiablevine: Yesterday, politicians rejected 57-43 a bill banning data centers from passing water and electricity costs to residents. Our “elected” officials want to expand data centers and make us pay for their resources. Maybe this is the problem, not “China.”@MikeJohnson",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "power"
  },
  "1ynqjje": {
   "tries": 1,
@@ -297,7 +303,7 @@
   "title": "@unusual_whales: BREAKING: The U.S. is sending a third aircraft carrier and up to 10,000 additional troops to the Middle East, per WSJ",
   "image": "",
   "media": "",
-  "desk": "money"
+  "desk": "war"
  },
  "zdq10v": {
   "tries": 1,
@@ -335,7 +341,8 @@
   "done": true,
   "title": "@LeadingReport: Declassified CIA files reveal previous U.S. weather-modification research, fueling renewed claims of secret weather-control programs, per Daily Mail.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "anomaly"
  },
  "1ebulbl": {
   "tries": 1,
