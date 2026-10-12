@@ -4,6 +4,10 @@
 //   /p/<code>/index.html
 // holding that post's own preview title and description, which then sends the
 // visitor on to the post on the main site. Nothing here changes index.html.
+//
+// It also keeps tools/share-cache.json, which the main site reads to draw its
+// X cards (Oct 2026): for each X post, its wording ("title") and whether it
+// carries a video or an image ("media").
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -104,10 +108,14 @@ async function getJson(host, url) {
   }
 }
 
+function oembedUrl(post) {
+  const clean = post.url.replace('x.com', 'twitter.com').split('?')[0];
+  return 'https://publish.twitter.com/oembed?omit_script=true&dnt=true&url=' + encodeURIComponent(clean);
+}
+
 async function lookup(post) {
   if (post.kind === 'tweet') {
-    const clean = post.url.replace('x.com', 'twitter.com').split('?')[0];
-    const j = await getJson('x', 'https://publish.twitter.com/oembed?omit_script=true&dnt=true&url=' + encodeURIComponent(clean));
+    const j = await getJson('x', oembedUrl(post));
     if (!j || j.gone) return j;
     const text = tweetText(j.html);
     const h = j.author_url ? '@' + String(j.author_url).split('/').pop() : handleOf(post.url);
@@ -124,6 +132,34 @@ async function lookup(post) {
     return { title: (j.status === 'success' && j.data && j.data.title) || '' };
   }
   return { title: '' };
+}
+
+// ── MEDIA MARKS (Oct 2026) ──
+// Does an X post carry a video or an image? The card on the main site then
+// reads "view video »" or "view image »" instead of "view post »".
+// Two lookups, in this order:
+//   1. X's embed data service. It says exactly what a post holds, but it is
+//      not an official service and X could change or close it at any time.
+//   2. X's official oEmbed service (the one used for the wording above). It
+//      can only say that a post has "some media", not which kind.
+// → 'video' | 'image' | 'media' (kind unknown) | '' (none), null if neither
+//   service gave an answer, undefined if both were skipped this run.
+async function mediaOf(post) {
+  const sid = (post.url.match(/status\/(\d+)/) || [])[1];
+  if (sid) {
+    const token = ((Number(sid) / 1e15) * Math.PI).toString(36).replace(/(0+|\.)/g, '');
+    const j = await getJson('embed', 'https://cdn.syndication.twimg.com/tweet-result?id=' + sid + '&token=' + token + '&lang=en');
+    if (j && !j.gone && j.id_str && (!j.__typename || j.__typename === 'Tweet')) {
+      const kinds = (Array.isArray(j.mediaDetails) ? j.mediaDetails : []).map(d => d && d.type);
+      if (j.video || kinds.includes('video') || kinds.includes('animated_gif')) return 'video';
+      if (kinds.includes('photo') || (Array.isArray(j.photos) && j.photos.length)) return 'image';
+      return '';
+    }
+  }
+  const o = await getJson('x', oembedUrl(post));
+  if (o === undefined || o === null) return o;
+  if (o.gone) return ''; // deleted or private: nothing to mark
+  return /pic\.twitter\.com\//.test(String(o.html || '')) ? 'media' : '';
 }
 
 function card(post, found) {
@@ -188,7 +224,7 @@ function page(code, post, c) {
     posts.push({ code, post: p });
   }
 
-  let looked = 0, got = 0;
+  let looked = 0, got = 0, marked = 0;
   const next = {};
   for (const { code, post } of posts) {
     let entry = cache[code] || { tries: 0, done: false };
@@ -197,11 +233,20 @@ function page(code, post, c) {
       const f = await lookup(post);
       if (f !== undefined) { // undefined = service skipped this run; try again next time
         looked++;
+        const keep = { media: entry.media, mtries: entry.mtries };
         if (f && f.gone) entry = { tries: entry.tries + 1, done: true };
         else if (f) { entry = { tries: entry.tries + 1, done: true, title: f.title || '', image: f.image || '' }; if (f.title) got++; }
         else entry = { tries: entry.tries + 1, done: false };
+        if (keep.media !== undefined) entry.media = keep.media;
+        if (keep.mtries !== undefined) entry.mtries = keep.mtries;
         await new Promise(r => setTimeout(r, 120));
       }
+    }
+    if (post.kind === 'tweet' && entry.media === undefined && (entry.mtries || 0) < MAX_TRIES) {
+      const m = await mediaOf(post);
+      if (m === null) entry.mtries = (entry.mtries || 0) + 1;
+      else if (m !== undefined) { entry.media = m; delete entry.mtries; marked++; }
+      await new Promise(r => setTimeout(r, 120));
     }
     next[code] = entry;
   }
@@ -213,6 +258,6 @@ function page(code, post, c) {
     fs.writeFileSync(path.join(dir, 'index.html'), page(code, post, card(post, next[code])));
   }
   fs.writeFileSync(CACHE_FILE, JSON.stringify(next, null, 1) + '\n');
-  console.log(posts.length + ' share pages written; ' + looked + ' lookups this run, ' + got + ' returned a title');
+  console.log(posts.length + ' share pages written; ' + looked + ' lookups this run, ' + got + ' returned a title; ' + marked + ' X posts given a media mark');
   for (const h of Object.keys(strikes)) if (strikes[h] >= 4) console.log('note: lookups for "' + h + '" were failing, so the rest were skipped this run');
 })().catch(e => { console.error(e); process.exit(1); });
