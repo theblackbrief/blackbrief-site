@@ -553,6 +553,10 @@ html,body{background:#f5f5f5}
 .editorial-card.tag-sus .editorial-footer,.editorial-card.tag-custom .editorial-footer{color:#ffaa00}
 .editorial-card .editorial-footer{color:#999}
 .bb-tick-item.tick-noted{color:#ffaa00}
+/* stamps can be tapped: they show every post with that tag */
+.stamp[data-tag]{pointer-events:auto;cursor:pointer;-webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent}
+.bb-tag-word{color:#ffaa00;font-weight:700;text-transform:uppercase}
+@media(prefers-color-scheme:light){.bb-tag-word{color:#b86e00}}
 @media(prefers-color-scheme:light){
 .stamp-sus,.stamp-custom{color:#b86e00;border-color:#b86e00}
 .video-card.tag-sus,.video-card.tag-custom,.rich-preview.tag-sus,.rich-preview.tag-custom,.editorial-card,.editorial-card.tag-sus,.editorial-card.tag-custom{border-left-color:#b86e00}
@@ -735,8 +739,12 @@ if(cls)e.className=cls;
 return e;
 }
 
+// TAPPABLE STAMPS (Oct 2026): tapping a stamp shows every post with that tag
 function mkStamp(t){
-var e=mkEl('div','stamp '+stampClass(t));
+var e=mkEl('button','stamp '+stampClass(t));
+e.type='button';
+e.setAttribute('data-tag',t);
+e.setAttribute('aria-label','show all '+t+' posts');
 e.textContent=t.toUpperCase();
 return e;
 }
@@ -1893,6 +1901,14 @@ drawerClose.addEventListener('click',closeDrawer);
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer();});
 document.addEventListener('click',function(e){
 // a desk label on a card shows that whole desk
+// a stamp shows every post with that tag
+var stp=e.target.closest('.stamp[data-tag]');
+if(stp){
+e.preventDefault();
+var tg=stp.getAttribute('data-tag');
+setFilter(tg==='urgent'||tg==='sus'?tg:'tag:'+tg);
+return;
+}
 var dkb=e.target.closest('.bb-desk-btn[data-desk]');
 if(dkb){
 e.preventDefault();
@@ -1957,6 +1973,7 @@ return getYtId(url)?'vid':isTw(url)?'x':'art';
 
 function matchesFilter(p,f){
 if(f.indexOf('desk:')===0)return postDesk(p)===f.slice(5);
+if(f.indexOf('tag:')===0)return p.tag===f.slice(4);
 if(f==='urgent'||f==='sus')return p.tag===f;
 if(f==='today')return !isNaN(p.ts)&&p.ts>=dayStart()&&p.ts<=Date.now()+60000;
 return postKind(p)===f;
@@ -2011,6 +2028,12 @@ var d=f.slice(5);
 var n=allLines.map(prep).filter(function(p){return postDesk(p)===d;}).length;
 return n?{k:'desk-'+d,t:n+' /'+d,f:f,desk:d,n:n}:null;
 }
+// a tag, from tapping a stamp: sus or any custom tag (#wtf, #lol...)
+if(f&&(f.indexOf('tag:')===0||f==='sus')){
+var tg=f==='sus'?'sus':f.slice(4);
+var tn=allLines.map(prep).filter(function(p){return p.tag===tg;}).length;
+return tn?{k:'tag-'+tg,t:tn+' '+tg,f:f,tag:tg,n:tn}:null;
+}
 var items=feedStats();
 for(var i=0;i<items.length;i++)if(items[i].f===f)return items[i];
 return null;
@@ -2039,6 +2062,12 @@ var it=statFor(activeFilter);
 if(it&&it.desk){
 // a desk: "/money // 15 transmissions // show all ✕"
 deskMark(fb,it.desk);
+fb.appendChild(document.createTextNode(' // '+plural(it.n,'transmission','transmissions')+' // '));
+}else if(it&&it.tag){
+// one of the curator's tags, in his amber: "wtf // 3 transmissions // show all ✕"
+var tw=mkEl('span','bb-tag-word');
+tw.textContent=it.tag;
+fb.appendChild(tw);
 fb.appendChild(document.createTextNode(' // '+plural(it.n,'transmission','transmissions')+' // '));
 }else fb.appendChild(document.createTextNode('showing '+label+' // '));
 var b=mkEl('b');
