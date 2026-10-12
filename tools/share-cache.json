@@ -4,14 +4,16 @@
   "done": true,
   "title": "@Polymarket: BREAKING: North Korea launches multiple ballistic missiles toward the sea off its eastern coast.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "n8tbh9": {
   "tries": 1,
   "done": true,
   "title": "@unusual_whales: 40% of workers earning over $300,000 say they're living paycheck to paycheck, per Goldman Sachs.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "8zx2u1": {
   "tries": 1,
@@ -25,14 +27,16 @@
   "done": true,
   "title": "@Kalshi: BREAKING: US consumer prices have risen +30% since the pandemic",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "67ikbc": {
   "tries": 1,
   "done": true,
   "title": "@HormuzLetter: BREAKING: Russia has just struck the CHP-5 power plant in Kharkiv, Ukraine's second largest combined heat and power plant, breaking the US energy ceasefire just hours after Trump announced it. Zelensky confirms the strike, saying \"Just now there was a strike on CHP-5 in the…",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "lgq1tm": {
   "tries": 1,
@@ -46,21 +50,24 @@
   "done": true,
   "title": "@RT_com: 'Please tell Putin, give us 60 days of total ceasefire, and we will organize elections' — Zelensky Vladimir Zelensky's official five-year term in office expired on May 20, 2024",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "war"
  },
  "11zy2gi": {
   "tries": 1,
   "done": true,
   "title": "@WarMonitor3: Trump announces a full energy ceasefire just now between Russia and Ukraine saying both parties have agreed.",
   "image": "",
-  "media": "image"
+  "media": "image",
+  "desk": "war"
  },
  "8yjznp": {
   "tries": 1,
   "done": true,
   "title": "@Polymarket: JUST IN: WHO reveals the cause of death remains “unknown” for the Russian plague lab worker whose death sparked fears of an outbreak.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "vh2rq2": {
   "tries": 0,
@@ -70,21 +77,24 @@
   "tries": 1,
   "done": true,
   "title": "Pentagon raises official toll of troops who died during war with Iran to 21 — The Washington Post",
-  "image": ""
+  "image": "",
+  "desk": "war"
  },
  "3x2xkl": {
   "tries": 1,
   "done": true,
   "title": "@BRICSinfo: JUST IN: 🇺🇦 Elon Musk says \"time for Ukraine to get a new leader.\"",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "turlme": {
   "tries": 1,
   "done": true,
   "title": "@AP: BREAKING: Trump says Ukraine should get a new president as he blames Zelenskyy for U.S. diesel prices.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "power"
  },
  "2d42fi": {
   "tries": 1,
@@ -98,28 +108,32 @@
   "done": true,
   "title": "@SecretFire79: NEW BORN INFANTS CAN BE TERMINATED (INFANTICIDE) AFTER A LIVE BIRTH IN MINNESOTA MN Governor Tim Walz signing to REPEAL the Minnesota “Born Alive Infants Protection Act.” Now a botched abortion (an infant born alive after a botched abortion) or a healthy new born infant, Can…",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "power"
  },
  "14n7pkf": {
   "tries": 1,
   "done": true,
   "title": "@NewsWire_US: Trump Faces New Calls for Impeachment After Striking Diesel Supply Deal with Putin",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "power"
  },
  "18yrk19": {
   "tries": 1,
   "done": true,
   "title": "@LeadingReport: Zelensky says Trump is weak because of his oil deal with Russia.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "186zvu1": {
   "tries": 1,
   "done": true,
   "title": "@TheCalvinCooli1: 🚨Just in: Ukrainian drones have struck an oil-loading terminal in Rostov, Russia, tonight, sparking a large fire This comes after the deal that President Trump made with Russia today for diesel",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "war"
  },
  "136dwq8": {
   "tries": 1,
@@ -133,42 +147,48 @@
   "done": true,
   "title": "@BullTheoryio: BREAKING: 🇺🇸 Americans believe they are in the WORST economic conditions in HISTORY. The Michigan Current Economic Conditions Index plunged 12.2% this month to 44.7, its lowest reading since index began in 1951. They are more negative than during the 2008 financial crisis,…",
   "image": "",
-  "media": "image"
+  "media": "image",
+  "desk": "money"
  },
  "ugbusd": {
   "tries": 1,
   "done": true,
   "title": "@MrSausageGet: There's always a grift. This is a must-watch. Trump accounts.",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "power"
  },
  "ixb1h0": {
   "tries": 1,
   "done": true,
   "title": "@greybtc: IS THIS WHAT CRONY CAPITALISM LOOKS LIKE IN AMERICA?",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "money"
  },
  "zx4hx0": {
   "tries": 1,
   "done": true,
   "title": "@ImBreckWorsham: Newly revealed texts allege to show Trump’s Greece ambassador Kimberly Guilfoyle asking a donor to wipe out her $100,000 credit-card debt in exchange for favors—then repeatedly begging the donor not to put it in writing. So much for “draining the swamp.”",
   "image": "",
-  "media": "image"
+  "media": "image",
+  "desk": "power"
  },
  "mnthsy": {
   "tries": 1,
   "done": true,
   "title": "@unusual_whales: BREAKING: The Pentagon has told U.S. Central Command to finish preparations for the potential resumption of large-scale combat operations against Iran, per Axios.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "awsdoq": {
   "tries": 1,
   "done": true,
   "title": "@HormuzLetter: BREAKING: Venezuela's Cardon Oil refinery, the country's second largest at 310,000 barrels per day, has just unexpectedly exploded and caught fire, forcing a full shutdown. The fire started at a gas line connecting the refinery's diesel hydrotreater and halted the whole plant,…",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "war"
  },
  "1qfi4p3": {
   "tries": 1,
@@ -182,14 +202,16 @@
   "done": true,
   "title": "@BRICSinfo: JUST IN: 🇺🇸🇷🇺 US Embassy urges all Americans in Russia to leave the country immediately following suspected pneumonic plague outbreak.",
   "image": "",
-  "media": "image"
+  "media": "image",
+  "desk": "war"
  },
  "15zfsjg": {
   "tries": 1,
   "done": true,
   "title": "@Polymarket: JUST IN: Texas launches investigation into Fruit of the Loom & Hanes over potential toxic chemicals in children’s underwear.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "1baxhh7": {
   "tries": 1,
@@ -203,49 +225,56 @@
   "done": true,
   "title": "@LeadingReport: Trump has offered to help Putin as Russia scrambles to contain a suspected outbreak of airborne plague in Siberia.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "b4ny76": {
   "tries": 1,
   "done": true,
   "title": "@ABC: The U.S. State Department is monitoring a reportedly fatal case of \"pneumonia of an unknown etiology\" linked to a plague research laboratory in Russia. Read more:",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "8tqbww": {
   "tries": 1,
   "done": true,
   "title": "@BRICSinfo: JUST IN: 🇺🇸🇬🇧 US withdraws all its bomber jets from RAF Fairford in UK following suspected terrorist plot.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "krkuz4": {
   "tries": 1,
   "done": true,
   "title": "@Persianserene1: 🚨 BREAKING A source inside the French regime has just informed me that the regime has so far killed more than 70,000 peaceful protesters.",
   "image": "",
-  "media": "image"
+  "media": "image",
+  "desk": "war"
  },
  "62tbgr": {
   "tries": 1,
   "done": true,
   "title": "@visegrad24: BREAKING: 5 hospitals have been closed for quarantines in Siberia due to a possible plague outbreak. The 28-year-old lab technician Darya Shipilova, died yesterday after breaking a test tube with live Yersinia pestis the Irkutsk Anti-Plague Institute on September 25th while…",
   "image": "",
-  "media": "image"
+  "media": "image",
+  "desk": "war"
  },
  "hmg2u9": {
   "tries": 1,
   "done": true,
   "title": "@911NewsBreaks: ALERT: 🚨 Russia quarantines 200 people, [enacts anti-epidemic measures] after lab worker dies of plague.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "6rpbz5": {
   "tries": 1,
   "done": true,
   "title": "@LeadingReport: Russian lab technician dıes from suspected pneumonic plague after reportedly breaking test tube containing live bacteria.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "os60j0": {
   "tries": 1,
@@ -259,21 +288,24 @@
   "done": true,
   "title": "@CNN: A CNN investigation has found that while Jared Kushner acted as a key Middle East peace negotiator, his private equity firm held the largest stake in an Israeli company backing businesses tied to Israel's military campaign in Gaza, including its largest arms manufacturer.…",
   "image": "",
-  "media": "image"
+  "media": "image",
+  "desk": "war"
  },
  "qtw5rm": {
   "tries": 1,
   "done": true,
   "title": "@unusual_whales: BREAKING: The U.S. is sending a third aircraft carrier and up to 10,000 additional troops to the Middle East, per WSJ",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "zdq10v": {
   "tries": 1,
   "done": true,
   "title": "@HormuzLetter: BREAKING: More than 2,000 US Marines are now heading to the Middle East aboard the Makin Island amphibious ready group, with a US official saying three aircraft carriers and two amphibious landing groups will be deployed around Iran by November for new operations. The official…",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "1ho6bvo": {
   "tries": 1,
@@ -287,14 +319,16 @@
   "done": true,
   "title": "@Polymarket: BREAKING: China halts October exports of diesel, gasoline, & jet fuel.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "ii6cl": {
   "tries": 1,
   "done": true,
   "title": "@GrayAreaTalks: Is Trump Overseeing the Death of America?@WeTheBrandon@rexjonesnewz@TruismTim",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "power"
  },
  "1meg08t": {
   "tries": 1,
@@ -308,41 +342,47 @@
   "done": true,
   "title": "@famexbt: PROPERTY TAXES IN AMERICA HAVE GONE TOO FAR THE HOUSE IS PAID OFF. SO WHY DOES THE BILL NEVER END? My parents finished paying off their mortgage back in 2007. They’re both in their 70s now. No mortgage payment. No lender. Yet they still have to send the county roughly $10,500…",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  },
  "10a3xwp": {
   "tries": 1,
   "done": true,
   "title": "@libsoftiktok: I’m sorry what?! MA Governor Maura Healey says everyone who has a baby will be visited in their home by a government appointed healthcare provider “to make an assessment” Stay out of our homes you power hungry creep",
   "image": "",
-  "media": "video"
+  "media": "video",
+  "desk": "power"
  },
  "nojpdv": {
   "tries": 1,
   "done": true,
   "title": "@DMichaelTripi: NEW: US reportedly to conduct large-scale military operation against Ansar Allah (Houthis) in Yemen in retaliation for strikes against Saudi Arabia. -CNN",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "1w224gr": {
   "tries": 1,
   "done": true,
   "title": "@LeadingReport: Trump says the Iran conflict will end soon.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "ola294": {
   "tries": 1,
   "done": true,
   "title": "@BRICSinfo: JUST IN: 🇺🇸🇬🇧 US Air Force B-1 bomber takes off from UK military base.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "war"
  },
  "1d5s1xi": {
   "tries": 1,
   "done": true,
   "title": "@StealthQE4: Looks like all hell is about to break out in the Middle East. Buckle up.",
   "image": "",
-  "media": ""
+  "media": "",
+  "desk": "money"
  }
 }
