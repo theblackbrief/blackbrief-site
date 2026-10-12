@@ -1,8 +1,8 @@
 # Runs each time posts.txt changes, and every 6 hours. It does two things:
 #   1. housekeeping: removes old posts and deleted tweets from posts.txt
 #      (see tools/housekeep.js; removed lines are kept in old-posts.txt)
-#   2. builds a small preview page for every post (the /p/ folder)
-#      (see tools/build-share.js)
+#   2. builds a small preview page for every post (the /p/ folder), and files
+#      every post under a desk (see tools/build-share.js)
 name: housekeeping and share pages
 
 on:
@@ -40,7 +40,7 @@ jobs:
         run: |
           git config user.name "blackbrief-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A p tools/share-cache.json tools/housekeep-state.json posts.txt old-posts.txt
+          git add -A p tools/share-cache.json tools/housekeep-state.json tools/desk-report.json posts.txt old-posts.txt
           if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
           git commit -m "housekeeping and share pages"
           git pull --rebase origin main
