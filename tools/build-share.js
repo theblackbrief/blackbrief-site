@@ -27,17 +27,21 @@ const MAX_TRIES = 3; // per post, across runs, before giving up on a lookup
 // Every post is filed under ONE subject desk, shown in the ticker as
 // [ 12 /money ] and tappable to filter the feed. Filing is redone on every
 // run, so a change below refiles the whole feed within a minute or two.
-//   1. The source account decides first (X posts only). Handles are written
-//      lowercase, without the @.
-//   2. Otherwise the wording is searched for the words below; the desk with
-//      the most matches wins (a tie goes to the desk listed first).
+//   1. The source account decides (X posts only), UNLESS the wording clearly
+//      points to another desk and says nothing about the account's own desk
+//      (Polymarket posting about missiles goes to /war, not /money).
+//      Handles are written lowercase, without the @.
+//   2. Otherwise the wording decides. Each word in DESK_WORDS counts 1, each
+//      word in DESK_WEAK (places and leaders, which turn up in every kind of
+//      story) counts half; the desk with the highest score wins, a tie going
+//      to the desk listed first.
 //   3. Otherwise the post stays unfiled and shows under no desk.
 // Editorials are never filed: they are the curator's own voice.
 // tools/desk-report.json lists the counts and the X accounts still unfiled,
 // so they can be added here.
 const DESKS = ['war', 'power', 'money', 'tech', 'anomaly'];
 const DESK_ACCOUNTS = {
-  war: ['shaykhsulaiman', 'hormuzletter', 'visegrad24', 'bricsinfo', 'warsurv', 'geopolitics_emp',
+  war: ['warmonitor3', 'shaykhsulaiman', 'hormuzletter', 'visegrad24', 'bricsinfo', 'warsurv', 'geopolitics_emp',
     'az_intel_', 'persianserene1', 'doctor_rahmeh', 'generalmcnews'],
   power: ['whitehouse', 'presssec', 'libsoftiktok', 'anncoulter', 'theblaze', 'emeraldrobinson',
     'nataliegwinters', 'moreperfectus', 'swamp__watch', 'amoneyresists', 'owenshroyer1776',
@@ -45,39 +49,52 @@ const DESK_ACCOUNTS = {
   money: ['kobeissiletter', 'zerohedge', 'polymarket', 'kalshi', 'unusual_whales', 'barchart',
     'wallstreetapes', 'wallstreetmav', 'charliebilello', 'firstsquawk', 'cryptorover', 'bulltheoryio',
     'greybtc', 'financelancelot', 'geiger_capital', 'stealthqe4', 'mrbankstips', 'hedgeye', 'famexbt',
-    'gemini', 'watcherguru', 'jameslavish'],
+    'gemini', 'watcherguru', 'jameslavish', 'nolimitgains'],
   tech: ['xfreeze', 'trungtphan'],
-  anomaly: ['cdcgov']
+  anomaly: ['cdcgov', 'weathernation']
 };
 const DESK_WORDS = {
-  war: ['war', 'wars', 'warfare', 'military', 'troops', 'soldier', 'soldiers', 'army', 'navy', 'air force',
-    'pentagon', 'missile', 'missiles', 'drone', 'drones', 'airstrike', 'airstrikes', 'strikes', 'bomb',
-    'bombs', 'bombing', 'bomber', 'bombers', 'invasion', 'invade', 'ceasefire', 'nato', 'nuclear', 'iran',
-    'iranian', 'tehran', 'israel', 'israeli', 'idf', 'gaza', 'hamas', 'hezbollah', 'houthi', 'houthis',
-    'lebanon', 'syria', 'yemen', 'ukraine', 'ukrainian', 'russia', 'russian', 'kremlin', 'putin',
-    'zelensky', 'taiwan', 'hormuz', 'strait', 'irgc', 'tanker', 'tankers', 'warship', 'warships',
+  war: ['war', 'wars', 'warfare', 'conflict', 'military', 'military operation', 'troops', 'soldier', 'soldiers',
+    'army', 'navy', 'air force', 'marines', 'pentagon', 'centcom', 'central command', 'missile', 'missiles',
+    'ballistic', 'drone', 'drones', 'airstrike', 'airstrikes', 'bomb', 'bombs', 'bombing', 'bomber', 'bombers',
+    'invasion', 'invade', 'ceasefire', 'nato', 'nuclear', 'idf', 'hamas', 'hezbollah', 'houthi', 'houthis',
+    'ansarallah', 'irgc', 'hormuz', 'strait', 'tanker', 'tankers', 'warship', 'warships', 'aircraft carrier',
     'weapons', 'hostage', 'hostages'],
-  power: ['trump', 'biden', 'harris', 'obama', 'vance', 'rubio', 'white house', 'congress', 'senate',
-    'senator', 'house speaker', 'democrat', 'democrats', 'democratic', 'republican', 'republicans', 'gop',
-    'maga', 'election', 'elections', 'ballot', 'vote', 'voters', 'supreme court', 'scotus', 'doj', 'fbi',
-    'attorney general', 'governor', 'mayor', 'president', 'administration', 'impeach', 'impeachment',
-    'epstein', 'immigration', 'deport', 'deportation', 'deportations', 'border', 'shutdown',
-    'executive order', 'lawmaker', 'lawmakers', 'newsom', 'press secretary', 'leavitt'],
+  power: ['white house', 'congress', 'senate', 'senator', 'house speaker', 'democrat', 'democrats', 'democratic',
+    'republican', 'republicans', 'gop', 'maga', 'election', 'elections', 'ballot', 'vote', 'voters',
+    'supreme court', 'scotus', 'doj', 'fbi', 'attorney general', 'governor', 'mayor', 'president',
+    'administration', 'impeach', 'impeachment', 'epstein', 'immigration', 'deport', 'deportation',
+    'deportations', 'border', 'shutdown', 'executive order', 'lawmaker', 'lawmakers', 'politicians', 'bill',
+    'ambassador', 'state department', 'press secretary', 'grift', 'corruption'],
   money: ['market', 'markets', 'stock', 'stocks', 's&p', 'nasdaq', 'dow', 'wall street', 'fed',
-    'federal reserve', 'powell', 'rate cut', 'rate cuts', 'interest rate', 'interest rates', 'inflation',
-    'cpi', 'jobs report', 'unemployment', 'recession', 'gdp', 'economy', 'economic', 'treasury', 'yield',
-    'yields', 'bond', 'bonds', 'oil', 'gold', 'silver', 'bitcoin', 'btc', 'crypto', 'ethereum', 'dollar',
-    'tariff', 'tariffs', 'earnings', 'bank', 'banks', 'debt', 'polymarket', 'kalshi', 'odds',
-    'prediction market', 'billion', 'trillion', 'price', 'prices', 'housing', 'mortgage', 'ipo', 'shares'],
+    'federal reserve', 'rate cut', 'rate cuts', 'interest rate', 'interest rates', 'inflation', 'cpi',
+    'consumer prices', 'jobs report', 'unemployment', 'recession', 'gdp', 'economy', 'economic', 'treasury',
+    'yield', 'yields', 'bond', 'bonds', 'oil', 'diesel', 'gasoline', 'jet fuel', 'refinery', 'gold', 'silver',
+    'bitcoin', 'btc', 'crypto', 'ethereum', 'dollar', 'tariff', 'tariffs', 'exports', 'earnings', 'bank',
+    'banks', 'debt', 'polymarket', 'kalshi', 'odds', 'prediction market', 'billion', 'trillion', 'price',
+    'prices', 'housing', 'home prices', 'affordable', 'affordability', 'foreclosure', 'foreclosures',
+    'mortgage', 'property tax', 'property taxes', 'taxes', 'medicare', 'paycheck', 'wages', 'capitalism',
+    'ipo', 'shares'],
   tech: ['ai', 'a.i.', 'artificial intelligence', 'openai', 'chatgpt', 'nvidia', 'apple', 'iphone',
     'google', 'meta', 'microsoft', 'tesla', 'spacex', 'starlink', 'xai', 'grok', 'robot', 'robots',
-    'robotics', 'chip', 'chips', 'semiconductor', 'semiconductors', 'hack', 'hacked', 'hacker', 'hackers',
-    'cyber', 'cyberattack', 'surveillance', 'facial recognition', 'data breach', 'deepfake', 'quantum',
-    'algorithm', 'smartphone', 'software'],
+    'robotics', 'chip', 'chips', 'semiconductor', 'semiconductors', 'data center', 'data centers', 'hack',
+    'hacked', 'hacker', 'hackers', 'cyber', 'cyberattack', 'surveillance', 'facial recognition',
+    'data breach', 'deepfake', 'quantum', 'algorithm', 'smartphone', 'software'],
   anomaly: ['ufo', 'ufos', 'uap', 'uaps', 'alien', 'aliens', 'extraterrestrial', 'earthquake', 'earthquakes',
-    'quake', 'quakes', 'volcano', 'eruption', 'tsunami', 'outbreak', 'virus', 'pandemic', 'measles',
-    'bird flu', 'h5n1', 'cdc', 'mysterious', 'mystery', 'unexplained', 'missing', 'sinkhole', 'meteor',
-    'asteroid', 'solar flare', 'strange', 'bizarre', 'anomaly', 'fireball', 'sighting', 'disappeared']
+    'quake', 'quakes', 'volcano', 'eruption', 'tsunami', 'flood', 'floods', 'flooding', 'hurricane', 'tornado',
+    'wildfire', 'wildfires', 'landslide', 'sinkhole', 'outbreak', 'virus', 'pandemic', 'epidemic', 'plague',
+    'pneumonic', 'pneumonia', 'quarantine', 'quarantines', 'pathogen', 'measles', 'bird flu', 'h5n1', 'cdc',
+    'mysterious', 'mystery', 'unexplained', 'unknown', 'missing', 'meteor', 'asteroid', 'solar flare', 'strange',
+    'bizarre', 'anomaly', 'fireball', 'sighting', 'disappeared', 'weather modification', 'weather-modification',
+    'geoengineering', 'cloud seeding', 'declassified']
+};
+// half-weight words: places and leaders, which turn up in every kind of story
+const DESK_WEAK = {
+  war: ['iran', 'iranian', 'tehran', 'israel', 'israeli', 'gaza', 'lebanon', 'syria', 'yemen', 'ukraine',
+    'ukrainian', 'russia', 'russian', 'kremlin', 'putin', 'zelensky', 'zelenskyy', 'taiwan', 'north korea',
+    'middle east'],
+  power: ['trump', 'biden', 'harris', 'obama', 'vance', 'rubio', 'newsom', 'leavitt'],
+  money: ['powell']
 };
 
 // ── the same rules index.html uses to read a posts.txt line ──
@@ -151,25 +168,29 @@ function handleOf(url) {
 const deskAccount = {};
 for (const d of DESKS) for (const h of DESK_ACCOUNTS[d] || []) deskAccount[h.toLowerCase()] = d;
 function wordRe(w) { return new RegExp('(?<![a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![a-z0-9])'); }
-const deskRes = DESKS.map(d => ({ d, res: (DESK_WORDS[d] || []).map(wordRe) }));
-// → { desk: 'money' | '' , by: 'account' | 'words' | '' }
+const deskRes = DESKS.map(d => ({ d, res: (DESK_WORDS[d] || []).map(w => [wordRe(w), 1])
+  .concat((DESK_WEAK[d] || []).map(w => [wordRe(w), 0.5])) }));
+// → { desk: 'money' | '', by: 'account' | 'words' | 'over_account' | '' }
 function deskOf(post, entry) {
   if (post.kind === 'editorial') return { desk: '', by: '' };
-  if (post.kind === 'tweet') {
-    const h = handleOf(post.url).slice(1).toLowerCase();
-    if (deskAccount[h]) return { desk: deskAccount[h], by: 'account' };
-  }
+  const acct = post.kind === 'tweet' ? deskAccount[handleOf(post.url).slice(1).toLowerCase()] || '' : '';
   let text = post.label || (entry && entry.title) || '';
   if (post.kind === 'tweet' && !post.label) { const i = text.indexOf(': '); if (text.charAt(0) === '@' && i !== -1) text = text.slice(i + 2); }
   text = String(text).toLowerCase();
-  if (!text) return { desk: '', by: '' };
+  const score = {};
   let best = '', top = 0;
   for (const { d, res } of deskRes) {
     let n = 0;
-    for (const re of res) if (re.test(text)) n++;
+    for (const [re, w] of res) if (re.test(text)) n += w;
+    score[d] = n;
     if (n > top) { top = n; best = d; }
   }
-  return { desk: best, by: best ? 'words' : '' };
+  if (acct) {
+    // the wording overrules the account only when it clearly points elsewhere
+    if (best && best !== acct && top >= 1 && !score[acct]) return { desk: best, by: 'over_account' };
+    return { desk: acct, by: 'account' };
+  }
+  return top >= 0.5 ? { desk: best, by: 'words' } : { desk: '', by: '' };
 }
 
 // ── lookups (each post is looked up once, then remembered in share-cache.json) ──
@@ -345,7 +366,7 @@ function page(code, post, c) {
     else { delete entry.desk; if (post.kind !== 'editorial') counts.unfiled++; }
     if (post.kind === 'tweet') {
       const h = handleOf(post.url).toLowerCase();
-      if (f.by !== 'account' && h) {
+      if (!deskAccount[h.slice(1)] && h) {
         const u = unfiled[h] || (unfiled[h] = { posts: 0, filed_by_words: [] });
         u.posts++;
         if (f.desk && u.filed_by_words.indexOf(f.desk) === -1) u.filed_by_words.push(f.desk);
@@ -366,7 +387,7 @@ function page(code, post, c) {
   fs.writeFileSync(DESK_REPORT, JSON.stringify({
     note: 'Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.',
     desks: counts,
-    filed_by: { account: byAccount.account || 0, words: byAccount.words || 0 },
+    filed_by: { account: byAccount.account || 0, words: byAccount.words || 0, words_over_account: byAccount.over_account || 0 },
     accounts_without_a_desk: accounts
   }, null, 1) + '\n');
   console.log(posts.length + ' share pages written; ' + looked + ' lookups this run, ' + got + ' returned a title; ' + marked + ' X posts given a media mark');
