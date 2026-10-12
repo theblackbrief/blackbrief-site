@@ -1,0 +1,148 @@
+{
+ "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
+ "desks": {
+  "unfiled": 9,
+  "war": 21,
+  "power": 7,
+  "money": 12,
+  "tech": 0,
+  "anomaly": 0
+ },
+ "filed_by": {
+  "account": 23,
+  "words": 17
+ },
+ "accounts_without_a_desk": [
+  {
+   "handle": "@leadingreport",
+   "posts": 5,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@911newsbreaks",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@abc",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@ap",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
+   ]
+  },
+  {
+   "handle": "@breaking911",
+   "posts": 1,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@cnn",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@daily_mailus",
+   "posts": 1,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@dmichaeltripi",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@grayareatalks",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
+   ]
+  },
+  {
+   "handle": "@insatiablevine",
+   "posts": 1,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@mrsausageget",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
+   ]
+  },
+  {
+   "handle": "@newswire_us",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
+   ]
+  },
+  {
+   "handle": "@nolimitgains",
+   "posts": 1,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@remarks",
+   "posts": 1,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@rt_com",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@scotchscotchzz",
+   "posts": 1,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@secretfire79",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
+   ]
+  },
+  {
+   "handle": "@thecalvincooli1",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@warmonitor3",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@weathernation",
+   "posts": 1,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@zacharyloft",
+   "posts": 1,
+   "filed_by_words": []
+  }
+ ]
+}
