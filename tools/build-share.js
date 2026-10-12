@@ -7,7 +7,8 @@
 //
 // It also keeps tools/share-cache.json, which the main site reads to draw its
 // X cards (Oct 2026): for each X post, its wording ("title") and whether it
-// carries a video or an image ("media").
+// carries a video or an image ("media"). Since the DESKS step it also files
+// every post under a subject desk ("desk"; see DESKS below).
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -15,11 +16,69 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'p');
 const CACHE_FILE = path.join(__dirname, 'share-cache.json');
+const DESK_REPORT = path.join(__dirname, 'desk-report.json');
 const SITE = 'https://theblackbrief.com';
 const NAME = 'the / black brief';
 const TAGLINE = "a newsfeed of things we don't wanna see in a world that isn't supposed to be";
 const IMAGE = SITE + '/BB_Share_Image.png';
 const MAX_TRIES = 3; // per post, across runs, before giving up on a lookup
+
+// ── DESKS (Oct 2026) ──
+// Every post is filed under ONE subject desk, shown in the ticker as
+// [ 12 /money ] and tappable to filter the feed. Filing is redone on every
+// run, so a change below refiles the whole feed within a minute or two.
+//   1. The source account decides first (X posts only). Handles are written
+//      lowercase, without the @.
+//   2. Otherwise the wording is searched for the words below; the desk with
+//      the most matches wins (a tie goes to the desk listed first).
+//   3. Otherwise the post stays unfiled and shows under no desk.
+// Editorials are never filed: they are the curator's own voice.
+// tools/desk-report.json lists the counts and the X accounts still unfiled,
+// so they can be added here.
+const DESKS = ['war', 'power', 'money', 'tech', 'anomaly'];
+const DESK_ACCOUNTS = {
+  war: ['shaykhsulaiman', 'hormuzletter', 'visegrad24', 'bricsinfo', 'warsurv', 'geopolitics_emp',
+    'az_intel_', 'persianserene1', 'doctor_rahmeh', 'generalmcnews'],
+  power: ['whitehouse', 'presssec', 'libsoftiktok', 'anncoulter', 'theblaze', 'emeraldrobinson',
+    'nataliegwinters', 'moreperfectus', 'swamp__watch', 'amoneyresists', 'owenshroyer1776',
+    'theintercept', 'imbreckworsham', 'keithwoodsyt', 'juliecbarrett'],
+  money: ['kobeissiletter', 'zerohedge', 'polymarket', 'kalshi', 'unusual_whales', 'barchart',
+    'wallstreetapes', 'wallstreetmav', 'charliebilello', 'firstsquawk', 'cryptorover', 'bulltheoryio',
+    'greybtc', 'financelancelot', 'geiger_capital', 'stealthqe4', 'mrbankstips', 'hedgeye', 'famexbt',
+    'gemini', 'watcherguru', 'jameslavish'],
+  tech: ['xfreeze', 'trungtphan'],
+  anomaly: ['cdcgov']
+};
+const DESK_WORDS = {
+  war: ['war', 'wars', 'warfare', 'military', 'troops', 'soldier', 'soldiers', 'army', 'navy', 'air force',
+    'pentagon', 'missile', 'missiles', 'drone', 'drones', 'airstrike', 'airstrikes', 'strikes', 'bomb',
+    'bombs', 'bombing', 'bomber', 'bombers', 'invasion', 'invade', 'ceasefire', 'nato', 'nuclear', 'iran',
+    'iranian', 'tehran', 'israel', 'israeli', 'idf', 'gaza', 'hamas', 'hezbollah', 'houthi', 'houthis',
+    'lebanon', 'syria', 'yemen', 'ukraine', 'ukrainian', 'russia', 'russian', 'kremlin', 'putin',
+    'zelensky', 'taiwan', 'hormuz', 'strait', 'irgc', 'tanker', 'tankers', 'warship', 'warships',
+    'weapons', 'hostage', 'hostages'],
+  power: ['trump', 'biden', 'harris', 'obama', 'vance', 'rubio', 'white house', 'congress', 'senate',
+    'senator', 'house speaker', 'democrat', 'democrats', 'democratic', 'republican', 'republicans', 'gop',
+    'maga', 'election', 'elections', 'ballot', 'vote', 'voters', 'supreme court', 'scotus', 'doj', 'fbi',
+    'attorney general', 'governor', 'mayor', 'president', 'administration', 'impeach', 'impeachment',
+    'epstein', 'immigration', 'deport', 'deportation', 'deportations', 'border', 'shutdown',
+    'executive order', 'lawmaker', 'lawmakers', 'newsom', 'press secretary', 'leavitt'],
+  money: ['market', 'markets', 'stock', 'stocks', 's&p', 'nasdaq', 'dow', 'wall street', 'fed',
+    'federal reserve', 'powell', 'rate cut', 'rate cuts', 'interest rate', 'interest rates', 'inflation',
+    'cpi', 'jobs report', 'unemployment', 'recession', 'gdp', 'economy', 'economic', 'treasury', 'yield',
+    'yields', 'bond', 'bonds', 'oil', 'gold', 'silver', 'bitcoin', 'btc', 'crypto', 'ethereum', 'dollar',
+    'tariff', 'tariffs', 'earnings', 'bank', 'banks', 'debt', 'polymarket', 'kalshi', 'odds',
+    'prediction market', 'billion', 'trillion', 'price', 'prices', 'housing', 'mortgage', 'ipo', 'shares'],
+  tech: ['ai', 'a.i.', 'artificial intelligence', 'openai', 'chatgpt', 'nvidia', 'apple', 'iphone',
+    'google', 'meta', 'microsoft', 'tesla', 'spacex', 'starlink', 'xai', 'grok', 'robot', 'robots',
+    'robotics', 'chip', 'chips', 'semiconductor', 'semiconductors', 'hack', 'hacked', 'hacker', 'hackers',
+    'cyber', 'cyberattack', 'surveillance', 'facial recognition', 'data breach', 'deepfake', 'quantum',
+    'algorithm', 'smartphone', 'software'],
+  anomaly: ['ufo', 'ufos', 'uap', 'uaps', 'alien', 'aliens', 'extraterrestrial', 'earthquake', 'earthquakes',
+    'quake', 'quakes', 'volcano', 'eruption', 'tsunami', 'outbreak', 'virus', 'pandemic', 'measles',
+    'bird flu', 'h5n1', 'cdc', 'mysterious', 'mystery', 'unexplained', 'missing', 'sinkhole', 'meteor',
+    'asteroid', 'solar flare', 'strange', 'bizarre', 'anomaly', 'fireball', 'sighting', 'disappeared']
+};
 
 // ── the same rules index.html uses to read a posts.txt line ──
 const TS_RE = /(?:^|\s)@(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)(?=\s|$)/;
@@ -86,6 +145,31 @@ function tweetText(html) {
 }
 function handleOf(url) {
   try { const seg = new URL(url).pathname.split('/')[1]; return seg && seg !== 'i' ? '@' + seg : ''; } catch (e) { return ''; }
+}
+
+// ── DESK FILING ──
+const deskAccount = {};
+for (const d of DESKS) for (const h of DESK_ACCOUNTS[d] || []) deskAccount[h.toLowerCase()] = d;
+function wordRe(w) { return new RegExp('(?<![a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![a-z0-9])'); }
+const deskRes = DESKS.map(d => ({ d, res: (DESK_WORDS[d] || []).map(wordRe) }));
+// → { desk: 'money' | '' , by: 'account' | 'words' | '' }
+function deskOf(post, entry) {
+  if (post.kind === 'editorial') return { desk: '', by: '' };
+  if (post.kind === 'tweet') {
+    const h = handleOf(post.url).slice(1).toLowerCase();
+    if (deskAccount[h]) return { desk: deskAccount[h], by: 'account' };
+  }
+  let text = post.label || (entry && entry.title) || '';
+  if (post.kind === 'tweet' && !post.label) { const i = text.indexOf(': '); if (text.charAt(0) === '@' && i !== -1) text = text.slice(i + 2); }
+  text = String(text).toLowerCase();
+  if (!text) return { desk: '', by: '' };
+  let best = '', top = 0;
+  for (const { d, res } of deskRes) {
+    let n = 0;
+    for (const re of res) if (re.test(text)) n++;
+    if (n > top) { top = n; best = d; }
+  }
+  return { desk: best, by: best ? 'words' : '' };
 }
 
 // ── lookups (each post is looked up once, then remembered in share-cache.json) ──
@@ -251,6 +335,27 @@ function page(code, post, c) {
     next[code] = entry;
   }
 
+  // DESKS: file every post, every run (no lookups, so this is quick)
+  const counts = { unfiled: 0 }, byAccount = {}, unfiled = {};
+  for (const d of DESKS) counts[d] = 0;
+  for (const { code, post } of posts) {
+    const entry = next[code];
+    const f = deskOf(post, entry);
+    if (f.desk) { entry.desk = f.desk; counts[f.desk]++; }
+    else { delete entry.desk; if (post.kind !== 'editorial') counts.unfiled++; }
+    if (post.kind === 'tweet') {
+      const h = handleOf(post.url).toLowerCase();
+      if (f.by !== 'account' && h) {
+        const u = unfiled[h] || (unfiled[h] = { posts: 0, filed_by_words: [] });
+        u.posts++;
+        if (f.desk && u.filed_by_words.indexOf(f.desk) === -1) u.filed_by_words.push(f.desk);
+      }
+    }
+    if (f.by) byAccount[f.by] = (byAccount[f.by] || 0) + 1;
+  }
+  const accounts = Object.keys(unfiled).sort((a, b) => unfiled[b].posts - unfiled[a].posts || (a < b ? -1 : 1))
+    .map(h => ({ handle: h, posts: unfiled[h].posts, filed_by_words: unfiled[h].filed_by_words }));
+
   fs.rmSync(OUT, { recursive: true, force: true });
   for (const { code, post } of posts) {
     const dir = path.join(OUT, code);
@@ -258,6 +363,13 @@ function page(code, post, c) {
     fs.writeFileSync(path.join(dir, 'index.html'), page(code, post, card(post, next[code])));
   }
   fs.writeFileSync(CACHE_FILE, JSON.stringify(next, null, 1) + '\n');
+  fs.writeFileSync(DESK_REPORT, JSON.stringify({
+    note: 'Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.',
+    desks: counts,
+    filed_by: { account: byAccount.account || 0, words: byAccount.words || 0 },
+    accounts_without_a_desk: accounts
+  }, null, 1) + '\n');
   console.log(posts.length + ' share pages written; ' + looked + ' lookups this run, ' + got + ' returned a title; ' + marked + ' X posts given a media mark');
+  console.log('desks: ' + DESKS.map(d => d + ' ' + counts[d]).join(', ') + ', unfiled ' + counts.unfiled);
   for (const h of Object.keys(strikes)) if (strikes[h] >= 4) console.log('note: lookups for "' + h + '" were failing, so the rest were skipped this run');
 })().catch(e => { console.error(e); process.exit(1); });
