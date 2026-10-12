@@ -1,4 +1,12 @@
 {
+ "k9e11j": {
+  "tries": 1,
+  "done": true,
+  "title": "@unusual_whales: A $100,000 salary in 2000 has the same purchasing power as $194,530 in 2026, per YF",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "a44hf4": {
   "tries": 1,
   "done": true,
@@ -383,13 +391,5 @@
   "image": "",
   "media": "",
   "desk": "war"
- },
- "1d5s1xi": {
-  "tries": 1,
-  "done": true,
-  "title": "@StealthQE4: Looks like all hell is about to break out in the Middle East. Buckle up.",
-  "image": "",
-  "media": "",
-  "desk": "money"
  }
 }
