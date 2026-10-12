@@ -350,19 +350,21 @@ html,body{background:#f5f5f5}
    the ticker shows a count per desk: [ 15 /money ]. The slash is the logo's
    red; each desk has its own colour from one cool family. */
 .bb-desk-slash{color:#cc2222;font-weight:700}
-.bb-desk{font-weight:700}
-.desk-war{color:#aab4c3}
-.desk-power{color:#a08bff}
-.desk-money{color:#79d4e6}
-.desk-tech{color:#5f8dff}
-.desk-anomaly{color:#d28cff}
+.bb-desk{font-weight:700;color:var(--desk)}
+.desk-war{--desk:#c8f060}
+.desk-power{--desk:#a08bff}
+.desk-money{--desk:#79d4e6}
+.desk-tech{--desk:#5f8dff}
+.desk-anomaly{--desk:#d28cff}
 @media(prefers-color-scheme:light){
-.desk-war{color:#4a5566}
-.desk-power{color:#5b45c9}
-.desk-money{color:#0b6f84}
-.desk-tech{color:#2552c9}
-.desk-anomaly{color:#8a2fb3}
+.desk-war{--desk:#5c7a0e}
+.desk-power{--desk:#5b45c9}
+.desk-money{--desk:#0b6f84}
+.desk-tech{--desk:#2552c9}
+.desk-anomaly{--desk:#8a2fb3}
 }
+/* the ticker can be dragged sideways at any time */
+#bb-ticker-mask{touch-action:pan-y;cursor:grab}
 
 /* ── MOBILE ── */
 @media(max-width:480px){
@@ -405,7 +407,7 @@ html,body{background:#f5f5f5}
 .wire-cue.has-media{color:#e6e6e6}
 /* live: under an hour old gets the green dot and a brighter time; over a day old steps back a little */
 .wire-fresh>.video-card-header{color:#e6e6e6}
-.wire-fresh>.video-card-header::before{content:'';display:inline-block;width:6px;height:6px;margin:0 9px 2px 0;vertical-align:middle;background:#2ecc71;border-radius:50%;animation:bb-blink 1.6s infinite}
+.wire-fresh .wire-who::before{content:'';display:inline-block;width:6px;height:6px;margin:0 9px 2px 0;vertical-align:middle;background:#2ecc71;border-radius:50%;animation:bb-blink 1.6s infinite}
 .wire-old .wire-text span{opacity:.8}
 /* the top post */
 .headline-card.wire-card{min-height:0}
@@ -456,7 +458,7 @@ html,body{background:#f5f5f5}
 .video-card.tag-sus .wire-kicker{color:#cc7700}
 .video-card.tag-custom .wire-kicker{color:#5a5348}
 .wire-fresh>.video-card-header{color:#222}
-.wire-fresh>.video-card-header::before{background:#27ae60}
+.wire-fresh .wire-who::before{background:#27ae60}
 .bb-day{color:#6e6e6e}
 .bb-day::before,.bb-day::after{background:rgba(0,0,0,0.12)}
 #bb-drawer-tweet{background:#f5f5f5}
@@ -510,6 +512,60 @@ html,body{background:#f5f5f5}
 .stamp{background:#ffffff}
 }
 @media(prefers-color-scheme:light) and (hover:hover){.rich-preview:hover,.wire-card:hover{background:#f6f7f8}}
+
+/* ── DESKS ON CARDS (Oct 2026) ──
+   "@handle // 2h ago" on the left of the top line, "/money" on the right
+   (tap it to see the whole desk). The desk's colour also goes on the
+   "view post »" line, the cue that the card opens. */
+.wire-card>.video-card-header{display:flex;align-items:center;justify-content:center}
+.wire-card>.video-card-header.has-desk{justify-content:flex-start;text-align:left;letter-spacing:.12em;padding-left:18px;padding-right:18px}
+.wire-who{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wire-age{flex-shrink:0;white-space:nowrap;margin-left:.45em}
+.wire-age:empty{display:none}
+.bb-desk-btn{margin-left:auto!important;flex-shrink:0;background:none;border:0;margin:-10px -6px -10px 0;padding:10px 6px 10px 10px;font:inherit;letter-spacing:inherit;text-transform:inherit;line-height:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.bb-desk-btn[hidden]{display:none}
+.wire-card .wire-cue.bb-dc{color:var(--desk);font-weight:700}
+@media(max-width:480px){.wire-card>.video-card-header.has-desk{padding-left:16px;padding-right:16px;font-size:12px}}
+
+/* ── PRESS (Oct 2026): a card brightens a little under the finger ── */
+.wire-card:active,.rich-preview:active{background:#161616}
+@media(prefers-color-scheme:light){.wire-card:active,.rich-preview:active{background:#eceef0}}
+
+/* ── ONE-TIME HINT (Oct 2026): "tap a card to open the post »" ── */
+.bb-tap-hint{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 -12px;font-family:'Zilla Slab',serif;font-size:12px;font-weight:700;letter-spacing:.2em;line-height:1;text-transform:uppercase;color:#d8d8d8;white-space:nowrap}
+.bb-tap-hint::before,.bb-tap-hint::after{content:'';width:18px;height:1px;background:#777}
+.bb-tap-hint b{color:#cc2222}
+@media(prefers-color-scheme:light){.bb-tap-hint{color:#333}.bb-tap-hint::before,.bb-tap-hint::after{background:#999}}
+@media(max-width:480px){.bb-tap-hint{font-size:11px;letter-spacing:.16em}}
+
+/* ── AMBER = THE CURATOR (Oct 2026) ──
+   Everything the owner marks himself is amber: every tag he adds (sus and all
+   custom tags) and his editorials. Red stays for the brand, #urgent and
+   #headline; green for live and shared. */
+.stamp-sus,.stamp-custom{color:#ffaa00;border-color:#ffaa00}
+.video-card.tag-sus,.video-card.tag-custom,.rich-preview.tag-sus,.rich-preview.tag-custom,.editorial-card,.editorial-card.tag-sus,.editorial-card.tag-custom{border-left-color:#ffaa00}
+.video-card.tag-sus .video-card-header,.video-card.tag-custom .video-card-header,
+.video-card.tag-sus .video-card-footer,.video-card.tag-custom .video-card-footer,
+.video-card.tag-sus .wire-kicker,.video-card.tag-custom .wire-kicker,
+.rich-preview.tag-sus .rich-preview-domain,.rich-preview.tag-custom .rich-preview-domain,
+.rich-preview.tag-sus .rich-preview-action,.rich-preview.tag-custom .rich-preview-action,
+.editorial-card .editorial-sigil,.editorial-card.tag-sus .editorial-sigil,.editorial-card.tag-custom .editorial-sigil,
+.editorial-card.tag-sus .editorial-footer,.editorial-card.tag-custom .editorial-footer{color:#ffaa00}
+.editorial-card .editorial-footer{color:#999}
+.bb-tick-item.tick-noted{color:#ffaa00}
+@media(prefers-color-scheme:light){
+.stamp-sus,.stamp-custom{color:#b86e00;border-color:#b86e00}
+.video-card.tag-sus,.video-card.tag-custom,.rich-preview.tag-sus,.rich-preview.tag-custom,.editorial-card,.editorial-card.tag-sus,.editorial-card.tag-custom{border-left-color:#b86e00}
+.video-card.tag-sus .video-card-header,.video-card.tag-custom .video-card-header,
+.video-card.tag-sus .video-card-footer,.video-card.tag-custom .video-card-footer,
+.video-card.tag-sus .wire-kicker,.video-card.tag-custom .wire-kicker,
+.rich-preview.tag-sus .rich-preview-domain,.rich-preview.tag-custom .rich-preview-domain,
+.rich-preview.tag-sus .rich-preview-action,.rich-preview.tag-custom .rich-preview-action,
+.editorial-card .editorial-sigil,.editorial-card.tag-sus .editorial-sigil,.editorial-card.tag-custom .editorial-sigil,
+.editorial-card.tag-sus .editorial-footer,.editorial-card.tag-custom .editorial-footer{color:#b86e00}
+.editorial-card .editorial-footer{color:#666}
+.bb-tick-item.tick-noted{color:#b86e00}
+}
 </style>
 
 </head>
@@ -883,13 +939,12 @@ return t.trim();
 // DESKS (Oct 2026): the subject desk GitHub filed a post under, or '' if none
 var DESKS=['war','power','money','tech','anomaly'];
 var DESK_MIN=3; // a desk with fewer posts than this stays out of the ticker
-function postDesk(p){
-var id=postId(p);
-if(!id)return'';
-var e=wire[bbCode(id)];
+function wireDesk(id){
+var e=id?wire[bbCode(id)]:null;
 var d=e&&e.desk;
 return DESKS.indexOf(d)!==-1?d:'';
 }
+function postDesk(p){return wireDesk(postId(p));}
 // 'video' | 'image' | 'media' (has one, kind unknown) | ''
 function wireMedia(id){
 var e=wire[bbCode(id)];
@@ -920,7 +975,8 @@ var id=tc.getAttribute('data-wire-id');
 var t=wireText(id),m=wireMedia(id);
 var ts=Number(tc.getAttribute('data-wire-ts'))||0;
 var pending=!t&&ts>0&&Date.now()-ts<WIRE_NEW_MS;
-var sig=t+'|'+m+'|'+(pending?1:0);
+var dk=wireDesk(id);
+var sig=t+'|'+m+'|'+(pending?1:0)+'|'+dk;
 if(tc.__wire===sig)return;
 tc.__wire=sig;
 var w=t?wireSplit(t):{k:'',t:''};
@@ -935,6 +991,20 @@ sp.appendChild(document.createTextNode(t?w.t:(pending?'new transmission':'')));
 var cue=tc.querySelector('.wire-cue');
 cue.textContent='view '+(m||'post')+' »';
 cue.classList.toggle('has-media',!!m);
+// DESKS ON CARDS (Oct 2026): "/money" at the right of the top line (tap to
+// see the whole desk), and the desk's colour on the "view ... »" line.
+// The top post keeps its red.
+if(tc.classList.contains('headline-card'))return;
+cue.className=cue.className.replace(/\s*\b(bb-dc|desk-[a-z]+)\b/g,'');
+if(dk){cue.classList.add('bb-dc');cue.classList.add('desk-'+dk);}
+var db=tc.querySelector('.bb-desk-btn');
+if(db){
+clearEl(db);
+db.hidden=!dk;
+db.setAttribute('data-desk',dk);
+if(dk){deskMark(db,dk);db.setAttribute('aria-label','show the '+dk+' desk');}
+db.parentNode.classList.toggle('has-desk',!!dk);
+}
 }
 // SAFETY NET: show X's own embed in place of the wording (lazily, like before)
 function wireEmbed(tc,body,on){
@@ -1006,7 +1076,17 @@ tc.setAttribute('data-wire-id',url);
 tc.setAttribute('data-wire-ts',isNaN(ts)?'':String(ts));
 tc.setAttribute('data-tweet',url.replace('x.com','twitter.com').split('?')[0]);
 var th=mkEl('div','video-card-header');
-setAge(th,twHandle(url),ts);
+// the handle can shorten with "…" on a narrow card; the age never does
+var who=mkEl('span','wire-who');
+who.textContent=twHandle(url);
+th.appendChild(who);
+var age=mkEl('span','wire-age');
+setAge(age,'',ts);
+th.appendChild(age);
+var db=mkEl('button','bb-desk-btn');
+db.type='button';
+db.hidden=true;
+th.appendChild(db);
 tc.appendChild(th);
 tc.appendChild(wireBody());
 var tf=mkEl('div','video-card-footer');
@@ -1064,6 +1144,33 @@ cs[i].classList.toggle('bb-lead',i===0&&!activeFilter&&cs[i].parentNode===feed);
 var k=dayKey(days[i]);
 if(k!==prev){cs[i].parentNode.insertBefore(dayMarker(days[i]),cs[i]);prev=k;}
 }
+placeTapHint();
+}
+
+// ONE-TIME HINT (Oct 2026): a reader who has never opened a card sees
+// "tap a card to open the post »" above the first card in the feed. It goes
+// away for good (on that device) the first time they open one.
+var TAP_KEY='bb-tapped';
+var tapHint=true;
+try{tapHint=!localStorage.getItem(TAP_KEY);}catch(e){}
+function placeTapHint(){
+var old=document.querySelectorAll('.bb-tap-hint');
+for(var i=0;i<old.length;i++)old[i].parentNode.removeChild(old[i]);
+if(!tapHint||activeFilter)return;
+var first=feed.querySelector('.post-container');
+if(!first)return;
+var h=mkEl('div','bb-tap-hint');
+h.appendChild(document.createTextNode('tap a card to open the post '));
+var b=mkEl('b');
+b.textContent='»';
+h.appendChild(b);
+feed.insertBefore(h,first);
+}
+function tapDone(){
+if(!tapHint)return;
+tapHint=false;
+try{localStorage.setItem(TAP_KEY,'1');}catch(e){}
+placeTapHint();
 }
 
 // the same link "§ share" gives, for the share button inside the drawer
@@ -1664,6 +1771,7 @@ setTimeout(go,100);
 }
 
 function openTweet(card){
+tapDone();
 wireFirst=card;
 drawerBrief.style.display='none';
 drawerFrame.style.display='none';
@@ -1738,6 +1846,7 @@ return t?t.textContent.trim():'';
 }
 
 function openDrawer(url,dom,title){
+tapDone();
 // back to article mode
 wireSeq++;
 wireCur=wireFirst=null;
@@ -1783,6 +1892,14 @@ overlay.addEventListener('click',closeDrawer);
 drawerClose.addEventListener('click',closeDrawer);
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer();});
 document.addEventListener('click',function(e){
+// a desk label on a card shows that whole desk
+var dkb=e.target.closest('.bb-desk-btn[data-desk]');
+if(dkb){
+e.preventDefault();
+var dsk=dkb.getAttribute('data-desk');
+if(dsk)setFilter('desk:'+dsk);
+return;
+}
 var wc=e.target.closest('.wire-card[data-tweet]');
 if(wc){e.preventDefault();openTweet(wc);return;}
 var rp=e.target.closest('.rich-preview[data-url],.headline-card[data-url]');
@@ -1888,6 +2005,12 @@ return out;
 
 // the ticker figure a filter belongs to, or null if it has nothing to show
 function statFor(f){
+// a desk can be filtered from a card even when it is too small for the ticker
+if(f&&f.indexOf('desk:')===0){
+var d=f.slice(5);
+var n=allLines.map(prep).filter(function(p){return postDesk(p)===d;}).length;
+return n?{k:'desk-'+d,t:n+' /'+d,f:f,desk:d,n:n}:null;
+}
 var items=feedStats();
 for(var i=0;i<items.length;i++)if(items[i].f===f)return items[i];
 return null;
@@ -1946,6 +2069,7 @@ function tickHalf(){return tickTrack.offsetWidth/2;}
 function tickRun(pos){
 var half=tickHalf()||1;
 var dur=Math.max(12,half/TICK_SPEED);
+tickTrack.style.transform='';
 tickTrack.style.animation='bb-scroll '+dur.toFixed(2)+'s linear infinite';
 tickTrack.style.animationDelay='-'+((pos%half)/half*dur).toFixed(3)+'s';
 }
@@ -1972,7 +2096,7 @@ var need=Math.min(40,Math.max(1,Math.ceil((tickMask.clientWidth+200)/one)));
 for(var i=1;i<need;i++)addSet();
 var count=tickTrack.childNodes.length;
 for(var j=0;j<count;j++)tickTrack.appendChild(tickTrack.childNodes[j].cloneNode(true));
-if(tickPaused)tickTrack.style.animation='none';else tickRun(0);
+if(tickPaused){tickTrack.style.animation='none';tickSet(tickPos);}else tickRun(0);
 }
 
 function tickerUpdate(){
@@ -1989,35 +2113,66 @@ els[i].classList.toggle('tick-active',on);
 });
 }
 
-// Paused = the strip stands still exactly where it was and can be swiped by
-// hand. Running = it scrolls by itself, picking up from where it stood.
+// Paused = the strip stands still exactly where it was. Running = it scrolls
+// by itself, picking up from where it stood.
+// TICKER DRAG (Oct 2026): the strip can be dragged sideways with a finger (or
+// the mouse) at any moment, not only while paused. It picks up scrolling 3
+// seconds after it is let go, unless a filter is on.
+var tickPos=0,tickDrag=null,tickDragEnd=0;
+var TICK_RESUME_MS=3000;
+function tickOffset(){
+var m=getComputedStyle(tickTrack).transform;
+var mm=m&&m!=='none'?m.match(/matrix\(([^)]+)\)/):null;
+return mm?(-parseFloat(mm[1].split(',')[4])||0):0;
+}
+// hold the strip at a position, wrapping round so it never runs out
+function tickSet(p){
+var half=tickHalf();
+p=half>0?p%half:0;
+if(p<0)p+=half;
+tickPos=p;
+tickTrack.style.transform='translateX('+(-p)+'px)';
+}
 function tickerPause(val){
 if(val===tickPaused)return;
 tickPaused=val;
 if(val){
-var m=getComputedStyle(tickTrack).transform,off=0;
-var mm=m&&m!=='none'?m.match(/matrix\(([^)]+)\)/):null;
-if(mm)off=-parseFloat(mm[1].split(',')[4])||0;
+var off=tickOffset();
 tickTrack.style.animation='none';
-tickMask.classList.add('bb-tick-free');
-tickMask.scrollLeft=off;
+tickSet(off);
 }else{
-var pos=tickMask.scrollLeft;
-tickMask.classList.remove('bb-tick-free');
-tickMask.scrollLeft=0;
-tickRun(pos);
+tickRun(tickPos);
 }
 tickOuter.classList.toggle('bb-ticker-paused',val);
 }
-
-// while paused, wrap the hand-scroll around so it never hits an end
-tickMask.addEventListener('scroll',function(){
-if(!tickPaused)return;
-var half=tickHalf();
-if(half<=0)return;
-if(tickMask.scrollLeft>=half+2)tickMask.scrollLeft-=half;
-else if(tickMask.scrollLeft<=0)tickMask.scrollLeft+=half;
-},{passive:true});
+function tickResumeLater(){
+if(tickTimer)clearTimeout(tickTimer);
+tickTimer=setTimeout(function(){tickTimer=null;if(!activeFilter&&!tickDrag)tickerPause(false);},TICK_RESUME_MS);
+}
+tickMask.addEventListener('pointerdown',function(e){
+if(e.pointerType==='mouse'&&e.button!==0)return;
+if(tickTimer){clearTimeout(tickTimer);tickTimer=null;}
+tickerPause(true);
+tickDrag={id:e.pointerId,x:e.clientX,start:tickPos,moved:false};
+});
+window.addEventListener('pointermove',function(e){
+if(!tickDrag||e.pointerId!==tickDrag.id)return;
+var dx=e.clientX-tickDrag.x;
+if(!tickDrag.moved){
+if(Math.abs(dx)<6)return;
+tickDrag.moved=true;
+try{tickMask.setPointerCapture(e.pointerId);}catch(ex){}
+}
+tickSet(tickDrag.start-dx);
+});
+function tickDragStop(e){
+if(!tickDrag||e.pointerId!==tickDrag.id)return;
+if(tickDrag.moved)tickDragEnd=Date.now();
+tickDrag=null;
+if(!activeFilter)tickResumeLater();
+}
+window.addEventListener('pointerup',tickDragStop);
+window.addEventListener('pointercancel',tickDragStop);
 
 function setFilter(f,keepScroll){
 var changed=f!==activeFilter;
@@ -2048,16 +2203,18 @@ setFilter(f===activeFilter?null:f);
 tickOuter.addEventListener('click',function(e){
 var t=e.target;
 if(!t||!t.closest)return;
+if(Date.now()-tickDragEnd<350)return; // the end of a drag is not a tap
 var item=t.closest('.bb-tick-item[data-f]');
 if(item)return tickerTap(item.getAttribute('data-f'));
 // the red "§ bb" label pauses and resumes the ticker
 if(t.closest('#bb-ticker-label')){
 if(tickTimer){clearTimeout(tickTimer);tickTimer=null;}
 tickerPause(!tickPaused);
-if(tickPaused&&!activeFilter)tickTimer=setTimeout(function(){if(!activeFilter)tickerPause(false);},8000);
+if(tickPaused&&!activeFilter)tickResumeLater();
 }
 });
 tickOuter.addEventListener('touchstart',function(){},{passive:true}); // lets the tap highlight show on iOS
+document.addEventListener('touchstart',function(){},{passive:true}); // and the press look on cards
 
 fb.addEventListener('click',function(){setFilter(null);});
 
