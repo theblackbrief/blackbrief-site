@@ -2,9 +2,9 @@
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
   "unfiled": 2,
-  "war": 16,
+  "war": 15,
   "power": 8,
-  "money": 14,
+  "money": 15,
   "tech": 0,
   "anomaly": 9
  },
@@ -20,6 +20,14 @@
    "filed_by_words": [
     "war",
     "anomaly"
+   ]
+  },
+  {
+   "handle": "@newswire_us",
+   "posts": 2,
+   "filed_by_words": [
+    "money",
+    "power"
    ]
   },
   {
@@ -63,13 +71,6 @@
    "filed_by_words": []
   },
   {
-   "handle": "@dmichaeltripi",
-   "posts": 1,
-   "filed_by_words": [
-    "war"
-   ]
-  },
-  {
    "handle": "@grayareatalks",
    "posts": 1,
    "filed_by_words": [
@@ -85,13 +86,6 @@
   },
   {
    "handle": "@mrsausageget",
-   "posts": 1,
-   "filed_by_words": [
-    "power"
-   ]
-  },
-  {
-   "handle": "@newswire_us",
    "posts": 1,
    "filed_by_words": [
     "power"
