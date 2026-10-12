@@ -345,6 +345,25 @@ html,body{background:#f5f5f5}
 }
 @media(prefers-color-scheme:light) and (hover:hover){.bb-tick-item[data-f]:hover{color:#000000}}
 
+/* ── DESKS (Oct 2026) ──
+   GitHub files every post under one subject desk (tools/build-share.js) and
+   the ticker shows a count per desk: [ 15 /money ]. The slash is the logo's
+   red; each desk has its own colour from one cool family. */
+.bb-desk-slash{color:#cc2222;font-weight:700}
+.bb-desk{font-weight:700}
+.desk-war{color:#aab4c3}
+.desk-power{color:#a08bff}
+.desk-money{color:#79d4e6}
+.desk-tech{color:#5f8dff}
+.desk-anomaly{color:#d28cff}
+@media(prefers-color-scheme:light){
+.desk-war{color:#4a5566}
+.desk-power{color:#5b45c9}
+.desk-money{color:#0b6f84}
+.desk-tech{color:#2552c9}
+.desk-anomaly{color:#8a2fb3}
+}
+
 /* ── MOBILE ── */
 @media(max-width:480px){
 #black-brief-wrapper{padding:12px 8px 36px}
@@ -550,7 +569,7 @@ var sec=document.getElementById('bb-archive-section');
 var pill=document.getElementById('bb-new-pill');
 var shell=document.getElementById('bb-sticky-shell');
 var fb=document.getElementById('bb-filter-bar');
-var activeFilter=null; // set by tapping a ticker item: 'today','urgent','sus','x','art','vid','ed'
+var activeFilter=null; // set by tapping a ticker item: 'today','urgent','sus' or a desk ('desk:money')
 
 // ── STATE ──
 var allLines=[];        // every post line, newest first
@@ -861,6 +880,16 @@ var i=t.indexOf(': ');
 if(t.charAt(0)==='@'&&i!==-1)t=t.slice(i+2);
 return t.trim();
 }
+// DESKS (Oct 2026): the subject desk GitHub filed a post under, or '' if none
+var DESKS=['war','power','money','tech','anomaly'];
+var DESK_MIN=3; // a desk with fewer posts than this stays out of the ticker
+function postDesk(p){
+var id=postId(p);
+if(!id)return'';
+var e=wire[bbCode(id)];
+var d=e&&e.desk;
+return DESKS.indexOf(d)!==-1?d:'';
+}
 // 'video' | 'image' | 'media' (has one, kind unknown) | ''
 function wireMedia(id){
 var e=wire[bbCode(id)];
@@ -870,7 +899,7 @@ return m==='video'||m==='image'||m==='media'?m:'';
 // KICKER: a post that opens with "BREAKING:", "JUST IN:", "NEW:" and the like
 // has that word lifted off and shown as a small red label above the wording.
 // A leading siren or flag emoji in front of the word is allowed for.
-var KICK_RE=/^[^A-Za-z0-9"'\u201c\u2018@#$(\[]{0,8}(BREAKING NEWS|BREAKING|JUST IN|NEW|UPDATE|DEVELOPING|ALERT|LATEST|EXCLUSIVE|URGENT|HAPPENING NOW|WATCH)(?:\s*:\s*|\s+[-\u2013\u2014|]\s+)/i;
+var KICK_RE=/^[^A-Za-z0-9"'“‘@#$(\[]{0,8}(BREAKING NEWS|BREAKING|JUST IN|NEW|UPDATE|DEVELOPING|ALERT|LATEST|EXCLUSIVE|URGENT|HAPPENING NOW|WATCH)(?:\s*:\s*|\s+[-–—|]\s+)/i;
 function wireSplit(t){
 var m=t.match(KICK_RE);
 if(!m)return{k:'',t:t};
@@ -904,7 +933,7 @@ clearEl(sp);
 if(pending)sp.appendChild(mkEl('i','bb-tick-dot'));
 sp.appendChild(document.createTextNode(t?w.t:(pending?'new transmission':'')));
 var cue=tc.querySelector('.wire-cue');
-cue.textContent='view '+(m||'post')+' \u00bb';
+cue.textContent='view '+(m||'post')+' »';
 cue.classList.toggle('has-media',!!m);
 }
 // SAFETY NET: show X's own embed in place of the wording (lazily, like before)
@@ -1559,14 +1588,14 @@ var drawerNav=mkEl('div');
 drawerNav.id='bb-drawer-nav';
 var navPrev=mkEl('button');
 navPrev.type='button';
-navPrev.textContent='\u00ab prev';
+navPrev.textContent='« prev';
 var navShare=mkEl('button');
 navShare.type='button';
 navShare.id='bb-drawer-share';
-navShare.textContent='\u00a7 share';
+navShare.textContent='§ share';
 var navNext=mkEl('button');
 navNext.type='button';
-navNext.textContent='next \u00bb';
+navNext.textContent='next »';
 drawerNav.appendChild(navPrev);
 drawerNav.appendChild(navShare);
 drawerNav.appendChild(navNext);
@@ -1644,7 +1673,7 @@ drawerTweet.style.minHeight='';
 drawerTweet.style.display='block';
 drawer.style.transform='';
 drawer.classList.add('wire-mode');
-drawerNewtab.textContent='open on x \u00bb';
+drawerNewtab.textContent='open on x »';
 overlay.classList.add('open');
 drawer.classList.add('open');
 document.body.style.overflow='hidden';
@@ -1715,7 +1744,7 @@ wireCur=wireFirst=null;
 clearEl(drawerTweet);
 drawerTweet.style.display='none';
 drawer.classList.remove('wire-mode');
-drawerNewtab.textContent='open in new tab \u00bb';
+drawerNewtab.textContent='open in new tab »';
 drawer.style.transform='';
 drawerFrame.style.display='';
 drawerBrief.style.display='';
@@ -1781,8 +1810,9 @@ tickMode='fail';tickerUpdate();
 // ── TICKER + FILTERS (rebuilt Oct 2026) ──
 // The tagline is the subtitle under the title. The ticker scrolls live
 // figures: total, last sync, newest post, posts today, live tags, and a count
-// of each kind of post. Items shown in [ brackets ] can be tapped to filter
-// the feed. Text is refreshed in place so the scroll never restarts; the strip
+// for each desk (DESKS, Oct 2026; these replaced the counts of x posts,
+// articles, videos and editorials). Items shown in [ brackets ] can be tapped
+// to filter the feed. Text is refreshed in place so the scroll never restarts; the strip
 // is only rebuilt when the set of items or the ticker width changes.
 var tickTrack=document.getElementById('bb-ticker-track');
 var tickOuter=document.getElementById('bb-ticker-outer');
@@ -1809,6 +1839,7 @@ return getYtId(url)?'vid':isTw(url)?'x':'art';
 }
 
 function matchesFilter(p,f){
+if(f.indexOf('desk:')===0)return postDesk(p)===f.slice(5);
 if(f==='urgent'||f==='sus')return p.tag===f;
 if(f==='today')return !isNaN(p.ts)&&p.ts>=dayStart()&&p.ts<=Date.now()+60000;
 return postKind(p)===f;
@@ -1817,7 +1848,7 @@ return postKind(p)===f;
 // the figures, in ticker order. k = name, t = text, f = what a tap does.
 function feedStats(){
 var now=Date.now(),start=dayStart();
-var n={x:0,art:0,vid:0,ed:0,today:0,urgent:0,sus:0},latest=0;
+var n={today:0,urgent:0,sus:0},dn={},latest=0;
 latestId=null;
 allLines.map(prep).forEach(function(p){
 if(!isNaN(p.ts)&&p.ts<=now+60000){
@@ -1826,8 +1857,8 @@ if(p.ts>=start)n.today++;
 }
 if(p.tag==='urgent')n.urgent++;
 if(p.tag==='sus')n.sus++;
-var k=postKind(p);
-if(k)n[k]++;
+var d=postDesk(p);
+if(d)dn[d]=(dn[d]||0)+1;
 });
 var mins=Math.round((now-bbSyncTime)/60000);
 var out=[
@@ -1839,10 +1870,10 @@ if(la)out.push({k:'latest',t:'latest '+la,f:'latest'});
 if(n.today)out.push({k:'today',t:n.today+' today',f:'today'});
 if(n.urgent)out.push({k:'urgent',t:n.urgent+' urgent',f:'urgent',c:'tick-urgent'});
 if(n.sus)out.push({k:'sus',t:n.sus+' sus',f:'sus',c:'tick-noted'});
-if(n.x)out.push({k:'x',t:plural(n.x,'x post','x posts'),f:'x'});
-if(n.art)out.push({k:'art',t:plural(n.art,'article','articles'),f:'art'});
-if(n.vid)out.push({k:'vid',t:plural(n.vid,'video','videos'),f:'vid'});
-if(n.ed)out.push({k:'ed',t:plural(n.ed,'editorial','editorials'),f:'ed'});
+// desks, the busiest first (a tie keeps the order of DESKS)
+DESKS.filter(function(d){return (dn[d]||0)>=DESK_MIN;})
+.sort(function(a,b){return dn[b]-dn[a]||DESKS.indexOf(a)-DESKS.indexOf(b);})
+.forEach(function(d){out.push({k:'desk-'+d,t:dn[d]+' /'+d,f:'desk:'+d,desk:d,n:dn[d]});});
 return out;
 }
 
@@ -1851,21 +1882,42 @@ if(tickMode==='init')return[{k:'init',t:'initializing...'}];
 if(tickMode==='fail')return[{k:'fail',t:'§ communications failure',c:'tick-urgent'}];
 if(tickMode==='empty')return[{k:'empty',t:'no intel found'}];
 var out=feedStats();
-if(tickHint)out.push({k:'hint',t:'tap a figure to filter'});
+if(tickHint)out.push({k:'hint',t:'tap a desk to filter'});
 return out;
+}
+
+// the ticker figure a filter belongs to, or null if it has nothing to show
+function statFor(f){
+var items=feedStats();
+for(var i=0;i<items.length;i++)if(items[i].f===f)return items[i];
+return null;
 }
 
 // text for the "showing ..." bar; '' if that filter has nothing to show
 function filterLabel(f){
-var items=feedStats();
-for(var i=0;i<items.length;i++)if(items[i].f===f)return items[i].t;
-return'';
+var it=statFor(f);
+return it?it.t:'';
+}
+
+// the red slash and the desk's name in its colour: "/money"
+function deskMark(el,d){
+var sl=mkEl('span','bb-desk-slash');
+sl.textContent='/';
+el.appendChild(sl);
+var w=mkEl('span','bb-desk desk-'+d);
+w.textContent=d;
+el.appendChild(w);
 }
 
 function drawFilterBar(label){
 clearEl(fb);
 if(!label){fb.style.display='none';return;}
-fb.appendChild(document.createTextNode('showing '+label+' // '));
+var it=statFor(activeFilter);
+if(it&&it.desk){
+// a desk: "/money // 15 transmissions // show all ✕"
+deskMark(fb,it.desk);
+fb.appendChild(document.createTextNode(' // '+plural(it.n,'transmission','transmissions')+' // '));
+}else fb.appendChild(document.createTextNode('showing '+label+' // '));
 var b=mkEl('b');
 b.textContent='show all ✕';
 fb.appendChild(b);
@@ -1873,6 +1925,20 @@ fb.style.display='';
 }
 
 function tickText(it){return it.f?'[ '+it.t+' ]':it.t;}
+// write (or rewrite) one ticker item; a desk gets "[ 15 /money ]" with the
+// slash in red and the name in the desk's colour
+function fillTick(s,it){
+var key=(it.dot?'dot|':'')+tickText(it);
+if(s.__bbTick===key)return;
+s.__bbTick=key;
+clearEl(s);
+if(it.dot)s.appendChild(mkEl('span','bb-tick-dot'));
+if(it.desk){
+s.appendChild(document.createTextNode('[ '+it.n+' '));
+deskMark(s,it.desk);
+s.appendChild(document.createTextNode(' ]'));
+}else s.appendChild(document.createTextNode(tickText(it)));
+}
 function tickIsActive(it){return !!it.f&&it.f===activeFilter;}
 function tickHalf(){return tickTrack.offsetWidth/2;}
 
@@ -1891,8 +1957,7 @@ items.forEach(function(it){
 var s=mkEl('span','bb-tick-item'+(it.c?' '+it.c:'')+(tickIsActive(it)?' tick-active':''));
 s.setAttribute('data-k',it.k);
 if(it.f)s.setAttribute('data-f',it.f);
-if(it.dot)s.appendChild(mkEl('span','bb-tick-dot'));
-s.appendChild(document.createTextNode(tickText(it)));
+fillTick(s,it);
 tickTrack.appendChild(s);
 var sep=mkEl('span','bb-tick-sep');
 sep.textContent='///';
@@ -1915,10 +1980,10 @@ var items=tickerItems();
 var sig=items.map(function(i){return i.k;}).join('|')+'@'+tickMask.clientWidth;
 if(sig!==tickSig){tickSig=sig;tickerBuild(items);return;}
 items.forEach(function(it){
-var txt=tickText(it),on=tickIsActive(it);
+var on=tickIsActive(it);
 var els=tickTrack.querySelectorAll('[data-k="'+it.k+'"]');
 for(var i=0;i<els.length;i++){
-if(els[i].lastChild.nodeValue!==txt)els[i].lastChild.nodeValue=txt;
+fillTick(els[i],it);
 els[i].classList.toggle('tick-active',on);
 }
 });
