@@ -524,8 +524,18 @@ html,body{background:#f5f5f5}
 .wire-age:empty{display:none}
 .bb-desk-btn{margin-left:auto!important;flex-shrink:0;background:none;border:0;margin:-10px -6px -10px 0;padding:10px 6px 10px 10px;font:inherit;letter-spacing:inherit;text-transform:inherit;line-height:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .bb-desk-btn[hidden]{display:none}
-.wire-card .wire-cue.bb-dc{color:var(--desk);font-weight:700}
+.video-card.wire-card .wire-cue.bb-dc,.video-card.wire-card[class*="tag-"] .wire-cue.bb-dc{color:var(--desk);font-weight:700}
 @media(max-width:480px){.wire-card>.video-card-header.has-desk{padding-left:16px;padding-right:16px;font-size:12px}}
+/* video cards: "youtube.com" on the left, "/money" on the right */
+.video-card:not(.wire-card)>.video-card-header.has-desk{display:flex;align-items:center;justify-content:flex-start;text-align:left;letter-spacing:.12em;padding-left:18px;padding-right:18px}
+@media(max-width:480px){.video-card:not(.wire-card)>.video-card-header.has-desk{padding-left:16px;padding-right:16px;font-size:12px}}
+/* article cards: the domain on the left, "/money" on the right */
+.rich-preview.has-desk .rich-preview-domain{left:20px;right:auto;text-align:left;letter-spacing:.12em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:calc(100% - 150px)}
+.rich-preview>.bb-desk-abs{position:absolute;top:12px;right:20px;margin-top:0;margin-right:0;margin-bottom:0;padding:8px 0 8px 10px;font-family:'Zilla Slab',serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;line-height:normal}
+@media(max-width:480px){.rich-preview>.bb-desk-abs,.rich-preview.has-desk .rich-preview-domain{font-size:12px}}
+/* the desk's colour on "external source" / "video source" */
+.rich-preview .rich-preview-action.bb-dc,.rich-preview[class*="tag-"] .rich-preview-action.bb-dc,
+.video-card .video-card-footer.bb-dc,.video-card[class*="tag-"] .video-card-footer.bb-dc{color:var(--desk);font-weight:700}
 
 /* ── PRESS (Oct 2026): a card brightens a little under the finger ── */
 .wire-card:active,.rich-preview:active{background:#161616}
@@ -1058,12 +1068,65 @@ for(var i=0;i<els.length;i++){
 var sp=els[i].querySelector('span');
 els[i].classList.toggle('wire-fade',sp.scrollHeight>sp.clientHeight+2);
 }
+// a stamp and a desk label both sit at the top right: move the desk label
+// in from the edge by the stamp's width so the two never overlap
+var st=document.querySelectorAll('.post-container>.stamp');
+for(var j=0;j<st.length;j++){
+var w=st[j].getBoundingClientRect().width;
+var hd=st[j].parentNode.querySelector('.video-card>.video-card-header.has-desk');
+if(hd){if(w>0)hd.style.paddingRight=Math.round(w+6)+'px';continue;}
+var ab=st[j].parentNode.querySelector('.rich-preview.has-desk>.bb-desk-abs');
+if(ab&&w>0)ab.style.right=Math.round(w+4)+'px';
+}
+// an article's domain stops short of its desk label
+var rp=document.querySelectorAll('.rich-preview.has-desk');
+for(var q=0;q<rp.length;q++){
+var dm=rp[q].querySelector('.rich-preview-domain'),bt=rp[q].querySelector('.bb-desk-abs');
+if(!dm||!bt)continue;
+var room=rp[q].clientWidth-20-(parseFloat(bt.style.right)||20)-bt.offsetWidth-14;
+if(room>40)dm.style.maxWidth=Math.round(room)+'px';
+}
 });
 }
 function fillWire(){
 var cs=document.querySelectorAll('.wire-card');
 for(var i=0;i<cs.length;i++){setWire(cs[i]);wireAge(cs[i]);}
+var ds=document.querySelectorAll('[data-desk-id]');
+for(var k=0;k<ds.length;k++)setDesk(ds[k]);
 checkFades();
+}
+// DESKS ON ARTICLE AND VIDEO CARDS (Oct 2026): the same "/money" at the top
+// right as an X card (domain or "youtube.com" moves to the left), and the
+// desk's colour on "external source" / "video source".
+function setDesk(el){
+var dk=wireDesk(el.getAttribute('data-desk-id'));
+if(el.__bbDesk===dk)return;
+el.__bbDesk=dk;
+var vid=el.classList.contains('video-card');
+var host=vid?el.querySelector('.video-card-header'):el;
+if(!host)return;
+var db=null;
+for(var i=0;i<host.children.length;i++)if(host.children[i].classList.contains('bb-desk-btn'))db=host.children[i];
+if(!db){
+if(vid){ // the header's text goes in its own span so it can sit on the left
+var lab=mkEl('span','wire-who');
+while(host.firstChild)lab.appendChild(host.firstChild);
+host.appendChild(lab);
+}
+db=mkEl('button','bb-desk-btn'+(vid?'':' bb-desk-abs'));
+db.type='button';
+host.appendChild(db);
+}
+clearEl(db);
+db.hidden=!dk;
+db.setAttribute('data-desk',dk);
+if(dk){deskMark(db,dk);db.setAttribute('aria-label','show the '+dk+' desk');}
+host.classList.toggle('has-desk',!!dk);
+var ft=el.querySelector('.video-card-footer,.rich-preview-action');
+if(ft){
+ft.className=ft.className.replace(/\s*\b(bb-dc|desk-[a-z]+)\b/g,'');
+if(dk){ft.classList.add('bb-dc');ft.classList.add('desk-'+dk);}
+}
 }
 // SHARE INSIDE THE CARD (Oct 2026): "§ share" joins the card's bottom line
 // instead of floating in the gap underneath it.
@@ -1336,6 +1399,9 @@ card.appendChild(buildWireCard(url,tag,p.ts));
 }else{
 card.appendChild(buildRichCard(url,tag,parts.label));
 }
+// DESKS ON ARTICLE AND VIDEO CARDS (Oct 2026)
+var dc=card.querySelector('.rich-preview,.video-card:not(.wire-card)');
+if(dc){dc.setAttribute('data-desk-id',url);setDesk(dc);}
 footShare(card,url);
 return card;
 }
@@ -1952,9 +2018,6 @@ var tickOuter=document.getElementById('bb-ticker-outer');
 var tickMask=document.getElementById('bb-ticker-mask');
 var tickPaused=false,tickTimer=null,tickSig='',tickMode='init',latestId=null;
 var TICK_SPEED=32; // pixels per second
-var FILTER_KEY='bb-filter-used';
-var tickHint=true; // the "tap a figure" line shows until this reader has used a filter
-try{tickHint=!localStorage.getItem(FILTER_KEY);}catch(e){}
 
 function plural(n,one,many){return n+' '+(n===1?one:many);}
 
@@ -2016,7 +2079,6 @@ if(tickMode==='init')return[{k:'init',t:'initializing...'}];
 if(tickMode==='fail')return[{k:'fail',t:'§ communications failure',c:'tick-urgent'}];
 if(tickMode==='empty')return[{k:'empty',t:'no intel found'}];
 var out=feedStats();
-if(tickHint)out.push({k:'hint',t:'tap a desk to filter'});
 return out;
 }
 
@@ -2206,7 +2268,6 @@ window.addEventListener('pointercancel',tickDragStop);
 function setFilter(f,keepScroll){
 var changed=f!==activeFilter;
 activeFilter=f;
-if(f){try{localStorage.setItem(FILTER_KEY,'1');}catch(e){}}
 if(tickTimer){clearTimeout(tickTimer);tickTimer=null;}
 if(changed&&allLines.length)render();
 tickerUpdate();
