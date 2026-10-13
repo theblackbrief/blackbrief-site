@@ -147,6 +147,11 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 /* ── VIDEO / TWEET ── */
 .yt-frame{aspect-ratio:16/9;width:100%;border-radius:0;border:none;display:block;background:#000}
 .tweet-wrap{border-radius:10px;overflow:hidden;min-height:260px}
+/* CENTRED BACKUP EMBED (Oct 2026): when a post's wording is missing, X's own
+   embed shows in the card. X draws it at most 550px wide and lines it up on the
+   left, so in a wide card (the full-width newest post, the top post) it sat
+   off-centre. Centre it in every card. */
+.tweet-wrap>.twitter-tweet{margin-left:auto!important;margin-right:auto!important}
 
 /* ── VIDEO CARDS ── */
 .video-card{border-radius:6px;border:2px solid rgba(255,255,255,0.08);border-left:5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.03);overflow:hidden;display:flex;flex-direction:column}
@@ -1038,6 +1043,7 @@ tweetObserver.observe(wrap);
 }else{
 var bq=mkEl('blockquote','twitter-tweet');
 bq.setAttribute('data-theme',xTheme());
+bq.setAttribute('data-align','center'); // CENTRED BACKUP EMBED (Oct 2026)
 var a=mkEl('a');
 a.href=u;
 bq.appendChild(a);
@@ -1348,6 +1354,7 @@ var url=wrap.getAttribute('data-tweet-url');
 if(url){
 var bq=mkEl('blockquote','twitter-tweet');
 bq.setAttribute('data-theme',xTheme());
+bq.setAttribute('data-align','center'); // CENTRED BACKUP EMBED (Oct 2026)
 var a=mkEl('a');
 a.href=url;
 bq.appendChild(a);
