@@ -1,4 +1,12 @@
 {
+ "dpzm0v": {
+  "tries": 1,
+  "done": true,
+  "title": "@LeadingReport: The nuclear family structure is disappearing across the country, per Institute for Family Studies.",
+  "image": "",
+  "media": "",
+  "desk": "war"
+ },
  "1tdwtec": {
   "tries": 1,
   "done": true,
@@ -379,13 +387,5 @@
   "image": "",
   "media": "video",
   "desk": "power"
- },
- "1meg08t": {
-  "tries": 1,
-  "done": true,
-  "title": "@LeadingReport: Declassified CIA files reveal previous U.S. weather-modification research, fueling renewed claims of secret weather-control programs, per Daily Mail.",
-  "image": "",
-  "media": "",
-  "desk": "anomaly"
  }
 }
