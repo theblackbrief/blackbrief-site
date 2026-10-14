@@ -1,4 +1,11 @@
 {
+ "1ngmc53": {
+  "tries": 1,
+  "done": true,
+  "title": "Inflation jumps to 3.7% as gas and diesel prices squeeze consumers ahead of the midterms — NBC News",
+  "image": "",
+  "desk": "money"
+ },
  "r83nz6": {
   "tries": 1,
   "done": true,
@@ -379,14 +386,6 @@
   "title": "@CNN: A CNN investigation has found that while Jared Kushner acted as a key Middle East peace negotiator, his private equity firm held the largest stake in an Israeli company backing businesses tied to Israel's military campaign in Gaza, including its largest arms manufacturer.…",
   "image": "",
   "media": "image",
-  "desk": "war"
- },
- "qtw5rm": {
-  "tries": 1,
-  "done": true,
-  "title": "@unusual_whales: BREAKING: The U.S. is sending a third aircraft carrier and up to 10,000 additional troops to the Middle East, per WSJ",
-  "image": "",
-  "media": "",
   "desk": "war"
  }
 }
