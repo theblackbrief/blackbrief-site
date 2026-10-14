@@ -1,15 +1,15 @@
 {
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
-  "unfiled": 5,
+  "unfiled": 4,
   "war": 18,
   "power": 5,
-  "money": 13,
+  "money": 14,
   "tech": 0,
   "anomaly": 8
  },
  "filed_by": {
-  "account": 18,
+  "account": 19,
   "words": 20,
   "words_over_account": 6
  },
@@ -64,11 +64,6 @@
    "filed_by_words": [
     "war"
    ]
-  },
-  {
-   "handle": "@daily_mailus",
-   "posts": 1,
-   "filed_by_words": []
   },
   {
    "handle": "@disclosetv",
