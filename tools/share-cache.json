@@ -1,4 +1,12 @@
 {
+ "mcyopm": {
+  "tries": 1,
+  "done": true,
+  "title": "@macropaperr: 5 OF THE LARGEST TEN BANKS IN THE US HAVE NOW ENTERED A BEAR MARKET TERRITORY. Bank of America: -23.5% Wells Fargo: -20.1% Goldman Sachs: -24% Morgan Stanley: -24% Capital One: -25% Along with this, the KBW Nasdaq Bank Index has dropped 15.6% from its peak and has hit a 5-month…",
+  "image": "",
+  "media": "image",
+  "desk": "money"
+ },
  "1ngmc53": {
   "tries": 1,
   "done": true,
@@ -379,13 +387,5 @@
   "image": "",
   "media": "",
   "desk": "power"
- },
- "1ynqjje": {
-  "tries": 1,
-  "done": true,
-  "title": "@CNN: A CNN investigation has found that while Jared Kushner acted as a key Middle East peace negotiator, his private equity firm held the largest stake in an Israeli company backing businesses tied to Israel's military campaign in Gaza, including its largest arms manufacturer.…",
-  "image": "",
-  "media": "image",
-  "desk": "war"
  }
 }
