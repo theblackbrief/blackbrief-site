@@ -2,11 +2,11 @@
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
   "unfiled": 4,
-  "war": 16,
+  "war": 17,
   "power": 4,
   "money": 17,
   "tech": 0,
-  "anomaly": 8
+  "anomaly": 7
  },
  "filed_by": {
   "account": 19,
@@ -15,20 +15,20 @@
  },
  "accounts_without_a_desk": [
   {
-   "handle": "@leadingreport",
-   "posts": 4,
-   "filed_by_words": [
-    "war",
-    "anomaly"
-   ]
-  },
-  {
    "handle": "@newswire_us",
-   "posts": 3,
+   "posts": 4,
    "filed_by_words": [
     "war",
     "money",
     "power"
+   ]
+  },
+  {
+   "handle": "@leadingreport",
+   "posts": 3,
+   "filed_by_words": [
+    "war",
+    "anomaly"
    ]
   },
   {

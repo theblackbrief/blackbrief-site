@@ -1,4 +1,12 @@
 {
+ "19mm7ct": {
+  "tries": 1,
+  "done": true,
+  "title": "@NewsWire_US: TRUMP: THE IRAN WAR WILL END VERY SOON.",
+  "image": "",
+  "media": "",
+  "desk": "war"
+ },
  "smesl6": {
   "tries": 1,
   "done": true,
@@ -376,14 +384,6 @@
   "tries": 1,
   "done": true,
   "title": "@911NewsBreaks: ALERT: 🚨 Russia quarantines 200 people, [enacts anti-epidemic measures] after lab worker dies of plague.",
-  "image": "",
-  "media": "",
-  "desk": "anomaly"
- },
- "6rpbz5": {
-  "tries": 1,
-  "done": true,
-  "title": "@LeadingReport: Russian lab technician dıes from suspected pneumonic plague after reportedly breaking test tube containing live bacteria.",
   "image": "",
   "media": "",
   "desk": "anomaly"
