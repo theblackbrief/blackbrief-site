@@ -4,9 +4,9 @@
   "unfiled": 4,
   "war": 17,
   "power": 4,
-  "money": 17,
+  "money": 18,
   "tech": 0,
-  "anomaly": 7
+  "anomaly": 6
  },
  "filed_by": {
   "account": 19,
@@ -32,13 +32,6 @@
    ]
   },
   {
-   "handle": "@911newsbreaks",
-   "posts": 1,
-   "filed_by_words": [
-    "anomaly"
-   ]
-  },
-  {
    "handle": "@abc",
    "posts": 1,
    "filed_by_words": [
@@ -47,6 +40,13 @@
   },
   {
    "handle": "@ap",
+   "posts": 1,
+   "filed_by_words": [
+    "money"
+   ]
+  },
+  {
+   "handle": "@bnonews",
    "posts": 1,
    "filed_by_words": [
     "money"

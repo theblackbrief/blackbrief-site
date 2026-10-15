@@ -1,4 +1,12 @@
 {
+ "1e63rsu": {
+  "tries": 1,
+  "done": true,
+  "title": "@BNONews: BREAKING: Active shooter reported at Silver Rail Elementary School in Bend, Oregon",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "19mm7ct": {
   "tries": 1,
   "done": true,
@@ -378,14 +386,6 @@
   "title": "@visegrad24: BREAKING: 5 hospitals have been closed for quarantines in Siberia due to a possible plague outbreak. The 28-year-old lab technician Darya Shipilova, died yesterday after breaking a test tube with live Yersinia pestis the Irkutsk Anti-Plague Institute on September 25th while…",
   "image": "",
   "media": "image",
-  "desk": "anomaly"
- },
- "hmg2u9": {
-  "tries": 1,
-  "done": true,
-  "title": "@911NewsBreaks: ALERT: 🚨 Russia quarantines 200 people, [enacts anti-epidemic measures] after lab worker dies of plague.",
-  "image": "",
-  "media": "",
   "desk": "anomaly"
  }
 }
