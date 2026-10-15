@@ -1,4 +1,12 @@
 {
+ "smesl6": {
+  "tries": 1,
+  "done": true,
+  "title": "@NewsWire_US: U.S. developing new strike plans on Iran that include MOAB, the largest non-nuclear bomb in the arsenal. — CNN",
+  "image": "",
+  "media": "",
+  "desk": "war"
+ },
  "mcyopm": {
   "tries": 1,
   "done": true,
@@ -379,13 +387,5 @@
   "image": "",
   "media": "",
   "desk": "anomaly"
- },
- "os60j0": {
-  "tries": 1,
-  "done": true,
-  "title": "@insatiablevine: Yesterday, politicians rejected 57-43 a bill banning data centers from passing water and electricity costs to residents. Our “elected” officials want to expand data centers and make us pay for their resources. Maybe this is the problem, not “China.”@MikeJohnson",
-  "image": "",
-  "media": "",
-  "desk": "power"
  }
 }

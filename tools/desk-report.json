@@ -2,8 +2,8 @@
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
   "unfiled": 4,
-  "war": 15,
-  "power": 5,
+  "war": 16,
+  "power": 4,
   "money": 17,
   "tech": 0,
   "anomaly": 8
@@ -24,8 +24,9 @@
   },
   {
    "handle": "@newswire_us",
-   "posts": 2,
+   "posts": 3,
    "filed_by_words": [
+    "war",
     "money",
     "power"
    ]
@@ -63,13 +64,6 @@
    "posts": 1,
    "filed_by_words": [
     "war"
-   ]
-  },
-  {
-   "handle": "@insatiablevine",
-   "posts": 1,
-   "filed_by_words": [
-    "power"
    ]
   },
   {
