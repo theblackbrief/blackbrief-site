@@ -1,4 +1,12 @@
 {
+ "li4u7z": {
+  "tries": 1,
+  "done": true,
+  "title": "@KTLA: #BreakingNews: Wildfire in Malibu explodes to 45 acres. Sky5 overhead. Watch Live:",
+  "image": "",
+  "media": "video",
+  "desk": "anomaly"
+ },
  "ozs0k6": {
   "tries": 1,
   "done": true,
@@ -377,14 +385,6 @@
   "title": "@BRICSinfo: JUST IN: 🇺🇸🇬🇧 US withdraws all its bomber jets from RAF Fairford in UK following suspected terrorist plot.",
   "image": "",
   "media": "",
-  "desk": "war"
- },
- "krkuz4": {
-  "tries": 1,
-  "done": true,
-  "title": "@Persianserene1: 🚨 BREAKING A source inside the French regime has just informed me that the regime has so far killed more than 70,000 peaceful protesters.",
-  "image": "",
-  "media": "image",
   "desk": "war"
  }
 }
