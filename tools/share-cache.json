@@ -1,4 +1,12 @@
 {
+ "1f4iuiu": {
+  "tries": 1,
+  "done": true,
+  "title": "@Polymarket: BREAKING: U.S. oil surges above $100/barrel.",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "9z6998": {
   "tries": 1,
   "done": true,
@@ -375,14 +383,6 @@
   "tries": 1,
   "done": true,
   "title": "@LeadingReport: Trump has offered to help Putin as Russia scrambles to contain a suspected outbreak of airborne plague in Siberia.",
-  "image": "",
-  "media": "",
-  "desk": "anomaly"
- },
- "b4ny76": {
-  "tries": 1,
-  "done": true,
-  "title": "@ABC: The U.S. State Department is monitoring a reportedly fatal case of \"pneumonia of an unknown etiology\" linked to a plague research laboratory in Russia. Read more:",
   "image": "",
   "media": "",
   "desk": "anomaly"

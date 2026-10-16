@@ -4,13 +4,13 @@
   "unfiled": 5,
   "war": 15,
   "power": 4,
-  "money": 19,
+  "money": 20,
   "tech": 0,
-  "anomaly": 6
+  "anomaly": 5
  },
  "filed_by": {
-  "account": 18,
-  "words": 22,
+  "account": 19,
+  "words": 21,
   "words_over_account": 4
  },
  "accounts_without_a_desk": [
@@ -36,13 +36,6 @@
    "posts": 2,
    "filed_by_words": [
     "money"
-   ]
-  },
-  {
-   "handle": "@abc",
-   "posts": 1,
-   "filed_by_words": [
-    "anomaly"
    ]
   },
   {
