@@ -1,4 +1,11 @@
 {
+ "17nw2r4": {
+  "tries": 1,
+  "done": true,
+  "title": "@disclosetv: NOW - Chaos at Place de la République in Paris, France.",
+  "image": "",
+  "media": "video"
+ },
  "d02tnk": {
   "tries": 1,
   "done": true,
@@ -376,13 +383,5 @@
   "image": "",
   "media": "image",
   "desk": "war"
- },
- "15zfsjg": {
-  "tries": 1,
-  "done": true,
-  "title": "@Polymarket: JUST IN: Texas launches investigation into Fruit of the Loom & Hanes over potential toxic chemicals in children’s underwear.",
-  "image": "",
-  "media": "",
-  "desk": "money"
  }
 }
