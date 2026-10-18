@@ -1,4 +1,12 @@
 {
+ "1c1f9dc": {
+  "tries": 1,
+  "done": true,
+  "title": "@HormuzLetter: BREAKING: The UK will deliver a speech to the British people asking them to be prepared for war and to make major sacrifices, per Army chief Roly Walker. Every citizen will be asked to make sacrifices, Walker says. The UK needs to \"take the fight to the enemy,\" he says.",
+  "image": "",
+  "media": "",
+  "desk": "war"
+ },
  "1ptfsld": {
   "tries": 1,
   "done": true,
@@ -374,14 +382,6 @@
   "title": "@HormuzLetter: BREAKING: Venezuela's Cardon Oil refinery, the country's second largest at 310,000 barrels per day, has just unexpectedly exploded and caught fire, forcing a full shutdown. The fire started at a gas line connecting the refinery's diesel hydrotreater and halted the whole plant,…",
   "image": "",
   "media": "video",
-  "desk": "money"
- },
- "1qfi4p3": {
-  "tries": 1,
-  "done": true,
-  "title": "@remarks: JUST IN: 🇺🇸 US home foreclosures surge 42% from last year as more Americans lose their homes.",
-  "image": "",
-  "media": "image",
   "desk": "money"
  }
 }
