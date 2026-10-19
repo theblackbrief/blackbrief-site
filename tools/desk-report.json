@@ -3,14 +3,14 @@
  "desks": {
   "unfiled": 10,
   "war": 14,
-  "power": 4,
-  "money": 17,
+  "power": 5,
+  "money": 16,
   "tech": 0,
   "anomaly": 4
  },
  "filed_by": {
-  "account": 18,
-  "words": 19,
+  "account": 17,
+  "words": 20,
   "words_over_account": 2
  },
  "accounts_without_a_desk": [
@@ -32,17 +32,18 @@
    ]
   },
   {
+   "handle": "@disclosetv",
+   "posts": 3,
+   "filed_by_words": [
+    "power",
+    "war"
+   ]
+  },
+  {
    "handle": "@bnonews",
    "posts": 2,
    "filed_by_words": [
     "money"
-   ]
-  },
-  {
-   "handle": "@disclosetv",
-   "posts": 2,
-   "filed_by_words": [
-    "war"
    ]
   },
   {

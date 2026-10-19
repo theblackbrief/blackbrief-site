@@ -1,4 +1,12 @@
 {
+ "1gbh6n4": {
+  "tries": 1,
+  "done": true,
+  "title": "@disclosetv: NOW - Trump says he'll allow 600,000 Chinese students into the U.S.",
+  "image": "",
+  "media": "video",
+  "desk": "power"
+ },
  "xhj6wz": {
   "tries": 1,
   "done": true,
@@ -373,13 +381,5 @@
   "image": "",
   "media": "video",
   "desk": "power"
- },
- "ixb1h0": {
-  "tries": 1,
-  "done": true,
-  "title": "@greybtc: IS THIS WHAT CRONY CAPITALISM LOOKS LIKE IN AMERICA?",
-  "image": "",
-  "media": "video",
-  "desk": "money"
  }
 }
