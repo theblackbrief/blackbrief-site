@@ -9,11 +9,19 @@
   "anomaly": 4
  },
  "filed_by": {
-  "account": 19,
-  "words": 18,
+  "account": 18,
+  "words": 19,
   "words_over_account": 2
  },
  "accounts_without_a_desk": [
+  {
+   "handle": "@leadingreport",
+   "posts": 4,
+   "filed_by_words": [
+    "power",
+    "war"
+   ]
+  },
   {
    "handle": "@newswire_us",
    "posts": 4,
@@ -21,13 +29,6 @@
     "war",
     "money",
     "power"
-   ]
-  },
-  {
-   "handle": "@leadingreport",
-   "posts": 3,
-   "filed_by_words": [
-    "war"
    ]
   },
   {
