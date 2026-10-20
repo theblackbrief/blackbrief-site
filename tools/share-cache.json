@@ -1,4 +1,12 @@
 {
+ "xea4y9": {
+  "tries": 1,
+  "done": true,
+  "title": "@Polymarket: BREAKING: Trump launches $25 million fraud whistleblower program, offering Americans up to $30,000 for tips that lead to successful prosecutions.",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "1gbh6n4": {
   "tries": 1,
   "done": true,
@@ -373,13 +381,5 @@
   "image": "",
   "media": "image",
   "desk": "money"
- },
- "ugbusd": {
-  "tries": 1,
-  "done": true,
-  "title": "@MrSausageGet: There's always a grift. This is a must-watch. Trump accounts.",
-  "image": "",
-  "media": "video",
-  "desk": "power"
  }
 }

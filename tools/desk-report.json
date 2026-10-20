@@ -3,14 +3,14 @@
  "desks": {
   "unfiled": 10,
   "war": 14,
-  "power": 5,
-  "money": 16,
+  "power": 4,
+  "money": 17,
   "tech": 0,
   "anomaly": 4
  },
  "filed_by": {
-  "account": 17,
-  "words": 20,
+  "account": 18,
+  "words": 19,
   "words_over_account": 2
  },
  "accounts_without_a_desk": [
@@ -77,13 +77,6 @@
    "posts": 1,
    "filed_by_words": [
     "money"
-   ]
-  },
-  {
-   "handle": "@mrsausageget",
-   "posts": 1,
-   "filed_by_words": [
-    "power"
    ]
   },
   {
