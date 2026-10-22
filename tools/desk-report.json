@@ -6,12 +6,12 @@
   "power": 4,
   "money": 18,
   "tech": 0,
-  "anomaly": 4
+  "anomaly": 5
  },
  "filed_by": {
   "account": 19,
   "words": 19,
-  "words_over_account": 2
+  "words_over_account": 3
  },
  "accounts_without_a_desk": [
   {
