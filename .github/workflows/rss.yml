@@ -1,0 +1,45 @@
+# Builds rss.xml (theblackbrief.com/rss.xml) from posts.txt.
+# Runs by itself right after "housekeeping and share pages" finishes, so the
+# feed always matches the trimmed posts and the newest X wording.
+# See tools/build-rss.js. Nothing else in the repo is changed.
+name: rss feed
+
+on:
+  workflow_run:
+    workflows: ["housekeeping and share pages"]
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - tools/build-rss.js
+      - .github/workflows/rss.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rss-feed
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: build rss.xml
+        run: node tools/build-rss.js
+      - name: save to the repo
+        run: |
+          git config user.name "blackbrief-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rss.xml
+          if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
+          git commit -m "rss feed"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
