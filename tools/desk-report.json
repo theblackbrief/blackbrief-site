@@ -5,13 +5,13 @@
   "war": 14,
   "power": 4,
   "money": 19,
-  "tech": 0,
+  "tech": 1,
   "anomaly": 5
  },
  "filed_by": {
   "account": 20,
   "words": 19,
-  "words_over_account": 3
+  "words_over_account": 4
  },
  "accounts_without_a_desk": [
   {
