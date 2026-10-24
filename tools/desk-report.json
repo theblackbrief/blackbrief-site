@@ -4,13 +4,13 @@
   "unfiled": 12,
   "war": 13,
   "power": 2,
-  "money": 18,
+  "money": 17,
   "tech": 1,
   "anomaly": 5
  },
  "filed_by": {
   "account": 19,
-  "words": 16,
+  "words": 15,
   "words_over_account": 4
  },
  "accounts_without_a_desk": [
@@ -41,13 +41,6 @@
   {
    "handle": "@bnonews",
    "posts": 2,
-   "filed_by_words": [
-    "money"
-   ]
-  },
-  {
-   "handle": "@ap",
-   "posts": 1,
    "filed_by_words": [
     "money"
    ]
