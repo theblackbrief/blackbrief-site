@@ -2,7 +2,7 @@
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
   "unfiled": 12,
-  "war": 11,
+  "war": 12,
   "power": 2,
   "money": 18,
   "tech": 1,
@@ -10,7 +10,7 @@
  },
  "filed_by": {
   "account": 19,
-  "words": 14,
+  "words": 15,
   "words_over_account": 4
  },
  "accounts_without_a_desk": [
@@ -24,10 +24,10 @@
   },
   {
    "handle": "@leadingreport",
-   "posts": 3,
+   "posts": 4,
    "filed_by_words": [
-    "power",
-    "war"
+    "war",
+    "power"
    ]
   },
   {

@@ -1,4 +1,12 @@
 {
+ "1qpgy9a": {
+  "tries": 1,
+  "done": true,
+  "title": "@LeadingReport: Pentagon prepares major U.S. milıtary bases to operate for 90 days without outside support, including civilian power grids and global supply chains, per Fox News.",
+  "image": "",
+  "media": "",
+  "desk": "war"
+ },
  "772e5n": {
   "tries": 1,
   "done": true,
@@ -376,9 +384,5 @@
   "image": "",
   "media": "",
   "desk": "anomaly"
- },
- "vh2rq2": {
-  "tries": 0,
-  "done": false
  }
 }
