@@ -6,13 +6,22 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sat, 24 Oct 2026 22:50:38 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 25 Oct 2026 17:13:19 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@LeadingReport: Pentagon prepares major U.S. milıtary bases to operate for 90 days without outside support, including civilian power grids and global supply ch…</title>
+   <link>https://theblackbrief.com/p/1qpgy9a/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1qpgy9a/</guid>
+   <pubDate>Sun, 25 Oct 2026 17:13:19 GMT</pubDate>
+   <category>war</category>
+   <category>urgent</category>
+   <description>&lt;p&gt;@LeadingReport: Pentagon prepares major U.S. milıtary bases to operate for 90 days without outside support, including civilian power grids and global supply chains, per Fox News.&lt;/p&gt;&lt;p&gt;/war // #urgent // &lt;a href=&quot;https://x.com/leadingreport/status/2114353369481461799?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1qpgy9a/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@unusual_whales: Here’s the median net worth of American families by age, per the Federal Reserve: Under 35: $33,000 35–44: $156,000 45–54: $255,000 55–64: $41…</title>
    <link>https://theblackbrief.com/p/772e5n/</link>
@@ -396,12 +405,6 @@
    <pubDate>Sun, 11 Oct 2026 07:25:27 GMT</pubDate>
    <category>anomaly</category>
    <description>&lt;p&gt;@Polymarket: JUST IN: WHO reveals the cause of death remains “unknown” for the Russian plague lab worker whose death sparked fears of an outbreak.&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/Polymarket/status/2109064130107777142?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/8yjznp/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>what will this week hold?</title>
-   <link>https://theblackbrief.com/p/vh2rq2/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/vh2rq2/</guid>
-   <description>&lt;p&gt;what will this week hold?&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://theblackbrief.com/p/vh2rq2/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
