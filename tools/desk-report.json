@@ -4,14 +4,14 @@
   "unfiled": 12,
   "war": 12,
   "power": 2,
-  "money": 18,
+  "money": 19,
   "tech": 1,
-  "anomaly": 5
+  "anomaly": 4
  },
  "filed_by": {
   "account": 19,
-  "words": 15,
-  "words_over_account": 4
+  "words": 16,
+  "words_over_account": 3
  },
  "accounts_without_a_desk": [
   {
@@ -107,6 +107,13 @@
    "handle": "@theinsiderpaper",
    "posts": 1,
    "filed_by_words": []
+  },
+  {
+   "handle": "@thewatch32",
+   "posts": 1,
+   "filed_by_words": [
+    "money"
+   ]
   }
  ]
 }

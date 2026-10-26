@@ -1,4 +1,12 @@
 {
+ "w9bi3e": {
+  "tries": 1,
+  "done": true,
+  "title": "@TheWatch32: 🚨BREAKING : UK citizens can be seen scrambling to buy bottled water after a warning from the UK government to stock up on canned food and bottled water.",
+  "image": "",
+  "media": "video",
+  "desk": "money"
+ },
  "1qpgy9a": {
   "tries": 1,
   "done": true,
@@ -376,13 +384,5 @@
   "image": "",
   "media": "image",
   "desk": "war"
- },
- "8yjznp": {
-  "tries": 1,
-  "done": true,
-  "title": "@Polymarket: JUST IN: WHO reveals the cause of death remains “unknown” for the Russian plague lab worker whose death sparked fears of an outbreak.",
-  "image": "",
-  "media": "",
-  "desk": "anomaly"
  }
 }
