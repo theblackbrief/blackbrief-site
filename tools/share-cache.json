@@ -1,4 +1,12 @@
 {
+ "1p1ivm": {
+  "tries": 1,
+  "done": true,
+  "title": "@Polymarket: JUST IN: Americans are reportedly buying less Halloween candy as prices soar +44% over 5 years, nearly double the rate of grocery inflation.",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "sjsg45": {
   "tries": 1,
   "done": true,
@@ -375,13 +383,5 @@
   "image": "",
   "media": "video",
   "desk": "anomaly"
- },
- "kuoo8x": {
-  "tries": 1,
-  "done": true,
-  "title": "@RT_com: 'Please tell Putin, give us 60 days of total ceasefire, and we will organize elections' — Zelensky Vladimir Zelensky's official five-year term in office expired on May 20, 2024",
-  "image": "",
-  "media": "video",
-  "desk": "war"
  }
 }

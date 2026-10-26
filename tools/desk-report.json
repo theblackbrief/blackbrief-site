@@ -2,15 +2,15 @@
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
   "unfiled": 13,
-  "war": 11,
+  "war": 10,
   "power": 2,
-  "money": 19,
+  "money": 20,
   "tech": 1,
   "anomaly": 4
  },
  "filed_by": {
-  "account": 18,
-  "words": 16,
+  "account": 19,
+  "words": 15,
   "words_over_account": 3
  },
  "accounts_without_a_desk": [
@@ -95,13 +95,6 @@
    "handle": "@realdonaldtrump",
    "posts": 1,
    "filed_by_words": []
-  },
-  {
-   "handle": "@rt_com",
-   "posts": 1,
-   "filed_by_words": [
-    "war"
-   ]
   },
   {
    "handle": "@ryanafournier",
