@@ -1,4 +1,11 @@
 {
+ "sjsg45": {
+  "tries": 1,
+  "done": true,
+  "title": "@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination can cause multiple sclerosis due to cross-reactive CD4+ T cells that recognize the spike protein of SARS-CoV-2 and myelin peptides.” In other words, your own immune system destroys the nerve…",
+  "image": "",
+  "media": "video"
+ },
  "w9bi3e": {
   "tries": 1,
   "done": true,
@@ -375,14 +382,6 @@
   "title": "@RT_com: 'Please tell Putin, give us 60 days of total ceasefire, and we will organize elections' — Zelensky Vladimir Zelensky's official five-year term in office expired on May 20, 2024",
   "image": "",
   "media": "video",
-  "desk": "war"
- },
- "11zy2gi": {
-  "tries": 1,
-  "done": true,
-  "title": "@WarMonitor3: Trump announces a full energy ceasefire just now between Russia and Ukraine saying both parties have agreed.",
-  "image": "",
-  "media": "image",
   "desk": "war"
  }
 }
