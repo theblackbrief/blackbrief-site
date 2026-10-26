@@ -1,4 +1,11 @@
 {
+ "6rz7ra": {
+  "tries": 1,
+  "done": true,
+  "title": "@Fynnderella1: This study revealed that cases of myocarditis have surged by 620% among people who received Covid mRNA injections. It also found that Covid shots caused a 175% spike in pericarditis.",
+  "image": "",
+  "media": ""
+ },
  "j28ivn": {
   "tries": 1,
   "done": true,
@@ -373,13 +380,5 @@
   "image": "",
   "media": "video",
   "desk": "anomaly"
- },
- "mea6u5": {
-  "tries": 1,
-  "done": true,
-  "title": "@Kalshi: BREAKING: US consumer prices have risen +30% since the pandemic",
-  "image": "",
-  "media": "",
-  "desk": "money"
  }
 }

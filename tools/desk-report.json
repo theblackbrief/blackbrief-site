@@ -1,15 +1,15 @@
 {
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
-  "unfiled": 15,
+  "unfiled": 16,
   "war": 9,
   "power": 2,
-  "money": 20,
+  "money": 19,
   "tech": 1,
   "anomaly": 3
  },
  "filed_by": {
-  "account": 18,
+  "account": 17,
   "words": 14,
   "words_over_account": 3
  },
@@ -48,6 +48,11 @@
   {
    "handle": "@mcgillmedicines",
    "posts": 2,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@fynnderella1",
+   "posts": 1,
    "filed_by_words": []
   },
   {
