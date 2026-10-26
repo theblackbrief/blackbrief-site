@@ -6,13 +6,20 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 26 Oct 2026 04:40:16 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 26 Oct 2026 13:34:05 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination can cause multiple sclerosis due to cross-reactive CD4+ T ce…</title>
+   <link>https://theblackbrief.com/p/sjsg45/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/sjsg45/</guid>
+   <pubDate>Mon, 26 Oct 2026 13:34:05 GMT</pubDate>
+   <description>&lt;p&gt;@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination can cause multiple sclerosis due to cross-reactive CD4+ T cells that recognize the spike protein of SARS-CoV-2 and myelin peptides.” In other words, your own immune system destroys the nerve…&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/mcgillmedicines/status/2114687909173309870?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/sjsg45/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@TheWatch32: 🚨BREAKING : UK citizens can be seen scrambling to buy bottled water after a warning from the UK government to stock up on canned food and bottled…</title>
    <link>https://theblackbrief.com/p/w9bi3e/</link>
@@ -397,14 +404,6 @@
    <pubDate>Sun, 11 Oct 2026 15:28:01 GMT</pubDate>
    <category>war</category>
    <description>&lt;p&gt;@RT_com: 'Please tell Putin, give us 60 days of total ceasefire, and we will organize elections' — Zelensky Vladimir Zelensky's official five-year term in office expired on May 20, 2024&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/rt_com/status/2109282103456395713?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/kuoo8x/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@WarMonitor3: Trump announces a full energy ceasefire just now between Russia and Ukraine saying both parties have agreed.</title>
-   <link>https://theblackbrief.com/p/11zy2gi/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/11zy2gi/</guid>
-   <pubDate>Sun, 11 Oct 2026 15:27:41 GMT</pubDate>
-   <category>war</category>
-   <description>&lt;p&gt;@WarMonitor3: Trump announces a full energy ceasefire just now between Russia and Ukraine saying both parties have agreed.&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/warmonitor3/status/2109288464457896068?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/11zy2gi/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
