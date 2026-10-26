@@ -6,13 +6,20 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 26 Oct 2026 21:43:02 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 26 Oct 2026 21:57:55 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@P_McCulloughMD: BREAKING: New Paper Reveals How mRNA Vaccine Materials Could Spread From Vaccinated to Unvaccinated People We identified two distinct forms of…</title>
+   <link>https://theblackbrief.com/p/j28ivn/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/j28ivn/</guid>
+   <pubDate>Mon, 26 Oct 2026 21:57:55 GMT</pubDate>
+   <description>&lt;p&gt;@P_McCulloughMD: BREAKING: New Paper Reveals How mRNA Vaccine Materials Could Spread From Vaccinated to Unvaccinated People We identified two distinct forms of mRNA vaccine shedding: internal transcriptional spread and potential human-to-human transfer. Vaccine spreads internally and…&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/p_mcculloughmd/status/2114773416859287555?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/j28ivn/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination can cause multiple sclerosis due to cross-reactive CD4+ T ce…</title>
    <link>https://theblackbrief.com/p/tnu0e0/</link>
@@ -395,14 +402,6 @@
    <pubDate>Sun, 11 Oct 2026 22:30:29 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@Kalshi: BREAKING: US consumer prices have risen +30% since the pandemic&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/kalshi/status/2109381019870924957?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/mea6u5/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@HormuzLetter: BREAKING: Russia has just struck the CHP-5 power plant in Kharkiv, Ukraine's second largest combined heat and power plant, breaking the US energ…</title>
-   <link>https://theblackbrief.com/p/67ikbc/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/67ikbc/</guid>
-   <pubDate>Sun, 11 Oct 2026 18:54:55 GMT</pubDate>
-   <category>war</category>
-   <description>&lt;p&gt;@HormuzLetter: BREAKING: Russia has just struck the CHP-5 power plant in Kharkiv, Ukraine's second largest combined heat and power plant, breaking the US energy ceasefire just hours after Trump announced it. Zelensky confirms the strike, saying &amp;quot;Just now there was a strike on CHP-5 in the…&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/HormuzLetter/status/2109342086730592508?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/67ikbc/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
