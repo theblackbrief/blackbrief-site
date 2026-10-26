@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 26 Oct 2026 13:34:05 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 26 Oct 2026 15:48:22 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Polymarket: JUST IN: Americans are reportedly buying less Halloween candy as prices soar +44% over 5 years, nearly double the rate of grocery inflation.</title>
+   <link>https://theblackbrief.com/p/1p1ivm/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1p1ivm/</guid>
+   <pubDate>Mon, 26 Oct 2026 15:48:22 GMT</pubDate>
+   <category>money</category>
+   <description>&lt;p&gt;@Polymarket: JUST IN: Americans are reportedly buying less Halloween candy as prices soar +44% over 5 years, nearly double the rate of grocery inflation.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/polymarket/status/2114742702508273924?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1p1ivm/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination can cause multiple sclerosis due to cross-reactive CD4+ T ce…</title>
    <link>https://theblackbrief.com/p/sjsg45/</link>
@@ -396,14 +404,6 @@
    <pubDate>Sun, 11 Oct 2026 16:11:27 GMT</pubDate>
    <category>anomaly</category>
    <description>&lt;p&gt;@Breaking911: Nepal reportedly hit with another massive flood.&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/breaking911/status/2109283586725822851?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/lgq1tm/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@RT_com: 'Please tell Putin, give us 60 days of total ceasefire, and we will organize elections' — Zelensky Vladimir Zelensky's official five-year term in offi…</title>
-   <link>https://theblackbrief.com/p/kuoo8x/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/kuoo8x/</guid>
-   <pubDate>Sun, 11 Oct 2026 15:28:01 GMT</pubDate>
-   <category>war</category>
-   <description>&lt;p&gt;@RT_com: 'Please tell Putin, give us 60 days of total ceasefire, and we will organize elections' — Zelensky Vladimir Zelensky's official five-year term in office expired on May 20, 2024&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/rt_com/status/2109282103456395713?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/kuoo8x/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
