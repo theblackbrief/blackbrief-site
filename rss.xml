@@ -6,13 +6,20 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 26 Oct 2026 15:48:22 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 26 Oct 2026 21:43:02 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination can cause multiple sclerosis due to cross-reactive CD4+ T ce…</title>
+   <link>https://theblackbrief.com/p/tnu0e0/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/tnu0e0/</guid>
+   <pubDate>Mon, 26 Oct 2026 21:43:02 GMT</pubDate>
+   <description>&lt;p&gt;@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination can cause multiple sclerosis due to cross-reactive CD4+ T cells that recognize the spike protein of SARS-CoV-2 and myelin peptides.” In other words, your own immune system destroys the nerve…&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/mcgillmedicines/status/2114687909173309870?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/tnu0e0/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Polymarket: JUST IN: Americans are reportedly buying less Halloween candy as prices soar +44% over 5 years, nearly double the rate of grocery inflation.</title>
    <link>https://theblackbrief.com/p/1p1ivm/</link>
@@ -396,14 +403,6 @@
    <pubDate>Sun, 11 Oct 2026 18:54:55 GMT</pubDate>
    <category>war</category>
    <description>&lt;p&gt;@HormuzLetter: BREAKING: Russia has just struck the CHP-5 power plant in Kharkiv, Ukraine's second largest combined heat and power plant, breaking the US energy ceasefire just hours after Trump announced it. Zelensky confirms the strike, saying &amp;quot;Just now there was a strike on CHP-5 in the…&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/HormuzLetter/status/2109342086730592508?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/67ikbc/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@Breaking911: Nepal reportedly hit with another massive flood.</title>
-   <link>https://theblackbrief.com/p/lgq1tm/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/lgq1tm/</guid>
-   <pubDate>Sun, 11 Oct 2026 16:11:27 GMT</pubDate>
-   <category>anomaly</category>
-   <description>&lt;p&gt;@Breaking911: Nepal reportedly hit with another massive flood.&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/breaking911/status/2109283586725822851?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/lgq1tm/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
