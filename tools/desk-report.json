@@ -3,14 +3,14 @@
  "desks": {
   "unfiled": 16,
   "war": 9,
-  "power": 2,
+  "power": 3,
   "money": 19,
   "tech": 1,
-  "anomaly": 3
+  "anomaly": 2
  },
  "filed_by": {
-  "account": 17,
-  "words": 14,
+  "account": 16,
+  "words": 15,
   "words_over_account": 3
  },
  "accounts_without_a_desk": [
@@ -59,6 +59,13 @@
    "handle": "@giammacool",
    "posts": 1,
    "filed_by_words": []
+  },
+  {
+   "handle": "@jmchyno",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
+   ]
   },
   {
    "handle": "@ktla",
