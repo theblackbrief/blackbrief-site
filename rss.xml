@@ -6,13 +6,28 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 27 Oct 2026 13:42:27 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 27 Oct 2026 21:04:58 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@reuters on X</title>
+   <link>https://theblackbrief.com/p/1gs9mt2/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1gs9mt2/</guid>
+   <pubDate>Tue, 27 Oct 2026 21:04:58 GMT</pubDate>
+   <description>&lt;p&gt;&lt;a href=&quot;https://x.com/reuters/status/2115155318585930226?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1gs9mt2/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
+  <item>
+   <title>@Polymarket: BREAKING: Hackers target the US Federal Election Commission, knocking its electronic filing system offline just 1 week before the midterm election…</title>
+   <link>https://theblackbrief.com/p/klkv3r/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/klkv3r/</guid>
+   <pubDate>Tue, 27 Oct 2026 21:04:42 GMT</pubDate>
+   <category>power</category>
+   <description>&lt;p&gt;@Polymarket: BREAKING: Hackers target the US Federal Election Commission, knocking its electronic filing system offline just 1 week before the midterm elections. — Reuters&lt;/p&gt;&lt;p&gt;/power // &lt;a href=&quot;https://x.com/polymarket/status/2115169361614774425?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/klkv3r/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@unusual_whales: Men have gained essentially no jobs since Trump took office. Since December 2024, the US has added about 760,000 jobs, and nearly all of them…</title>
    <link>https://theblackbrief.com/p/1454q9c/</link>
@@ -392,14 +407,6 @@
    <pubDate>Mon, 12 Oct 2026 23:10:06 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@Barchart: BREAKING 🚨: Housing Market Home Sellers now outnumber Home Buyers by the largest margin ever recorded 🤯 👀&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/barchart/status/2109448588418011208?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/sh1u1/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@unusual_whales: A $100,000 salary in 2000 has the same purchasing power as $194,530 in 2026, per YF</title>
-   <link>https://theblackbrief.com/p/k9e11j/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/k9e11j/</guid>
-   <pubDate>Mon, 12 Oct 2026 14:19:12 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@unusual_whales: A $100,000 salary in 2000 has the same purchasing power as $194,530 in 2026, per YF&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/unusual_whales/status/2109449219463434295?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/k9e11j/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
