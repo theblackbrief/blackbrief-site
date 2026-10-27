@@ -1,4 +1,12 @@
 {
+ "1gs9mt2": {
+  "tries": 1,
+  "done": true,
+  "title": "@Reuters: BREAKING: A hacker is attempting to breach the US Federal Election Commission's systems and that agency has had to 'temporarily shut down' its web-facing services as a result, according to an email seen by Reuters",
+  "image": "",
+  "media": "video",
+  "desk": "power"
+ },
  "klkv3r": {
   "tries": 1,
   "done": true,
@@ -370,14 +378,6 @@
   "title": "@NewsWire_US: Nearly 90% of Boomers Support Higher Taxes on Younger Workers to Protect Social Security Benefits — Poll",
   "image": "",
   "media": "",
-  "desk": "money"
- },
- "sh1u1": {
-  "tries": 1,
-  "done": true,
-  "title": "@Barchart: BREAKING 🚨: Housing Market Home Sellers now outnumber Home Buyers by the largest margin ever recorded 🤯 👀",
-  "image": "",
-  "media": "image",
   "desk": "money"
  }
 }

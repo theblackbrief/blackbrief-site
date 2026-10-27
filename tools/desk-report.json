@@ -3,14 +3,14 @@
  "desks": {
   "unfiled": 17,
   "war": 8,
-  "power": 4,
-  "money": 18,
+  "power": 5,
+  "money": 17,
   "tech": 1,
   "anomaly": 2
  },
  "filed_by": {
-  "account": 15,
-  "words": 15,
+  "account": 14,
+  "words": 16,
   "words_over_account": 3
  },
  "accounts_without_a_desk": [
@@ -110,6 +110,13 @@
    "handle": "@realdonaldtrump",
    "posts": 1,
    "filed_by_words": []
+  },
+  {
+   "handle": "@reuters",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
+   ]
   },
   {
    "handle": "@ryanafournier",
