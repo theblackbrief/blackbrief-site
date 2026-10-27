@@ -1,4 +1,12 @@
 {
+ "1454q9c": {
+  "tries": 1,
+  "done": true,
+  "title": "@unusual_whales: Men have gained essentially no jobs since Trump took office. Since December 2024, the US has added about 760,000 jobs, and nearly all of them went to women, per government payroll data",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "1arx7cn": {
   "tries": 1,
   "done": true,
@@ -371,13 +379,5 @@
   "image": "",
   "media": "",
   "desk": "money"
- },
- "a44hf4": {
-  "tries": 1,
-  "done": true,
-  "title": "@Polymarket: BREAKING: North Korea launches multiple ballistic missiles toward the sea off its eastern coast.",
-  "image": "",
-  "media": "",
-  "desk": "war"
  }
 }
