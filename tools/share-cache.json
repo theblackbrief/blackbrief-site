@@ -1,4 +1,12 @@
 {
+ "klkv3r": {
+  "tries": 1,
+  "done": true,
+  "title": "@Polymarket: BREAKING: Hackers target the US Federal Election Commission, knocking its electronic filing system offline just 1 week before the midterm elections. — Reuters",
+  "image": "",
+  "media": "",
+  "desk": "power"
+ },
  "1454q9c": {
   "tries": 1,
   "done": true,
@@ -370,14 +378,6 @@
   "title": "@Barchart: BREAKING 🚨: Housing Market Home Sellers now outnumber Home Buyers by the largest margin ever recorded 🤯 👀",
   "image": "",
   "media": "image",
-  "desk": "money"
- },
- "k9e11j": {
-  "tries": 1,
-  "done": true,
-  "title": "@unusual_whales: A $100,000 salary in 2000 has the same purchasing power as $194,530 in 2026, per YF",
-  "image": "",
-  "media": "",
   "desk": "money"
  }
 }
