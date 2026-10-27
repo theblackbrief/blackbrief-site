@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 27 Oct 2026 00:41:35 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 27 Oct 2026 13:42:27 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@unusual_whales: Men have gained essentially no jobs since Trump took office. Since December 2024, the US has added about 760,000 jobs, and nearly all of them…</title>
+   <link>https://theblackbrief.com/p/1454q9c/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1454q9c/</guid>
+   <pubDate>Tue, 27 Oct 2026 13:42:27 GMT</pubDate>
+   <category>money</category>
+   <description>&lt;p&gt;@unusual_whales: Men have gained essentially no jobs since Trump took office. Since December 2024, the US has added about 760,000 jobs, and nearly all of them went to women, per government payroll data&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/unusual_whales/status/2115065224697164126?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1454q9c/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@InsiderWN: #BREAKING: Japanese Minister Hosono issues emergency request urging citizens to stockpile food and water.</title>
    <link>https://theblackbrief.com/p/1arx7cn/</link>
@@ -392,14 +400,6 @@
    <pubDate>Mon, 12 Oct 2026 14:19:12 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@unusual_whales: A $100,000 salary in 2000 has the same purchasing power as $194,530 in 2026, per YF&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/unusual_whales/status/2109449219463434295?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/k9e11j/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@Polymarket: BREAKING: North Korea launches multiple ballistic missiles toward the sea off its eastern coast.</title>
-   <link>https://theblackbrief.com/p/a44hf4/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/a44hf4/</guid>
-   <pubDate>Mon, 12 Oct 2026 02:58:21 GMT</pubDate>
-   <category>war</category>
-   <description>&lt;p&gt;@Polymarket: BREAKING: North Korea launches multiple ballistic missiles toward the sea off its eastern coast.&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/polymarket/status/2109464392618389779?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/a44hf4/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
