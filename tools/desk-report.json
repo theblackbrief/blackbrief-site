@@ -2,9 +2,9 @@
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
   "unfiled": 17,
-  "war": 8,
+  "war": 9,
   "power": 5,
-  "money": 17,
+  "money": 16,
   "tech": 1,
   "anomaly": 2
  },
@@ -31,14 +31,6 @@
    ]
   },
   {
-   "handle": "@newswire_us",
-   "posts": 3,
-   "filed_by_words": [
-    "war",
-    "money"
-   ]
-  },
-  {
    "handle": "@bnonews",
    "posts": 2,
    "filed_by_words": [
@@ -49,6 +41,20 @@
    "handle": "@mcgillmedicines",
    "posts": 2,
    "filed_by_words": []
+  },
+  {
+   "handle": "@newswire_us",
+   "posts": 2,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@theinsiderpaper",
+   "posts": 2,
+   "filed_by_words": [
+    "war"
+   ]
   },
   {
    "handle": "@fynnderella1",
@@ -120,11 +126,6 @@
   },
   {
    "handle": "@ryanafournier",
-   "posts": 1,
-   "filed_by_words": []
-  },
-  {
-   "handle": "@theinsiderpaper",
    "posts": 1,
    "filed_by_words": []
   },
