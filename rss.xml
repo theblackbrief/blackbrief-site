@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 27 Oct 2026 21:04:58 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 27 Oct 2026 21:38:28 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@TheInsiderPaper: NEW: 3 of Britain’s 4 nuclear deterrent submarines are out at sea in an &quot;unusual&quot; situation, The Times reports</title>
+   <link>https://theblackbrief.com/p/140bi27/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/140bi27/</guid>
+   <pubDate>Tue, 27 Oct 2026 21:38:28 GMT</pubDate>
+   <category>war</category>
+   <description>&lt;p&gt;@TheInsiderPaper: NEW: 3 of Britain’s 4 nuclear deterrent submarines are out at sea in an &amp;quot;unusual&amp;quot; situation, The Times reports&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/theinsiderpaper/status/2115164834404995303?a=cYxJZlEKDwqhdPwDE1o&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/140bi27/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Reuters: BREAKING: A hacker is attempting to breach the US Federal Election Commission's systems and that agency has had to 'temporarily shut down' its web-fa…</title>
    <link>https://theblackbrief.com/p/1gs9mt2/</link>
@@ -392,14 +400,6 @@
    <pubDate>Mon, 12 Oct 2026 23:26:44 GMT</pubDate>
    <category>lol</category>
    <description>&lt;p&gt;#lol // &lt;a href=&quot;https://x.com/realdonaldtrump/status/2109670566408135106?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/6odiym/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@NewsWire_US: Nearly 90% of Boomers Support Higher Taxes on Younger Workers to Protect Social Security Benefits — Poll</title>
-   <link>https://theblackbrief.com/p/qzkkc6/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/qzkkc6/</guid>
-   <pubDate>Mon, 12 Oct 2026 23:25:51 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@NewsWire_US: Nearly 90% of Boomers Support Higher Taxes on Younger Workers to Protect Social Security Benefits — Poll&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/newswire_us/status/2109743259123958089?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/qzkkc6/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
