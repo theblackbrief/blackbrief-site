@@ -3,7 +3,7 @@
  "desks": {
   "unfiled": 16,
   "war": 10,
-  "power": 4,
+  "power": 5,
   "money": 16,
   "tech": 1,
   "anomaly": 2
@@ -11,7 +11,7 @@
  "filed_by": {
   "account": 15,
   "words": 15,
-  "words_over_account": 3
+  "words_over_account": 4
  },
  "accounts_without_a_desk": [
   {
