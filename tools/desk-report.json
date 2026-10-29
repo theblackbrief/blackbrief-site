@@ -9,8 +9,8 @@
   "anomaly": 2
  },
  "filed_by": {
-  "account": 15,
-  "words": 17,
+  "account": 16,
+  "words": 16,
   "words_over_account": 4
  },
  "accounts_without_a_desk": [
@@ -24,7 +24,7 @@
   },
   {
    "handle": "@leadingreport",
-   "posts": 4,
+   "posts": 3,
    "filed_by_words": [
     "war",
     "power"
