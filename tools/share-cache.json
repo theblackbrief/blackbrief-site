@@ -1,4 +1,12 @@
 {
+ "41i0bd": {
+  "tries": 1,
+  "done": true,
+  "title": "@Polymarket: BREAKING: Surface-to-air missile systems have reportedly been deployed near President Trump's Mar-a-Lago estate in Florida.",
+  "image": "",
+  "media": "",
+  "desk": "power"
+ },
  "1qyoqcx": {
   "tries": 1,
   "done": true,
@@ -375,13 +383,6 @@
   "title": "@macropaperr: 5 OF THE LARGEST TEN BANKS IN THE US HAVE NOW ENTERED A BEAR MARKET TERRITORY. Bank of America: -23.5% Wells Fargo: -20.1% Goldman Sachs: -24% Morgan Stanley: -24% Capital One: -25% Along with this, the KBW Nasdaq Bank Index has dropped 15.6% from its peak and has hit a 5-month…",
   "image": "",
   "media": "image",
-  "desk": "money"
- },
- "1ngmc53": {
-  "tries": 1,
-  "done": true,
-  "title": "Inflation jumps to 3.7% as gas and diesel prices squeeze consumers ahead of the midterms — NBC News",
-  "image": "",
   "desk": "money"
  }
 }
