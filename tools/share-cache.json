@@ -1,4 +1,12 @@
 {
+ "1p3wsrh": {
+  "tries": 1,
+  "done": true,
+  "title": "@HormuzLetter: BREAKING: The US Army is now training soldiers to dig mass battlefield graves for American troops for the first time since the Korean War, practicing the burial of 2,400 bodies in under 24 hours in open pits, per a US Army release. Engineers, preventive medicine teams, chaplains…",
+  "image": "",
+  "media": "",
+  "desk": "war"
+ },
  "1c48kim": {
   "tries": 1,
   "done": true,
@@ -375,13 +383,5 @@
   "image": "",
   "media": "",
   "desk": "money"
- },
- "1a3lnmp": {
-  "tries": 1,
-  "done": true,
-  "title": "@disclosetv: NOW - Trump: \"Wait till you see what we do to Iran. We're gonna—we're gonna do a number. Wait till you see... We've had it.\"",
-  "image": "",
-  "media": "video",
-  "desk": "war"
  }
 }
