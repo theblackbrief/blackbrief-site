@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Thu, 29 Oct 2026 16:32:53 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 30 Oct 2026 00:57:47 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@HormuzLetter: BREAKING: The US Army is now training soldiers to dig mass battlefield graves for American troops for the first time since the Korean War, pract…</title>
+   <link>https://theblackbrief.com/p/1p3wsrh/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1p3wsrh/</guid>
+   <pubDate>Fri, 30 Oct 2026 00:57:47 GMT</pubDate>
+   <category>war</category>
+   <description>&lt;p&gt;@HormuzLetter: BREAKING: The US Army is now training soldiers to dig mass battlefield graves for American troops for the first time since the Korean War, practicing the burial of 2,400 bodies in under 24 hours in open pits, per a US Army release. Engineers, preventive medicine teams, chaplains…&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/hormuzletter/status/2115953303817211963?a=s4D3pLP8rl26AuJ3PpA&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1p3wsrh/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@nypost: Pentagon treating military base freezer malfunctions as suspected cyberattack: officials</title>
    <link>https://theblackbrief.com/p/1c48kim/</link>
@@ -396,14 +404,6 @@
    <pubDate>Wed, 14 Oct 2026 13:51:46 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@unusual_whales: 40% of workers earning over $500,000 are leaving paycheck to paycheck, per Goldman Sachs.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/unusual_whales/status/2110359215604896111?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1cbf9yl/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@disclosetv: NOW - Trump: &quot;Wait till you see what we do to Iran. We're gonna—we're gonna do a number. Wait till you see... We've had it.&quot;</title>
-   <link>https://theblackbrief.com/p/1a3lnmp/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1a3lnmp/</guid>
-   <pubDate>Wed, 14 Oct 2026 03:45:11 GMT</pubDate>
-   <category>war</category>
-   <description>&lt;p&gt;@disclosetv: NOW - Trump: &amp;quot;Wait till you see what we do to Iran. We're gonna—we're gonna do a number. Wait till you see... We've had it.&amp;quot;&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/disclosetv/status/2110184314461642957?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1a3lnmp/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
