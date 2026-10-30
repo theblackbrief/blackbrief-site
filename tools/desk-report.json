@@ -9,15 +9,16 @@
   "anomaly": 2
  },
  "filed_by": {
-  "account": 15,
-  "words": 17,
+  "account": 14,
+  "words": 18,
   "words_over_account": 4
  },
  "accounts_without_a_desk": [
   {
    "handle": "@disclosetv",
-   "posts": 4,
+   "posts": 5,
    "filed_by_words": [
+    "money",
     "war",
     "power"
    ]
