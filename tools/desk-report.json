@@ -9,8 +9,8 @@
   "anomaly": 2
  },
  "filed_by": {
-  "account": 16,
-  "words": 16,
+  "account": 15,
+  "words": 17,
   "words_over_account": 4
  },
  "accounts_without_a_desk": [
@@ -61,6 +61,13 @@
    "posts": 2,
    "filed_by_words": [
     "war"
+   ]
+  },
+  {
+   "handle": "@bnodesk",
+   "posts": 1,
+   "filed_by_words": [
+    "money"
    ]
   },
   {
