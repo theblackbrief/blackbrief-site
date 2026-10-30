@@ -1,4 +1,12 @@
 {
+ "1o17ii1": {
+  "tries": 1,
+  "done": true,
+  "title": "@BRICSinfo: JUST IN: 🇵🇱 Coup reportedly underway in Poland.",
+  "image": "",
+  "media": "",
+  "desk": "war"
+ },
  "41i0bd": {
   "tries": 1,
   "done": true,
@@ -376,13 +384,5 @@
   "image": "",
   "media": "",
   "desk": "war"
- },
- "mcyopm": {
-  "tries": 1,
-  "done": true,
-  "title": "@macropaperr: 5 OF THE LARGEST TEN BANKS IN THE US HAVE NOW ENTERED A BEAR MARKET TERRITORY. Bank of America: -23.5% Wells Fargo: -20.1% Goldman Sachs: -24% Morgan Stanley: -24% Capital One: -25% Along with this, the KBW Nasdaq Bank Index has dropped 15.6% from its peak and has hit a 5-month…",
-  "image": "",
-  "media": "image",
-  "desk": "money"
  }
 }
