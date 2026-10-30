@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri, 30 Oct 2026 00:57:47 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 30 Oct 2026 05:57:46 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@BNODesk: BREAKING: North Korea is behind the $6.36 billion Binance hack, the biggest in crypto history, according to TRM Labs</title>
+   <link>https://theblackbrief.com/p/15czjre/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/15czjre/</guid>
+   <pubDate>Fri, 30 Oct 2026 05:57:46 GMT</pubDate>
+   <category>money</category>
+   <description>&lt;p&gt;@BNODesk: BREAKING: North Korea is behind the $6.36 billion Binance hack, the biggest in crypto history, according to TRM Labs&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/BNODesk/status/2116021372715475205?a=gZ6ESN060WyWT9gs4bM&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/15czjre/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@HormuzLetter: BREAKING: The US Army is now training soldiers to dig mass battlefield graves for American troops for the first time since the Korean War, pract…</title>
    <link>https://theblackbrief.com/p/1p3wsrh/</link>
@@ -396,14 +404,6 @@
    <pubDate>Wed, 14 Oct 2026 14:47:56 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@unusual_whales: BlackRock CEO Larry Fink says America has lost the bedrock of America, as there is no &amp;quot;longstanding career&amp;quot; anymore.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/unusual_whales/status/2110339082882879546?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/r83nz6/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@unusual_whales: 40% of workers earning over $500,000 are leaving paycheck to paycheck, per Goldman Sachs.</title>
-   <link>https://theblackbrief.com/p/1cbf9yl/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1cbf9yl/</guid>
-   <pubDate>Wed, 14 Oct 2026 13:51:46 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@unusual_whales: 40% of workers earning over $500,000 are leaving paycheck to paycheck, per Goldman Sachs.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/unusual_whales/status/2110359215604896111?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1cbf9yl/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
