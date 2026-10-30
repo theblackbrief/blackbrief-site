@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri, 30 Oct 2026 18:01:16 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 30 Oct 2026 21:41:57 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@BRICSinfo: JUST IN: 🇵🇱 Coup reportedly underway in Poland.</title>
+   <link>https://theblackbrief.com/p/1o17ii1/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1o17ii1/</guid>
+   <pubDate>Fri, 30 Oct 2026 21:41:57 GMT</pubDate>
+   <category>war</category>
+   <description>&lt;p&gt;@BRICSinfo: JUST IN: 🇵🇱 Coup reportedly underway in Poland.&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/bricsinfo/status/2116266294609666339?a=NChemQz9PGiaJ-g0k88&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1o17ii1/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Polymarket: BREAKING: Surface-to-air missile systems have reportedly been deployed near President Trump's Mar-a-Lago estate in Florida.</title>
    <link>https://theblackbrief.com/p/41i0bd/</link>
@@ -396,14 +404,6 @@
    <pubDate>Thu, 15 Oct 2026 06:54:12 GMT</pubDate>
    <category>war</category>
    <description>&lt;p&gt;@NewsWire_US: U.S. developing new strike plans on Iran that include MOAB, the largest non-nuclear bomb in the arsenal. — CNN&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/NewsWire_US/status/2110590525703172525?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/smesl6/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@macropaperr: 5 OF THE LARGEST TEN BANKS IN THE US HAVE NOW ENTERED A BEAR MARKET TERRITORY. Bank of America: -23.5% Wells Fargo: -20.1% Goldman Sachs: -24% Mo…</title>
-   <link>https://theblackbrief.com/p/mcyopm/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/mcyopm/</guid>
-   <pubDate>Wed, 14 Oct 2026 17:00:37 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@macropaperr: 5 OF THE LARGEST TEN BANKS IN THE US HAVE NOW ENTERED A BEAR MARKET TERRITORY. Bank of America: -23.5% Wells Fargo: -20.1% Goldman Sachs: -24% Morgan Stanley: -24% Capital One: -25% Along with this, the KBW Nasdaq Bank Index has dropped 15.6% from its peak and has hit a 5-month…&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/macropaperr/status/2110392315789639775?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/mcyopm/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
