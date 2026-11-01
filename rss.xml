@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri, 30 Oct 2026 21:41:57 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 01 Nov 2026 05:24:36 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@LeadingReport: President Trump sends third aircraft carrier toward Iran, per Daily Mail.</title>
+   <link>https://theblackbrief.com/p/1lirc73/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1lirc73/</guid>
+   <pubDate>Sun, 01 Nov 2026 05:24:36 GMT</pubDate>
+   <category>war</category>
+   <description>&lt;p&gt;@LeadingReport: President Trump sends third aircraft carrier toward Iran, per Daily Mail.&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/leadingreport/status/2116680946523279493?a=DfOfIM0WEjvaENWHSxY&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1lirc73/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@BRICSinfo: JUST IN: 🇵🇱 Coup reportedly underway in Poland.</title>
    <link>https://theblackbrief.com/p/1o17ii1/</link>
@@ -396,14 +404,6 @@
    <pubDate>Thu, 15 Oct 2026 06:58:32 GMT</pubDate>
    <category>war</category>
    <description>&lt;p&gt;@NewsWire_US: TRUMP: THE IRAN WAR WILL END VERY SOON.&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/NewsWire_US/status/2110592960727302278?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/19mm7ct/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@NewsWire_US: U.S. developing new strike plans on Iran that include MOAB, the largest non-nuclear bomb in the arsenal. — CNN</title>
-   <link>https://theblackbrief.com/p/smesl6/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/smesl6/</guid>
-   <pubDate>Thu, 15 Oct 2026 06:54:12 GMT</pubDate>
-   <category>war</category>
-   <description>&lt;p&gt;@NewsWire_US: U.S. developing new strike plans on Iran that include MOAB, the largest non-nuclear bomb in the arsenal. — CNN&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/NewsWire_US/status/2110590525703172525?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/smesl6/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
