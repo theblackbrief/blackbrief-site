@@ -25,7 +25,7 @@
   },
   {
    "handle": "@leadingreport",
-   "posts": 3,
+   "posts": 4,
    "filed_by_words": [
     "war",
     "power"
@@ -42,13 +42,6 @@
    "handle": "@mcgillmedicines",
    "posts": 2,
    "filed_by_words": []
-  },
-  {
-   "handle": "@newswire_us",
-   "posts": 2,
-   "filed_by_words": [
-    "war"
-   ]
   },
   {
    "handle": "@nypost",
@@ -112,6 +105,13 @@
    "posts": 1,
    "filed_by_words": [
     "anomaly"
+   ]
+  },
+  {
+   "handle": "@newswire_us",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
    ]
   },
   {

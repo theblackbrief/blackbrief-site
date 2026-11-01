@@ -1,4 +1,12 @@
 {
+ "1lirc73": {
+  "tries": 1,
+  "done": true,
+  "title": "@LeadingReport: President Trump sends third aircraft carrier toward Iran, per Daily Mail.",
+  "image": "",
+  "media": "",
+  "desk": "war"
+ },
  "1o17ii1": {
   "tries": 1,
   "done": true,
@@ -373,14 +381,6 @@
   "tries": 1,
   "done": true,
   "title": "@NewsWire_US: TRUMP: THE IRAN WAR WILL END VERY SOON.",
-  "image": "",
-  "media": "",
-  "desk": "war"
- },
- "smesl6": {
-  "tries": 1,
-  "done": true,
-  "title": "@NewsWire_US: U.S. developing new strike plans on Iran that include MOAB, the largest non-nuclear bomb in the arsenal. — CNN",
   "image": "",
   "media": "",
   "desk": "war"
