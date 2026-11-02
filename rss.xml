@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sun, 01 Nov 2026 05:24:36 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 02 Nov 2026 01:32:17 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Kalshi: JUST IN: Hedge funds are pulling money out of US stocks at fastest pace ever</title>
+   <link>https://theblackbrief.com/p/1j39y03/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1j39y03/</guid>
+   <pubDate>Mon, 02 Nov 2026 01:32:17 GMT</pubDate>
+   <category>money</category>
+   <description>&lt;p&gt;@Kalshi: JUST IN: Hedge funds are pulling money out of US stocks at fastest pace ever&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/kalshi/status/2116983621856936241?a=4lNQXvwNyu881iC9LUc&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1j39y03/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@LeadingReport: President Trump sends third aircraft carrier toward Iran, per Daily Mail.</title>
    <link>https://theblackbrief.com/p/1lirc73/</link>
@@ -396,14 +404,6 @@
    <pubDate>Thu, 15 Oct 2026 21:34:14 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@BNONews: BREAKING: Active shooter reported at Silver Rail Elementary School in Bend, Oregon&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/bnonews/status/2110832194910298251?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1e63rsu/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@NewsWire_US: TRUMP: THE IRAN WAR WILL END VERY SOON.</title>
-   <link>https://theblackbrief.com/p/19mm7ct/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/19mm7ct/</guid>
-   <pubDate>Thu, 15 Oct 2026 06:58:32 GMT</pubDate>
-   <category>war</category>
-   <description>&lt;p&gt;@NewsWire_US: TRUMP: THE IRAN WAR WILL END VERY SOON.&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/NewsWire_US/status/2110592960727302278?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/19mm7ct/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
