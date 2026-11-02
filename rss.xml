@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 02 Nov 2026 14:12:00 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 02 Nov 2026 16:59:46 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@GeneralMCNews: BREAKING: A power outage in downtown Washington, D.C., is disrupting traffic lights and multiple federal facilities, including the State Depart…</title>
+   <link>https://theblackbrief.com/p/iiawy9/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/iiawy9/</guid>
+   <pubDate>Mon, 02 Nov 2026 16:59:46 GMT</pubDate>
+   <category>power</category>
+   <description>&lt;p&gt;@GeneralMCNews: BREAKING: A power outage in downtown Washington, D.C., is disrupting traffic lights and multiple federal facilities, including the State Department, as infrastructure disruptions continue to surface worldwide.&lt;/p&gt;&lt;p&gt;/power // &lt;a href=&quot;https://x.com/generalmcnews/status/2117282243236483188?a=-IViR_Q0jJsVRa6mu80&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/iiawy9/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@BBCWorld: Supermarket freezers in Belgium and Sweden hit by cyber-attack</title>
    <link>https://theblackbrief.com/p/knnhkt/</link>
@@ -397,13 +405,6 @@
    <pubDate>Fri, 16 Oct 2026 03:21:53 GMT</pubDate>
    <category>anomaly</category>
    <description>&lt;p&gt;@KTLA: #BreakingNews: Wildfire in Malibu explodes to 45 acres. Sky5 overhead. Watch Live:&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/ktla/status/2110900034682458246?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/li4u7z/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@BNONews: UPDATE: At least 5 killed, including 3 children, an adult and the suspect, in elementary school shooting in Bend, Oregon - CBS News</title>
-   <link>https://theblackbrief.com/p/ozs0k6/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/ozs0k6/</guid>
-   <pubDate>Thu, 15 Oct 2026 23:14:37 GMT</pubDate>
-   <description>&lt;p&gt;@BNONews: UPDATE: At least 5 killed, including 3 children, an adult and the suspect, in elementary school shooting in Bend, Oregon - CBS News&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/bnonews/status/2110859079761698975?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/ozs0k6/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
