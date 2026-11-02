@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 02 Nov 2026 01:32:17 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 02 Nov 2026 14:12:00 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@BBCWorld: Supermarket freezers in Belgium and Sweden hit by cyber-attack</title>
+   <link>https://theblackbrief.com/p/knnhkt/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/knnhkt/</guid>
+   <pubDate>Mon, 02 Nov 2026 14:12:00 GMT</pubDate>
+   <category>tech</category>
+   <description>&lt;p&gt;@BBCWorld: Supermarket freezers in Belgium and Sweden hit by cyber-attack&lt;/p&gt;&lt;p&gt;/tech // &lt;a href=&quot;https://x.com/bbcworld/status/2117216490105561262?a=wLwohu-LHjq_VnwSiDw&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/knnhkt/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Kalshi: JUST IN: Hedge funds are pulling money out of US stocks at fastest pace ever</title>
    <link>https://theblackbrief.com/p/1j39y03/</link>
@@ -396,14 +404,6 @@
    <guid isPermaLink="true">https://theblackbrief.com/p/ozs0k6/</guid>
    <pubDate>Thu, 15 Oct 2026 23:14:37 GMT</pubDate>
    <description>&lt;p&gt;@BNONews: UPDATE: At least 5 killed, including 3 children, an adult and the suspect, in elementary school shooting in Bend, Oregon - CBS News&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/bnonews/status/2110859079761698975?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/ozs0k6/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@BNONews: BREAKING: Active shooter reported at Silver Rail Elementary School in Bend, Oregon</title>
-   <link>https://theblackbrief.com/p/1e63rsu/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1e63rsu/</guid>
-   <pubDate>Thu, 15 Oct 2026 21:34:14 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@BNONews: BREAKING: Active shooter reported at Silver Rail Elementary School in Bend, Oregon&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/bnonews/status/2110832194910298251?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1e63rsu/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
