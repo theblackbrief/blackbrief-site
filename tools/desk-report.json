@@ -4,8 +4,8 @@
   "unfiled": 14,
   "war": 12,
   "power": 6,
-  "money": 15,
-  "tech": 1,
+  "money": 14,
+  "tech": 2,
   "anomaly": 2
  },
  "filed_by": {
@@ -32,13 +32,6 @@
    ]
   },
   {
-   "handle": "@bnonews",
-   "posts": 2,
-   "filed_by_words": [
-    "money"
-   ]
-  },
-  {
    "handle": "@mcgillmedicines",
    "posts": 2,
    "filed_by_words": []
@@ -58,11 +51,23 @@
    ]
   },
   {
+   "handle": "@bbcworld",
+   "posts": 1,
+   "filed_by_words": [
+    "tech"
+   ]
+  },
+  {
    "handle": "@bnodesk",
    "posts": 1,
    "filed_by_words": [
     "money"
    ]
+  },
+  {
+   "handle": "@bnonews",
+   "posts": 1,
+   "filed_by_words": []
   },
   {
    "handle": "@daily_mailus",
