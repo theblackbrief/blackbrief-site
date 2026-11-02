@@ -1,4 +1,12 @@
 {
+ "73vq7r": {
+  "tries": 1,
+  "done": true,
+  "title": "@InsiderWire: #BREAKING: 2 election centers in Maricopa County, Arizona, closed 'due to power issues.'",
+  "image": "",
+  "media": "",
+  "desk": "power"
+ },
  "iiawy9": {
   "tries": 1,
   "done": true,
@@ -377,13 +385,5 @@
   "image": "",
   "media": "",
   "desk": "money"
- },
- "li4u7z": {
-  "tries": 1,
-  "done": true,
-  "title": "@KTLA: #BreakingNews: Wildfire in Malibu explodes to 45 acres. Sky5 overhead. Watch Live:",
-  "image": "",
-  "media": "video",
-  "desk": "anomaly"
  }
 }
