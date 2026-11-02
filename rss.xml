@@ -6,13 +6,22 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 02 Nov 2026 16:59:46 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 02 Nov 2026 18:13:40 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@InsiderWire: #BREAKING: 2 election centers in Maricopa County, Arizona, closed 'due to power issues.'</title>
+   <link>https://theblackbrief.com/p/73vq7r/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/73vq7r/</guid>
+   <pubDate>Mon, 02 Nov 2026 18:13:40 GMT</pubDate>
+   <category>power</category>
+   <category>urgent</category>
+   <description>&lt;p&gt;@InsiderWire: #BREAKING: 2 election centers in Maricopa County, Arizona, closed 'due to power issues.'&lt;/p&gt;&lt;p&gt;/power // #urgent // &lt;a href=&quot;https://x.com/insiderwire/status/2117310280631812193?a=ljgaTmT8stZ0niZc-Ew&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/73vq7r/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@GeneralMCNews: BREAKING: A power outage in downtown Washington, D.C., is disrupting traffic lights and multiple federal facilities, including the State Depart…</title>
    <link>https://theblackbrief.com/p/iiawy9/</link>
@@ -397,14 +406,6 @@
    <pubDate>Fri, 16 Oct 2026 19:05:31 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@Polymarket: BREAKING: Brent crude soars above $110 per barrel for the first time since May.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/polymarket/status/2111165031626969555?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/9z6998/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@KTLA: #BreakingNews: Wildfire in Malibu explodes to 45 acres. Sky5 overhead. Watch Live:</title>
-   <link>https://theblackbrief.com/p/li4u7z/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/li4u7z/</guid>
-   <pubDate>Fri, 16 Oct 2026 03:21:53 GMT</pubDate>
-   <category>anomaly</category>
-   <description>&lt;p&gt;@KTLA: #BreakingNews: Wildfire in Malibu explodes to 45 acres. Sky5 overhead. Watch Live:&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/ktla/status/2110900034682458246?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/li4u7z/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
