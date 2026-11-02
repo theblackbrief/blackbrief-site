@@ -1,4 +1,12 @@
 {
+ "1j39y03": {
+  "tries": 1,
+  "done": true,
+  "title": "@Kalshi: JUST IN: Hedge funds are pulling money out of US stocks at fastest pace ever",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "1lirc73": {
   "tries": 1,
   "done": true,
@@ -376,13 +384,5 @@
   "image": "",
   "media": "",
   "desk": "money"
- },
- "19mm7ct": {
-  "tries": 1,
-  "done": true,
-  "title": "@NewsWire_US: TRUMP: THE IRAN WAR WILL END VERY SOON.",
-  "image": "",
-  "media": "",
-  "desk": "war"
  }
 }
