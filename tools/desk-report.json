@@ -2,15 +2,15 @@
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
   "unfiled": 13,
-  "war": 13,
+  "war": 14,
   "power": 8,
-  "money": 13,
+  "money": 12,
   "tech": 2,
   "anomaly": 1
  },
  "filed_by": {
-  "account": 15,
-  "words": 16,
+  "account": 14,
+  "words": 17,
   "words_over_account": 6
  },
  "accounts_without_a_desk": [
@@ -110,6 +110,13 @@
    "handle": "@rawsalerts",
    "posts": 1,
    "filed_by_words": []
+  },
+  {
+   "handle": "@rt_com",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
   },
   {
    "handle": "@ryanafournier",
