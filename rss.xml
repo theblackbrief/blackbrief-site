@@ -6,13 +6,20 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 03 Nov 2026 09:58:43 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 19:51:19 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@TheInsiderPaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of self-sufficiency</title>
+   <link>https://theblackbrief.com/p/c7glxx/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/c7glxx/</guid>
+   <pubDate>Tue, 03 Nov 2026 19:51:19 GMT</pubDate>
+   <description>&lt;p&gt;@TheInsiderPaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of self-sufficiency&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/theinsiderpaper/status/2117685975904297036?a=QeJjnSjNVFV1ZzL0BDA&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/c7glxx/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Polymarket: BREAKING: Britain &amp; France prepare a multinational military force for potential deployment to Ukraine after the war.</title>
    <link>https://theblackbrief.com/p/1n0hk2s/</link>
@@ -402,14 +409,6 @@
    <pubDate>Sun, 18 Oct 2026 00:57:40 GMT</pubDate>
    <category>war</category>
    <description>&lt;p&gt;@HormuzLetter: BREAKING: The UK will deliver a speech to the British people asking them to be prepared for war and to make major sacrifices, per Army chief Roly Walker. Every citizen will be asked to make sacrifices, Walker says. The UK needs to &amp;quot;take the fight to the enemy,&amp;quot; he says.&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/HormuzLetter/status/2111614009187385696?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1c1f9dc/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@Polymarket: BREAKING: Bell tower of Limoges' historic 143-year-old town hall collapses amid raging fires during riots in France.</title>
-   <link>https://theblackbrief.com/p/1ptfsld/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1ptfsld/</guid>
-   <pubDate>Sat, 17 Oct 2026 22:01:44 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@Polymarket: BREAKING: Bell tower of Limoges' historic 143-year-old town hall collapses amid raging fires during riots in France.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/polymarket/status/2111576453896958030?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1ptfsld/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
