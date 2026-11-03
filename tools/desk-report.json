@@ -1,8 +1,8 @@
 {
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
-  "unfiled": 13,
-  "war": 14,
+  "unfiled": 12,
+  "war": 15,
   "power": 8,
   "money": 12,
   "tech": 2,
@@ -10,7 +10,7 @@
  },
  "filed_by": {
   "account": 14,
-  "words": 17,
+  "words": 18,
   "words_over_account": 6
  },
  "accounts_without_a_desk": [
@@ -66,6 +66,13 @@
    ]
   },
   {
+   "handle": "@bedouinreport",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
    "handle": "@bnodesk",
    "posts": 1,
    "filed_by_words": [
@@ -117,11 +124,6 @@
    "filed_by_words": [
     "war"
    ]
-  },
-  {
-   "handle": "@ryanafournier",
-   "posts": 1,
-   "filed_by_words": []
   },
   {
    "handle": "@thewatch32",
