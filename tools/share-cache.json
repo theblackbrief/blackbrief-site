@@ -1,4 +1,11 @@
 {
+ "c7glxx": {
+  "tries": 1,
+  "done": true,
+  "title": "@TheInsiderPaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of self-sufficiency",
+  "image": "",
+  "media": ""
+ },
  "1n0hk2s": {
   "tries": 1,
   "done": true,
@@ -380,13 +387,5 @@
   "image": "",
   "media": "",
   "desk": "war"
- },
- "1ptfsld": {
-  "tries": 1,
-  "done": true,
-  "title": "@Polymarket: BREAKING: Bell tower of Limoges' historic 143-year-old town hall collapses amid raging fires during riots in France.",
-  "image": "",
-  "media": "image",
-  "desk": "money"
  }
 }
