@@ -1,8 +1,8 @@
 {
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
-  "unfiled": 12,
-  "war": 15,
+  "unfiled": 11,
+  "war": 16,
   "power": 8,
   "money": 12,
   "tech": 2,
@@ -10,7 +10,7 @@
  },
  "filed_by": {
   "account": 14,
-  "words": 18,
+  "words": 19,
   "words_over_account": 6
  },
  "accounts_without_a_desk": [
@@ -92,11 +92,6 @@
    "filed_by_words": []
   },
   {
-   "handle": "@giammacool",
-   "posts": 1,
-   "filed_by_words": []
-  },
-  {
    "handle": "@insiderwn",
    "posts": 1,
    "filed_by_words": []
@@ -120,6 +115,13 @@
   },
   {
    "handle": "@rt_com",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@swetha_xai",
    "posts": 1,
    "filed_by_words": [
     "war"
