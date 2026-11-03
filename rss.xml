@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 02 Nov 2026 18:13:40 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 03:41:30 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@LeadingReport: JUST IN: U.S. strikes Iran’s Qeshm Island, per WSJ.</title>
+   <link>https://theblackbrief.com/p/11k95kw/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/11k95kw/</guid>
+   <pubDate>Tue, 03 Nov 2026 03:41:30 GMT</pubDate>
+   <category>war</category>
+   <description>&lt;p&gt;@LeadingReport: JUST IN: U.S. strikes Iran’s Qeshm Island, per WSJ.&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/leadingreport/status/2117428437795340477?a=VQBpQE7PnOSPeXd2x5U&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/11k95kw/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@InsiderWire: #BREAKING: 2 election centers in Maricopa County, Arizona, closed 'due to power issues.'</title>
    <link>https://theblackbrief.com/p/73vq7r/</link>
@@ -398,14 +406,6 @@
    <pubDate>Fri, 16 Oct 2026 19:53:54 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@Polymarket: BREAKING: U.S. oil surges above $100/barrel.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/polymarket/status/2111134747913343226?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1f4iuiu/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@Polymarket: BREAKING: Brent crude soars above $110 per barrel for the first time since May.</title>
-   <link>https://theblackbrief.com/p/9z6998/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/9z6998/</guid>
-   <pubDate>Fri, 16 Oct 2026 19:05:31 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@Polymarket: BREAKING: Brent crude soars above $110 per barrel for the first time since May.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/polymarket/status/2111165031626969555?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/9z6998/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
