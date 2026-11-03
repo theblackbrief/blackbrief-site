@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 03 Nov 2026 03:41:30 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 03:42:13 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@RT_com: ❗️ US OFFICIALS CONFIRMED WASHINGTON BOMBED IRAN'S QESHM ISLAND FEW HOURS AGO IN A SERIES OF 'LIMITED STRIKES' — WSJ</title>
+   <link>https://theblackbrief.com/p/1dlodbv/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1dlodbv/</guid>
+   <pubDate>Tue, 03 Nov 2026 03:42:13 GMT</pubDate>
+   <category>war</category>
+   <description>&lt;p&gt;@RT_com: ❗️ US OFFICIALS CONFIRMED WASHINGTON BOMBED IRAN'S QESHM ISLAND FEW HOURS AGO IN A SERIES OF 'LIMITED STRIKES' — WSJ&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/rt_com/status/2117418142989504983?a=Oj64RIC0BwgMI6kvqd4&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1dlodbv/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@LeadingReport: JUST IN: U.S. strikes Iran’s Qeshm Island, per WSJ.</title>
    <link>https://theblackbrief.com/p/11k95kw/</link>
@@ -398,14 +406,6 @@
    <guid isPermaLink="true">https://theblackbrief.com/p/1qht1v3/</guid>
    <pubDate>Sat, 17 Oct 2026 01:29:36 GMT</pubDate>
    <description>&lt;p&gt;@RyanAFournier: 🚨 ABSOLUTE DESTRUCTION in San Clemente right now! The raging Norte Fire has exploded to nearly 500 acres. If you are under an evacuation order, GET OUT NOW. Do not wait! Praying for the firefighters on the front lines fighting these winds. Stay safe, California! 🙏🔥…&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/ryanafournier/status/2111235666499559682?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1qht1v3/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@Polymarket: BREAKING: U.S. oil surges above $100/barrel.</title>
-   <link>https://theblackbrief.com/p/1f4iuiu/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1f4iuiu/</guid>
-   <pubDate>Fri, 16 Oct 2026 19:53:54 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@Polymarket: BREAKING: U.S. oil surges above $100/barrel.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/polymarket/status/2111134747913343226?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1f4iuiu/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
