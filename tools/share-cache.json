@@ -1,4 +1,11 @@
 {
+ "1q0lxy9": {
+  "tries": 1,
+  "done": true,
+  "title": "@Breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.",
+  "image": "",
+  "media": "video"
+ },
  "1linbeg": {
   "tries": 1,
   "done": true,
@@ -380,14 +387,6 @@
   "title": "@disclosetv: NOW - Trump says he'll allow 600,000 Chinese students into the U.S.",
   "image": "",
   "media": "video",
-  "desk": "power"
- },
- "xhj6wz": {
-  "tries": 1,
-  "done": true,
-  "title": "@LeadingReport: President Trump calls for New Mexico to change its name to ‘New America.’",
-  "image": "",
-  "media": "",
   "desk": "power"
  }
 }
