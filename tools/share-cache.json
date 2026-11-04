@@ -1,4 +1,12 @@
 {
+ "xcap9k": {
+  "tries": 1,
+  "done": true,
+  "title": "@LeadingReport: JUST IN: Many polls seem to have underestimated Democrats.",
+  "image": "",
+  "media": "",
+  "desk": "power"
+ },
  "c7glxx": {
   "tries": 1,
   "done": true,
@@ -379,13 +387,5 @@
   "title": "@LeadingReport: Kansas mom released without charges after driving into youth soccer game kılling 2, per TMZ.",
   "image": "",
   "media": ""
- },
- "1c1f9dc": {
-  "tries": 1,
-  "done": true,
-  "title": "@HormuzLetter: BREAKING: The UK will deliver a speech to the British people asking them to be prepared for war and to make major sacrifices, per Army chief Roly Walker. Every citizen will be asked to make sacrifices, Walker says. The UK needs to \"take the fight to the enemy,\" he says.",
-  "image": "",
-  "media": "",
-  "desk": "war"
  }
 }
