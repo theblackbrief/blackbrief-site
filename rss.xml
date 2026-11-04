@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Wed, 04 Nov 2026 03:12:18 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 04 Nov 2026 14:46:21 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@NewsWire_US: TRUMP CANCELS PUBLIC APPEARANCES</title>
+   <link>https://theblackbrief.com/p/1linbeg/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1linbeg/</guid>
+   <pubDate>Wed, 04 Nov 2026 14:46:21 GMT</pubDate>
+   <category>power</category>
+   <description>&lt;p&gt;@NewsWire_US: TRUMP CANCELS PUBLIC APPEARANCES&lt;/p&gt;&lt;p&gt;/power // &lt;a href=&quot;https://x.com/newswire_us/status/2117971731751354847?a=AULxrrYTfnorZVfKAGA&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1linbeg/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@rawsalerts: 🚨 #BREAKING: Democrats seize control of both the House &amp; Senate, as projected by Polymarket.</title>
    <link>https://theblackbrief.com/p/9ugn4t/</link>
@@ -403,13 +411,6 @@
    <pubDate>Mon, 19 Oct 2026 23:18:31 GMT</pubDate>
    <category>power</category>
    <description>&lt;p&gt;@LeadingReport: President Trump calls for New Mexico to change its name to ‘New America.’&lt;/p&gt;&lt;p&gt;/power // &lt;a href=&quot;https://x.com/LeadingReport/status/2112261279331275132?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/xhj6wz/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@rawsalerts: 🚨 #BREAKING: France announces partial ban on free speech, as rioters &amp; looters inflict chaos.</title>
-   <link>https://theblackbrief.com/p/5itphw/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/5itphw/</guid>
-   <pubDate>Mon, 19 Oct 2026 23:16:03 GMT</pubDate>
-   <description>&lt;p&gt;@rawsalerts: 🚨 #BREAKING: France announces partial ban on free speech, as rioters &amp;amp; looters inflict chaos.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/rawsalerts/status/2112256012770218136?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/5itphw/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
