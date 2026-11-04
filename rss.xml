@@ -6,13 +6,20 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Wed, 04 Nov 2026 18:43:10 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 04 Nov 2026 21:51:14 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Breaking911: Evil.</title>
+   <link>https://theblackbrief.com/p/1pmrs83/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1pmrs83/</guid>
+   <pubDate>Wed, 04 Nov 2026 21:51:14 GMT</pubDate>
+   <description>&lt;p&gt;@Breaking911: Evil.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/breaking911/status/2118026507473793492?a=cQPgfZYk5zyCynSVwiU&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1pmrs83/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.</title>
    <link>https://theblackbrief.com/p/1q0lxy9/</link>
@@ -402,15 +409,6 @@
    <pubDate>Tue, 20 Oct 2026 19:33:21 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@Polymarket: BREAKING: Trump launches $25 million fraud whistleblower program, offering Americans up to $30,000 for tips that lead to successful prosecutions.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/Polymarket/status/2112618655309861293?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/xea4y9/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@disclosetv: NOW - Trump says he'll allow 600,000 Chinese students into the U.S.</title>
-   <link>https://theblackbrief.com/p/1gbh6n4/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1gbh6n4/</guid>
-   <pubDate>Mon, 19 Oct 2026 23:19:40 GMT</pubDate>
-   <category>power</category>
-   <category>lol</category>
-   <description>&lt;p&gt;@disclosetv: NOW - Trump says he'll allow 600,000 Chinese students into the U.S.&lt;/p&gt;&lt;p&gt;/power // #lol // &lt;a href=&quot;https://x.com/disclosetv/status/1960028207605825615?s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1gbh6n4/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
