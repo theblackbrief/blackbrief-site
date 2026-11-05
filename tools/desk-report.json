@@ -4,13 +4,13 @@
   "unfiled": 11,
   "war": 17,
   "power": 10,
-  "money": 11,
+  "money": 12,
   "tech": 2,
   "anomaly": 1
  },
  "filed_by": {
   "account": 11,
-  "words": 22,
+  "words": 23,
   "words_over_account": 8
  },
  "accounts_without_a_desk": [
@@ -50,6 +50,13 @@
    "filed_by_words": [
     "power",
     "war"
+   ]
+  },
+  {
+   "handle": "@insiderwn",
+   "posts": 2,
+   "filed_by_words": [
+    "money"
    ]
   },
   {
@@ -101,11 +108,6 @@
   },
   {
    "handle": "@fynnderella1",
-   "posts": 1,
-   "filed_by_words": []
-  },
-  {
-   "handle": "@insiderwn",
    "posts": 1,
    "filed_by_words": []
   },
