@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Thu, 05 Nov 2026 15:03:50 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 05 Nov 2026 15:23:20 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own account, with losses around $133 million.</title>
+   <link>https://theblackbrief.com/p/1la03ph/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1la03ph/</guid>
+   <pubDate>Thu, 05 Nov 2026 15:23:20 GMT</pubDate>
+   <category>money</category>
+   <description>&lt;p&gt;@InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own account, with losses around $133 million.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/InsiderWN/status/2118267580481982917?a=fsnw4Nq-9E3Oa2XyhYI&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1la03ph/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@BRICSinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.</title>
    <link>https://theblackbrief.com/p/1hfsc77/</link>
