@@ -4,14 +4,14 @@
   "unfiled": 11,
   "war": 17,
   "power": 10,
-  "money": 10,
+  "money": 11,
   "tech": 2,
   "anomaly": 1
  },
  "filed_by": {
   "account": 11,
   "words": 22,
-  "words_over_account": 7
+  "words_over_account": 8
  },
  "accounts_without_a_desk": [
   {
