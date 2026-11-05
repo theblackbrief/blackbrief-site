@@ -1,4 +1,12 @@
 {
+ "17ra8sd": {
+  "tries": 1,
+  "done": true,
+  "title": "@NewsWire_US: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too far after his wife Melania complained about people she knew were getting deported. — WSJ",
+  "image": "",
+  "media": "",
+  "desk": "power"
+ },
  "1pmrs83": {
   "tries": 1,
   "done": true,
@@ -376,14 +384,6 @@
   "tries": 1,
   "done": true,
   "title": "@unusual_whales: BREAKING: Major U.S. banks are detecting unauthorized third-party AI agents operating inside customer accounts, with some agents attempting to take actions that appear to be independent of user instructions, per Axios",
-  "image": "",
-  "media": "",
-  "desk": "money"
- },
- "xea4y9": {
-  "tries": 1,
-  "done": true,
-  "title": "@Polymarket: BREAKING: Trump launches $25 million fraud whistleblower program, offering Americans up to $30,000 for tips that lead to successful prosecutions.",
   "image": "",
   "media": "",
   "desk": "money"

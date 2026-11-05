@@ -3,14 +3,14 @@
  "desks": {
   "unfiled": 11,
   "war": 16,
-  "power": 9,
-  "money": 11,
+  "power": 10,
+  "money": 10,
   "tech": 2,
   "anomaly": 1
  },
  "filed_by": {
-  "account": 12,
-  "words": 20,
+  "account": 11,
+  "words": 21,
   "words_over_account": 7
  },
  "accounts_without_a_desk": [
@@ -54,6 +54,13 @@
    "handle": "@mcgillmedicines",
    "posts": 2,
    "filed_by_words": []
+  },
+  {
+   "handle": "@newswire_us",
+   "posts": 2,
+   "filed_by_words": [
+    "power"
+   ]
   },
   {
    "handle": "@nypost",
@@ -102,13 +109,6 @@
   },
   {
    "handle": "@jmchyno",
-   "posts": 1,
-   "filed_by_words": [
-    "power"
-   ]
-  },
-  {
-   "handle": "@newswire_us",
    "posts": 1,
    "filed_by_words": [
     "power"
