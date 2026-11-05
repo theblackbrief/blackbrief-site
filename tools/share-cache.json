@@ -1,4 +1,12 @@
 {
+ "16i1lpw": {
+  "tries": 1,
+  "done": true,
+  "title": "@rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in history\" 🌈",
+  "image": "",
+  "media": "",
+  "desk": "power"
+ },
  "1la03ph": {
   "tries": 1,
   "done": true,
@@ -395,21 +403,5 @@
   "title": "@disclosetv: JUST IN - U.S. is carrying out a \"large-scale evacuation\" of family members of American diplomats in Middle Eastern countries: reports",
   "image": "",
   "media": ""
- },
- "4r9tmh": {
-  "tries": 1,
-  "done": true,
-  "title": "@BRICSinfo: JUST IN: 🇫🇷 France confirms first-ever human infection with Shamonda virus, previously only found in animals. patient has died.",
-  "image": "",
-  "media": "",
-  "desk": "anomaly"
- },
- "batgat": {
-  "tries": 1,
-  "done": true,
-  "title": "@unusual_whales: BREAKING: Major U.S. banks are detecting unauthorized third-party AI agents operating inside customer accounts, with some agents attempting to take actions that appear to be independent of user instructions, per Axios",
-  "image": "",
-  "media": "",
-  "desk": "money"
  }
 }
