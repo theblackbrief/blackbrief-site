@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Thu, 05 Nov 2026 04:58:54 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 05 Nov 2026 13:48:29 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by fighter jets after a series of bomb threats. Fligh…</title>
+   <link>https://theblackbrief.com/p/1o1jqjh/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1o1jqjh/</guid>
+   <pubDate>Thu, 05 Nov 2026 13:48:29 GMT</pubDate>
+   <category>war</category>
+   <description>&lt;p&gt;@Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by fighter jets after a series of bomb threats. Flights from Warsaw, Milan, Copenhagen, Madrid, London and Dublin were affected. Italian jets escorted one plane to Rome, while a Dublin…&lt;/p&gt;&lt;p&gt;/war // &lt;a href=&quot;https://x.com/Breaking911/status/2118330935703666969?a=4cRxGfza2cLBYFuC6wM&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1o1jqjh/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@NewsWire_US: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too far after his wife Melania complained about people s…</title>
    <link>https://theblackbrief.com/p/17ra8sd/</link>
