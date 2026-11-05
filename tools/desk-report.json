@@ -30,13 +30,6 @@
    ]
   },
   {
-   "handle": "@theinsiderpaper",
-   "posts": 3,
-   "filed_by_words": [
-    "war"
-   ]
-  },
-  {
    "handle": "@disclosetv",
    "posts": 2,
    "filed_by_words": [
@@ -86,6 +79,20 @@
    ]
   },
   {
+   "handle": "@rt_com",
+   "posts": 2,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
+   "handle": "@theinsiderpaper",
+   "posts": 2,
+   "filed_by_words": [
+    "war"
+   ]
+  },
+  {
    "handle": "@bbcworld",
    "posts": 1,
    "filed_by_words": [
@@ -129,13 +136,6 @@
    "handle": "@p_mcculloughmd",
    "posts": 1,
    "filed_by_words": []
-  },
-  {
-   "handle": "@rt_com",
-   "posts": 1,
-   "filed_by_words": [
-    "war"
-   ]
   },
   {
    "handle": "@swetha_xai",
