@@ -1,4 +1,12 @@
 {
+ "1mgc2re": {
+  "tries": 1,
+  "done": true,
+  "title": "@disclosetv: JUST IN - Trump: \"You only have yourselves to blame!\"",
+  "image": "",
+  "media": "image",
+  "desk": "power"
+ },
  "jyw8yd": {
   "tries": 1,
   "done": true,
@@ -381,20 +389,5 @@
   "image": "",
   "media": "",
   "desk": "tech"
- },
- "1qq1qug": {
-  "tries": 1,
-  "done": true,
-  "title": "@BullTheoryio: 🚨 THE INTERNET IS FACING ONE OF THE WORST WAVES OF CYBERSECURITY THREATS EVER. More than 20 major cyber incidents and security warnings have been reported in recent days, affecting banks, governments, cloud platforms and widely used software. And some of the details are…",
-  "image": "",
-  "media": "",
-  "desk": "money"
- },
- "w3gelg": {
-  "tries": 1,
-  "done": true,
-  "title": "@nypost: Marijuana legalization linked to troubling health trend in landmark new study",
-  "image": "",
-  "media": "image"
  }
 }

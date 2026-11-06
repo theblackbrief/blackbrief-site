@@ -1,16 +1,16 @@
 {
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
-  "unfiled": 10,
+  "unfiled": 9,
   "war": 17,
-  "power": 11,
-  "money": 11,
+  "power": 12,
+  "money": 10,
   "tech": 2,
   "anomaly": 0
  },
  "filed_by": {
-  "account": 10,
-  "words": 24,
+  "account": 9,
+  "words": 25,
   "words_over_account": 7
  },
  "accounts_without_a_desk": [
@@ -31,8 +31,9 @@
   },
   {
    "handle": "@disclosetv",
-   "posts": 2,
+   "posts": 3,
    "filed_by_words": [
+    "power",
     "money",
     "war"
    ]
@@ -62,13 +63,6 @@
    "posts": 2,
    "filed_by_words": [
     "power"
-   ]
-  },
-  {
-   "handle": "@nypost",
-   "posts": 2,
-   "filed_by_words": [
-    "war"
    ]
   },
   {
@@ -130,6 +124,13 @@
    "posts": 1,
    "filed_by_words": [
     "power"
+   ]
+  },
+  {
+   "handle": "@nypost",
+   "posts": 1,
+   "filed_by_words": [
+    "war"
    ]
   },
   {
