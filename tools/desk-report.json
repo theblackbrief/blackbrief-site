@@ -3,14 +3,14 @@
  "desks": {
   "unfiled": 9,
   "war": 17,
-  "power": 12,
+  "power": 13,
   "money": 11,
   "tech": 2,
   "anomaly": 0
  },
  "filed_by": {
   "account": 10,
-  "words": 25,
+  "words": 26,
   "words_over_account": 7
  },
  "accounts_without_a_desk": [
@@ -112,6 +112,13 @@
    "posts": 1,
    "filed_by_words": [
     "war"
+   ]
+  },
+  {
+   "handle": "@dmichaeltripi",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
    ]
   },
   {
