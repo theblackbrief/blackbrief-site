@@ -3,14 +3,14 @@
  "desks": {
   "unfiled": 10,
   "war": 18,
-  "power": 13,
+  "power": 14,
   "money": 10,
   "tech": 1,
   "anomaly": 0
  },
  "filed_by": {
   "account": 9,
-  "words": 27,
+  "words": 28,
   "words_over_account": 6
  },
  "accounts_without_a_desk": [
@@ -105,6 +105,13 @@
    "posts": 1,
    "filed_by_words": [
     "money"
+   ]
+  },
+  {
+   "handle": "@breannamorello",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
    ]
   },
   {
