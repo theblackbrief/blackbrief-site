@@ -2,9 +2,9 @@
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
   "unfiled": 10,
-  "war": 17,
+  "war": 18,
   "power": 14,
-  "money": 10,
+  "money": 9,
   "tech": 1,
   "anomaly": 0
  },
