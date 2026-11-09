@@ -4,13 +4,13 @@
   "unfiled": 10,
   "war": 17,
   "power": 15,
-  "money": 10,
+  "money": 9,
   "tech": 1,
   "anomaly": 0
  },
  "filed_by": {
   "account": 10,
-  "words": 27,
+  "words": 26,
   "words_over_account": 6
  },
  "accounts_without_a_desk": [
@@ -163,13 +163,6 @@
    "posts": 1,
    "filed_by_words": [
     "war"
-   ]
-  },
-  {
-   "handle": "@thewatch32",
-   "posts": 1,
-   "filed_by_words": [
-    "money"
    ]
   },
   {
