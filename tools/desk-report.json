@@ -1,16 +1,16 @@
 {
  "note": "Written by tools/build-share.js. X accounts below have no desk of their own yet; each was filed by its wording, or left unfiled.",
  "desks": {
-  "unfiled": 10,
+  "unfiled": 9,
   "war": 17,
-  "power": 15,
+  "power": 16,
   "money": 9,
   "tech": 1,
   "anomaly": 0
  },
  "filed_by": {
   "account": 10,
-  "words": 26,
+  "words": 27,
   "words_over_account": 6
  },
  "accounts_without_a_desk": [
@@ -53,11 +53,6 @@
    ]
   },
   {
-   "handle": "@mcgillmedicines",
-   "posts": 2,
-   "filed_by_words": []
-  },
-  {
    "handle": "@newswire_us",
    "posts": 2,
    "filed_by_words": [
@@ -83,6 +78,13 @@
    "posts": 2,
    "filed_by_words": [
     "war"
+   ]
+  },
+  {
+   "handle": "@60minutes",
+   "posts": 1,
+   "filed_by_words": [
+    "power"
    ]
   },
   {
@@ -138,6 +140,11 @@
    "filed_by_words": [
     "power"
    ]
+  },
+  {
+   "handle": "@mcgillmedicines",
+   "posts": 1,
+   "filed_by_words": []
   },
   {
    "handle": "@nypost",
