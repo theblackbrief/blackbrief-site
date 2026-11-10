@@ -1,90 +1,188 @@
 {
- "note": "Written by tools/build-share.js. Desks are picked by an AI (GitHub Models), or by you with a desk tag such as #world. Unfiled posts are waiting for their wording or for the AI, and are tried again on the next run.",
+ "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
-  "unfiled": 50,
-  "politics": 0,
-  "world": 0,
-  "money": 0,
-  "tech": 0,
-  "anomaly": 0
+  "unfiled": 3,
+  "politics": 13,
+  "world": 19,
+  "money": 8,
+  "tech": 1,
+  "anomaly": 6
  },
  "filed_by": {
-  "ai": 0,
-  "you": 0
+  "you": 0,
+  "account": 12,
+  "words": 28,
+  "words_over_account": 7
  },
- "ai": "could not reach the AI this run: Unexpected token 'O', \"OK\r\n\" is not valid JSON",
  "newest": [
-  "unfiled  @60Minutes: President Trump says his administration’s deportation policy was “too tough.”",
-  "unfiled  @unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new Federal Res…",
-  "unfiled  @BRICSinfo: JUST IN: 🇬🇧 BBC prepares emergency radio studio with 100 staff to broadcast government messages…",
-  "unfiled  @BreannaMorello: 🚨HAPPENING TODAY🚨 President Donald Trump will be hosting a Diwali celebration today at 1:3…",
-  "unfiled  @valuetainment: NEW: Making $100,000 a year is now considered lower-middle class in 12 U.S. states.",
-  "unfiled  dailymail.com: Trump rushed into secret meeting on whether to start up Iran strikes",
-  "unfiled  @DMichaelTripi: NEW: Trump administration threatens thousands of grassroots conservative organizations warnin…",
-  "unfiled  @WatcherGuru: JUST IN: 🇯🇵 128 Japanese credit unions hit by widespread outages, leaving customers unable to…",
-  "unfiled  @disclosetv: JUST IN - Trump: \"You only have yourselves to blame!\"",
-  "unfiled  @RT_com: Kiev goes DARK with major BLACKOUT across the whole city",
-  "unfiled  @rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in h…",
-  "unfiled  @InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own ac…",
-  "unfiled  @BRICSinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.",
-  "unfiled  @Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by…",
-  "unfiled  @NewsWire_US: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too fa…",
-  "unfiled  @Breaking911: Evil.",
-  "unfiled  @Breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.",
-  "unfiled  @NewsWire_US: TRUMP CANCELS PUBLIC APPEARANCES",
-  "unfiled  @rawsalerts: 🚨 #BREAKING: Democrats seize control of both the House & Senate, as projected by Polymarket.",
-  "unfiled  @LeadingReport: JUST IN: Many polls seem to have underestimated Democrats."
+  "/politics (words)  @60Minutes: President Trump says his administration’s deportation policy was “too tough.”",
+  "/money (account)  @unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new Federal Res…",
+  "/world (account)  @BRICSinfo: JUST IN: 🇬🇧 BBC prepares emergency radio studio with 100 staff to broadcast government messages…",
+  "/politics (words)  @BreannaMorello: 🚨HAPPENING TODAY🚨 President Donald Trump will be hosting a Diwali celebration today at 1:3…",
+  "/money (words)  @valuetainment: NEW: Making $100,000 a year is now considered lower-middle class in 12 U.S. states.",
+  "/world (words)  Trump rushed into secret meeting on whether to start up Iran strikes",
+  "/politics (words)  @dmichaeltripi: NEW: Trump administration threatens thousands of grassroots conservative organizations warnin…",
+  "/money (account)  @WatcherGuru: JUST IN: 🇯🇵 128 Japanese credit unions hit by widespread outages, leaving customers unable to…",
+  "/politics (words)  @disclosetv: JUST IN - Trump: \"You only have yourselves to blame!\"",
+  "/world (account)  @rt_com: Kiev goes DARK with major BLACKOUT across the whole city",
+  "/politics (words)  @rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in h…",
+  "/money (words)  @InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own ac…",
+  "/money (over_account)  @bricsinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.",
+  "/world (words)  @Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by…",
+  "/politics (words)  @newswire_us: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too fa…",
+  "unfiled (-)  @breaking911: Evil.",
+  "/anomaly (words)  @breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.",
+  "/politics (words)  @newswire_us: TRUMP CANCELS PUBLIC APPEARANCES",
+  "/politics (words)  @rawsalerts: 🚨 #BREAKING: Democrats seize control of both the House & Senate, as projected by Polymarket.",
+  "/politics (words)  @leadingreport: JUST IN: Many polls seem to have underestimated Democrats.",
+  "/anomaly (words)  @theinsiderpaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of s…",
+  "/world (over_account)  @polymarket: BREAKING: Britain & France prepare a multinational military force for potential deployment to Uk…",
+  "/world (words)  @Swetha_xai: 🚨 Iran has reportedly broadcast nuclear strike warning messages on state TV.@Grok verify the au…",
+  "/world (account)  @bedouinreport: 🚨🇷🇺🇺🇸🇮🇷 BREAKING: The Russian Government has reportedly informed Washington, through b…",
+  "/world (account)  @rt_com: ❗️ US OFFICIALS CONFIRMED WASHINGTON BOMBED IRAN'S QESHM ISLAND FEW HOURS AGO IN A SERIES OF 'LIMITE…"
  ],
- "unfiled_posts": [
-  "@60Minutes: President Trump says his administration’s deportation policy was “too tough.”",
-  "@unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new F…",
-  "@BRICSinfo: JUST IN: 🇬🇧 BBC prepares emergency radio studio with 100 staff to broadcast governmen…",
-  "@BreannaMorello: 🚨HAPPENING TODAY🚨 President Donald Trump will be hosting a Diwali celebration to…",
-  "@valuetainment: NEW: Making $100,000 a year is now considered lower-middle class in 12 U.S. states.",
-  "dailymail.com: Trump rushed into secret meeting on whether to start up Iran strikes",
-  "@DMichaelTripi: NEW: Trump administration threatens thousands of grassroots conservative organizati…",
-  "@WatcherGuru: JUST IN: 🇯🇵 128 Japanese credit unions hit by widespread outages, leaving customers…",
-  "@disclosetv: JUST IN - Trump: \"You only have yourselves to blame!\"",
-  "@RT_com: Kiev goes DARK with major BLACKOUT across the whole city",
-  "@rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"g…",
-  "@InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from…",
-  "@BRICSinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.",
-  "@Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or es…",
-  "@NewsWire_US: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had g…",
-  "@Breaking911: Evil.",
-  "@Breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.",
-  "@NewsWire_US: TRUMP CANCELS PUBLIC APPEARANCES",
-  "@rawsalerts: 🚨 #BREAKING: Democrats seize control of both the House & Senate, as projected by Poly…",
-  "@LeadingReport: JUST IN: Many polls seem to have underestimated Democrats.",
-  "@TheInsiderPaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72…",
-  "@Polymarket: BREAKING: Britain & France prepare a multinational military force for potential deploy…",
-  "@Swetha_xai: 🚨 Iran has reportedly broadcast nuclear strike warning messages on state TV.@Grok ver…",
-  "@BedouinReport: 🚨🇷🇺🇺🇸🇮🇷 BREAKING: The Russian Government has reportedly informed Washington,…",
-  "@RT_com: ❗️ US OFFICIALS CONFIRMED WASHINGTON BOMBED IRAN'S QESHM ISLAND FEW HOURS AGO IN A SERIES…",
-  "@LeadingReport: JUST IN: U.S. strikes Iran’s Qeshm Island, per WSJ.",
-  "@InsiderWire: #BREAKING: 2 election centers in Maricopa County, Arizona, closed 'due to power issue…",
-  "@GeneralMCNews: BREAKING: A power outage in downtown Washington, D.C., is disrupting traffic lights…",
-  "@BBCWorld: Supermarket freezers in Belgium and Sweden hit by cyber-attack",
-  "@Kalshi: JUST IN: Hedge funds are pulling money out of US stocks at fastest pace ever",
-  "@LeadingReport: President Trump sends third aircraft carrier toward Iran, per Daily Mail.",
-  "@BRICSinfo: JUST IN: 🇵🇱 Coup reportedly underway in Poland.",
-  "@Polymarket: BREAKING: Surface-to-air missile systems have reportedly been deployed near President…",
-  "@disclosetv: JUST IN - Treasury sets record with $839 billion borrowed in one week.",
-  "@BNODesk: BREAKING: North Korea is behind the $6.36 billion Binance hack, the biggest in crypto his…",
-  "@HormuzLetter: BREAKING: The US Army is now training soldiers to dig mass battlefield graves for Am…",
-  "@nypost: Pentagon treating military base freezer malfunctions as suspected cyberattack: officials",
-  "@BRICSinfo: JUST IN: 🇦🇺 Australians urged to stockpile canned food and bottled water to prepare f…",
-  "@InsiderWire: #BREAKING: Nuclear “incident” reported at Savannah River Site in South Carolina, FAA…",
-  "@Daily_MailUS: US launches nuclear readiness drills with 'doomsday planes' and bombers airborne nat…",
-  "@Kalshi: BREAKING: Former FBI Deputy Director urges Americans to stockpile emergency supplies",
-  "@BRICSinfo: JUST IN: 🇰🇵 Kim Jong Un orders North Korea's military to increase readiness for comba…",
-  "@InsiderWN: #BREAKING Normandy prefecture urges residents to stockpile 72-hour emergency kits for “…",
-  "@TheInsiderPaper: NEW: 3 of Britain’s 4 nuclear deterrent submarines are out at sea in an \"unusual\"…",
-  "@Polymarket: BREAKING: Hackers target the US Federal Election Commission, knocking its electronic f…",
-  "@unusual_whales: Men have gained essentially no jobs since Trump took office. Since December 2024,…",
-  "@JMChyno: BREAKING: Unconfirmed reports of multiple explosions on the North Korean side of the bord…",
-  "@Fynnderella1: This study revealed that cases of myocarditis have surged by 620% among people who r…",
-  "@P_McCulloughMD: BREAKING: New Paper Reveals How mRNA Vaccine Materials Could Spread From Vaccinate…",
-  "@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination…"
+ "accounts_without_a_desk": [
+  {
+   "handle": "@breaking911",
+   "posts": 3,
+   "filed_by_words": [
+    "world",
+    "anomaly"
+   ]
+  },
+  {
+   "handle": "@leadingreport",
+   "posts": 3,
+   "filed_by_words": [
+    "politics",
+    "world"
+   ]
+  },
+  {
+   "handle": "@disclosetv",
+   "posts": 2,
+   "filed_by_words": [
+    "politics",
+    "money"
+   ]
+  },
+  {
+   "handle": "@insiderwire",
+   "posts": 2,
+   "filed_by_words": [
+    "politics",
+    "world"
+   ]
+  },
+  {
+   "handle": "@insiderwn",
+   "posts": 2,
+   "filed_by_words": [
+    "money",
+    "anomaly"
+   ]
+  },
+  {
+   "handle": "@newswire_us",
+   "posts": 2,
+   "filed_by_words": [
+    "politics"
+   ]
+  },
+  {
+   "handle": "@rawsalerts",
+   "posts": 2,
+   "filed_by_words": [
+    "politics"
+   ]
+  },
+  {
+   "handle": "@theinsiderpaper",
+   "posts": 2,
+   "filed_by_words": [
+    "anomaly",
+    "world"
+   ]
+  },
+  {
+   "handle": "@60minutes",
+   "posts": 1,
+   "filed_by_words": [
+    "politics"
+   ]
+  },
+  {
+   "handle": "@bnodesk",
+   "posts": 1,
+   "filed_by_words": [
+    "money"
+   ]
+  },
+  {
+   "handle": "@breannamorello",
+   "posts": 1,
+   "filed_by_words": [
+    "politics"
+   ]
+  },
+  {
+   "handle": "@daily_mailus",
+   "posts": 1,
+   "filed_by_words": [
+    "world"
+   ]
+  },
+  {
+   "handle": "@dmichaeltripi",
+   "posts": 1,
+   "filed_by_words": [
+    "politics"
+   ]
+  },
+  {
+   "handle": "@fynnderella1",
+   "posts": 1,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@jmchyno",
+   "posts": 1,
+   "filed_by_words": [
+    "anomaly"
+   ]
+  },
+  {
+   "handle": "@mcgillmedicines",
+   "posts": 1,
+   "filed_by_words": []
+  },
+  {
+   "handle": "@nypost",
+   "posts": 1,
+   "filed_by_words": [
+    "world"
+   ]
+  },
+  {
+   "handle": "@p_mcculloughmd",
+   "posts": 1,
+   "filed_by_words": [
+    "anomaly"
+   ]
+  },
+  {
+   "handle": "@swetha_xai",
+   "posts": 1,
+   "filed_by_words": [
+    "world"
+   ]
+  },
+  {
+   "handle": "@valuetainment",
+   "posts": 1,
+   "filed_by_words": [
+    "money"
+   ]
+  }
  ]
 }
