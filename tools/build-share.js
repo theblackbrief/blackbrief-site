@@ -26,42 +26,102 @@ const MAX_TRIES = 3; // per post, across runs, before giving up on a lookup
 // ── DESKS (rebuilt Nov 2026) ──
 // Every post is filed under ONE subject desk, shown in the ticker as
 // [ 12 /money ] and on the card, and tappable to filter the feed.
-// Since Nov 2026 an AI reads each post and picks the desk (it replaced the
-// word lists, which kept mislabelling posts). It runs on GitHub Models, the
-// free AI service that comes with every GitHub account: no key, no account,
-// no cost. The workflow's built-in token is allowed to use it by the line
-// "models: read" in .github/workflows/share-pages.yml.
-//   - Each post is filed ONCE and remembered in share-cache.json ("desk").
-//     An X post is filed once its wording has arrived from X.
-//   - YOUR WORD WINS: tag a post with a desk name (#world, #politics...) and
-//     it goes to that desk, whatever the AI said. The site shows no stamp for
-//     a desk tag. The bb/edit tag Shortcut does this: custom → "world".
-//   - If the AI cannot be reached, the post stays unfiled and is tried again
-//     on the next run. Nothing else is affected.
-//   - Editorials are never filed: they are the curator's own voice.
-// The descriptions below are what the AI reads when it decides. Change them
-// (and raise DESK_VERSION by one) to have the whole feed filed again.
+// Filing is redone on every run, so a change below refiles the whole feed
+// within a minute or two.
+//   0. YOUR WORD WINS: tag a post with a desk name (#world, #politics...) and
+//      it goes to that desk. The site shows no stamp for a desk tag. The
+//      bb/edit tag Shortcut does this: custom → "world".
+//   1. The source account decides (X posts only), UNLESS the wording clearly
+//      points to another desk and says nothing about the account's own desk
+//      (Polymarket posting about missiles goes to /world, not /money).
+//      Handles are written lowercase, without the @.
+//   2. Otherwise the wording decides. Each word in DESK_WORDS counts 1, each
+//      word in DESK_WEAK counts half; the desk with the highest score wins, a
+//      tie going to the desk listed first.
+//   3. Otherwise the post stays unfiled and shows under no desk.
+// Editorials are never filed: they are the curator's own voice.
+// tools/desk-report.json shows the counts, the newest posts with their desk,
+// and the X accounts that have no desk of their own.
+// (An AI filer on GitHub Models was tried on Nov 10, 2026; that service had
+// been shut down by GitHub, so the word lists came back with the new names.)
 const DESKS = ['politics', 'world', 'money', 'tech', 'anomaly'];
-const DESK_VERSION = 1;
-const DESK_RULES = {
-  politics: 'US government and politics: the White House, Congress, elections, courts, parties, the DOJ and FBI, immigration and border policy, culture-war fights inside the US, and church-and-state disputes in the US.',
-  world: 'Anything centred outside the US: wars and military action anywhere (including US strikes abroad), foreign governments and leaders, diplomacy, sanctions as foreign policy, terrorism, international crises, religious conflict abroad.',
-  money: 'Markets, stocks, the economy, the Fed, inflation, jobs, prices and housing, oil and commodities, crypto, prediction markets and betting odds (Polymarket, Kalshi), companies as businesses (earnings, deals, layoffs, stock moves).',
-  tech: 'Technology and science: AI, big tech products and platforms, chips, cyber attacks and hacking, surveillance tech, space and rockets, scientific discoveries.',
-  anomaly: 'The strange and the alarming that fits nowhere else: disease outbreaks and health scares, natural disasters, extreme weather, earthquakes, UFOs and UAPs, unexplained events, missing people, bizarre incidents, crime oddities.'
+const DESK_ACCOUNTS = {
+  politics: ['whitehouse', 'presssec', 'libsoftiktok', 'anncoulter', 'theblaze', 'emeraldrobinson',
+    'nataliegwinters', 'moreperfectus', 'swamp__watch', 'amoneyresists', 'owenshroyer1776',
+    'theintercept', 'imbreckworsham', 'keithwoodsyt', 'juliecbarrett'],
+  world: ['warmonitor3', 'shaykhsulaiman', 'hormuzletter', 'visegrad24', 'bricsinfo', 'warsurv', 'geopolitics_emp',
+    'az_intel_', 'persianserene1', 'doctor_rahmeh', 'generalmcnews', 'rt_com', 'bbcworld', 'bedouinreport'],
+  money: ['kobeissiletter', 'zerohedge', 'polymarket', 'kalshi', 'unusual_whales', 'barchart',
+    'wallstreetapes', 'wallstreetmav', 'charliebilello', 'firstsquawk', 'cryptorover', 'bulltheoryio',
+    'greybtc', 'financelancelot', 'geiger_capital', 'stealthqe4', 'mrbankstips', 'hedgeye', 'famexbt',
+    'gemini', 'watcherguru', 'jameslavish', 'nolimitgains'],
+  tech: ['xfreeze', 'trungtphan'],
+  anomaly: ['cdcgov', 'weathernation']
 };
-const DESK_EDGES = [
-  'A US strike or military action abroad goes to world.',
-  'A bill or fight in Congress goes to politics, even if it is about money or another country.',
-  'A company\'s stock, earnings or business deal goes to money; its new product or technology goes to tech.',
-  'Betting odds or a prediction market on any subject go to money.',
-  'A disaster or outbreak goes to anomaly, unless the post is mainly about a government\'s response to it.',
-  'The account that posted is only a hint; the wording decides.'
-];
-const AI_URL = process.env.MODELS_URL || 'https://models.github.ai/inference/chat/completions';
-const AI_MODEL = 'openai/gpt-4.1-mini';
-const AI_BATCH = 20;   // posts per question (the free tier allows ~150 questions a day)
-const AI_TRIES = 3;    // per post, before it is left unfiled for good
+const DESK_WORDS = {
+  politics: ['white house', 'congress', 'congressional', 'senate', 'senator', 'house speaker', 'speaker johnson',
+    'democrat', 'democrats', 'democratic', 'republican', 'republicans', 'gop', 'maga', 'election', 'elections',
+    'midterm', 'midterms', 'primary', 'ballot', 'vote', 'voters', 'voting', 'supreme court', 'scotus', 'doj', 'fbi',
+    'attorney general', 'governor', 'mayor', 'administration', 'impeach', 'impeachment', 'epstein',
+    'immigration', 'immigrant', 'immigrants', 'migrants', 'ice', 'deport', 'deportation', 'deportations',
+    'deported', 'border patrol', 'shutdown', 'executive order', 'lawmaker', 'lawmakers', 'politicians',
+    'bill', 'legislation', 'press secretary', 'grift', 'corruption', 'indicted', 'indictment', 'judge',
+    'federal judge', 'lawsuit', 'sued', 'pardon', 'pardoned', 'cabinet', 'secret service', 'oval office',
+    'campaign', 'diwali', 'church', 'christian', 'christians', 'prayer', 'religious liberty', 'second amendment',
+    'abortion', 'transgender', 'woke', 'dei', 'censorship', 'free speech', 'protest', 'protesters', 'riot'],
+  world: ['war', 'wars', 'warfare', 'conflict', 'military', 'military operation', 'troops', 'soldier', 'soldiers',
+    'army', 'navy', 'air force', 'marines', 'pentagon', 'centcom', 'central command', 'missile', 'missiles',
+    'ballistic', 'drone', 'drones', 'airstrike', 'airstrikes', 'strike', 'strikes', 'bomb', 'bombs', 'bombing',
+    'bomber', 'bombers', 'invasion', 'invade', 'ceasefire', 'nato', 'nuclear', 'idf', 'hamas', 'hezbollah',
+    'houthi', 'houthis', 'ansarallah', 'irgc', 'hormuz', 'strait', 'tanker', 'tankers', 'warship', 'warships',
+    'aircraft carrier', 'weapons', 'hostage', 'hostages', 'sanctions', 'embassy', 'ambassador', 'diplomat',
+    'diplomatic', 'foreign minister', 'prime minister', 'parliament', 'regime', 'coup', 'terror', 'terrorist',
+    'terrorism', 'un', 'united nations', 'state department'],
+  money: ['market', 'markets', 'stock', 'stocks', 's&p', 'nasdaq', 'dow', 'wall street', 'fed',
+    'federal reserve', 'rate cut', 'rate cuts', 'interest rate', 'interest rates', 'inflation', 'cpi',
+    'consumer prices', 'jobs report', 'unemployment', 'recession', 'gdp', 'economy', 'economic', 'treasury',
+    'yield', 'yields', 'bond', 'bonds', 'oil', 'diesel', 'gasoline', 'gas prices', 'jet fuel', 'refinery', 'gold',
+    'silver', 'bitcoin', 'btc', 'crypto', 'ethereum', 'dollar', 'tariff', 'tariffs', 'exports', 'earnings', 'bank',
+    'banks', 'debt', 'polymarket', 'kalshi', 'odds', 'chance', 'prediction market', 'billion', 'trillion', 'price',
+    'prices', 'housing', 'home prices', 'rent', 'affordable', 'affordability', 'foreclosure', 'foreclosures',
+    'mortgage', 'property tax', 'property taxes', 'taxes', 'medicare', 'social security', 'paycheck', 'wages',
+    'wealth', 'wealthy', 'poorer', 'richer', 'capitalism', 'ipo', 'shares', 'layoffs', 'bankrupt', 'bankruptcy',
+    'ceo', 'revenue', 'profit', 'profits', 'shoppers', 'retail', 'credit card', 'savings', 'income',
+    'salary', 'salaries', 'middle class', 'lower-middle class', 'cost of living', 'groceries', 'a year'],
+  tech: ['ai', 'a.i.', 'artificial intelligence', 'openai', 'chatgpt', 'anthropic', 'claude', 'nvidia', 'apple',
+    'iphone', 'google', 'meta', 'microsoft', 'amazon', 'tesla', 'spacex', 'starlink', 'xai', 'grok', 'robot',
+    'robots', 'robotics', 'humanoid', 'chip', 'chips', 'semiconductor', 'semiconductors', 'data center',
+    'data centers', 'hack', 'hacked', 'hacker', 'hackers', 'cyber', 'cyberattack', 'surveillance',
+    'facial recognition', 'data breach', 'deepfake', 'quantum', 'algorithm', 'smartphone', 'software', 'app',
+    'internet', 'outage', 'rocket', 'launch', 'nasa', 'satellite', 'space', 'moon', 'mars', 'scientists',
+    'study finds', 'researchers', 'self-driving', 'tiktok'],
+  anomaly: ['ufo', 'ufos', 'uap', 'uaps', 'alien', 'aliens', 'extraterrestrial', 'earthquake', 'earthquakes',
+    'quake', 'quakes', 'magnitude', 'volcano', 'eruption', 'tsunami', 'flood', 'floods', 'flooding', 'hurricane',
+    'tornado', 'storm', 'blizzard', 'heat wave', 'wildfire', 'wildfires', 'landslide', 'sinkhole', 'outbreak',
+    'virus', 'pandemic', 'epidemic', 'plague', 'pneumonic', 'pneumonia', 'quarantine', 'quarantines', 'pathogen',
+    'measles', 'bird flu', 'h5n1', 'cdc', 'infection', 'infections', 'disease', 'vaccine', 'vaccines', 'cancer',
+    'mysterious', 'mystery', 'unexplained', 'unknown', 'missing', 'meteor', 'asteroid', 'solar flare', 'strange',
+    'bizarre', 'anomaly', 'fireball', 'sighting', 'disappeared', 'weather modification', 'weather-modification',
+    'geoengineering', 'cloud seeding', 'declassified', 'emergency', 'evacuate', 'evacuation', 'blackout',
+    'power outage', 'derailment', 'crash', 'explosion', 'shooting', 'dead', 'killed']
+};
+// half-weight words: names and words that turn up in every kind of story
+const DESK_WEAK = {
+  politics: ['trump', 'biden', 'harris', 'obama', 'vance', 'rubio', 'newsom', 'leavitt', 'hegseth', 'president',
+    'democrats', 'federal', 'government', 'officials'],
+  money: ['powell', 'musk', 'company', 'deal'],
+  // places and foreign leaders: a story set abroad leans /world, but a bank,
+  // a hack or an outbreak abroad still goes to its own desk
+  world: ['foreign', 'global', 'international',
+    'iran', 'iranian', 'tehran', 'israel', 'israeli', 'gaza', 'lebanon', 'syria', 'yemen', 'ukraine',
+    'ukrainian', 'kyiv', 'kiev', 'russia', 'russian', 'kremlin', 'putin', 'zelensky', 'zelenskyy', 'taiwan',
+    'north korea', 'middle east', 'china', 'chinese', 'beijing', 'xi jinping', 'venezuela', 'maduro', 'cuba',
+    'mexico', 'mexican', 'canada', 'canadian', 'uk', 'britain', 'british', 'bbc', 'london', 'europe',
+    'european', 'eu', 'germany', 'france', 'french', 'india', 'pakistan', 'saudi', 'qatar', 'turkey', 'egypt',
+    'africa', 'japan', 'japanese', 'korea', 'netanyahu', 'starmer', 'macron', 'modi', 'erdogan', 'khamenei',
+    'kim jong un', 'vatican', 'pope'],
+  anomaly: ['breaking']
+};
 
 // ── the same rules index.html uses to read a posts.txt line ──
 const TS_RE = /(?:^|\s)@(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)(?=\s|$)/;
@@ -132,61 +192,39 @@ function handleOf(url) {
   try { const seg = new URL(url).pathname.split('/')[1]; return seg && seg !== 'i' ? '@' + seg : ''; } catch (e) { return ''; }
 }
 
-// ── DESK FILING (Nov 2026) ──
-// The words the AI reads for a post, or '' if there is nothing to read yet.
+// ── DESK FILING ──
+const deskAccount = {};
+for (const d of DESKS) for (const h of DESK_ACCOUNTS[d] || []) deskAccount[h.toLowerCase()] = d;
+function wordRe(w) { return new RegExp('(?<![a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![a-z0-9])'); }
+const deskRes = DESKS.map(d => ({ d, res: (DESK_WORDS[d] || []).map(w => [wordRe(w), 1])
+  .concat((DESK_WEAK[d] || []).map(w => [wordRe(w), 0.5])) }));
+// the words a post is filed by (and shown by in the report)
 function deskText(post, entry) {
   if (post.kind === 'editorial') return '';
-  if (post.kind === 'tweet') {
-    if (!entry || !entry.title) return ''; // wording not here yet (or X no longer has it)
-    return entry.title; // "@Handle: wording"
-  }
-  if (post.kind === 'video') return entry && entry.title ? 'YouTube video: ' + entry.title : '';
-  const t = post.label || (entry && entry.title) || '';
-  return t ? domain(post.url) + ': ' + t : '';
+  let t = post.label || (entry && entry.title) || '';
+  if (post.kind === 'tweet' && !post.label) { const i = t.indexOf(': '); if (t.charAt(0) === '@' && i !== -1) t = t.slice(i + 2); }
+  return t;
 }
-
-let aiDown = ''; // set when the AI service fails; no more questions this run
-async function askDesks(items) {
-  // items: [{ n, text }] → { n: desk }
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) { aiDown = 'no GITHUB_TOKEN (run inside GitHub Actions)'; return null; }
-  const sys = 'You file news posts for a news feed into exactly one desk each.\n\nDesks:\n' +
-    DESKS.map(d => '- ' + d + ': ' + DESK_RULES[d]).join('\n') +
-    '\n\nRules for the borders:\n' + DESK_EDGES.map(r => '- ' + r).join('\n') +
-    '\n\nRead each post the way a news editor would, including sarcasm and context. Every post gets exactly one of: ' +
-    DESKS.join(', ') + '. Answer with a JSON object only, mapping each post number to its desk, e.g. {"1":"world","2":"money"}.';
-  const user = items.map(i => i.n + '. ' + i.text.replace(/\s+/g, ' ').slice(0, 600)).join('\n');
-  try {
-    const r = await fetch(AI_URL, {
-      method: 'POST',
-      signal: AbortSignal.timeout(60000),
-      headers: { 'content-type': 'application/json', authorization: 'Bearer ' + token, accept: 'application/json' },
-      body: JSON.stringify({
-        model: AI_MODEL, temperature: 0,
-        response_format: { type: 'json_object' },
-        messages: [{ role: 'system', content: sys }, { role: 'user', content: user }]
-      })
-    });
-    if (!r.ok) {
-      const body = (await r.text().catch(() => '')).slice(0, 300);
-      aiDown = 'HTTP ' + r.status + ' ' + body;
-      return null;
-    }
-    const j = await r.json();
-    const txt = j && j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content || '';
-    const m = String(txt).match(/\{[\s\S]*\}/);
-    if (!m) return {};
-    const o = JSON.parse(m[0]);
-    const out = {};
-    for (const k of Object.keys(o)) {
-      const d = String(o[k] || '').toLowerCase().replace(/^\//, '').trim();
-      if (DESKS.indexOf(d) !== -1) out[String(k).trim()] = d;
-    }
-    return out;
-  } catch (e) {
-    aiDown = String(e && e.message || e);
-    return null;
+// → { desk: 'money' | '', by: 'you' | 'account' | 'words' | 'over_account' | '' }
+function deskOf(post, entry) {
+  if (post.kind === 'editorial') return { desk: '', by: '' };
+  if (DESKS.indexOf(post.tag) !== -1) return { desk: post.tag, by: 'you' };
+  const acct = post.kind === 'tweet' ? deskAccount[handleOf(post.url).slice(1).toLowerCase()] || '' : '';
+  const text = String(deskText(post, entry)).toLowerCase();
+  const score = {};
+  let best = '', top = 0;
+  for (const { d, res } of deskRes) {
+    let n = 0;
+    for (const [re, w] of res) if (re.test(text)) n += w;
+    score[d] = n;
+    if (n > top) { top = n; best = d; }
   }
+  if (acct) {
+    // the wording overrules the account only when it clearly points elsewhere
+    if (best && best !== acct && top >= 1 && !score[acct]) return { desk: best, by: 'over_account' };
+    return { desk: acct, by: 'account' };
+  }
+  return top >= 0.5 ? { desk: best, by: 'words' } : { desk: '', by: '' };
 }
 
 // ── lookups (each post is looked up once, then remembered in share-cache.json) ──
@@ -352,43 +390,30 @@ function page(code, post, c) {
     next[code] = entry;
   }
 
-  // DESKS: your desk tag wins; otherwise the AI files each post once
-  const counts = { unfiled: 0 }, by = { you: 0, ai: 0 }, waiting = [];
+  // DESKS: file every post, every run (no lookups, so this is quick)
+  const counts = { unfiled: 0 }, by = {}, unfiled = {}, recent = [];
   for (const d of DESKS) counts[d] = 0;
-  const toAsk = [];
   for (const { code, post } of posts) {
     const entry = next[code];
-    if (post.kind === 'editorial') { delete entry.desk; delete entry.dby; delete entry.dv; delete entry.dtries; continue; }
-    if (DESKS.indexOf(post.tag) !== -1) { entry.desk = post.tag; entry.dby = 'you'; entry.dv = DESK_VERSION; delete entry.dtries; continue; }
-    if (entry.dby === 'you') { delete entry.desk; delete entry.dby; delete entry.dv; } // tag since removed: file it afresh
-    if (entry.dby === 'ai' && entry.dv === DESK_VERSION && DESKS.indexOf(entry.desk) !== -1) continue;
-    if (entry.dv === DESK_VERSION && (entry.dtries || 0) >= AI_TRIES) continue; // given up on
-    if (DESKS.indexOf(entry.desk) === -1 || entry.dv !== DESK_VERSION) { delete entry.desk; delete entry.dby; }
-    if (entry.dv !== DESK_VERSION) { delete entry.dtries; delete entry.dv; }
-    const text = deskText(post, entry);
-    if (text) toAsk.push({ code, entry, text });
+    delete entry.dby; delete entry.dv; delete entry.dtries; // left over from the AI trial
+    const f = deskOf(post, entry);
+    if (f.desk) { entry.desk = f.desk; counts[f.desk]++; }
+    else { delete entry.desk; if (post.kind !== 'editorial') counts.unfiled++; }
+    if (f.by) by[f.by] = (by[f.by] || 0) + 1;
+    if (post.kind === 'tweet') {
+      const h = handleOf(post.url).toLowerCase();
+      if (h && !deskAccount[h.slice(1)]) {
+        const u = unfiled[h] || (unfiled[h] = { posts: 0, filed_by_words: [] });
+        u.posts++;
+        if (f.desk && u.filed_by_words.indexOf(f.desk) === -1) u.filed_by_words.push(f.desk);
+      }
+    }
+    if (post.kind !== 'editorial' && recent.length < 25) {
+      recent.push((f.desk ? '/' + f.desk : 'unfiled') + ' (' + (f.by || '-') + ')  ' + clip((post.kind === 'tweet' ? handleOf(post.url) + ': ' : '') + (deskText(post, entry) || post.url), 110));
+    }
   }
-  let asked = 0, filed = 0;
-  for (let i = 0; i < toAsk.length && !aiDown; i += AI_BATCH) {
-    const chunk = toAsk.slice(i, i + AI_BATCH);
-    const ans = await askDesks(chunk.map((c, k) => ({ n: k + 1, text: c.text })));
-    if (ans === null) break; // service down or refused: try again next run
-    asked++;
-    chunk.forEach((c, k) => {
-      const d = ans[String(k + 1)];
-      if (d) { c.entry.desk = d; c.entry.dby = 'ai'; c.entry.dv = DESK_VERSION; delete c.entry.dtries; filed++; }
-      else { c.entry.dtries = (c.entry.dtries || 0) + 1; if (c.entry.dtries >= AI_TRIES) c.entry.dv = DESK_VERSION; }
-    });
-    if (i + AI_BATCH < toAsk.length) await new Promise(r => setTimeout(r, 5000)); // stay well under the per-minute limit
-  }
-  const recent = [];
-  for (const { code, post } of posts) {
-    if (post.kind === 'editorial') continue;
-    const entry = next[code];
-    if (DESKS.indexOf(entry.desk) !== -1) { counts[entry.desk]++; by[entry.dby === 'you' ? 'you' : 'ai']++; }
-    else { counts.unfiled++; waiting.push(clip(deskText(post, entry) || post.url, 100)); }
-    if (recent.length < 20) recent.push((entry.desk ? '/' + entry.desk + (entry.dby === 'you' ? ' (yours)' : '') : 'unfiled') + '  ' + clip(deskText(post, entry) || post.url, 110));
-  }
+  const accounts = Object.keys(unfiled).sort((a, b) => unfiled[b].posts - unfiled[a].posts || (a < b ? -1 : 1))
+    .map(h => ({ handle: h, posts: unfiled[h].posts, filed_by_words: unfiled[h].filed_by_words }));
 
   fs.rmSync(OUT, { recursive: true, force: true });
   for (const { code, post } of posts) {
@@ -398,15 +423,13 @@ function page(code, post, c) {
   }
   fs.writeFileSync(CACHE_FILE, JSON.stringify(next, null, 1) + '\n');
   fs.writeFileSync(DESK_REPORT, JSON.stringify({
-    note: 'Written by tools/build-share.js. Desks are picked by an AI (GitHub Models), or by you with a desk tag such as #world. Unfiled posts are waiting for their wording or for the AI, and are tried again on the next run.',
+    note: 'Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.',
     desks: counts,
-    filed_by: { ai: by.ai, you: by.you },
-    ai: aiDown ? 'could not reach the AI this run: ' + aiDown : 'ok; ' + filed + ' posts filed this run (' + asked + ' questions)',
+    filed_by: { you: by.you || 0, account: by.account || 0, words: by.words || 0, words_over_account: by.over_account || 0 },
     newest: recent,
-    unfiled_posts: waiting
+    accounts_without_a_desk: accounts
   }, null, 1) + '\n');
   console.log(posts.length + ' share pages written; ' + looked + ' lookups this run, ' + got + ' returned a title; ' + marked + ' X posts given a media mark');
-  console.log('desks: ' + DESKS.map(d => d + ' ' + counts[d]).join(', ') + ', unfiled ' + counts.unfiled + ' (' + filed + ' filed by the AI this run)');
-  if (aiDown) console.log('note: the AI could not be reached, so unfiled posts wait for the next run: ' + aiDown);
+  console.log('desks: ' + DESKS.map(d => d + ' ' + counts[d]).join(', ') + ', unfiled ' + counts.unfiled);
   for (const h of Object.keys(strikes)) if (strikes[h] >= 4) console.log('note: lookups for "' + h + '" were failing, so the rest were skipped this run');
 })().catch(e => { console.error(e); process.exit(1); });
