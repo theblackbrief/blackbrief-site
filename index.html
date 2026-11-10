@@ -373,14 +373,14 @@ html:where(.bb-light),:where(.bb-light) body{background:#f5f5f5}
    red; each desk has its own colour from one cool family. */
 .bb-desk-slash{color:#cc2222;font-weight:700}
 .bb-desk{font-weight:700;color:var(--desk)}
-.desk-war{--desk:#c8f060}
-.desk-power{--desk:#a08bff}
+.desk-world{--desk:#c8f060}
+.desk-politics{--desk:#a08bff}
 .desk-money{--desk:#79d4e6}
 .desk-tech{--desk:#5f8dff}
 .desk-anomaly{--desk:#d28cff}
 
-:where(.bb-light) .desk-war{--desk:#4f8a00}
-:where(.bb-light) .desk-power{--desk:#5a2dff}
+:where(.bb-light) .desk-world{--desk:#4f8a00}
+:where(.bb-light) .desk-politics{--desk:#5a2dff}
 :where(.bb-light) .desk-money{--desk:#0081a8}
 :where(.bb-light) .desk-tech{--desk:#0055ff}
 :where(.bb-light) .desk-anomaly{--desk:#a020e0}
@@ -711,6 +711,9 @@ var m=raw.match(TS_RE);
 var ts=m?Date.parse(m[1]):NaN;
 var text=m?raw.replace(TS_RE,' ').replace(/\s+/g,' ').trim():raw;
 var tag=getTag(text);
+// a desk tag (#world, #politics...) only tells GitHub which desk to file the
+// post under (Nov 2026); it never shows as a stamp
+if(tag&&DESKS&&DESKS.indexOf(tag)!==-1)tag=null;
 if(tag==='headline'||tag==='urgent'){
 var fresh=!isNaN(ts)&&(Date.now()-ts)<EXPIRE_MS;
 if(!fresh)tag=null;
@@ -961,7 +964,7 @@ if(t.charAt(0)==='@'&&i!==-1)t=t.slice(i+2);
 return t.trim();
 }
 // DESKS (Oct 2026): the subject desk GitHub filed a post under, or '' if none
-var DESKS=['war','power','money','tech','anomaly'];
+var DESKS=['politics','world','money','tech','anomaly']; // renamed Nov 2026 (were war, power, money, tech, anomaly)
 var DESK_MIN=3; // a desk with fewer posts than this stays out of the ticker
 function wireDesk(id){
 var e=id?wire[bbCode(id)]:null;

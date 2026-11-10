@@ -111,7 +111,7 @@ function itemXml(p) {
   const link = SITE + '/p/' + code + '/';
   const d = describe(post, cache);
   const desk = cache && cache.desk ? String(cache.desk).replace(/^\//, '') : '';
-  const tag = post.tag && post.tag !== 'headline' ? post.tag : '';
+  const tag = post.tag && post.tag !== 'headline' && post.tag !== desk ? post.tag : ''; // a desk tag (#world) is already the desk
 
   // the item's text (shown by feed readers): wording, then the links
   let html = '';

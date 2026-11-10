@@ -2,7 +2,8 @@
 #   1. housekeeping: removes old posts and deleted tweets from posts.txt
 #      (see tools/housekeep.js; removed lines are kept in old-posts.txt)
 #   2. builds a small preview page for every post (the /p/ folder), and files
-#      every post under a desk (see tools/build-share.js)
+#      every post under a desk with the help of GitHub Models, the free AI
+#      that comes with the GitHub account (see tools/build-share.js)
 name: housekeeping and share pages
 
 on:
@@ -19,6 +20,7 @@ on:
 
 permissions:
   contents: write
+  models: read # lets the built-in token ask GitHub Models to file posts into desks (free)
 
 concurrency:
   group: share-pages
@@ -35,6 +37,8 @@ jobs:
           CHECK_DEAD: ${{ github.event_name != 'push' && '1' || '0' }}
         run: node tools/housekeep.js
       - name: build pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node tools/build-share.js
       - name: save to the repo
         run: |
