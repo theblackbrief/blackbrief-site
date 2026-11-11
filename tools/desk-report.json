@@ -5,8 +5,8 @@
   "politics": 13,
   "world": 19,
   "money": 8,
-  "tech": 2,
-  "anomaly": 6
+  "tech": 3,
+  "anomaly": 5
  },
  "filed_by": {
   "you": 0,
@@ -15,6 +15,7 @@
   "words_over_account": 7
  },
  "newest": [
+  "/tech (words)  @remarks: JUST IN: 🇺🇸 Spike in suicides reported at NSA and US Cyber Command, the agencies responsible for…",
   "/tech (words)  @coinbureau: 🚨BREAKING: Apple confirms widespread outages across multiple iCloud services, including Mail, P…",
   "/politics (words)  @60Minutes: President Trump says his administration’s deportation policy was “too tough.”",
   "/money (account)  @unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new Federal Res…",
@@ -38,8 +39,7 @@
   "/politics (words)  @leadingreport: JUST IN: Many polls seem to have underestimated Democrats.",
   "/anomaly (words)  @theinsiderpaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of s…",
   "/world (over_account)  @polymarket: BREAKING: Britain & France prepare a multinational military force for potential deployment to Uk…",
-  "/world (words)  @Swetha_xai: 🚨 Iran has reportedly broadcast nuclear strike warning messages on state TV.@Grok verify the au…",
-  "/world (account)  @bedouinreport: 🚨🇷🇺🇺🇸🇮🇷 BREAKING: The Russian Government has reportedly informed Washington, through b…"
+  "/world (words)  @Swetha_xai: 🚨 Iran has reportedly broadcast nuclear strike warning messages on state TV.@Grok verify the au…"
  ],
  "accounts_without_a_desk": [
   {
@@ -166,10 +166,10 @@
    ]
   },
   {
-   "handle": "@p_mcculloughmd",
+   "handle": "@remarks",
    "posts": 1,
    "filed_by_words": [
-    "anomaly"
+    "tech"
    ]
   },
   {
