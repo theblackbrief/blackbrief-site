@@ -1,20 +1,21 @@
 {
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
-  "unfiled": 3,
+  "unfiled": 2,
   "politics": 13,
   "world": 19,
   "money": 8,
-  "tech": 1,
+  "tech": 2,
   "anomaly": 6
  },
  "filed_by": {
   "you": 0,
   "account": 12,
-  "words": 28,
+  "words": 29,
   "words_over_account": 7
  },
  "newest": [
+  "/tech (words)  @coinbureau: 🚨BREAKING: Apple confirms widespread outages across multiple iCloud services, including Mail, P…",
   "/politics (words)  @60Minutes: President Trump says his administration’s deportation policy was “too tough.”",
   "/money (account)  @unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new Federal Res…",
   "/world (account)  @BRICSinfo: JUST IN: 🇬🇧 BBC prepares emergency radio studio with 100 staff to broadcast government messages…",
@@ -38,8 +39,7 @@
   "/anomaly (words)  @theinsiderpaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of s…",
   "/world (over_account)  @polymarket: BREAKING: Britain & France prepare a multinational military force for potential deployment to Uk…",
   "/world (words)  @Swetha_xai: 🚨 Iran has reportedly broadcast nuclear strike warning messages on state TV.@Grok verify the au…",
-  "/world (account)  @bedouinreport: 🚨🇷🇺🇺🇸🇮🇷 BREAKING: The Russian Government has reportedly informed Washington, through b…",
-  "/world (account)  @rt_com: ❗️ US OFFICIALS CONFIRMED WASHINGTON BOMBED IRAN'S QESHM ISLAND FEW HOURS AGO IN A SERIES OF 'LIMITE…"
+  "/world (account)  @bedouinreport: 🚨🇷🇺🇺🇸🇮🇷 BREAKING: The Russian Government has reportedly informed Washington, through b…"
  ],
  "accounts_without_a_desk": [
   {
@@ -126,6 +126,13 @@
    ]
   },
   {
+   "handle": "@coinbureau",
+   "posts": 1,
+   "filed_by_words": [
+    "tech"
+   ]
+  },
+  {
    "handle": "@daily_mailus",
    "posts": 1,
    "filed_by_words": [
@@ -150,11 +157,6 @@
    "filed_by_words": [
     "anomaly"
    ]
-  },
-  {
-   "handle": "@mcgillmedicines",
-   "posts": 1,
-   "filed_by_words": []
   },
   {
    "handle": "@nypost",
