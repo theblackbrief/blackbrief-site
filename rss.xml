@@ -6,13 +6,22 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 09 Nov 2026 14:29:45 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 11 Nov 2026 04:20:48 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@coinbureau: 🚨BREAKING: Apple confirms widespread outages across multiple iCloud services, including Mail, Photos and Find My Apple has confirmed iCloud servi…</title>
+   <link>https://theblackbrief.com/p/7nkdlv/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/7nkdlv/</guid>
+   <pubDate>Wed, 11 Nov 2026 04:20:48 GMT</pubDate>
+   <category>tech</category>
+   <category>urgent</category>
+   <description>&lt;p&gt;@coinbureau: 🚨BREAKING: Apple confirms widespread outages across multiple iCloud services, including Mail, Photos and Find My Apple has confirmed iCloud service disruptions affecting users since around 5:49 PM ET, with outages impacting Mail, Calendar, Contacts, Photos, iWork and Game…&lt;/p&gt;&lt;p&gt;/tech // #urgent // &lt;a href=&quot;https://x.com/coinbureau/status/2120353008643080587?a=4azA65C8LgbQKnz3Dik&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/7nkdlv/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@60Minutes: President Trump says his administration’s deportation policy was “too tough.”</title>
    <link>https://theblackbrief.com/p/912g19/</link>
@@ -408,13 +417,6 @@
    <pubDate>Mon, 26 Oct 2026 21:57:55 GMT</pubDate>
    <category>anomaly</category>
    <description>&lt;p&gt;@P_McCulloughMD: BREAKING: New Paper Reveals How mRNA Vaccine Materials Could Spread From Vaccinated to Unvaccinated People We identified two distinct forms of mRNA vaccine shedding: internal transcriptional spread and potential human-to-human transfer. Vaccine spreads internally and…&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/p_mcculloughmd/status/2114773416859287555?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/j28ivn/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination can cause multiple sclerosis due to cross-reactive CD4+ T ce…</title>
-   <link>https://theblackbrief.com/p/tnu0e0/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/tnu0e0/</guid>
-   <pubDate>Mon, 26 Oct 2026 21:43:02 GMT</pubDate>
-   <description>&lt;p&gt;@mcgillmedicines: “The World Health Organization” now states on its website: “COVID-19 vaccination can cause multiple sclerosis due to cross-reactive CD4+ T cells that recognize the spike protein of SARS-CoV-2 and myelin peptides.” In other words, your own immune system destroys the nerve…&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/mcgillmedicines/status/2114687909173309870?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/tnu0e0/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
