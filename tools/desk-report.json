@@ -1,9 +1,9 @@
 {
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
-  "unfiled": 2,
+  "unfiled": 1,
   "politics": 13,
-  "world": 19,
+  "world": 20,
   "money": 8,
   "tech": 3,
   "anomaly": 5
@@ -11,10 +11,11 @@
  "filed_by": {
   "you": 0,
   "account": 12,
-  "words": 29,
+  "words": 30,
   "words_over_account": 7
  },
  "newest": [
+  "/world (words)  @remarks: JUST IN: 🇨🇦 Canada reiterates warning for citizens to prepare to survive at least 72 hours withou…",
   "/tech (words)  @remarks: JUST IN: 🇺🇸 Spike in suicides reported at NSA and US Cyber Command, the agencies responsible for…",
   "/tech (words)  @coinbureau: 🚨BREAKING: Apple confirms widespread outages across multiple iCloud services, including Mail, P…",
   "/politics (words)  @60Minutes: President Trump says his administration’s deportation policy was “too tough.”",
@@ -38,8 +39,7 @@
   "/politics (words)  @rawsalerts: 🚨 #BREAKING: Democrats seize control of both the House & Senate, as projected by Polymarket.",
   "/politics (words)  @leadingreport: JUST IN: Many polls seem to have underestimated Democrats.",
   "/anomaly (words)  @theinsiderpaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of s…",
-  "/world (over_account)  @polymarket: BREAKING: Britain & France prepare a multinational military force for potential deployment to Uk…",
-  "/world (words)  @Swetha_xai: 🚨 Iran has reportedly broadcast nuclear strike warning messages on state TV.@Grok verify the au…"
+  "/world (over_account)  @polymarket: BREAKING: Britain & France prepare a multinational military force for potential deployment to Uk…"
  ],
  "accounts_without_a_desk": [
   {
@@ -97,6 +97,14 @@
    ]
   },
   {
+   "handle": "@remarks",
+   "posts": 2,
+   "filed_by_words": [
+    "world",
+    "tech"
+   ]
+  },
+  {
    "handle": "@theinsiderpaper",
    "posts": 2,
    "filed_by_words": [
@@ -147,11 +155,6 @@
    ]
   },
   {
-   "handle": "@fynnderella1",
-   "posts": 1,
-   "filed_by_words": []
-  },
-  {
    "handle": "@jmchyno",
    "posts": 1,
    "filed_by_words": [
@@ -163,13 +166,6 @@
    "posts": 1,
    "filed_by_words": [
     "world"
-   ]
-  },
-  {
-   "handle": "@remarks",
-   "posts": 1,
-   "filed_by_words": [
-    "tech"
    ]
   },
   {
