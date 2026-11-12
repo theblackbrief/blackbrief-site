@@ -1,4 +1,11 @@
 {
+ "yr2e4b": {
+  "tries": 1,
+  "done": true,
+  "title": "@disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect has not been apprehended.",
+  "image": "",
+  "media": "video"
+ },
  "1cgvy38": {
   "tries": 1,
   "done": true,
@@ -388,13 +395,5 @@
   "image": "",
   "media": "",
   "desk": "world"
- },
- "klkv3r": {
-  "tries": 1,
-  "done": true,
-  "title": "@Polymarket: BREAKING: Hackers target the US Federal Election Commission, knocking its electronic filing system offline just 1 week before the midterm elections. — Reuters",
-  "image": "",
-  "media": "",
-  "desk": "politics"
  }
 }

@@ -1,8 +1,8 @@
 {
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
-  "unfiled": 1,
-  "politics": 12,
+  "unfiled": 2,
+  "politics": 11,
   "world": 21,
   "money": 8,
   "tech": 3,
@@ -12,9 +12,10 @@
   "you": 0,
   "account": 12,
   "words": 31,
-  "words_over_account": 6
+  "words_over_account": 5
  },
  "newest": [
+  "unfiled (-)  @disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect ha…",
   "/anomaly (words)  @Breaking911: BREAKING UPDATE: Four people are reportedly injured in an active shooter situation at the VIDA…",
   "/world (words)  @disclosetv: NEW - Acting Navy Secretary Hung Cao tells USS George H.W. Bush families that their loved ones w…",
   "/world (words)  @remarks: JUST IN: 🇨🇦 Canada reiterates warning for citizens to prepare to survive at least 72 hours withou…",
@@ -38,8 +39,7 @@
   "unfiled (-)  @breaking911: Evil.",
   "/anomaly (words)  @breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.",
   "/politics (words)  @newswire_us: TRUMP CANCELS PUBLIC APPEARANCES",
-  "/politics (words)  @rawsalerts: 🚨 #BREAKING: Democrats seize control of both the House & Senate, as projected by Polymarket.",
-  "/politics (words)  @leadingreport: JUST IN: Many polls seem to have underestimated Democrats."
+  "/politics (words)  @rawsalerts: 🚨 #BREAKING: Democrats seize control of both the House & Senate, as projected by Polymarket."
  ],
  "accounts_without_a_desk": [
   {
@@ -52,7 +52,7 @@
   },
   {
    "handle": "@disclosetv",
-   "posts": 3,
+   "posts": 4,
    "filed_by_words": [
     "world",
     "politics",
