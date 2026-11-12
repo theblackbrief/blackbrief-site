@@ -3,10 +3,10 @@
  "desks": {
   "unfiled": 1,
   "politics": 13,
-  "world": 20,
+  "world": 21,
   "money": 8,
   "tech": 3,
-  "anomaly": 5
+  "anomaly": 4
  },
  "filed_by": {
   "you": 0,
@@ -15,6 +15,7 @@
   "words_over_account": 7
  },
  "newest": [
+  "/world (words)  @disclosetv: NEW - Acting Navy Secretary Hung Cao tells USS George H.W. Bush families that their loved ones w…",
   "/world (words)  @remarks: JUST IN: 🇨🇦 Canada reiterates warning for citizens to prepare to survive at least 72 hours withou…",
   "/tech (words)  @remarks: JUST IN: 🇺🇸 Spike in suicides reported at NSA and US Cyber Command, the agencies responsible for…",
   "/tech (words)  @coinbureau: 🚨BREAKING: Apple confirms widespread outages across multiple iCloud services, including Mail, P…",
@@ -38,8 +39,7 @@
   "/politics (words)  @newswire_us: TRUMP CANCELS PUBLIC APPEARANCES",
   "/politics (words)  @rawsalerts: 🚨 #BREAKING: Democrats seize control of both the House & Senate, as projected by Polymarket.",
   "/politics (words)  @leadingreport: JUST IN: Many polls seem to have underestimated Democrats.",
-  "/anomaly (words)  @theinsiderpaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of s…",
-  "/world (over_account)  @polymarket: BREAKING: Britain & France prepare a multinational military force for potential deployment to Uk…"
+  "/anomaly (words)  @theinsiderpaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of s…"
  ],
  "accounts_without_a_desk": [
   {
@@ -51,19 +51,20 @@
    ]
   },
   {
+   "handle": "@disclosetv",
+   "posts": 3,
+   "filed_by_words": [
+    "world",
+    "politics",
+    "money"
+   ]
+  },
+  {
    "handle": "@leadingreport",
    "posts": 3,
    "filed_by_words": [
     "politics",
     "world"
-   ]
-  },
-  {
-   "handle": "@disclosetv",
-   "posts": 2,
-   "filed_by_words": [
-    "politics",
-    "money"
    ]
   },
   {
@@ -152,13 +153,6 @@
    "posts": 1,
    "filed_by_words": [
     "politics"
-   ]
-  },
-  {
-   "handle": "@jmchyno",
-   "posts": 1,
-   "filed_by_words": [
-    "anomaly"
    ]
   },
   {

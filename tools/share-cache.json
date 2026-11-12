@@ -1,4 +1,12 @@
 {
+ "195nuxz": {
+  "tries": 1,
+  "done": true,
+  "title": "@disclosetv: NEW - Acting Navy Secretary Hung Cao tells USS George H.W. Bush families that their loved ones won’t be home for the holidays, warning that if the U.S. didn’t stop Iran now, it would soon have too many cruise missiles and drones to penetrate and become a \"nuclear-armed Iran.\"",
+  "image": "",
+  "media": "",
+  "desk": "world"
+ },
  "1dwcz84": {
   "tries": 1,
   "done": true,
@@ -388,13 +396,5 @@
   "image": "",
   "media": "",
   "desk": "politics"
- },
- "lzt90f": {
-  "tries": 1,
-  "done": true,
-  "title": "@JMChyno: BREAKING: Unconfirmed reports of multiple explosions on the North Korean side of the border near new artillery postions. Circumstances unclear.",
-  "image": "",
-  "media": "",
-  "desk": "anomaly"
  }
 }
