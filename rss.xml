@@ -6,13 +6,22 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Thu, 12 Nov 2026 06:35:28 GMT</lastBuildDate>
+  <lastBuildDate>Thu, 12 Nov 2026 14:04:43 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Breaking911: BREAKING UPDATE: Four people are reportedly injured in an active shooter situation at the VIDA Fitness gym in Washington, D.C.</title>
+   <link>https://theblackbrief.com/p/1cgvy38/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1cgvy38/</guid>
+   <pubDate>Thu, 12 Nov 2026 14:04:43 GMT</pubDate>
+   <category>anomaly</category>
+   <category>urgent</category>
+   <description>&lt;p&gt;@Breaking911: BREAKING UPDATE: Four people are reportedly injured in an active shooter situation at the VIDA Fitness gym in Washington, D.C.&lt;/p&gt;&lt;p&gt;/anomaly // #urgent // &lt;a href=&quot;https://x.com/Breaking911/status/2120875608540680206?a=462fwRNy3WjBac27clU&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1cgvy38/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@disclosetv: NEW - Acting Navy Secretary Hung Cao tells USS George H.W. Bush families that their loved ones won’t be home for the holidays, warning that if the…</title>
    <link>https://theblackbrief.com/p/195nuxz/</link>
@@ -410,14 +419,6 @@
    <pubDate>Tue, 27 Oct 2026 21:04:42 GMT</pubDate>
    <category>politics</category>
    <description>&lt;p&gt;@Polymarket: BREAKING: Hackers target the US Federal Election Commission, knocking its electronic filing system offline just 1 week before the midterm elections. — Reuters&lt;/p&gt;&lt;p&gt;/politics // &lt;a href=&quot;https://x.com/polymarket/status/2115169361614774425?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/klkv3r/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@unusual_whales: Men have gained essentially no jobs since Trump took office. Since December 2024, the US has added about 760,000 jobs, and nearly all of them…</title>
-   <link>https://theblackbrief.com/p/1454q9c/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1454q9c/</guid>
-   <pubDate>Tue, 27 Oct 2026 13:42:27 GMT</pubDate>
-   <category>politics</category>
-   <description>&lt;p&gt;@unusual_whales: Men have gained essentially no jobs since Trump took office. Since December 2024, the US has added about 760,000 jobs, and nearly all of them went to women, per government payroll data&lt;/p&gt;&lt;p&gt;/politics // &lt;a href=&quot;https://x.com/unusual_whales/status/2115065224697164126?s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1454q9c/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
