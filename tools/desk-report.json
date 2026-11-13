@@ -3,8 +3,8 @@
  "desks": {
   "unfiled": 3,
   "politics": 11,
-  "world": 20,
-  "money": 9,
+  "world": 19,
+  "money": 10,
   "tech": 3,
   "anomaly": 4
  },
@@ -15,6 +15,7 @@
   "words_over_account": 5
  },
  "newest": [
+  "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…",
   "unfiled (-)  US existing home sales slump to more than 16-year low in October",
   "/money (account)  @WallStreetApes: 🚨 Muslims are now impersonating police vehicles in Scottsdale, Arizona. Notice the red and…",
   "unfiled (-)  @disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect ha…",
@@ -38,8 +39,7 @@
   "/money (over_account)  @bricsinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.",
   "/world (words)  @Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by…",
   "/politics (words)  @newswire_us: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too fa…",
-  "unfiled (-)  @breaking911: Evil.",
-  "/anomaly (words)  @breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida."
+  "unfiled (-)  @breaking911: Evil."
  ],
  "accounts_without_a_desk": [
   {

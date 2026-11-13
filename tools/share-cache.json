@@ -1,4 +1,12 @@
 {
+ "1av8igm": {
+  "tries": 1,
+  "done": true,
+  "title": "@Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting public safety.",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "1kjzssn": {
   "tries": 1,
   "done": true,
@@ -385,13 +393,5 @@
   "image": "",
   "media": "",
   "desk": "anomaly"
- },
- "wun0s9": {
-  "tries": 1,
-  "done": true,
-  "title": "@BRICSinfo: JUST IN: 🇰🇵 Kim Jong Un orders North Korea's military to increase readiness for combat.",
-  "image": "",
-  "media": "",
-  "desk": "world"
  }
 }
