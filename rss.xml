@@ -6,13 +6,20 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri, 13 Nov 2026 04:44:15 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 13 Nov 2026 07:34:01 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>US existing home sales slump to more than 16-year low in October</title>
+   <link>https://theblackbrief.com/p/1kjzssn/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1kjzssn/</guid>
+   <pubDate>Fri, 13 Nov 2026 07:34:01 GMT</pubDate>
+   <description>&lt;p&gt;US existing home sales slump to more than 16-year low in October&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://finance.yahoo.com/real-estate/articles/us-existing-home-sales-slump-150246718.html&quot;&gt;read on finance.yahoo.com »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1kjzssn/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@WallStreetApes: 🚨 Muslims are now impersonating police vehicles in Scottsdale, Arizona. Notice the red and blue flashing lights on the side and on the top of…</title>
    <link>https://theblackbrief.com/p/1ej2026/</link>
@@ -410,14 +417,6 @@
    <pubDate>Wed, 28 Oct 2026 02:39:50 GMT</pubDate>
    <category>world</category>
    <description>&lt;p&gt;@BRICSinfo: JUST IN: 🇰🇵 Kim Jong Un orders North Korea's military to increase readiness for combat.&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/bricsinfo/status/2115244230540935307?a=85zoL9hjuVkzR9TLoU8&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/wun0s9/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@InsiderWN: #BREAKING Normandy prefecture urges residents to stockpile 72-hour emergency kits for “potential crises.”</title>
-   <link>https://theblackbrief.com/p/8rrn9v/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/8rrn9v/</guid>
-   <pubDate>Wed, 28 Oct 2026 02:39:38 GMT</pubDate>
-   <category>anomaly</category>
-   <description>&lt;p&gt;@InsiderWN: #BREAKING Normandy prefecture urges residents to stockpile 72-hour emergency kits for “potential crises.”&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/insiderwn/status/2115257062515208694?a=kZVpVMsZmZsdMhEZqXQ&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/8rrn9v/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
