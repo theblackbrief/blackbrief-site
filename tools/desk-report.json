@@ -3,18 +3,19 @@
  "desks": {
   "unfiled": 2,
   "politics": 11,
-  "world": 21,
-  "money": 8,
+  "world": 20,
+  "money": 9,
   "tech": 3,
   "anomaly": 5
  },
  "filed_by": {
   "you": 0,
-  "account": 12,
-  "words": 31,
+  "account": 13,
+  "words": 30,
   "words_over_account": 5
  },
  "newest": [
+  "/money (account)  @WallStreetApes: 🚨 Muslims are now impersonating police vehicles in Scottsdale, Arizona. Notice the red and…",
   "unfiled (-)  @disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect ha…",
   "/anomaly (words)  @Breaking911: BREAKING UPDATE: Four people are reportedly injured in an active shooter situation at the VIDA…",
   "/world (words)  @disclosetv: NEW - Acting Navy Secretary Hung Cao tells USS George H.W. Bush families that their loved ones w…",
@@ -38,8 +39,7 @@
   "/politics (words)  @newswire_us: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too fa…",
   "unfiled (-)  @breaking911: Evil.",
   "/anomaly (words)  @breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.",
-  "/politics (words)  @newswire_us: TRUMP CANCELS PUBLIC APPEARANCES",
-  "/politics (words)  @rawsalerts: 🚨 #BREAKING: Democrats seize control of both the House & Senate, as projected by Polymarket."
+  "/politics (words)  @newswire_us: TRUMP CANCELS PUBLIC APPEARANCES"
  ],
  "accounts_without_a_desk": [
   {
@@ -106,14 +106,6 @@
    ]
   },
   {
-   "handle": "@theinsiderpaper",
-   "posts": 2,
-   "filed_by_words": [
-    "anomaly",
-    "world"
-   ]
-  },
-  {
    "handle": "@60minutes",
    "posts": 1,
    "filed_by_words": [
@@ -167,6 +159,13 @@
    "posts": 1,
    "filed_by_words": [
     "world"
+   ]
+  },
+  {
+   "handle": "@theinsiderpaper",
+   "posts": 1,
+   "filed_by_words": [
+    "anomaly"
    ]
   },
   {
