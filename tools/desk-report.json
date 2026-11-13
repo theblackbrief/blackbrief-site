@@ -1,20 +1,21 @@
 {
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
-  "unfiled": 2,
+  "unfiled": 3,
   "politics": 11,
   "world": 20,
   "money": 9,
   "tech": 3,
-  "anomaly": 5
+  "anomaly": 4
  },
  "filed_by": {
   "you": 0,
   "account": 13,
-  "words": 30,
+  "words": 29,
   "words_over_account": 5
  },
  "newest": [
+  "unfiled (-)  US existing home sales slump to more than 16-year low in October",
   "/money (account)  @WallStreetApes: 🚨 Muslims are now impersonating police vehicles in Scottsdale, Arizona. Notice the red and…",
   "unfiled (-)  @disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect ha…",
   "/anomaly (words)  @Breaking911: BREAKING UPDATE: Four people are reportedly injured in an active shooter situation at the VIDA…",
@@ -38,8 +39,7 @@
   "/world (words)  @Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by…",
   "/politics (words)  @newswire_us: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too fa…",
   "unfiled (-)  @breaking911: Evil.",
-  "/anomaly (words)  @breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.",
-  "/politics (words)  @newswire_us: TRUMP CANCELS PUBLIC APPEARANCES"
+  "/anomaly (words)  @breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida."
  ],
  "accounts_without_a_desk": [
   {
@@ -73,14 +73,6 @@
    "filed_by_words": [
     "politics",
     "world"
-   ]
-  },
-  {
-   "handle": "@insiderwn",
-   "posts": 2,
-   "filed_by_words": [
-    "money",
-    "anomaly"
    ]
   },
   {
@@ -145,6 +137,13 @@
    "posts": 1,
    "filed_by_words": [
     "politics"
+   ]
+  },
+  {
+   "handle": "@insiderwn",
+   "posts": 1,
+   "filed_by_words": [
+    "money"
    ]
   },
   {
