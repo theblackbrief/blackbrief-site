@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri, 13 Nov 2026 07:34:01 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 13 Nov 2026 22:14:07 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Polymarket: BREAKING: FAA shuts down flights nationwide due to &quot;extraordinary circumstances&quot; impacting public safety.</title>
+   <link>https://theblackbrief.com/p/1av8igm/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1av8igm/</guid>
+   <pubDate>Fri, 13 Nov 2026 22:14:07 GMT</pubDate>
+   <category>money</category>
+   <description>&lt;p&gt;@Polymarket: BREAKING: FAA shuts down flights nationwide due to &amp;quot;extraordinary circumstances&amp;quot; impacting public safety.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/Polymarket/status/2121347886109618559?a=9Ofe7wCcqoliv2hUlCg&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1av8igm/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>US existing home sales slump to more than 16-year low in October</title>
    <link>https://theblackbrief.com/p/1kjzssn/</link>
@@ -409,14 +417,6 @@
    <pubDate>Wed, 28 Oct 2026 20:37:12 GMT</pubDate>
    <category>anomaly</category>
    <description>&lt;p&gt;@Kalshi: BREAKING: Former FBI Deputy Director urges Americans to stockpile emergency supplies&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/kalshi/status/2115526515685216273?a=b7JbsLuxAYHt43EaDjI&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/japejo/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@BRICSinfo: JUST IN: 🇰🇵 Kim Jong Un orders North Korea's military to increase readiness for combat.</title>
-   <link>https://theblackbrief.com/p/wun0s9/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/wun0s9/</guid>
-   <pubDate>Wed, 28 Oct 2026 02:39:50 GMT</pubDate>
-   <category>world</category>
-   <description>&lt;p&gt;@BRICSinfo: JUST IN: 🇰🇵 Kim Jong Un orders North Korea's military to increase readiness for combat.&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/bricsinfo/status/2115244230540935307?a=85zoL9hjuVkzR9TLoU8&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/wun0s9/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
