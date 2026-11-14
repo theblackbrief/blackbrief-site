@@ -2,8 +2,8 @@
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
   "unfiled": 3,
-  "politics": 11,
-  "world": 19,
+  "politics": 12,
+  "world": 18,
   "money": 10,
   "tech": 4,
   "anomaly": 3
@@ -15,6 +15,7 @@
   "words_over_account": 4
  },
  "newest": [
+  "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…",
   "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…",
   "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…",
   "unfiled (-)  US existing home sales slump to more than 16-year low in October",
@@ -38,8 +39,7 @@
   "/politics (words)  @rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in h…",
   "/money (words)  @InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own ac…",
   "/money (over_account)  @bricsinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.",
-  "/world (words)  @Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by…",
-  "/politics (words)  @newswire_us: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too fa…"
+  "/world (words)  @Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by…"
  ],
  "accounts_without_a_desk": [
   {
@@ -127,13 +127,6 @@
    ]
   },
   {
-   "handle": "@daily_mailus",
-   "posts": 1,
-   "filed_by_words": [
-    "world"
-   ]
-  },
-  {
    "handle": "@dmichaeltripi",
    "posts": 1,
    "filed_by_words": [
@@ -145,6 +138,13 @@
    "posts": 1,
    "filed_by_words": [
     "money"
+   ]
+  },
+  {
+   "handle": "@marionawfal",
+   "posts": 1,
+   "filed_by_words": [
+    "politics"
    ]
   },
   {
