@@ -3,9 +3,9 @@
  "desks": {
   "unfiled": 3,
   "politics": 12,
-  "world": 18,
+  "world": 17,
   "money": 10,
-  "tech": 4,
+  "tech": 5,
   "anomaly": 3
  },
  "filed_by": {
@@ -15,6 +15,7 @@
   "words_over_account": 4
  },
  "newest": [
+  "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…",
   "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…",
   "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…",
   "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…",
@@ -38,8 +39,7 @@
   "/world (account)  @rt_com: Kiev goes DARK with major BLACKOUT across the whole city",
   "/politics (words)  @rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in h…",
   "/money (words)  @InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own ac…",
-  "/money (over_account)  @bricsinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.",
-  "/world (words)  @Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by…"
+  "/money (over_account)  @bricsinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses."
  ],
  "accounts_without_a_desk": [
   {
@@ -64,14 +64,6 @@
    "posts": 4,
    "filed_by_words": [
     "tech",
-    "politics",
-    "world"
-   ]
-  },
-  {
-   "handle": "@insiderwire",
-   "posts": 2,
-   "filed_by_words": [
     "politics",
     "world"
    ]
@@ -134,10 +126,24 @@
    ]
   },
   {
+   "handle": "@insiderwire",
+   "posts": 1,
+   "filed_by_words": [
+    "politics"
+   ]
+  },
+  {
    "handle": "@insiderwn",
    "posts": 1,
    "filed_by_words": [
     "money"
+   ]
+  },
+  {
+   "handle": "@intheassembly",
+   "posts": 1,
+   "filed_by_words": [
+    "tech"
    ]
   },
   {
