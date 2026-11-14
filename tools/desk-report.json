@@ -5,16 +5,17 @@
   "politics": 11,
   "world": 19,
   "money": 10,
-  "tech": 3,
-  "anomaly": 4
+  "tech": 4,
+  "anomaly": 3
  },
  "filed_by": {
   "you": 0,
   "account": 13,
-  "words": 29,
-  "words_over_account": 5
+  "words": 30,
+  "words_over_account": 4
  },
  "newest": [
+  "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…",
   "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…",
   "unfiled (-)  US existing home sales slump to more than 16-year low in October",
   "/money (account)  @WallStreetApes: 🚨 Muslims are now impersonating police vehicles in Scottsdale, Arizona. Notice the red and…",
@@ -38,8 +39,7 @@
   "/money (words)  @InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own ac…",
   "/money (over_account)  @bricsinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.",
   "/world (words)  @Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by…",
-  "/politics (words)  @newswire_us: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too fa…",
-  "unfiled (-)  @breaking911: Evil."
+  "/politics (words)  @newswire_us: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too fa…"
  ],
  "accounts_without_a_desk": [
   {
@@ -61,8 +61,9 @@
   },
   {
    "handle": "@leadingreport",
-   "posts": 3,
+   "posts": 4,
    "filed_by_words": [
+    "tech",
     "politics",
     "world"
    ]

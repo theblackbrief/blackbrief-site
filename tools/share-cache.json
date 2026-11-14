@@ -1,4 +1,12 @@
 {
+ "32gqfo": {
+  "tries": 1,
+  "done": true,
+  "title": "@LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits systems at Walmart, Target and other major companies.",
+  "image": "",
+  "media": "",
+  "desk": "tech"
+ },
  "1av8igm": {
   "tries": 1,
   "done": true,
@@ -385,13 +393,5 @@
   "image": "",
   "media": "image",
   "desk": "world"
- },
- "japejo": {
-  "tries": 1,
-  "done": true,
-  "title": "@Kalshi: BREAKING: Former FBI Deputy Director urges Americans to stockpile emergency supplies",
-  "image": "",
-  "media": "",
-  "desk": "anomaly"
  }
 }
