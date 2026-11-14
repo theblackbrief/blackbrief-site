@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sat, 14 Nov 2026 06:05:13 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 14 Nov 2026 13:48:35 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@InTheAssembly: Japan says it is in a &quot;state of EMERGENCY in cyber space&quot; after a wave of cyberattacks hit more than 20 major companies. Rail operators, hospit…</title>
+   <link>https://theblackbrief.com/p/4p18ue/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/4p18ue/</guid>
+   <pubDate>Sat, 14 Nov 2026 13:48:35 GMT</pubDate>
+   <category>tech</category>
+   <description>&lt;p&gt;@InTheAssembly: Japan says it is in a &amp;quot;state of EMERGENCY in cyber space&amp;quot; after a wave of cyberattacks hit more than 20 major companies. Rail operators, hospitals, Lawson, SoftBank's cloud unit and even police systems have been breached. Tens of millions of customer records may have leaked.&lt;/p&gt;&lt;p&gt;/tech // &lt;a href=&quot;https://x.com/InTheAssembly/status/2121581617659686920?a=bgIBlipQAcnf1-Ku0Gw&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/4p18ue/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Rita Ali confirmed that authorities identified a sus…</title>
    <link>https://theblackbrief.com/p/67qbak/</link>
@@ -410,15 +418,6 @@
    <category>world</category>
    <category>urgent</category>
    <description>&lt;p&gt;@BRICSinfo: JUST IN: 🇦🇺 Australians urged to stockpile canned food and bottled water to prepare for emergencies.&lt;/p&gt;&lt;p&gt;/world // #urgent // &lt;a href=&quot;https://x.com/bricsinfo/status/2115820955834482880?a=5SRncCX1f_8VTl30c18&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/4igo55/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@InsiderWire: #BREAKING: Nuclear “incident” reported at Savannah River Site in South Carolina, FAA says.</title>
-   <link>https://theblackbrief.com/p/9jnmnl/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/9jnmnl/</guid>
-   <pubDate>Thu, 29 Oct 2026 00:54:52 GMT</pubDate>
-   <category>world</category>
-   <category>urgent</category>
-   <description>&lt;p&gt;@InsiderWire: #BREAKING: Nuclear “incident” reported at Savannah River Site in South Carolina, FAA says.&lt;/p&gt;&lt;p&gt;/world // #urgent // &lt;a href=&quot;https://x.com/insiderwire/status/2115598803738959952?a=NJG2IwxK9ATfcmEuf4Y&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/9jnmnl/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
