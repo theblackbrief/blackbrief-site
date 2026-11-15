@@ -10,11 +10,12 @@
  },
  "filed_by": {
   "you": 0,
-  "account": 13,
-  "words": 30,
+  "account": 12,
+  "words": 31,
   "words_over_account": 4
  },
  "newest": [
+  "/world (words)  @TheLetterxen: BREAKING: Dallas Love Field Airport in Texas has suspended flight operations following a repor…",
   "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…",
   "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…",
   "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…",
@@ -38,8 +39,7 @@
   "/politics (words)  @disclosetv: JUST IN - Trump: \"You only have yourselves to blame!\"",
   "/world (account)  @rt_com: Kiev goes DARK with major BLACKOUT across the whole city",
   "/politics (words)  @rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in h…",
-  "/money (words)  @InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own ac…",
-  "/money (over_account)  @bricsinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses."
+  "/money (words)  @InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own ac…"
  ],
  "accounts_without_a_desk": [
   {
@@ -172,6 +172,13 @@
    "posts": 1,
    "filed_by_words": [
     "anomaly"
+   ]
+  },
+  {
+   "handle": "@theletterxen",
+   "posts": 1,
+   "filed_by_words": [
+    "world"
    ]
   },
   {
