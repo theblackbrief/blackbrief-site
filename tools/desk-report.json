@@ -3,18 +3,19 @@
  "desks": {
   "unfiled": 4,
   "politics": 12,
-  "world": 16,
+  "world": 15,
   "money": 10,
   "tech": 5,
-  "anomaly": 3
+  "anomaly": 4
  },
  "filed_by": {
   "you": 0,
-  "account": 12,
-  "words": 30,
+  "account": 11,
+  "words": 31,
   "words_over_account": 4
  },
  "newest": [
+  "/anomaly (words)  @disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a \"p…",
   "unfiled (-)  @disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry abo…",
   "/world (words)  @TheLetterxen: BREAKING: Dallas Love Field Airport in Texas has suspended flight operations following a repor…",
   "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…",
@@ -38,14 +39,14 @@
   "/politics (words)  @dmichaeltripi: NEW: Trump administration threatens thousands of grassroots conservative organizations warnin…",
   "/money (account)  @WatcherGuru: JUST IN: 🇯🇵 128 Japanese credit unions hit by widespread outages, leaving customers unable to…",
   "/politics (words)  @disclosetv: JUST IN - Trump: \"You only have yourselves to blame!\"",
-  "/world (account)  @rt_com: Kiev goes DARK with major BLACKOUT across the whole city",
-  "/politics (words)  @rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in h…"
+  "/world (account)  @rt_com: Kiev goes DARK with major BLACKOUT across the whole city"
  ],
  "accounts_without_a_desk": [
   {
    "handle": "@disclosetv",
-   "posts": 5,
+   "posts": 6,
    "filed_by_words": [
+    "anomaly",
     "world",
     "politics",
     "money"
