@@ -1,9 +1,9 @@
 {
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
-  "unfiled": 3,
+  "unfiled": 4,
   "politics": 12,
-  "world": 17,
+  "world": 16,
   "money": 10,
   "tech": 5,
   "anomaly": 3
@@ -11,10 +11,11 @@
  "filed_by": {
   "you": 0,
   "account": 12,
-  "words": 31,
+  "words": 30,
   "words_over_account": 4
  },
  "newest": [
+  "unfiled (-)  @disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry abo…",
   "/world (words)  @TheLetterxen: BREAKING: Dallas Love Field Airport in Texas has suspended flight operations following a repor…",
   "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…",
   "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…",
@@ -38,25 +39,24 @@
   "/money (account)  @WatcherGuru: JUST IN: 🇯🇵 128 Japanese credit unions hit by widespread outages, leaving customers unable to…",
   "/politics (words)  @disclosetv: JUST IN - Trump: \"You only have yourselves to blame!\"",
   "/world (account)  @rt_com: Kiev goes DARK with major BLACKOUT across the whole city",
-  "/politics (words)  @rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in h…",
-  "/money (words)  @InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own ac…"
+  "/politics (words)  @rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in h…"
  ],
  "accounts_without_a_desk": [
+  {
+   "handle": "@disclosetv",
+   "posts": 5,
+   "filed_by_words": [
+    "world",
+    "politics",
+    "money"
+   ]
+  },
   {
    "handle": "@breaking911",
    "posts": 4,
    "filed_by_words": [
     "anomaly",
     "world"
-   ]
-  },
-  {
-   "handle": "@disclosetv",
-   "posts": 4,
-   "filed_by_words": [
-    "world",
-    "politics",
-    "money"
    ]
   },
   {
@@ -151,13 +151,6 @@
    "posts": 1,
    "filed_by_words": [
     "politics"
-   ]
-  },
-  {
-   "handle": "@nypost",
-   "posts": 1,
-   "filed_by_words": [
-    "world"
    ]
   },
   {

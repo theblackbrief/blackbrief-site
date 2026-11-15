@@ -1,4 +1,11 @@
 {
+ "gfzvr7": {
+  "tries": 1,
+  "done": true,
+  "title": "@disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry about power systems going down.",
+  "image": "",
+  "media": "video"
+ },
  "3s4tr2": {
   "tries": 1,
   "done": true,
@@ -384,14 +391,6 @@
   "title": "@HormuzLetter: BREAKING: The US Army is now training soldiers to dig mass battlefield graves for American troops for the first time since the Korean War, practicing the burial of 2,400 bodies in under 24 hours in open pits, per a US Army release. Engineers, preventive medicine teams, chaplains…",
   "image": "",
   "media": "",
-  "desk": "world"
- },
- "1c48kim": {
-  "tries": 1,
-  "done": true,
-  "title": "@nypost: Pentagon treating military base freezer malfunctions as suspected cyberattack: officials",
-  "image": "",
-  "media": "image",
   "desk": "world"
  }
 }
