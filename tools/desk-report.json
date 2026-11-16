@@ -2,8 +2,8 @@
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
   "unfiled": 4,
-  "politics": 12,
-  "world": 15,
+  "politics": 11,
+  "world": 16,
   "money": 9,
   "tech": 6,
   "anomaly": 4
@@ -15,6 +15,7 @@
   "words_over_account": 4
  },
  "newest": [
+  "/world (over_account)  @Polymarket: JUST IN: UK lawmakers propose paid time off for workers to train for war, cyberattacks, & other…",
   "/money (words)  @InsiderWire: #BREAKING: Chase, Bank of America, Wells Fargo and U.S. Bank hit by nationwide outage, users re…",
   "/tech (words)  @JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.",
   "/anomaly (words)  @disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a \"p…",
@@ -38,8 +39,7 @@
   "/politics (words)  @BreannaMorello: 🚨HAPPENING TODAY🚨 President Donald Trump will be hosting a Diwali celebration today at 1:3…",
   "/money (words)  @valuetainment: NEW: Making $100,000 a year is now considered lower-middle class in 12 U.S. states.",
   "/world (words)  Trump rushed into secret meeting on whether to start up Iran strikes",
-  "/politics (words)  @dmichaeltripi: NEW: Trump administration threatens thousands of grassroots conservative organizations warnin…",
-  "/money (account)  @WatcherGuru: JUST IN: 🇯🇵 128 Japanese credit unions hit by widespread outages, leaving customers unable to…"
+  "/politics (words)  @dmichaeltripi: NEW: Trump administration threatens thousands of grassroots conservative organizations warnin…"
  ],
  "accounts_without_a_desk": [
   {
