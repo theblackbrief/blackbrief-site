@@ -1,4 +1,12 @@
 {
+ "sh4joz": {
+  "tries": 1,
+  "done": true,
+  "title": "@InsiderWire: #BREAKING: Chase, Bank of America, Wells Fargo and U.S. Bank hit by nationwide outage, users report.",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "widhx": {
   "tries": 1,
   "done": true,
@@ -384,13 +392,5 @@
   "image": "",
   "media": "",
   "desk": "politics"
- },
- "1qyoqcx": {
-  "tries": 1,
-  "done": true,
-  "title": "@disclosetv: JUST IN - Treasury sets record with $839 billion borrowed in one week.",
-  "image": "",
-  "media": "",
-  "desk": "money"
  }
 }

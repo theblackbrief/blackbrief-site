@@ -15,6 +15,7 @@
   "words_over_account": 4
  },
  "newest": [
+  "/money (words)  @InsiderWire: #BREAKING: Chase, Bank of America, Wells Fargo and U.S. Bank hit by nationwide outage, users re…",
   "/tech (words)  @JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.",
   "/anomaly (words)  @disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a \"p…",
   "unfiled (-)  @disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry abo…",
@@ -38,18 +39,16 @@
   "/money (words)  @valuetainment: NEW: Making $100,000 a year is now considered lower-middle class in 12 U.S. states.",
   "/world (words)  Trump rushed into secret meeting on whether to start up Iran strikes",
   "/politics (words)  @dmichaeltripi: NEW: Trump administration threatens thousands of grassroots conservative organizations warnin…",
-  "/money (account)  @WatcherGuru: JUST IN: 🇯🇵 128 Japanese credit unions hit by widespread outages, leaving customers unable to…",
-  "/politics (words)  @disclosetv: JUST IN - Trump: \"You only have yourselves to blame!\""
+  "/money (account)  @WatcherGuru: JUST IN: 🇯🇵 128 Japanese credit unions hit by widespread outages, leaving customers unable to…"
  ],
  "accounts_without_a_desk": [
   {
    "handle": "@disclosetv",
-   "posts": 6,
+   "posts": 5,
    "filed_by_words": [
     "anomaly",
     "world",
-    "politics",
-    "money"
+    "politics"
    ]
   },
   {
@@ -67,6 +66,14 @@
     "tech",
     "politics",
     "world"
+   ]
+  },
+  {
+   "handle": "@insiderwire",
+   "posts": 2,
+   "filed_by_words": [
+    "money",
+    "politics"
    ]
   },
   {
@@ -114,13 +121,6 @@
   },
   {
    "handle": "@dmichaeltripi",
-   "posts": 1,
-   "filed_by_words": [
-    "politics"
-   ]
-  },
-  {
-   "handle": "@insiderwire",
    "posts": 1,
    "filed_by_words": [
     "politics"
