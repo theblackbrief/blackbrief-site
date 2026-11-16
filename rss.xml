@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 16 Nov 2026 19:53:47 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 16 Nov 2026 19:54:14 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Kalshi: JUST IN: FCC nationwide emergency alert test begins at 2:20 p.m. ET tomorrow</title>
+   <link>https://theblackbrief.com/p/u7qhxa/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/u7qhxa/</guid>
+   <pubDate>Mon, 16 Nov 2026 19:54:14 GMT</pubDate>
+   <category>anomaly</category>
+   <description>&lt;p&gt;@Kalshi: JUST IN: FCC nationwide emergency alert test begins at 2:20 p.m. ET tomorrow&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/Kalshi/status/2122238246943895686?a=rAax0NRFFAjBcwiaOE0&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/u7qhxa/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Polymarket: JUST IN: UK lawmakers propose paid time off for workers to train for war, cyberattacks, &amp; other national emergencies.</title>
    <link>https://theblackbrief.com/p/43iqey/</link>
@@ -409,14 +417,6 @@
    <pubDate>Sun, 01 Nov 2026 05:24:36 GMT</pubDate>
    <category>world</category>
    <description>&lt;p&gt;@LeadingReport: President Trump sends third aircraft carrier toward Iran, per Daily Mail.&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/leadingreport/status/2116680946523279493?a=DfOfIM0WEjvaENWHSxY&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1lirc73/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@BRICSinfo: JUST IN: 🇵🇱 Coup reportedly underway in Poland.</title>
-   <link>https://theblackbrief.com/p/1o17ii1/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1o17ii1/</guid>
-   <pubDate>Fri, 30 Oct 2026 21:41:57 GMT</pubDate>
-   <category>world</category>
-   <description>&lt;p&gt;@BRICSinfo: JUST IN: 🇵🇱 Coup reportedly underway in Poland.&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/bricsinfo/status/2116266294609666339?a=NChemQz9PGiaJ-g0k88&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1o17ii1/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
