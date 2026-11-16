@@ -1,4 +1,12 @@
 {
+ "widhx": {
+  "tries": 1,
+  "done": true,
+  "title": "@JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.",
+  "image": "",
+  "media": "",
+  "desk": "tech"
+ },
  "nawj1x": {
   "tries": 1,
   "done": true,
@@ -383,14 +391,6 @@
   "title": "@disclosetv: JUST IN - Treasury sets record with $839 billion borrowed in one week.",
   "image": "",
   "media": "",
-  "desk": "money"
- },
- "15czjre": {
-  "tries": 1,
-  "done": true,
-  "title": "@BNODesk: BREAKING: North Korea is behind the $6.36 billion Binance hack, the biggest in crypto history, according to TRM Labs",
-  "image": "",
-  "media": "image",
   "desk": "money"
  }
 }
