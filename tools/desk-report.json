@@ -3,18 +3,19 @@
  "desks": {
   "unfiled": 4,
   "politics": 11,
-  "world": 16,
+  "world": 15,
   "money": 9,
   "tech": 6,
-  "anomaly": 4
+  "anomaly": 5
  },
  "filed_by": {
   "you": 0,
-  "account": 11,
+  "account": 10,
   "words": 31,
-  "words_over_account": 4
+  "words_over_account": 5
  },
  "newest": [
+  "/anomaly (over_account)  @Kalshi: JUST IN: FCC nationwide emergency alert test begins at 2:20 p.m. ET tomorrow",
   "/world (over_account)  @Polymarket: JUST IN: UK lawmakers propose paid time off for workers to train for war, cyberattacks, & other…",
   "/money (words)  @InsiderWire: #BREAKING: Chase, Bank of America, Wells Fargo and U.S. Bank hit by nationwide outage, users re…",
   "/tech (words)  @JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.",
@@ -38,8 +39,7 @@
   "/world (account)  @BRICSinfo: JUST IN: 🇬🇧 BBC prepares emergency radio studio with 100 staff to broadcast government messages…",
   "/politics (words)  @BreannaMorello: 🚨HAPPENING TODAY🚨 President Donald Trump will be hosting a Diwali celebration today at 1:3…",
   "/money (words)  @valuetainment: NEW: Making $100,000 a year is now considered lower-middle class in 12 U.S. states.",
-  "/world (words)  Trump rushed into secret meeting on whether to start up Iran strikes",
-  "/politics (words)  @dmichaeltripi: NEW: Trump administration threatens thousands of grassroots conservative organizations warnin…"
+  "/world (words)  Trump rushed into secret meeting on whether to start up Iran strikes"
  ],
  "accounts_without_a_desk": [
   {
