@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sun, 15 Nov 2026 19:06:10 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 16 Nov 2026 02:06:29 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.</title>
+   <link>https://theblackbrief.com/p/widhx/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/widhx/</guid>
+   <pubDate>Mon, 16 Nov 2026 02:06:29 GMT</pubDate>
+   <category>tech</category>
+   <description>&lt;p&gt;@JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.&lt;/p&gt;&lt;p&gt;/tech // &lt;a href=&quot;https://x.com/JMChyno/status/2122106386784108929?a=4IUWNrAnp-iolIGGYJ4&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/widhx/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a &quot;phase black&quot; emergency.</title>
    <link>https://theblackbrief.com/p/nawj1x/</link>
@@ -409,14 +417,6 @@
    <pubDate>Fri, 30 Oct 2026 15:51:59 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@disclosetv: JUST IN - Treasury sets record with $839 billion borrowed in one week.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/disclosetv/status/2116161006451691902?a=ZhcBbFgojB_fycxtVv4&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1qyoqcx/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@BNODesk: BREAKING: North Korea is behind the $6.36 billion Binance hack, the biggest in crypto history, according to TRM Labs</title>
-   <link>https://theblackbrief.com/p/15czjre/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/15czjre/</guid>
-   <pubDate>Fri, 30 Oct 2026 05:57:46 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@BNODesk: BREAKING: North Korea is behind the $6.36 billion Binance hack, the biggest in crypto history, according to TRM Labs&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/BNODesk/status/2116021372715475205?a=gZ6ESN060WyWT9gs4bM&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/15czjre/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
