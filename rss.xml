@@ -6,13 +6,20 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 16 Nov 2026 19:54:14 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 16 Nov 2026 22:46:30 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@disclosetv: JUST IN - All United flights are grounded: reports</title>
+   <link>https://theblackbrief.com/p/1befjke/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1befjke/</guid>
+   <pubDate>Mon, 16 Nov 2026 22:46:30 GMT</pubDate>
+   <description>&lt;p&gt;@disclosetv: JUST IN - All United flights are grounded: reports&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/disclosetv/status/2122454981299036522?a=3oWRM2nNBtkCPKDrPYc&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1befjke/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Kalshi: JUST IN: FCC nationwide emergency alert test begins at 2:20 p.m. ET tomorrow</title>
    <link>https://theblackbrief.com/p/u7qhxa/</link>
@@ -409,14 +416,6 @@
    <pubDate>Mon, 02 Nov 2026 01:32:17 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@Kalshi: JUST IN: Hedge funds are pulling money out of US stocks at fastest pace ever&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/kalshi/status/2116983621856936241?a=4lNQXvwNyu881iC9LUc&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1j39y03/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@LeadingReport: President Trump sends third aircraft carrier toward Iran, per Daily Mail.</title>
-   <link>https://theblackbrief.com/p/1lirc73/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1lirc73/</guid>
-   <pubDate>Sun, 01 Nov 2026 05:24:36 GMT</pubDate>
-   <category>world</category>
-   <description>&lt;p&gt;@LeadingReport: President Trump sends third aircraft carrier toward Iran, per Daily Mail.&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/leadingreport/status/2116680946523279493?a=DfOfIM0WEjvaENWHSxY&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1lirc73/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
