@@ -1,9 +1,9 @@
 {
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
-  "unfiled": 4,
+  "unfiled": 5,
   "politics": 11,
-  "world": 15,
+  "world": 14,
   "money": 9,
   "tech": 6,
   "anomaly": 5
@@ -11,10 +11,11 @@
  "filed_by": {
   "you": 0,
   "account": 10,
-  "words": 31,
+  "words": 30,
   "words_over_account": 5
  },
  "newest": [
+  "unfiled (-)  @disclosetv: JUST IN - All United flights are grounded: reports",
   "/anomaly (over_account)  @Kalshi: JUST IN: FCC nationwide emergency alert test begins at 2:20 p.m. ET tomorrow",
   "/world (over_account)  @Polymarket: JUST IN: UK lawmakers propose paid time off for workers to train for war, cyberattacks, & other…",
   "/money (words)  @InsiderWire: #BREAKING: Chase, Bank of America, Wells Fargo and U.S. Bank hit by nationwide outage, users re…",
@@ -38,13 +39,12 @@
   "/money (account)  @unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new Federal Res…",
   "/world (account)  @BRICSinfo: JUST IN: 🇬🇧 BBC prepares emergency radio studio with 100 staff to broadcast government messages…",
   "/politics (words)  @BreannaMorello: 🚨HAPPENING TODAY🚨 President Donald Trump will be hosting a Diwali celebration today at 1:3…",
-  "/money (words)  @valuetainment: NEW: Making $100,000 a year is now considered lower-middle class in 12 U.S. states.",
-  "/world (words)  Trump rushed into secret meeting on whether to start up Iran strikes"
+  "/money (words)  @valuetainment: NEW: Making $100,000 a year is now considered lower-middle class in 12 U.S. states."
  ],
  "accounts_without_a_desk": [
   {
    "handle": "@disclosetv",
-   "posts": 5,
+   "posts": 6,
    "filed_by_words": [
     "anomaly",
     "world",
@@ -61,7 +61,7 @@
   },
   {
    "handle": "@leadingreport",
-   "posts": 4,
+   "posts": 3,
    "filed_by_words": [
     "tech",
     "politics",
