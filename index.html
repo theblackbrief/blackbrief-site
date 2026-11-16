@@ -87,6 +87,8 @@ html,body{background:#000000;color:#e8e8e8;font-family:'Zilla Slab',serif;min-he
 #bb-header{text-align:center;padding:16px 20px 16px;font-family:'Zilla Slab',serif}
 #bb-header h1{font-family:'Zilla Slab',serif;font-size:clamp(2rem,8vw,5rem);font-weight:700;font-style:normal;color:#ffffff;line-height:1.05;letter-spacing:0;white-space:nowrap}
 #bb-header h1 span{color:#cc2222}
+/* HOME LINK (Nov 2026): the title takes the reader back to the plain home page */
+#bb-header h1 a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
 #bb-header p{font-family:'Source Serif 4',serif;font-size:clamp(13.5px,1.6vw,18px);font-weight:400;font-style:normal;color:#bdbdbd;margin:2px auto 0;max-width:34em;line-height:1.35;letter-spacing:.01em;text-wrap:balance}
 
 /* ── STICKY SHELL ── */
@@ -300,13 +302,17 @@ html:where(.bb-light),:where(.bb-light) body{background:#f5f5f5}
 :where(.bb-light) .bb-share-btn{color:#707070}:where(.bb-light) .bb-share-btn:hover{color:#222}
 
 /* ── SHARED POST (permalink) ──
-   The card itself turns green. No outer frame around the container. */
+   The card itself turns green. No outer frame around the container.
+   "shared // viewing ✕" under the card is a button (Nov 2026): tapping it
+   clears the green and returns the page to normal. */
 .post-container.bb-shared{opacity:1!important}
 .post-container.bb-shared:not(.headline-card) .rich-preview,
 .post-container.bb-shared:not(.headline-card) .editorial-card,
 .post-container.bb-shared:not(.headline-card) .video-card,
 .headline-card.bb-shared{border-color:#44dd77;border-left-color:#44dd77;box-shadow:0 0 22px rgba(68,221,119,0.16)}
-.bb-shared-note{position:absolute;left:2px;bottom:0;font-family:'Zilla Slab',serif;font-size:12px;font-weight:700;letter-spacing:.15em;line-height:1.3;text-transform:uppercase;color:#44dd77;pointer-events:none}
+.bb-shared-note{position:absolute;left:2px;bottom:0;font-family:'Zilla Slab',serif;font-size:12px;font-weight:700;letter-spacing:.15em;line-height:1.3;text-transform:uppercase;color:#44dd77;pointer-events:auto;background:none;border:0;padding:0;cursor:pointer;text-align:left;-webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent}
+.bb-shared-note b{font-weight:700;margin-left:.45em}
+@media(hover:hover){.bb-shared-note:hover b{text-decoration:underline;text-underline-offset:3px}}
 .headline-card .bb-shared-note{left:20px;bottom:18px}
 
 :where(.bb-light) .post-container.bb-shared:not(.headline-card) .rich-preview,
@@ -588,7 +594,7 @@ html:where(.bb-light),:where(.bb-light) body{background:#f5f5f5}
 
 <div id="bb-sticky-shell">
 <div id="bb-header">
-  <h1>the <span>/</span> black brief</h1>
+  <h1><a href="/" aria-label="the black brief, home">the <span>/</span> black brief</a></h1>
   <p>a newsfeed of things we don't wanna see in a world that isn't supposed to be</p>
 </div>
 
@@ -1586,6 +1592,10 @@ bbUpdateStatus();
 }
 
 // ── PERMALINK HANDLER ──
+// BACK TO NORMAL (Nov 2026): once the shared card is found, the ?p= / ?post=
+// is taken out of the address bar, so a refresh (or a copied address) gives
+// the plain home page. The green stays for this visit until the reader taps
+// "shared // viewing ✕", turns on a filter, or loads new transmissions.
 function applyPermalink(){
 if(!postParam&&!postCode)return;
 var allContainers=document.querySelectorAll('.post-container[data-post-id]');
@@ -1597,12 +1607,18 @@ if(pid===postParam||(postCode&&bbCode(pid)===postCode)){plTarget=allContainers[p
 if(!plTarget)return;
 if(!plTarget.classList.contains('bb-shared')){ // a kept card is already marked
 plTarget.classList.add('bb-shared');
-var note=mkEl('span','bb-shared-note');
-note.textContent='shared // viewing';
+var note=mkEl('button','bb-shared-note');
+note.type='button';
+note.setAttribute('aria-label','clear the shared post');
+note.appendChild(document.createTextNode('shared // viewing'));
+var x=mkEl('b');
+x.textContent='✕';
+note.appendChild(x);
 plTarget.appendChild(note);
 }
 if(permalinkDone)return; // re-render: keep the green card, skip the scroll + drawer
 permalinkDone=true;
+cleanAddress();
 if(plTarget.closest('#bb-archive-section')){
 sec.classList.add('open');
 syncArchiveBtn();
@@ -1619,6 +1635,28 @@ setTimeout(function(){
 if(document.body.contains(plTarget))plTarget.scrollIntoView({behavior:'smooth',block:'center'});
 },800);
 },600);
+}
+
+// take ?p= / ?post= out of the address bar without reloading the page
+function cleanAddress(){
+try{
+var q=new URLSearchParams(window.location.search);
+if(!q.has('p')&&!q.has('post'))return;
+q.delete('p');q.delete('post');
+var s=q.toString();
+history.replaceState(history.state,'',window.location.pathname+(s?'?'+s:'')+window.location.hash);
+}catch(e){}
+}
+
+// drop the shared post: no more green, and later redraws leave it alone
+function clearShared(){
+if(!postParam&&!postCode)return;
+postParam=postCode=null;
+cleanAddress();
+var els=document.querySelectorAll('.bb-shared');
+for(var i=0;i<els.length;i++)els[i].classList.remove('bb-shared');
+var notes=document.querySelectorAll('.bb-shared-note');
+for(var j=0;j<notes.length;j++)notes[j].parentNode.removeChild(notes[j]);
 }
 
 // ── STATUS ──
@@ -1655,6 +1693,7 @@ function hidePill(){pill.classList.remove('show');}
 
 pill.addEventListener('click',function(){
 if(!pendingLines)return hidePill();
+clearShared(); // moving on to the new posts: the shared one goes back to normal
 allLines=pendingLines;
 pendingLines=null;
 hidePill();
@@ -1977,6 +2016,13 @@ overlay.addEventListener('click',closeDrawer);
 drawerClose.addEventListener('click',closeDrawer);
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer();});
 document.addEventListener('click',function(e){
+// "shared // viewing ✕" puts the page back to normal (and does not open the card)
+var sn=e.target.closest('.bb-shared-note');
+if(sn){
+e.preventDefault();
+clearShared();
+return;
+}
 // a desk label on a card shows that whole desk
 // a stamp shows every post with that tag
 var stp=e.target.closest('.stamp[data-tag]');
@@ -2269,6 +2315,7 @@ window.addEventListener('pointercancel',tickDragStop);
 
 function setFilter(f,keepScroll){
 var changed=f!==activeFilter;
+if(f)clearShared(); // the reader has moved on from the shared post
 activeFilter=f;
 if(tickTimer){clearTimeout(tickTimer);tickTimer=null;}
 if(changed&&allLines.length)render();
