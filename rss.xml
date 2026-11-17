@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 17 Nov 2026 05:01:59 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 17 Nov 2026 05:10:01 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@HormuzLetter: BREAKING: A cyberattack hit 178 major organizations, including Zoom, CNN, BBC, Fox News, HSBC, Ledger, Equifax, Salesforce, IKEA and Air France-…</title>
+   <link>https://theblackbrief.com/p/39qef6/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/39qef6/</guid>
+   <pubDate>Tue, 17 Nov 2026 05:10:01 GMT</pubDate>
+   <category>world</category>
+   <description>&lt;p&gt;@HormuzLetter: BREAKING: A cyberattack hit 178 major organizations, including Zoom, CNN, BBC, Fox News, HSBC, Ledger, Equifax, Salesforce, IKEA and Air France-KLM, by loading malware on the Optimizely Web platform, exposing visitors to scripts built to steal payment data and exploit iOS…&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/HormuzLetter/status/2122535982591365248?a=lcI12xDGCaOGKqP36g0&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/39qef6/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@InsiderWire: #BREAKING: Unexploded bomb found in Coeur d'Alene, Idaho; residents being evacuated.</title>
    <link>https://theblackbrief.com/p/8oc9xv/</link>
@@ -408,14 +416,6 @@
    <pubDate>Mon, 02 Nov 2026 16:59:46 GMT</pubDate>
    <category>world</category>
    <description>&lt;p&gt;@GeneralMCNews: BREAKING: A power outage in downtown Washington, D.C., is disrupting traffic lights and multiple federal facilities, including the State Department, as infrastructure disruptions continue to surface worldwide.&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/generalmcnews/status/2117282243236483188?a=-IViR_Q0jJsVRa6mu80&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/iiawy9/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@BBCWorld: Supermarket freezers in Belgium and Sweden hit by cyber-attack</title>
-   <link>https://theblackbrief.com/p/knnhkt/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/knnhkt/</guid>
-   <pubDate>Mon, 02 Nov 2026 14:12:00 GMT</pubDate>
-   <category>tech</category>
-   <description>&lt;p&gt;@BBCWorld: Supermarket freezers in Belgium and Sweden hit by cyber-attack&lt;/p&gt;&lt;p&gt;/tech // &lt;a href=&quot;https://x.com/bbcworld/status/2117216490105561262?a=wLwohu-LHjq_VnwSiDw&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/knnhkt/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
