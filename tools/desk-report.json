@@ -3,18 +3,19 @@
  "desks": {
   "unfiled": 5,
   "politics": 11,
-  "world": 14,
-  "money": 9,
+  "world": 15,
+  "money": 8,
   "tech": 6,
   "anomaly": 5
  },
  "filed_by": {
   "you": 0,
-  "account": 10,
-  "words": 30,
+  "account": 9,
+  "words": 31,
   "words_over_account": 5
  },
  "newest": [
+  "/world (words)  @InsiderWire: #BREAKING: Unexploded bomb found in Coeur d'Alene, Idaho; residents being evacuated.",
   "unfiled (-)  @disclosetv: JUST IN - All United flights are grounded: reports",
   "/anomaly (over_account)  @Kalshi: JUST IN: FCC nationwide emergency alert test begins at 2:20 p.m. ET tomorrow",
   "/world (over_account)  @Polymarket: JUST IN: UK lawmakers propose paid time off for workers to train for war, cyberattacks, & other…",
@@ -38,8 +39,7 @@
   "/politics (words)  @60Minutes: President Trump says his administration’s deportation policy was “too tough.”",
   "/money (account)  @unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new Federal Res…",
   "/world (account)  @BRICSinfo: JUST IN: 🇬🇧 BBC prepares emergency radio studio with 100 staff to broadcast government messages…",
-  "/politics (words)  @BreannaMorello: 🚨HAPPENING TODAY🚨 President Donald Trump will be hosting a Diwali celebration today at 1:3…",
-  "/money (words)  @valuetainment: NEW: Making $100,000 a year is now considered lower-middle class in 12 U.S. states."
+  "/politics (words)  @BreannaMorello: 🚨HAPPENING TODAY🚨 President Donald Trump will be hosting a Diwali celebration today at 1:3…"
  ],
  "accounts_without_a_desk": [
   {
@@ -60,20 +60,21 @@
    ]
   },
   {
+   "handle": "@insiderwire",
+   "posts": 3,
+   "filed_by_words": [
+    "world",
+    "money",
+    "politics"
+   ]
+  },
+  {
    "handle": "@leadingreport",
    "posts": 3,
    "filed_by_words": [
     "tech",
     "politics",
     "world"
-   ]
-  },
-  {
-   "handle": "@insiderwire",
-   "posts": 2,
-   "filed_by_words": [
-    "money",
-    "politics"
    ]
   },
   {
