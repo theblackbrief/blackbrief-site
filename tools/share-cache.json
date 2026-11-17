@@ -1,4 +1,12 @@
 {
+ "ym2zp9": {
+  "tries": 1,
+  "done": true,
+  "title": "@Breaking911: BREAKING: CNN is reporting that the NSA's internal communications network is down.",
+  "image": "",
+  "media": "video",
+  "desk": "anomaly"
+ },
  "17koz77": {
   "tries": 1,
   "done": true,
@@ -383,13 +391,5 @@
   "image": "",
   "media": "",
   "desk": "world"
- },
- "73vq7r": {
-  "tries": 1,
-  "done": true,
-  "title": "@InsiderWire: #BREAKING: 2 election centers in Maricopa County, Arizona, closed 'due to power issues.'",
-  "image": "",
-  "media": "",
-  "desk": "politics"
  }
 }

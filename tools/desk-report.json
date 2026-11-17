@@ -2,11 +2,11 @@
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
   "unfiled": 5,
-  "politics": 11,
+  "politics": 10,
   "world": 15,
   "money": 9,
   "tech": 5,
-  "anomaly": 5
+  "anomaly": 6
  },
  "filed_by": {
   "you": 0,
@@ -15,6 +15,7 @@
   "words_over_account": 4
  },
  "newest": [
+  "/anomaly (words)  @Breaking911: BREAKING: CNN is reporting that the NSA's internal communications network is down.",
   "/money (account)  @WatcherGuru: JUST IN: $13 trillion asset manager Charles Schwab's website goes down.",
   "/world (account)  @HormuzLetter: BREAKING: A cyberattack hit 178 major organizations, including Zoom, CNN, BBC, Fox News, HSBC,…",
   "/world (words)  @InsiderWire: #BREAKING: Unexploded bomb found in Coeur d'Alene, Idaho; residents being evacuated.",
@@ -38,8 +39,7 @@
   "/world (words)  @remarks: JUST IN: 🇨🇦 Canada reiterates warning for citizens to prepare to survive at least 72 hours withou…",
   "/tech (words)  @remarks: JUST IN: 🇺🇸 Spike in suicides reported at NSA and US Cyber Command, the agencies responsible for…",
   "/tech (words)  @coinbureau: 🚨BREAKING: Apple confirms widespread outages across multiple iCloud services, including Mail, P…",
-  "/politics (words)  @60Minutes: President Trump says his administration’s deportation policy was “too tough.”",
-  "/money (account)  @unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new Federal Res…"
+  "/politics (words)  @60Minutes: President Trump says his administration’s deportation policy was “too tough.”"
  ],
  "accounts_without_a_desk": [
   {
@@ -53,19 +53,10 @@
   },
   {
    "handle": "@breaking911",
-   "posts": 4,
+   "posts": 5,
    "filed_by_words": [
     "anomaly",
     "world"
-   ]
-  },
-  {
-   "handle": "@insiderwire",
-   "posts": 3,
-   "filed_by_words": [
-    "world",
-    "money",
-    "politics"
    ]
   },
   {
@@ -75,6 +66,14 @@
     "tech",
     "politics",
     "world"
+   ]
+  },
+  {
+   "handle": "@insiderwire",
+   "posts": 2,
+   "filed_by_words": [
+    "world",
+    "money"
    ]
   },
   {
