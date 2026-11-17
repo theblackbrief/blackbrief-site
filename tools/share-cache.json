@@ -1,4 +1,12 @@
 {
+ "fcmjwz": {
+  "tries": 1,
+  "done": true,
+  "title": "@aaronp613: Apple employees are sharing on Reddit that Apple corporate offices are all offline as well This outage is massive",
+  "image": "",
+  "media": "image",
+  "desk": "tech"
+ },
  "1unb79o": {
   "tries": 1,
   "done": true,
@@ -382,14 +390,6 @@
   "title": "@Swetha_xai: 🚨 Iran has reportedly broadcast nuclear strike warning messages on state TV.@Grok verify the authenticity",
   "image": "",
   "media": "",
-  "desk": "world"
- },
- "4w01yd": {
-  "tries": 1,
-  "done": true,
-  "title": "@BedouinReport: 🚨🇷🇺🇺🇸🇮🇷 BREAKING: The Russian Government has reportedly informed Washington, through back channels, that the usage of any Nuclear Weapons on Iran would free Russia to take equal measures in Ukraine.",
-  "image": "",
-  "media": "image",
   "desk": "world"
  }
 }
