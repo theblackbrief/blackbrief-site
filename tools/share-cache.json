@@ -1,4 +1,12 @@
 {
+ "10gtj1h": {
+  "tries": 1,
+  "done": true,
+  "title": "@FBIDallas: The #FBI issued a FLASH advisory warning that cybercriminals and state-aligned hackers are exploiting ARTEX, a super intelligence-powered penetration testing framework, to automate attacks against businesses and organizations worldwide. ARTEX can accelerate intrusions from…",
+  "image": "",
+  "media": "image",
+  "desk": "politics"
+ },
  "ym2zp9": {
   "tries": 1,
   "done": true,
@@ -382,14 +390,6 @@
   "title": "@RT_com: ❗️ US OFFICIALS CONFIRMED WASHINGTON BOMBED IRAN'S QESHM ISLAND FEW HOURS AGO IN A SERIES OF 'LIMITED STRIKES' — WSJ",
   "image": "",
   "media": "video",
-  "desk": "world"
- },
- "11k95kw": {
-  "tries": 1,
-  "done": true,
-  "title": "@LeadingReport: JUST IN: U.S. strikes Iran’s Qeshm Island, per WSJ.",
-  "image": "",
-  "media": "",
   "desk": "world"
  }
 }
