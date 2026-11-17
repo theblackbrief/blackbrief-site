@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 17 Nov 2026 19:02:35 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 17 Nov 2026 19:05:44 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@aaronp613: Apple employees are sharing on Reddit that Apple corporate offices are all offline as well This outage is massive</title>
+   <link>https://theblackbrief.com/p/fcmjwz/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/fcmjwz/</guid>
+   <pubDate>Tue, 17 Nov 2026 19:05:44 GMT</pubDate>
+   <category>tech</category>
+   <description>&lt;p&gt;@aaronp613: Apple employees are sharing on Reddit that Apple corporate offices are all offline as well This outage is massive&lt;/p&gt;&lt;p&gt;/tech // &lt;a href=&quot;https://x.com/aaronp613/status/2122758908800540997?a=8QJC6QQNymZhJSZ8ETw&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/fcmjwz/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Polymarket: BREAKING: Norway’s energy giant Equinor detects major ongoing cyberattack.</title>
    <link>https://theblackbrief.com/p/1unb79o/</link>
@@ -407,14 +415,6 @@
    <category>world</category>
    <category>urgent</category>
    <description>&lt;p&gt;@Swetha_xai: 🚨 Iran has reportedly broadcast nuclear strike warning messages on state TV.@Grok verify the authenticity&lt;/p&gt;&lt;p&gt;/world // #urgent // &lt;a href=&quot;https://x.com/Swetha_xai/status/2117515723589488773?a=GkcNV9GMXk2tz4YKPbE&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1wq507p/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@BedouinReport: 🚨🇷🇺🇺🇸🇮🇷 BREAKING: The Russian Government has reportedly informed Washington, through back channels, that the usage of any Nuclear Weapon…</title>
-   <link>https://theblackbrief.com/p/4w01yd/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/4w01yd/</guid>
-   <pubDate>Tue, 03 Nov 2026 05:56:29 GMT</pubDate>
-   <category>world</category>
-   <description>&lt;p&gt;@BedouinReport: 🚨🇷🇺🇺🇸🇮🇷 BREAKING: The Russian Government has reportedly informed Washington, through back channels, that the usage of any Nuclear Weapons on Iran would free Russia to take equal measures in Ukraine.&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/bedouinreport/status/2117435859201056819?a=0aBjhXcd69i6PdQ_SbU&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/4w01yd/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
