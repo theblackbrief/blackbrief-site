@@ -1,4 +1,12 @@
 {
+ "1unb79o": {
+  "tries": 1,
+  "done": true,
+  "title": "@Polymarket: BREAKING: Norway’s energy giant Equinor detects major ongoing cyberattack.",
+  "image": "",
+  "media": "",
+  "desk": "tech"
+ },
  "10gtj1h": {
   "tries": 1,
   "done": true,
@@ -382,14 +390,6 @@
   "title": "@BedouinReport: 🚨🇷🇺🇺🇸🇮🇷 BREAKING: The Russian Government has reportedly informed Washington, through back channels, that the usage of any Nuclear Weapons on Iran would free Russia to take equal measures in Ukraine.",
   "image": "",
   "media": "image",
-  "desk": "world"
- },
- "1dlodbv": {
-  "tries": 1,
-  "done": true,
-  "title": "@RT_com: ❗️ US OFFICIALS CONFIRMED WASHINGTON BOMBED IRAN'S QESHM ISLAND FEW HOURS AGO IN A SERIES OF 'LIMITED STRIKES' — WSJ",
-  "image": "",
-  "media": "video",
   "desk": "world"
  }
 }

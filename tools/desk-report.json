@@ -3,18 +3,19 @@
  "desks": {
   "unfiled": 5,
   "politics": 11,
-  "world": 14,
+  "world": 13,
   "money": 9,
-  "tech": 5,
+  "tech": 6,
   "anomaly": 6
  },
  "filed_by": {
   "you": 0,
-  "account": 10,
+  "account": 9,
   "words": 31,
-  "words_over_account": 4
+  "words_over_account": 5
  },
  "newest": [
+  "/tech (over_account)  @Polymarket: BREAKING: Norway’s energy giant Equinor detects major ongoing cyberattack.",
   "/politics (words)  @FBIDallas: The #FBI issued a FLASH advisory warning that cybercriminals and state-aligned hackers are exploi…",
   "/anomaly (words)  @Breaking911: BREAKING: CNN is reporting that the NSA's internal communications network is down.",
   "/money (account)  @WatcherGuru: JUST IN: $13 trillion asset manager Charles Schwab's website goes down.",
@@ -38,8 +39,7 @@
   "/anomaly (words)  @Breaking911: BREAKING UPDATE: Four people are reportedly injured in an active shooter situation at the VIDA…",
   "/world (words)  @disclosetv: NEW - Acting Navy Secretary Hung Cao tells USS George H.W. Bush families that their loved ones w…",
   "/world (words)  @remarks: JUST IN: 🇨🇦 Canada reiterates warning for citizens to prepare to survive at least 72 hours withou…",
-  "/tech (words)  @remarks: JUST IN: 🇺🇸 Spike in suicides reported at NSA and US Cyber Command, the agencies responsible for…",
-  "/tech (words)  @coinbureau: 🚨BREAKING: Apple confirms widespread outages across multiple iCloud services, including Mail, P…"
+  "/tech (words)  @remarks: JUST IN: 🇺🇸 Spike in suicides reported at NSA and US Cyber Command, the agencies responsible for…"
  ],
  "accounts_without_a_desk": [
   {
