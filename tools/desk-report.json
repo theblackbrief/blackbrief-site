@@ -3,8 +3,8 @@
  "desks": {
   "unfiled": 5,
   "politics": 11,
-  "world": 16,
-  "money": 8,
+  "world": 15,
+  "money": 9,
   "tech": 5,
   "anomaly": 5
  },
@@ -15,6 +15,7 @@
   "words_over_account": 4
  },
  "newest": [
+  "/money (account)  @WatcherGuru: JUST IN: $13 trillion asset manager Charles Schwab's website goes down.",
   "/world (account)  @HormuzLetter: BREAKING: A cyberattack hit 178 major organizations, including Zoom, CNN, BBC, Fox News, HSBC,…",
   "/world (words)  @InsiderWire: #BREAKING: Unexploded bomb found in Coeur d'Alene, Idaho; residents being evacuated.",
   "unfiled (-)  @disclosetv: JUST IN - All United flights are grounded: reports",
@@ -38,8 +39,7 @@
   "/tech (words)  @remarks: JUST IN: 🇺🇸 Spike in suicides reported at NSA and US Cyber Command, the agencies responsible for…",
   "/tech (words)  @coinbureau: 🚨BREAKING: Apple confirms widespread outages across multiple iCloud services, including Mail, P…",
   "/politics (words)  @60Minutes: President Trump says his administration’s deportation policy was “too tough.”",
-  "/money (account)  @unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new Federal Res…",
-  "/world (account)  @BRICSinfo: JUST IN: 🇬🇧 BBC prepares emergency radio studio with 100 staff to broadcast government messages…"
+  "/money (account)  @unusual_whales: Young Americans are getting poorer, while the oldest are getting richer, per new Federal Res…"
  ],
  "accounts_without_a_desk": [
   {

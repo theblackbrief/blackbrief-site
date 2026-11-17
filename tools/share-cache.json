@@ -1,4 +1,12 @@
 {
+ "17koz77": {
+  "tries": 1,
+  "done": true,
+  "title": "@WatcherGuru: JUST IN: $13 trillion asset manager Charles Schwab's website goes down.",
+  "image": "",
+  "media": "",
+  "desk": "money"
+ },
  "39qef6": {
   "tries": 1,
   "done": true,
@@ -383,13 +391,5 @@
   "image": "",
   "media": "",
   "desk": "politics"
- },
- "iiawy9": {
-  "tries": 1,
-  "done": true,
-  "title": "@GeneralMCNews: BREAKING: A power outage in downtown Washington, D.C., is disrupting traffic lights and multiple federal facilities, including the State Department, as infrastructure disruptions continue to surface worldwide.",
-  "image": "",
-  "media": "",
-  "desk": "world"
  }
 }
