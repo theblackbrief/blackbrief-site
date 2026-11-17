@@ -3,7 +3,7 @@
  "desks": {
   "unfiled": 5,
   "politics": 11,
-  "world": 12,
+  "world": 11,
   "money": 9,
   "tech": 7,
   "anomaly": 6
@@ -11,7 +11,7 @@
  "filed_by": {
   "you": 0,
   "account": 8,
-  "words": 32,
+  "words": 31,
   "words_over_account": 5
  },
  "newest": [
@@ -21,7 +21,6 @@
   "/anomaly (words)  @Breaking911: BREAKING: CNN is reporting that the NSA's internal communications network is down.",
   "/money (account)  @WatcherGuru: JUST IN: $13 trillion asset manager Charles Schwab's website goes down.",
   "/world (account)  @HormuzLetter: BREAKING: A cyberattack hit 178 major organizations, including Zoom, CNN, BBC, Fox News, HSBC,…",
-  "/world (words)  @InsiderWire: #BREAKING: Unexploded bomb found in Coeur d'Alene, Idaho; residents being evacuated.",
   "unfiled (-)  @disclosetv: JUST IN - All United flights are grounded: reports",
   "/anomaly (over_account)  @Kalshi: JUST IN: FCC nationwide emergency alert test begins at 2:20 p.m. ET tomorrow",
   "/world (over_account)  @Polymarket: JUST IN: UK lawmakers propose paid time off for workers to train for war, cyberattacks, & other…",
@@ -39,7 +38,8 @@
   "unfiled (-)  @disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect ha…",
   "/anomaly (words)  @Breaking911: BREAKING UPDATE: Four people are reportedly injured in an active shooter situation at the VIDA…",
   "/world (words)  @disclosetv: NEW - Acting Navy Secretary Hung Cao tells USS George H.W. Bush families that their loved ones w…",
-  "/world (words)  @remarks: JUST IN: 🇨🇦 Canada reiterates warning for citizens to prepare to survive at least 72 hours withou…"
+  "/world (words)  @remarks: JUST IN: 🇨🇦 Canada reiterates warning for citizens to prepare to survive at least 72 hours withou…",
+  "/tech (words)  @remarks: JUST IN: 🇺🇸 Spike in suicides reported at NSA and US Cyber Command, the agencies responsible for…"
  ],
  "accounts_without_a_desk": [
   {
@@ -57,14 +57,6 @@
    "filed_by_words": [
     "anomaly",
     "world"
-   ]
-  },
-  {
-   "handle": "@insiderwire",
-   "posts": 2,
-   "filed_by_words": [
-    "world",
-    "money"
    ]
   },
   {
@@ -137,6 +129,13 @@
    "posts": 1,
    "filed_by_words": [
     "politics"
+   ]
+  },
+  {
+   "handle": "@insiderwire",
+   "posts": 1,
+   "filed_by_words": [
+    "money"
    ]
   },
   {
