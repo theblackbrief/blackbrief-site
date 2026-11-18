@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Wed, 18 Nov 2026 20:07:12 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 23:14:51 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Polymarket: BREAKING: Russia deploys 2 nuclear-capable bombers to Vietnam for the first time since the Soviet era.</title>
+   <link>https://theblackbrief.com/p/yljcf8/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/yljcf8/</guid>
+   <pubDate>Wed, 18 Nov 2026 23:14:51 GMT</pubDate>
+   <category>world</category>
+   <description>&lt;p&gt;@Polymarket: BREAKING: Russia deploys 2 nuclear-capable bombers to Vietnam for the first time since the Soviet era.&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/Polymarket/status/2123095491403526325?a=5Pc74Taj3g8R-DrK1UY&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/yljcf8/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@TousiTVOfficial: 🇺🇸 BREAKING: Trump administration confirms recent cyber incidents were in fact attacks by the Islamic Republic of Iran and more attacks to…</title>
    <link>https://theblackbrief.com/p/ip4ig2/</link>
@@ -406,14 +414,6 @@
    <category>anomaly</category>
    <category>urgent</category>
    <description>&lt;p&gt;@Breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.&lt;/p&gt;&lt;p&gt;/anomaly // #urgent // &lt;a href=&quot;https://x.com/breaking911/status/2118039766457520394?a=FGH5TiNuOAARwL3lepg&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1q0lxy9/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@NewsWire_US: TRUMP CANCELS PUBLIC APPEARANCES</title>
-   <link>https://theblackbrief.com/p/1linbeg/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1linbeg/</guid>
-   <pubDate>Wed, 04 Nov 2026 14:46:21 GMT</pubDate>
-   <category>politics</category>
-   <description>&lt;p&gt;@NewsWire_US: TRUMP CANCELS PUBLIC APPEARANCES&lt;/p&gt;&lt;p&gt;/politics // &lt;a href=&quot;https://x.com/newswire_us/status/2117971731751354847?a=AULxrrYTfnorZVfKAGA&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1linbeg/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
