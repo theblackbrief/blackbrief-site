@@ -5,8 +5,8 @@
   "politics": 11,
   "world": 9,
   "money": 10,
-  "tech": 7,
-  "anomaly": 8
+  "tech": 8,
+  "anomaly": 7
  },
  "filed_by": {
   "you": 0,
@@ -15,6 +15,7 @@
   "words_over_account": 4
  },
  "newest": [
+  "/tech (words)  @TUCO187187: This isn’t good DHS warns Iran-linked hackers are targeting U.S. energy, water, and government i…",
   "/anomaly (words)  @mattvanswol: 🚨 #BREAKING: Nearly 240,000 people in South Carolina have just been told to BOIL THEIR WATER a…",
   "/money (account)  @Polymarket: JUST IN: Stanley Druckenmiller reveals he's out of the stock market & focused on preserving capi…",
   "/anomaly (words)  @ItsTheEnforcer: 🚨BREAKING: Reports claim that the NSA has declared “Code Orange” — meaning that the NSA cam…",
@@ -38,8 +39,7 @@
   "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…",
   "unfiled (-)  US existing home sales slump to more than 16-year low in October",
   "/money (account)  @WallStreetApes: 🚨 Muslims are now impersonating police vehicles in Scottsdale, Arizona. Notice the red and…",
-  "unfiled (-)  @disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect ha…",
-  "/anomaly (words)  @Breaking911: BREAKING UPDATE: Four people are reportedly injured in an active shooter situation at the VIDA…"
+  "unfiled (-)  @disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect ha…"
  ],
  "accounts_without_a_desk": [
   {
@@ -181,17 +181,17 @@
    ]
   },
   {
-   "handle": "@theinsiderpaper",
-   "posts": 1,
-   "filed_by_words": [
-    "anomaly"
-   ]
-  },
-  {
    "handle": "@theletterxen",
    "posts": 1,
    "filed_by_words": [
     "world"
+   ]
+  },
+  {
+   "handle": "@tuco187187",
+   "posts": 1,
+   "filed_by_words": [
+    "tech"
    ]
   },
   {

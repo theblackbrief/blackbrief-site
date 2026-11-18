@@ -1,4 +1,12 @@
 {
+ "6r2xgk": {
+  "tries": 1,
+  "done": true,
+  "title": "@TUCO187187: This isn’t good DHS warns Iran-linked hackers are targeting U.S. energy, water, and government infrastructure.@grok can you confirm",
+  "image": "",
+  "media": "",
+  "desk": "tech"
+ },
  "11ixkfm": {
   "tries": 1,
   "done": true,
@@ -383,13 +391,5 @@
   "image": "",
   "media": "",
   "desk": "politics"
- },
- "c7glxx": {
-  "tries": 1,
-  "done": true,
-  "title": "@TheInsiderPaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of self-sufficiency",
-  "image": "",
-  "media": "",
-  "desk": "anomaly"
  }
 }
