@@ -1,4 +1,12 @@
 {
+ "11ixkfm": {
+  "tries": 1,
+  "done": true,
+  "title": "@mattvanswol: 🚨 #BREAKING: Nearly 240,000 people in South Carolina have just been told to BOIL THEIR WATER after a yet-unexplained “power blip” knocked out water pressure across the ENTIRE main system at Spartanburg Water. Not one neighborhood... the WHOLE system. Several Spartanburg County…",
+  "image": "",
+  "media": "video",
+  "desk": "anomaly"
+ },
  "1dpt5lx": {
   "tries": 1,
   "done": true,
@@ -383,13 +391,5 @@
   "image": "",
   "media": "",
   "desk": "anomaly"
- },
- "1n0hk2s": {
-  "tries": 1,
-  "done": true,
-  "title": "@Polymarket: BREAKING: Britain & France prepare a multinational military force for potential deployment to Ukraine after the war.",
-  "image": "",
-  "media": "",
-  "desk": "world"
  }
 }
