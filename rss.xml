@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Wed, 18 Nov 2026 04:32:28 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 18 Nov 2026 19:06:15 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@mattvanswol: 🚨 #BREAKING: Nearly 240,000 people in South Carolina have just been told to BOIL THEIR WATER after a yet-unexplained “power blip” knocked out wa…</title>
+   <link>https://theblackbrief.com/p/11ixkfm/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/11ixkfm/</guid>
+   <pubDate>Wed, 18 Nov 2026 19:06:15 GMT</pubDate>
+   <category>anomaly</category>
+   <description>&lt;p&gt;@mattvanswol: 🚨 #BREAKING: Nearly 240,000 people in South Carolina have just been told to BOIL THEIR WATER after a yet-unexplained “power blip” knocked out water pressure across the ENTIRE main system at Spartanburg Water. Not one neighborhood... the WHOLE system. Several Spartanburg County…&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/mattvanswol/status/2123116034760818802?a=4OgEbylXkXXukVcOFE8&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/11ixkfm/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Polymarket: JUST IN: Stanley Druckenmiller reveals he's out of the stock market &amp; focused on preserving capital because he’s &quot;never had less clarity&quot; about th…</title>
    <link>https://theblackbrief.com/p/1dpt5lx/</link>
@@ -406,14 +414,6 @@
    <pubDate>Tue, 03 Nov 2026 19:51:19 GMT</pubDate>
    <category>anomaly</category>
    <description>&lt;p&gt;@TheInsiderPaper: NEW: EU issues guidelines urging citizens to pack emergency bags, prepare for 72 hours of self-sufficiency&lt;/p&gt;&lt;p&gt;/anomaly // &lt;a href=&quot;https://x.com/theinsiderpaper/status/2117685975904297036?a=QeJjnSjNVFV1ZzL0BDA&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/c7glxx/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@Polymarket: BREAKING: Britain &amp; France prepare a multinational military force for potential deployment to Ukraine after the war.</title>
-   <link>https://theblackbrief.com/p/1n0hk2s/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1n0hk2s/</guid>
-   <pubDate>Tue, 03 Nov 2026 09:58:43 GMT</pubDate>
-   <category>world</category>
-   <description>&lt;p&gt;@Polymarket: BREAKING: Britain &amp;amp; France prepare a multinational military force for potential deployment to Ukraine after the war.&lt;/p&gt;&lt;p&gt;/world // &lt;a href=&quot;https://x.com/polymarket/status/2117531727086428193?a=-T7LJL-mXRPVpSIVgWg&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1n0hk2s/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
