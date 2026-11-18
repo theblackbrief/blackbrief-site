@@ -6,15 +6,16 @@
   "world": 11,
   "money": 9,
   "tech": 7,
-  "anomaly": 6
+  "anomaly": 7
  },
  "filed_by": {
   "you": 0,
   "account": 8,
-  "words": 31,
+  "words": 32,
   "words_over_account": 5
  },
  "newest": [
+  "/anomaly (words)  @ItsTheEnforcer: 🚨BREAKING: Reports claim that the NSA has declared “Code Orange” — meaning that the NSA cam…",
   "/tech (words)  @aaronp613: Apple employees are sharing on Reddit that Apple corporate offices are all offline as well This o…",
   "/tech (over_account)  @Polymarket: BREAKING: Norway’s energy giant Equinor detects major ongoing cyberattack.",
   "/politics (words)  @FBIDallas: The #FBI issued a FLASH advisory warning that cybercriminals and state-aligned hackers are exploi…",
@@ -38,8 +39,7 @@
   "unfiled (-)  @disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect ha…",
   "/anomaly (words)  @Breaking911: BREAKING UPDATE: Four people are reportedly injured in an active shooter situation at the VIDA…",
   "/world (words)  @disclosetv: NEW - Acting Navy Secretary Hung Cao tells USS George H.W. Bush families that their loved ones w…",
-  "/world (words)  @remarks: JUST IN: 🇨🇦 Canada reiterates warning for citizens to prepare to survive at least 72 hours withou…",
-  "/tech (words)  @remarks: JUST IN: 🇺🇸 Spike in suicides reported at NSA and US Cyber Command, the agencies responsible for…"
+  "/world (words)  @remarks: JUST IN: 🇨🇦 Canada reiterates warning for citizens to prepare to survive at least 72 hours withou…"
  ],
  "accounts_without_a_desk": [
   {
@@ -150,6 +150,13 @@
    "posts": 1,
    "filed_by_words": [
     "tech"
+   ]
+  },
+  {
+   "handle": "@itstheenforcer",
+   "posts": 1,
+   "filed_by_words": [
+    "anomaly"
    ]
   },
   {
