@@ -2,8 +2,8 @@
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
   "unfiled": 5,
-  "politics": 10,
-  "world": 9,
+  "politics": 9,
+  "world": 10,
   "money": 10,
   "tech": 8,
   "anomaly": 8
@@ -11,10 +11,11 @@
  "filed_by": {
   "you": 0,
   "account": 9,
-  "words": 32,
-  "words_over_account": 4
+  "words": 31,
+  "words_over_account": 5
  },
  "newest": [
+  "/world (over_account)  @Polymarket: BREAKING: Russia deploys 2 nuclear-capable bombers to Vietnam for the first time since the Sovie…",
   "/politics (words)  @TousiTVOfficial: 🇺🇸 BREAKING: Trump administration confirms recent cyber incidents were in fact attacks by…",
   "/anomaly (words)  @Daily_MailUS: Americans urged to charge phones and gather emergency supplies now as power outages threaten f…",
   "/tech (words)  @TUCO187187: This isn’t good DHS warns Iran-linked hackers are targeting U.S. energy, water, and government i…",
@@ -38,8 +39,7 @@
   "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…",
   "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…",
   "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…",
-  "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…",
-  "unfiled (-)  US existing home sales slump to more than 16-year low in October"
+  "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…"
  ],
  "accounts_without_a_desk": [
   {
@@ -57,13 +57,6 @@
    "filed_by_words": [
     "anomaly",
     "world"
-   ]
-  },
-  {
-   "handle": "@newswire_us",
-   "posts": 2,
-   "filed_by_words": [
-    "politics"
    ]
   },
   {
@@ -177,6 +170,13 @@
    "posts": 1,
    "filed_by_words": [
     "anomaly"
+   ]
+  },
+  {
+   "handle": "@newswire_us",
+   "posts": 1,
+   "filed_by_words": [
+    "politics"
    ]
   },
   {

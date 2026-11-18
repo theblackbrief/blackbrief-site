@@ -1,4 +1,12 @@
 {
+ "yljcf8": {
+  "tries": 1,
+  "done": true,
+  "title": "@Polymarket: BREAKING: Russia deploys 2 nuclear-capable bombers to Vietnam for the first time since the Soviet era.",
+  "image": "",
+  "media": "",
+  "desk": "world"
+ },
  "ip4ig2": {
   "tries": 1,
   "done": true,
@@ -383,13 +391,5 @@
   "image": "",
   "media": "video",
   "desk": "anomaly"
- },
- "1linbeg": {
-  "tries": 1,
-  "done": true,
-  "title": "@NewsWire_US: TRUMP CANCELS PUBLIC APPEARANCES",
-  "image": "",
-  "media": "",
-  "desk": "politics"
  }
 }
