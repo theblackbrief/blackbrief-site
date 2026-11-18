@@ -15,6 +15,7 @@
   "words_over_account": 4
  },
  "newest": [
+  "/politics (words)  @TousiTVOfficial: 🇺🇸 BREAKING: Trump administration confirms recent cyber incidents were in fact attacks by…",
   "/anomaly (words)  @Daily_MailUS: Americans urged to charge phones and gather emergency supplies now as power outages threaten f…",
   "/tech (words)  @TUCO187187: This isn’t good DHS warns Iran-linked hackers are targeting U.S. energy, water, and government i…",
   "/anomaly (words)  @mattvanswol: 🚨 #BREAKING: Nearly 240,000 people in South Carolina have just been told to BOIL THEIR WATER a…",
@@ -38,8 +39,7 @@
   "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…",
   "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…",
   "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…",
-  "unfiled (-)  US existing home sales slump to more than 16-year low in October",
-  "/money (account)  @WallStreetApes: 🚨 Muslims are now impersonating police vehicles in Scottsdale, Arizona. Notice the red and…"
+  "unfiled (-)  US existing home sales slump to more than 16-year low in October"
  ],
  "accounts_without_a_desk": [
   {
@@ -61,13 +61,6 @@
   },
   {
    "handle": "@newswire_us",
-   "posts": 2,
-   "filed_by_words": [
-    "politics"
-   ]
-  },
-  {
-   "handle": "@rawsalerts",
    "posts": 2,
    "filed_by_words": [
     "politics"
@@ -187,10 +180,24 @@
    ]
   },
   {
+   "handle": "@rawsalerts",
+   "posts": 1,
+   "filed_by_words": [
+    "politics"
+   ]
+  },
+  {
    "handle": "@theletterxen",
    "posts": 1,
    "filed_by_words": [
     "world"
+   ]
+  },
+  {
+   "handle": "@tousitvofficial",
+   "posts": 1,
+   "filed_by_words": [
+    "politics"
    ]
   },
   {
