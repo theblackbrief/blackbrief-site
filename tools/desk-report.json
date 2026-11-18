@@ -2,11 +2,11 @@
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
   "unfiled": 5,
-  "politics": 11,
+  "politics": 10,
   "world": 9,
   "money": 10,
   "tech": 8,
-  "anomaly": 7
+  "anomaly": 8
  },
  "filed_by": {
   "you": 0,
@@ -15,6 +15,7 @@
   "words_over_account": 4
  },
  "newest": [
+  "/anomaly (words)  @Daily_MailUS: Americans urged to charge phones and gather emergency supplies now as power outages threaten f…",
   "/tech (words)  @TUCO187187: This isn’t good DHS warns Iran-linked hackers are targeting U.S. energy, water, and government i…",
   "/anomaly (words)  @mattvanswol: 🚨 #BREAKING: Nearly 240,000 people in South Carolina have just been told to BOIL THEIR WATER a…",
   "/money (account)  @Polymarket: JUST IN: Stanley Druckenmiller reveals he's out of the stock market & focused on preserving capi…",
@@ -38,8 +39,7 @@
   "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…",
   "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…",
   "unfiled (-)  US existing home sales slump to more than 16-year low in October",
-  "/money (account)  @WallStreetApes: 🚨 Muslims are now impersonating police vehicles in Scottsdale, Arizona. Notice the red and…",
-  "unfiled (-)  @disclosetv: NEW - 5 people shot in Vida gym, Washington D.C., a shelter in place order is active. Suspect ha…"
+  "/money (account)  @WallStreetApes: 🚨 Muslims are now impersonating police vehicles in Scottsdale, Arizona. Notice the red and…"
  ],
  "accounts_without_a_desk": [
   {
@@ -57,14 +57,6 @@
    "filed_by_words": [
     "anomaly",
     "world"
-   ]
-  },
-  {
-   "handle": "@leadingreport",
-   "posts": 2,
-   "filed_by_words": [
-    "tech",
-    "politics"
    ]
   },
   {
@@ -118,6 +110,13 @@
    ]
   },
   {
+   "handle": "@daily_mailus",
+   "posts": 1,
+   "filed_by_words": [
+    "anomaly"
+   ]
+  },
+  {
    "handle": "@dmichaeltripi",
    "posts": 1,
    "filed_by_words": [
@@ -161,6 +160,13 @@
   },
   {
    "handle": "@jmchyno",
+   "posts": 1,
+   "filed_by_words": [
+    "tech"
+   ]
+  },
+  {
+   "handle": "@leadingreport",
    "posts": 1,
    "filed_by_words": [
     "tech"
