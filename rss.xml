@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri, 20 Nov 2026 00:36:36 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 20 Nov 2026 02:23:59 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Polymarket: BREAKING: U.S. Department of Agriculture takes multiple systems offline in response to a “cybersecurity incident.”</title>
+   <link>https://theblackbrief.com/p/15rhmji/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/15rhmji/</guid>
+   <pubDate>Fri, 20 Nov 2026 02:23:59 GMT</pubDate>
+   <category>money</category>
+   <description>&lt;p&gt;@Polymarket: BREAKING: U.S. Department of Agriculture takes multiple systems offline in response to a “cybersecurity incident.”&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/Polymarket/status/2123572623087198478?a=3ZSDCmGh6GhEQ3fdcx8&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/15rhmji/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@disclosetv: JUST IN - U.S. national cyber director is stepping down — Axios</title>
    <link>https://theblackbrief.com/p/1t1ml52/</link>
@@ -406,13 +414,6 @@
    <pubDate>Thu, 05 Nov 2026 04:58:54 GMT</pubDate>
    <category>politics</category>
    <description>&lt;p&gt;@NewsWire_US: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too far after his wife Melania complained about people she knew were getting deported. — WSJ&lt;/p&gt;&lt;p&gt;/politics // &lt;a href=&quot;https://x.com/newswire_us/status/2118190280499450321?a=kq-mObkevzbNCwDdUxQ&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/17ra8sd/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@Breaking911: Evil.</title>
-   <link>https://theblackbrief.com/p/1pmrs83/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1pmrs83/</guid>
-   <pubDate>Wed, 04 Nov 2026 21:51:14 GMT</pubDate>
-   <description>&lt;p&gt;@Breaking911: Evil.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/breaking911/status/2118026507473793492?a=cQPgfZYk5zyCynSVwiU&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1pmrs83/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
