@@ -15,6 +15,7 @@
   "words_over_account": 5
  },
  "newest": [
+  "/politics (words)  @azcentral: Gov. Katie Hobbs will replace 3 judges appointed by her Republican predecessor. Are spots on the…",
   "/money (account)  @Polymarket: BREAKING: U.S. Department of Agriculture takes multiple systems offline in response to a “cybers…",
   "/tech (words)  @disclosetv: JUST IN - U.S. national cyber director is stepping down — Axios",
   "/world (over_account)  @Polymarket: BREAKING: Russia deploys 2 nuclear-capable bombers to Vietnam for the first time since the Sovie…",
@@ -38,8 +39,7 @@
   "/anomaly (words)  @disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a \"p…",
   "unfiled (-)  @disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry abo…",
   "/world (words)  @TheLetterxen: BREAKING: Dallas Love Field Airport in Texas has suspended flight operations following a repor…",
-  "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…",
-  "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…"
+  "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…"
  ],
  "accounts_without_a_desk": [
   {
@@ -80,6 +80,13 @@
    "posts": 1,
    "filed_by_words": [
     "tech"
+   ]
+  },
+  {
+   "handle": "@azcentral",
+   "posts": 1,
+   "filed_by_words": [
+    "politics"
    ]
   },
   {
@@ -171,13 +178,6 @@
    "posts": 1,
    "filed_by_words": [
     "anomaly"
-   ]
-  },
-  {
-   "handle": "@newswire_us",
-   "posts": 1,
-   "filed_by_words": [
-    "politics"
    ]
   },
   {

@@ -1,4 +1,12 @@
 {
+ "g08xkc": {
+  "tries": 1,
+  "done": true,
+  "title": "@azcentral: Gov. Katie Hobbs will replace 3 judges appointed by her Republican predecessor. Are spots on the bench becoming more politicized?",
+  "image": "",
+  "media": "",
+  "desk": "politics"
+ },
  "15rhmji": {
   "tries": 1,
   "done": true,
@@ -384,13 +392,5 @@
   "image": "",
   "media": "video",
   "desk": "world"
- },
- "17ra8sd": {
-  "tries": 1,
-  "done": true,
-  "title": "@NewsWire_US: Trump repeatedly shifted on immigration crackdown, telling aides Stephen Miller had gone too far after his wife Melania complained about people she knew were getting deported. — WSJ",
-  "image": "",
-  "media": "",
-  "desk": "politics"
  }
 }
