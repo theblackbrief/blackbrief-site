@@ -1,4 +1,12 @@
 {
+ "1t1ml52": {
+  "tries": 1,
+  "done": true,
+  "title": "@disclosetv: JUST IN - U.S. national cyber director is stepping down — Axios",
+  "image": "",
+  "media": "",
+  "desk": "tech"
+ },
  "yljcf8": {
   "tries": 1,
   "done": true,
@@ -383,13 +391,5 @@
   "title": "@Breaking911: Evil.",
   "image": "",
   "media": "video"
- },
- "1q0lxy9": {
-  "tries": 1,
-  "done": true,
-  "title": "@Breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.",
-  "image": "",
-  "media": "video",
-  "desk": "anomaly"
  }
 }

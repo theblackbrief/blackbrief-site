@@ -5,8 +5,8 @@
   "politics": 9,
   "world": 10,
   "money": 10,
-  "tech": 8,
-  "anomaly": 8
+  "tech": 9,
+  "anomaly": 7
  },
  "filed_by": {
   "you": 0,
@@ -15,6 +15,7 @@
   "words_over_account": 5
  },
  "newest": [
+  "/tech (words)  @disclosetv: JUST IN - U.S. national cyber director is stepping down — Axios",
   "/world (over_account)  @Polymarket: BREAKING: Russia deploys 2 nuclear-capable bombers to Vietnam for the first time since the Sovie…",
   "/politics (words)  @TousiTVOfficial: 🇺🇸 BREAKING: Trump administration confirms recent cyber incidents were in fact attacks by…",
   "/anomaly (words)  @Daily_MailUS: Americans urged to charge phones and gather emergency supplies now as power outages threaten f…",
@@ -38,14 +39,14 @@
   "/world (words)  @TheLetterxen: BREAKING: Dallas Love Field Airport in Texas has suspended flight operations following a repor…",
   "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…",
   "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…",
-  "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…",
-  "/money (account)  @Polymarket: BREAKING: FAA shuts down flights nationwide due to \"extraordinary circumstances\" impacting publi…"
+  "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…"
  ],
  "accounts_without_a_desk": [
   {
    "handle": "@disclosetv",
-   "posts": 6,
+   "posts": 7,
    "filed_by_words": [
+    "tech",
     "anomaly",
     "world",
     "politics"
@@ -53,7 +54,7 @@
   },
   {
    "handle": "@breaking911",
-   "posts": 5,
+   "posts": 4,
    "filed_by_words": [
     "anomaly",
     "world"
