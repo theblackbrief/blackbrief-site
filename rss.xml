@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Wed, 18 Nov 2026 23:14:51 GMT</lastBuildDate>
+  <lastBuildDate>Fri, 20 Nov 2026 00:36:36 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@disclosetv: JUST IN - U.S. national cyber director is stepping down — Axios</title>
+   <link>https://theblackbrief.com/p/1t1ml52/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/1t1ml52/</guid>
+   <pubDate>Fri, 20 Nov 2026 00:36:36 GMT</pubDate>
+   <category>tech</category>
+   <description>&lt;p&gt;@disclosetv: JUST IN - U.S. national cyber director is stepping down — Axios&lt;/p&gt;&lt;p&gt;/tech // &lt;a href=&quot;https://x.com/disclosetv/status/2123542024934785495?a=Whh5-XRe727M5w_HtOI&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1t1ml52/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@Polymarket: BREAKING: Russia deploys 2 nuclear-capable bombers to Vietnam for the first time since the Soviet era.</title>
    <link>https://theblackbrief.com/p/yljcf8/</link>
@@ -405,15 +413,6 @@
    <guid isPermaLink="true">https://theblackbrief.com/p/1pmrs83/</guid>
    <pubDate>Wed, 04 Nov 2026 21:51:14 GMT</pubDate>
    <description>&lt;p&gt;@Breaking911: Evil.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://x.com/breaking911/status/2118026507473793492?a=cQPgfZYk5zyCynSVwiU&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1pmrs83/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@Breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.</title>
-   <link>https://theblackbrief.com/p/1q0lxy9/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1q0lxy9/</guid>
-   <pubDate>Wed, 04 Nov 2026 18:43:10 GMT</pubDate>
-   <category>anomaly</category>
-   <category>urgent</category>
-   <description>&lt;p&gt;@Breaking911: BREAKING: Reports of an active shooter at a Citibank in Tampa, Florida.&lt;/p&gt;&lt;p&gt;/anomaly // #urgent // &lt;a href=&quot;https://x.com/breaking911/status/2118039766457520394?a=FGH5TiNuOAARwL3lepg&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1q0lxy9/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
