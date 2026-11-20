@@ -1,20 +1,21 @@
 {
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
-  "unfiled": 5,
+  "unfiled": 4,
   "politics": 9,
   "world": 10,
-  "money": 10,
+  "money": 11,
   "tech": 9,
   "anomaly": 7
  },
  "filed_by": {
   "you": 0,
-  "account": 9,
+  "account": 10,
   "words": 31,
   "words_over_account": 5
  },
  "newest": [
+  "/money (account)  @Polymarket: BREAKING: U.S. Department of Agriculture takes multiple systems offline in response to a “cybers…",
   "/tech (words)  @disclosetv: JUST IN - U.S. national cyber director is stepping down — Axios",
   "/world (over_account)  @Polymarket: BREAKING: Russia deploys 2 nuclear-capable bombers to Vietnam for the first time since the Sovie…",
   "/politics (words)  @TousiTVOfficial: 🇺🇸 BREAKING: Trump administration confirms recent cyber incidents were in fact attacks by…",
@@ -38,8 +39,7 @@
   "unfiled (-)  @disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry abo…",
   "/world (words)  @TheLetterxen: BREAKING: Dallas Love Field Airport in Texas has suspended flight operations following a repor…",
   "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…",
-  "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…",
-  "/tech (words)  @LeadingReport: Major outage disrupts employee access to pay information, time-off requests and benefits syst…"
+  "/politics (words)  @MarioNawfal: 🚨🇺🇸 UPDATE: BOMB FOUND at Illinois ethanol plant as mass evacuations ordered Peoria Mayor Ri…"
  ],
  "accounts_without_a_desk": [
   {
@@ -54,7 +54,7 @@
   },
   {
    "handle": "@breaking911",
-   "posts": 4,
+   "posts": 3,
    "filed_by_words": [
     "anomaly",
     "world"
