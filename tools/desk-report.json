@@ -4,8 +4,8 @@
   "unfiled": 4,
   "politics": 10,
   "world": 9,
-  "money": 11,
-  "tech": 9,
+  "money": 10,
+  "tech": 10,
   "anomaly": 7
  },
  "filed_by": {
@@ -15,6 +15,7 @@
   "words_over_account": 5
  },
  "newest": [
+  "/tech (over_account)  @polymarket: BREAKING: Microsoft declares “Code Red,” its highest emergency alert, after a historic 24-hour g…",
   "/politics (words)  @breannamorello: 🚨BREAKING NEWS🚨 ICE records show the agency can ONLY account for about 60,000 deportations…",
   "/politics (words)  @azcentral: Gov. Katie Hobbs will replace 3 judges appointed by her Republican predecessor. Are spots on the…",
   "/money (account)  @Polymarket: BREAKING: U.S. Department of Agriculture takes multiple systems offline in response to a “cybers…",
@@ -38,8 +39,7 @@
   "/money (words)  @InsiderWire: #BREAKING: Chase, Bank of America, Wells Fargo and U.S. Bank hit by nationwide outage, users re…",
   "/tech (words)  @JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.",
   "/anomaly (words)  @disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a \"p…",
-  "unfiled (-)  @disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry abo…",
-  "/world (words)  @TheLetterxen: BREAKING: Dallas Love Field Airport in Texas has suspended flight operations following a repor…"
+  "unfiled (-)  @disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry abo…"
  ],
  "accounts_without_a_desk": [
   {
