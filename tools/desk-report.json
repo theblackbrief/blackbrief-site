@@ -2,8 +2,8 @@
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
   "unfiled": 5,
-  "politics": 10,
-  "world": 9,
+  "politics": 9,
+  "world": 10,
   "money": 9,
   "tech": 10,
   "anomaly": 7
@@ -15,6 +15,7 @@
   "words_over_account": 5
  },
  "newest": [
+  "/world (words)  @myradarwx: NEW: The Army is planning to detonate 68 barrels (about 9,700 pounds) of degraded lead azide at M…",
   "unfiled (-)  @disclosetv: NOW - Reports of \"cybersecurity breach at the CIA.\"",
   "/tech (over_account)  @polymarket: BREAKING: Microsoft declares “Code Red,” its highest emergency alert, after a historic 24-hour g…",
   "/politics (words)  @breannamorello: 🚨BREAKING NEWS🚨 ICE records show the agency can ONLY account for about 60,000 deportations…",
@@ -38,8 +39,7 @@
   "/anomaly (over_account)  @Kalshi: JUST IN: FCC nationwide emergency alert test begins at 2:20 p.m. ET tomorrow",
   "/world (over_account)  @Polymarket: JUST IN: UK lawmakers propose paid time off for workers to train for war, cyberattacks, & other…",
   "/money (words)  @InsiderWire: #BREAKING: Chase, Bank of America, Wells Fargo and U.S. Bank hit by nationwide outage, users re…",
-  "/tech (words)  @JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.",
-  "/anomaly (words)  @disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a \"p…"
+  "/tech (words)  @JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing."
  ],
  "accounts_without_a_desk": [
   {
@@ -173,10 +173,10 @@
    ]
   },
   {
-   "handle": "@rawsalerts",
+   "handle": "@myradarwx",
    "posts": 1,
    "filed_by_words": [
-    "politics"
+    "world"
    ]
   },
   {

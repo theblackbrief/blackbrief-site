@@ -1,4 +1,12 @@
 {
+ "1rsl5vb": {
+  "tries": 1,
+  "done": true,
+  "title": "@MyRadarWX: NEW: The Army is planning to detonate 68 barrels (about 9,700 pounds) of degraded lead azide at Middletown, Iowa on Wednesday morning at 9 a.m. This map shows where the dust will go. Remove shoes at the door and adjust your HVAC settings:",
+  "image": "",
+  "media": "",
+  "desk": "world"
+ },
  "kenkhl": {
   "tries": 1,
   "done": true,
@@ -383,13 +391,5 @@
   "image": "",
   "media": "video",
   "desk": "world"
- },
- "16i1lpw": {
-  "tries": 1,
-  "done": true,
-  "title": "@rawsalerts: 🚨 #BREAKING: Congressional Equality Caucus brags the upcoming Congress will be the \"gayest in history\" 🌈",
-  "image": "",
-  "media": "",
-  "desk": "politics"
  }
 }
