@@ -2,8 +2,8 @@
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
   "unfiled": 4,
-  "politics": 9,
-  "world": 10,
+  "politics": 10,
+  "world": 9,
   "money": 11,
   "tech": 9,
   "anomaly": 7
@@ -15,6 +15,7 @@
   "words_over_account": 5
  },
  "newest": [
+  "/politics (words)  @breannamorello: 🚨BREAKING NEWS🚨 ICE records show the agency can ONLY account for about 60,000 deportations…",
   "/politics (words)  @azcentral: Gov. Katie Hobbs will replace 3 judges appointed by her Republican predecessor. Are spots on the…",
   "/money (account)  @Polymarket: BREAKING: U.S. Department of Agriculture takes multiple systems offline in response to a “cybers…",
   "/tech (words)  @disclosetv: JUST IN - U.S. national cyber director is stepping down — Axios",
@@ -38,8 +39,7 @@
   "/tech (words)  @JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.",
   "/anomaly (words)  @disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a \"p…",
   "unfiled (-)  @disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry abo…",
-  "/world (words)  @TheLetterxen: BREAKING: Dallas Love Field Airport in Texas has suspended flight operations following a repor…",
-  "/tech (words)  @InTheAssembly: Japan says it is in a \"state of EMERGENCY in cyber space\" after a wave of cyberattacks hit mo…"
+  "/world (words)  @TheLetterxen: BREAKING: Dallas Love Field Airport in Texas has suspended flight operations following a repor…"
  ],
  "accounts_without_a_desk": [
   {
@@ -54,10 +54,16 @@
   },
   {
    "handle": "@breaking911",
-   "posts": 3,
+   "posts": 2,
    "filed_by_words": [
-    "anomaly",
-    "world"
+    "anomaly"
+   ]
+  },
+  {
+   "handle": "@breannamorello",
+   "posts": 2,
+   "filed_by_words": [
+    "politics"
    ]
   },
   {
@@ -84,13 +90,6 @@
   },
   {
    "handle": "@azcentral",
-   "posts": 1,
-   "filed_by_words": [
-    "politics"
-   ]
-  },
-  {
-   "handle": "@breannamorello",
    "posts": 1,
    "filed_by_words": [
     "politics"

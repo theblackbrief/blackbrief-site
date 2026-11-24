@@ -1,4 +1,12 @@
 {
+ "7q5u9v": {
+  "tries": 1,
+  "done": true,
+  "title": "@BreannaMorello: 🚨BREAKING NEWS🚨 ICE records show the agency can ONLY account for about 60,000 deportations in fiscal year 2025, despite the administration publicly reporting more than 442,000. The Oversight Project obtained the data in a lawsuit and claims there's questionable numbers…",
+  "image": "",
+  "media": "image",
+  "desk": "politics"
+ },
  "g08xkc": {
   "tries": 1,
   "done": true,
@@ -384,13 +392,5 @@
   "image": "",
   "media": "",
   "desk": "money"
- },
- "1o1jqjh": {
-  "tries": 1,
-  "done": true,
-  "title": "@Breaking911: BREAKING: At least 14 flights across Europe were diverted, forced to land early or escorted by fighter jets after a series of bomb threats. Flights from Warsaw, Milan, Copenhagen, Madrid, London and Dublin were affected. Italian jets escorted one plane to Rome, while a Dublin…",
-  "image": "",
-  "media": "video",
-  "desk": "world"
  }
 }
