@@ -6,13 +6,21 @@
   <description>a newsfeed of things we don't wanna see in a world that isn't supposed to be</description>
   <language>en</language>
   <atom:link href="https://theblackbrief.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 24 Nov 2026 14:04:50 GMT</lastBuildDate>
+  <lastBuildDate>Tue, 24 Nov 2026 17:02:24 GMT</lastBuildDate>
   <ttl>15</ttl>
   <image>
    <url>https://theblackbrief.com/BB_Icon.png</url>
    <title>the / black brief</title>
    <link>https://theblackbrief.com/</link>
   </image>
+  <item>
+   <title>@Polymarket: BREAKING: Microsoft declares “Code Red,” its highest emergency alert, after a historic 24-hour global outage. — Reuters</title>
+   <link>https://theblackbrief.com/p/150xvi/</link>
+   <guid isPermaLink="true">https://theblackbrief.com/p/150xvi/</guid>
+   <pubDate>Tue, 24 Nov 2026 17:02:24 GMT</pubDate>
+   <category>tech</category>
+   <description>&lt;p&gt;@Polymarket: BREAKING: Microsoft declares “Code Red,” its highest emergency alert, after a historic 24-hour global outage. — Reuters&lt;/p&gt;&lt;p&gt;/tech // &lt;a href=&quot;https://x.com/polymarket/status/2125265616693080108?a=seWEHr_euIqMOtgYOo8&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/150xvi/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
+  </item>
   <item>
    <title>@BreannaMorello: 🚨BREAKING NEWS🚨 ICE records show the agency can ONLY account for about 60,000 deportations in fiscal year 2025, despite the administration p…</title>
    <link>https://theblackbrief.com/p/7q5u9v/</link>
@@ -406,14 +414,6 @@
    <pubDate>Thu, 05 Nov 2026 15:23:20 GMT</pubDate>
    <category>money</category>
    <description>&lt;p&gt;@InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own account, with losses around $133 million.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/InsiderWN/status/2118267580481982917?a=fsnw4Nq-9E3Oa2XyhYI&amp;amp;s=20&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1la03ph/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
-  </item>
-  <item>
-   <title>@BRICSinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.</title>
-   <link>https://theblackbrief.com/p/1hfsc77/</link>
-   <guid isPermaLink="true">https://theblackbrief.com/p/1hfsc77/</guid>
-   <pubDate>Thu, 05 Nov 2026 15:03:50 GMT</pubDate>
-   <category>money</category>
-   <description>&lt;p&gt;@BRICSinfo: JUST IN: 🇵🇾 Bank holding savings for half of Paraguay's population collapses.&lt;/p&gt;&lt;p&gt;/money // &lt;a href=&quot;https://x.com/bricsinfo/status/2118195255204069402?a=NEBDeqYTea5ple4GSSw&amp;amp;s=12&quot;&gt;view post on x »&lt;/a&gt; &amp;#160; &lt;a href=&quot;https://theblackbrief.com/p/1hfsc77/&quot;&gt;open on the / black brief »&lt;/a&gt;&lt;/p&gt;</description>
   </item>
  </channel>
 </rss>
