@@ -1,20 +1,21 @@
 {
  "note": "Written by tools/build-share.js. A desk tag such as #world wins; otherwise the source account and the wording decide (see DESKS in build-share.js). X accounts below have no desk of their own yet.",
  "desks": {
-  "unfiled": 4,
+  "unfiled": 5,
   "politics": 10,
   "world": 9,
-  "money": 10,
+  "money": 9,
   "tech": 10,
   "anomaly": 7
  },
  "filed_by": {
   "you": 0,
   "account": 10,
-  "words": 31,
+  "words": 30,
   "words_over_account": 5
  },
  "newest": [
+  "unfiled (-)  @disclosetv: NOW - Reports of \"cybersecurity breach at the CIA.\"",
   "/tech (over_account)  @polymarket: BREAKING: Microsoft declares “Code Red,” its highest emergency alert, after a historic 24-hour g…",
   "/politics (words)  @breannamorello: 🚨BREAKING NEWS🚨 ICE records show the agency can ONLY account for about 60,000 deportations…",
   "/politics (words)  @azcentral: Gov. Katie Hobbs will replace 3 judges appointed by her Republican predecessor. Are spots on the…",
@@ -38,13 +39,12 @@
   "/world (over_account)  @Polymarket: JUST IN: UK lawmakers propose paid time off for workers to train for war, cyberattacks, & other…",
   "/money (words)  @InsiderWire: #BREAKING: Chase, Bank of America, Wells Fargo and U.S. Bank hit by nationwide outage, users re…",
   "/tech (words)  @JMChyno: BREAKING: Major Australian supermarket Coles hit by cyber attack, investigations are ongoing.",
-  "/anomaly (words)  @disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a \"p…",
-  "unfiled (-)  @disclosetv: NOW - DHS Secretary says Americans should \"absolutely not\" stockpile food and water or worry abo…"
+  "/anomaly (words)  @disclosetv: NEW - Dutch supermarkets are planning emergency stores to maintain food supplies in case of a \"p…"
  ],
  "accounts_without_a_desk": [
   {
    "handle": "@disclosetv",
-   "posts": 7,
+   "posts": 8,
    "filed_by_words": [
     "tech",
     "anomaly",
@@ -125,13 +125,6 @@
   },
   {
    "handle": "@insiderwire",
-   "posts": 1,
-   "filed_by_words": [
-    "money"
-   ]
-  },
-  {
-   "handle": "@insiderwn",
    "posts": 1,
    "filed_by_words": [
     "money"

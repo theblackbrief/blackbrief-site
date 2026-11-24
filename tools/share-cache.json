@@ -1,4 +1,11 @@
 {
+ "kenkhl": {
+  "tries": 1,
+  "done": true,
+  "title": "@disclosetv: NOW - Reports of \"cybersecurity breach at the CIA.\"",
+  "image": "",
+  "media": "video"
+ },
  "150xvi": {
   "tries": 1,
   "done": true,
@@ -384,13 +391,5 @@
   "image": "",
   "media": "",
   "desk": "politics"
- },
- "1la03ph": {
-  "tries": 1,
-  "done": true,
-  "title": "@InsiderWN: #BREAKING: French bank Crédit Mutuel Arkéa confirms cyberattack transferred funds from its own account, with losses around $133 million.",
-  "image": "",
-  "media": "",
-  "desk": "money"
  }
 }
