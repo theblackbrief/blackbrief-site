@@ -1,4 +1,12 @@
 {
+ "euou9j": {
+  "tries": 1,
+  "done": true,
+  "title": "@LeadingReport: Hospital misdiagnosis leads to man having penıs, prostate and bladder removed after cancer diagnosis blunder, per Daily Mail.",
+  "image": "",
+  "media": "",
+  "desk": "anomaly"
+ },
  "1rsl5vb": {
   "tries": 1,
   "done": true,
@@ -383,13 +391,5 @@
   "image": "",
   "media": "image",
   "desk": "politics"
- },
- "jyw8yd": {
-  "tries": 1,
-  "done": true,
-  "title": "@RT_com: Kiev goes DARK with major BLACKOUT across the whole city",
-  "image": "",
-  "media": "video",
-  "desk": "world"
  }
 }
